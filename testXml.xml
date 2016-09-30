@@ -1,0 +1,42 @@
+<FILE id="xin_eng_201012">
+<DOC id="XIN_ENG_20101201.0001" type="multi" >
+<HEADLINE>
+( (NP (NP (NNP Xinhua) (NNP Middle) (NNP East) (NN news) (NN advisory)) (: --) (NP (NNP Dec.) (CD 1))))
+</HEADLINE>
+<DATELINE>
+( (NP (NP (NP (NNP CAIRO)) (, ,) (NP (NNP Dec.) (CD 1))) (PRN (-LRB- -LRB-) (NP (NNP Xinhua)) (-RRB- -RRB-))))
+</DATELINE>
+<TEXT>
+( (S (NP (DT The) (VBG following)) (VP (VBP are) (NP (NP (DT some)) (PP (IN of) (NP (NP (DT the) (JJ major) (NNP Middle) (NNP East) (NN news) (NNS stories)) (ADJP (JJ due) (S (VP (TO to) (VP (AUXB be) (VP (VBN covered) (CC or) (VP (VBN pursued) (PP (IN by) (NP (NNP Xinhua) (NNP News) (NNP Agency))) (PP (IN on) (NP (NNP Wednesday))))))))))))) (. .)))
+( (S (: --) (NP (DT The) (JJ 34th) (NNP Cairo) (NNP International) (NNP Film) (NNP Festival)) (VP (AUXZ is) (VP (VBN held) (PP (IN in) (NP (NNP Cairo))) (PP (IN till) (NP (NNP Dec.) (CD 9))))) (. .)))
+( (S (: --) (NP (NP (NN Monitoring)) (PP (IN as) (NP (DT the) (JJ Egyptian) (NN government)))) (VP (VBD delayed) (NP (NP (DT the) (NN announcement)) (PP (IN of) (NP (NP (JJ parliamentary) (NNS elections) (POS ')) (NNS results)))) (PP (IN on) (NP (NNP Tuesday)))) (. .)))
+( (S (: --) (S (VP (VBG Monitoring) (NP (NP (DT the) (NN formation)) (PP (IN of) (NP (JJ new) (JJ Iraqi) (NN government)))))) (. .)))
+</TEXT>
+<sentences>
+  <sentence id="1">
+    <tokens>
+      <token id="1">
+        <word>The</word>
+        <lemma>the</lemma>
+        <CharacterOffsetBegin>0</CharacterOffsetBegin>
+        <CharacterOffsetEnd>3</CharacterOffsetEnd>
+        <POS>DT</POS>
+        <NER>O</NER>
+      </token>
+      <token id="2">
+        <word>following</word>
+        <lemma>follow</lemma>
+        <CharacterOffsetBegin>4</CharacterOffsetBegin>
+        <CharacterOffsetEnd>13</CharacterOffsetEnd>
+        <POS>VBG</POS>
+        <NER>O</NER>
+      </token>
+</tokens>
+
+  </sentence>
+</sentences>
+
+
+</DOC>
+</FILE>
+

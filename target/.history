@@ -1,0 +1,3 @@
+run
+scalac hello.scala
+exit

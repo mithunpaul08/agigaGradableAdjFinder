@@ -1,0 +1,22 @@
+import scala.xml.XML
+
+
+object Hi {
+ def main(args: Array[String]) = println("Hi!")
+//val temp="testing"
+//	val xmlGiga = XML.loadFile("testXml.xml")
+	val pizzafile  = XML.loadFile("pizza.xml")
+	//val xmlGiga = XML.loadFile("xin_eng_201012.xml")
+	val xmlTemperature = XML.loadFile("temperature.xml")
+//	val temp = (xmlGiga \\ "FILE"  \\"DOC" \\"sentences" \\ "tokens" \ "token" \ "@id") text
+	val pizza= (pizzafile  \\ "order" \\ "item" \\  "pizza" \\ "crust"  \\ "topping").map(_.text)
+
+	val text = (xmlTemperature \\ "channel" \\ "item" \ "condition" \ "@text") text
+
+
+println(pizza)
+println(text)
+//println(temp)
+//println(text)
+}
+
