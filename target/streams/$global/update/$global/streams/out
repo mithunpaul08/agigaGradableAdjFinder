@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for hello#hello_2.11;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies hello#hello_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.8 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@513dfc1b[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4d021975[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.8[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.8 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.8] org.scala-lang#scala-library;2.11.8[0m
@@ -32,21 +32,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies hello#hello_2.11;1.0->com.github.myedibleenso#processors-agiga_2.11;0.0.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.github.myedibleenso#processors-agiga_2.11;0.0.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.myedibleenso#processors-agiga_2.11;0.0.1 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving com.github.myedibleenso#processors-agiga_2.11;0.0.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.github.myedibleenso#processors-agiga_2.11;0.0.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/com.github.myedibleenso/processors-agiga_2.11/0.0.1/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.github.myedibleenso#processors-agiga_2.11;0.0.1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.github.myedibleenso#processors-agiga_2.11;0.0.1[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.pom (0.0.1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.myedibleenso#processors-agiga_2.11;0.0.1!processors-agiga_2.11.pom(pom.original) (149ms)[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/com.github.myedibleenso/processors-agiga_2.11/0.0.1/jars/processors-agiga_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.jar[0m
-[0m[[0mdebug[0m] [0m	found com.github.myedibleenso#processors-agiga_2.11;0.0.1 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.myedibleenso#processors-agiga_2.11;0.0.1[0m
+[0m[[0mdebug[0m] [0m	found com.github.myedibleenso#processors-agiga_2.11;0.0.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies hello#hello_2.11;1.0->com.github.myedibleenso#processors-agiga_2.11;0.0.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies hello#hello_2.11;1.0->com.github.myedibleenso#processors-agiga_2.11;0.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.myedibleenso#processors-agiga_2.11;0.0.1->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
@@ -101,21 +88,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.myedibleenso#processors-agiga_2.11;0.0.1->org.clulab#processors-main_2.11;6.0.0 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.clulab#processors-main_2.11;6.0.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.clulab#processors-main_2.11;6.0.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.clulab#processors-main_2.11;6.0.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.clulab#processors-main_2.11;6.0.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/org.clulab/processors-main_2.11/6.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.clulab#processors-main_2.11;6.0.0[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.clulab#processors-main_2.11;6.0.0[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.pom (6.0.0)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.clulab#processors-main_2.11;6.0.0!processors-main_2.11.pom(pom.original) (76ms)[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/org.clulab/processors-main_2.11/6.0.0/jars/processors-main_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.jar[0m
-[0m[[0mdebug[0m] [0m	found org.clulab#processors-main_2.11;6.0.0 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.clulab#processors-main_2.11;6.0.0[0m
+[0m[[0mdebug[0m] [0m	found org.clulab#processors-main_2.11;6.0.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.myedibleenso#processors-agiga_2.11;0.0.1->org.clulab#processors-main_2.11;6.0.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.clulab#processors-main_2.11;6.0.0->org.scala-lang#scala-library;2.11.8 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.clulab#processors-main_2.11;6.0.0->org.scala-lang#scala-library;2.11.8 [compile->compile(*)][0m
@@ -385,40 +359,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.jhu.agiga#agiga;1.4->edu.stanford.nlp#stanford-corenlp;1.3.5 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving edu.stanford.nlp#stanford-corenlp;1.3.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: edu.stanford.nlp#stanford-corenlp;1.3.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving edu.stanford.nlp#stanford-corenlp;1.3.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: edu.stanford.nlp#stanford-corenlp;1.3.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/edu.stanford.nlp/stanford-corenlp/1.3.5/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for edu.stanford.nlp#stanford-corenlp;1.3.5[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for edu.stanford.nlp#stanford-corenlp;1.3.5[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.pom (1.3.5)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] edu.stanford.nlp#stanford-corenlp;1.3.5!stanford-corenlp.pom(pom.original) (79ms)[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/edu.stanford.nlp/stanford-corenlp/1.3.5/jars/stanford-corenlp.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.jar[0m
-[0m[[0mdebug[0m] [0m	found edu.stanford.nlp#stanford-corenlp;1.3.5 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: edu.stanford.nlp#stanford-corenlp;1.3.5[0m
+[0m[[0mdebug[0m] [0m	found edu.stanford.nlp#stanford-corenlp;1.3.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.jhu.agiga#agiga;1.4->edu.stanford.nlp#stanford-corenlp;1.3.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving xom#xom;1.2.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: xom#xom;1.2.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving xom#xom;1.2.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: xom#xom;1.2.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/xom/xom/1.2.5/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for xom#xom;1.2.5[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for xom#xom;1.2.5[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.pom (1.2.5)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] xom#xom;1.2.5!xom.pom(pom.original) (71ms)[0m
-[0m[[0mdebug[0m] [0m		tried /work/mithunpaul/.ivy2/local/xom/xom/1.2.5/jars/xom.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.jar[0m
-[0m[[0mdebug[0m] [0m	found xom#xom;1.2.5 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: xom#xom;1.2.5[0m
+[0m[[0mdebug[0m] [0m	found xom#xom;1.2.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->compile(*)][0m
@@ -2016,20 +1964,10 @@
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.8!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/github/myedibleenso/processors-agiga_2.11/0.0.1/processors-agiga_2.11-0.0.1.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.github.myedibleenso#processors-agiga_2.11;0.0.1!processors-agiga_2.11.jar (145ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.github.myedibleenso#processors-agiga_2.11;0.0.1!processors-agiga_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.scala-logging#scala-logging_2.11;3.1.0!scala-logging_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/clulab/processors-main_2.11/6.0.0/processors-main_2.11-6.0.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.clulab#processors-main_2.11;6.0.0!processors-main_2.11.jar (265ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.clulab#processors-main_2.11;6.0.0!processors-main_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] edu.jhu.agiga#agiga;1.4!agiga.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-compress;1.10!commons-compress.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.8!scala-reflect.jar[0m
@@ -2053,26 +1991,16 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scalap;2.11.0!scalap.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.0!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] ch.qos.logback#logback-core;1.0.10!logback-core.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/1.3.5/stanford-corenlp-1.3.5.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] edu.stanford.nlp#stanford-corenlp;1.3.5!stanford-corenlp.jar (302ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] edu.stanford.nlp#stanford-corenlp;1.3.5!stanford-corenlp.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.ximpleware#vtd-xml;2.11!vtd-xml.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/xom/xom/1.2.5/xom-1.2.5.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] xom#xom;1.2.5!xom.jar (84ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] xom#xom;1.2.5!xom.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] joda-time#joda-time;2.1!joda-time.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] de.jollyday#jollyday;0.4.7!jollyday.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.xml.bind#jaxb-api;2.2.7!jaxb-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.8!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2783ms :: artifacts dl 861ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 667ms :: artifacts dl 39ms[0m
 [0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 compile produced in /net/kate/storage/work/mithunpaul/testbed/target/resolution-cache/reports/hello-hello_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 runtime produced in /net/kate/storage/work/mithunpaul/testbed/target/resolution-cache/reports/hello-hello_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 test produced in /net/kate/storage/work/mithunpaul/testbed/target/resolution-cache/reports/hello-hello_2.11-test.xml[0m
@@ -2086,5 +2014,5 @@
 [0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 docs produced in /net/kate/storage/work/mithunpaul/testbed/target/resolution-cache/reports/hello-hello_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 pom produced in /net/kate/storage/work/mithunpaul/testbed/target/resolution-cache/reports/hello-hello_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 scala-tool produced in /net/kate/storage/work/mithunpaul/testbed/target/resolution-cache/reports/hello-hello_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2783ms resolve - 861ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (667ms resolve - 39ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -1,0 +1,40 @@
+import org.clulab.agiga
+import org.clulab.processors.Document
+import java.io.File
+import scala.collection.parallel.ForkJoinTaskSupport
+
+
+
+object agigaParser {
+
+	def main(args: Array[string]) = println("adjective extraction ended")
+{
+/** do something with the extracted adjectives */
+for {
+  f <- files
+  doc = agiga.toDocument(f)
+	}
+ 
+  val adjectives = processDocument(doc)
+	println(adjectives)
+  // write to a file or whatever
+  // ...
+
+// the xml files are here
+val files = new File("/net/kate/storage/data/nlp/corpora/agiga/data/xml").listFiles.par
+// you'll probably want to increase this...
+val nthreads = 4
+// limit parallelization
+files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+
+/** extract words tagged as adjectives */
+def processDocument(doc: Document): Seq[Seq[String]] = for {
+  s <- doc.sentences
+  (t, i) <- s.tags.get.zipWithIndex
+  // is it an adjective?
+  if t == "JJ"
+  w = s.words(i)
+} yield w
+
+
+

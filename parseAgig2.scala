@@ -51,7 +51,8 @@ for {
 } {
 println("inside print files code4")
   val adjectives = processDocument(doc)
-	println(adjectives)
+println(adjectives.mkString(" "))
+//	println(adjectives)
   // write to a file or whatever
   // ...
 }
