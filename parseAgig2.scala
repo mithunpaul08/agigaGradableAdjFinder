@@ -58,6 +58,7 @@ for {
 } {
 println("finished finding adjectives.")
   val adjectives = processDocument(doc)
+	val uniqAdj=adjectives.distinct
 //println(adjectives.mkString(" "))
 
 
@@ -67,7 +68,8 @@ val pathForOutputFile= outputDirectoryPath+"gradedAdjectivesFromAgiga"+".txt"
 // FileWriter
 val file = new File(pathForOutputFile)
 val bw = new BufferedWriter(new FileWriter(file))
-bw.write(adjectives.mkString("\n "))
+//bw.write(adjectives.mkString("\n "))
+bw.write(uniqAdj.mkString("\n "))
 bw.close()
 
 
