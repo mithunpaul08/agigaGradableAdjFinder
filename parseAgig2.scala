@@ -4,13 +4,13 @@ import org.clulab.agiga
 import org.clulab.processors.Document
 import java.io.File
 import scala.collection.parallel.ForkJoinTaskSupport
-
+import java.io._
 
 
 object agigParser{
 
 val baseDirectoryPath= "/work/mithunpaul/gzips/"
-
+val outputDirectoryPath = "/work/mithunpaul/outputs/"
 // the xml files are here
 //val files = new File("/net/kate/storage/data/nlp/corpora/agiga/data/xml").listFiles.par
 val files = new File("/work/mithunpaul/gzips/").listFiles.par
@@ -26,12 +26,19 @@ def processDocument(doc: Document): Array[String] = for {
   // is it an adjective?
   if t == "JJ"
   w = s.words(i)
-} yield w
+//to find if the adjective ends with -est or -er
+if w.matches(".*(est|er)$")
+  // get the lemma
+  lemma = s.lemmas.get(i)
+} yield lemma
+
+
+//} yield w
 
 
 def printLine (): Unit =
 {
-println("inside print files code1")
+println("finished writing adjectives to file")
 }
 
 def readFiles (): Unit =
@@ -39,7 +46,7 @@ def readFiles (): Unit =
 
 
 
-println("inside print files code2")
+println("starting identification of adjectives in agiga")
 
 /** do something with the extracted adjectives */
 for {
@@ -49,9 +56,21 @@ for {
 //println("inside print files code334")
   doc = agiga.toDocument(combinedFileName)
 } {
-println("inside print files code4")
+println("finished finding adjectives.")
   val adjectives = processDocument(doc)
-println(adjectives.mkString(" "))
+//println(adjectives.mkString(" "))
+
+
+//write to files
+
+val pathForOutputFile= outputDirectoryPath+"gradedAdjectivesFromAgiga"+".txt"
+// FileWriter
+val file = new File(pathForOutputFile)
+val bw = new BufferedWriter(new FileWriter(file))
+bw.write(adjectives.mkString("\n "))
+bw.close()
+
+
 //	println(adjectives)
   // write to a file or whatever
   // ...
