@@ -38,81 +38,13 @@
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/com.ximpleware/vtd-xml/jars/vtd-xml-2.11.jar[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.10.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
-[0m[[31merror[0m] [0m(run-main-0) java.lang.OutOfMemoryError: GC overhead limit exceeded[0m
-java.lang.OutOfMemoryError: GC overhead limit exceeded
-	at java.util.Arrays.copyOfRange(Arrays.java:3664)
-	at java.lang.StringBuffer.toString(StringBuffer.java:671)
-	at com.ximpleware.VTDNav.toString(VTDNav.java:4881)
-	at com.ximpleware.VTDNav.toString(VTDNav.java:4811)
-	at edu.jhu.agiga.AgigaSentenceReader.parseTokens(AgigaSentenceReader.java:261)
-	at edu.jhu.agiga.AgigaSentenceReader.next(AgigaSentenceReader.java:139)
-	at edu.jhu.agiga.AgigaSentenceReader.next(AgigaSentenceReader.java:38)
-	at edu.jhu.agiga.AgigaDocumentReader.next(AgigaDocumentReader.java:128)
-	at edu.jhu.agiga.AgigaDocumentReader.next(AgigaDocumentReader.java:36)
-	at edu.jhu.agiga.StreamingVtdXmlReader.next(StreamingVtdXmlReader.java:134)
-	at scala.collection.convert.Wrappers$JIteratorWrapper.next(Wrappers.scala:43)
-	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
-	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
-	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
-	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
-	at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:59)
-	at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:104)
-	at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:48)
-	at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:310)
-	at scala.collection.AbstractIterator.to(Iterator.scala:1336)
-	at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:302)
-	at scala.collection.AbstractIterator.toBuffer(Iterator.scala:1336)
-	at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:289)
-	at scala.collection.AbstractIterator.toArray(Iterator.scala:1336)
-	at org.clulab.agiga.package$.toDocument(package.scala:120)
-	at agiga.agigParser$$anonfun$readFiles$1.apply(parseAgig2.scala:57)
-	at agiga.agigParser$$anonfun$readFiles$1.apply(parseAgig2.scala:53)
-	at scala.collection.parallel.mutable.ParArray$Map.leaf(ParArray.scala:657)
-	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
-	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
-	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
-	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
 [0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
 [0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
 [0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-2-worker-3[0m
 [0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-2-worker-3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-2-worker-29[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-2-worker-29[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-2-worker-25[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-2-worker-25[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-2-worker-7[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-2-worker-7[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-2-worker-11[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-2-worker-11[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-2-worker-21[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-2-worker-21[0m
+[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-2-worker-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-2-worker-1[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
-java.lang.RuntimeException: Nonzero exit code: 1
-	at scala.sys.package$.error(package.scala:27)
-	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:2077)
-	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:2077)
-	at scala.Option.foreach(Option.scala:236)
-	at sbt.BuildCommon$class.toError(Defaults.scala:2077)
-	at sbt.Defaults$.toError(Defaults.scala:39)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$38$$anonfun$apply$39.apply(Defaults.scala:750)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$38$$anonfun$apply$39.apply(Defaults.scala:748)
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
-	at sbt.std.Transform$$anon$4.work(System.scala:63)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
-	at sbt.Execute.work(Execute.scala:237)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[0m[[31merror[0m] [0m(compile:[31mrun[0m) Nonzero exit code: 1[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m

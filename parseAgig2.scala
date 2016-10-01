@@ -14,7 +14,7 @@ val baseDirectoryPath = "/work/mithunpaul/gzipsJustOne/"
 val outputDirectoryPath = "/work/mithunpaul/outputs/"
 // the xml files are here
 val files = new File(baseDirectoryPath).listFiles.par
-val nthreads = 16
+val nthreads = 2
 // limit parallelization
 files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 
@@ -43,39 +43,65 @@ println("finished writing adjectives to file")
 
 def readFiles (): Unit =
 {
+	for (f <- files) {
+	val fileName=f.getName
+	println("starting identification of adjectives in agigafile:" +fileName)
+	val outFile = new File(outputDirectoryPath, "gradAdj"+ fileName+".txt")
+    	// make sure the file hasn't been already processed
+    	// useful when restarting
+	if (!outFile.exists)
+    	{
+	val doc = agiga.toDocument(f.getAbsolutePath)
+    	println("finished finding adjectives in"+fileName)
+    	val adjectives = processDocument(doc)
+     	 val uniqAdj = adjectives.distinct
+    	//write to file
+	val bw = new BufferedWriter(new FileWriter(outFile))
+	bw.write(uniqAdj.mkString("\n "))
+	bw.close()
+ 	}
+}
+ }
+
+
+}
 
 
 
-println("starting identification of adjectives in agiga")
+
 
 /** do something with the extracted adjectives */
-for {
-  f <- files
+//for  {
+ // f <- files
+
+
+
 //println("inside print files code34")
-	val combinedFileName=baseDirectoryPath +f.getName
+//	val combinedFileName=baseDirectoryPath +f.getName
 //println("inside print files code334")
-  doc = agiga.toDocument(combinedFileName)
-} {
-println("finished finding adjectives.")
-  val adjectives = processDocument(doc)
-	val uniqAdj=adjectives.distinct
+
+//val doc = agiga.toDocument(combinedFileName)
+
+//println("finished finding adjectives.")
+ // val adjectives = processDocument(doc)
+//	val uniqAdj=adjectives.distinct
 //println(adjectives.mkString(" "))
 
 
 //write to files
 
-val pathForOutputFile= outputDirectoryPath+"gradedAdjectivesFromAgiga"+".txt"
+//val pathForOutputFile= outputDirectoryPath+"gradedAdjectivesFromAgiga"+combinedFileName+".txt"
 // FileWriter
-val file = new File(pathForOutputFile)
-val bw = new BufferedWriter(new FileWriter(file))
+//val file = new File(pathForOutputFile)
+//if (!file.exists)
+
+//{val bw = new BufferedWriter(new FileWriter(file))
 //bw.write(adjectives.mkString("\n "))
-bw.write(uniqAdj.mkString("\n "))
-bw.close()
+//bw.write(uniqAdj.mkString("\n "))
+//bw.close()
+//}
+//}
 
+//}
 
-//	println(adjectives)
-  // write to a file or whatever
-  // ...
-}
-}
-}
+//}
