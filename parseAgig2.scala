@@ -8,14 +8,13 @@ import java.io._
 
 
 object agigParser{
-
-val baseDirectoryPath= "/work/mithunpaul/gzips/"
+val completeAgigaFiles = "net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+//val baseDirectoryPath = "/work/mithunpaul/gzips/"
+val baseDirectoryPath = "/work/mithunpaul/gzipsJustOne/"
 val outputDirectoryPath = "/work/mithunpaul/outputs/"
 // the xml files are here
-//val files = new File("/net/kate/storage/data/nlp/corpora/agiga/data/xml").listFiles.par
-val files = new File("/work/mithunpaul/gzips/").listFiles.par
-// you'll probably want to increase this...
-val nthreads = 4
+val files = new File(baseDirectoryPath).listFiles.par
+val nthreads = 16
 // limit parallelization
 files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 
@@ -24,7 +23,8 @@ def processDocument(doc: Document): Array[String] = for {
   s <- doc.sentences
   (t, i) <- s.tags.get.zipWithIndex
   // is it an adjective?
-  if t == "JJ"
+  //if t == "JJ"
+  if t.startsWith("JJ")
   w = s.words(i)
 //to find if the adjective ends with -est or -er
 if w.matches(".*(est|er)$")
