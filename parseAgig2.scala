@@ -16,15 +16,18 @@ import java.util.Comparator;
 
 
 object agigParser {
-	//val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+	val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
 	/* path in local machine */
-	val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
+	//val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
 
 	//a relative path, instead of absolute path
 	//val baseDirectoryPath = "/inputs/"
 	//val baseDirectoryPath = "/work/mithunpaul/gzipsJustOne/"
-	//val outputDirectoryPath = "/work/mithunpaul/outputs/"
-	val outputDirectoryPath = "./outputs/"
+	
+	//val outputDirectoryPath = "/data1/nlp/"
+	val outputDirectoryPath= "/data1/nlp/users/mithun/allAdjectives/"
+	//output path outside the work area on jenny
+	//val outputDirectoryPath = "./outputs/"
 	// the xml files are here
 	//val files = new File(baseDirectoryPath).listFiles.par
 
@@ -57,8 +60,6 @@ object agigParser {
 		var lemma = "teststring"
 		for (s <- doc.sentences) {
 			for ((t, i) <- s.tags.get.zipWithIndex) {
-				println("inside the doc.sentences for loop. The sentence is " + s)
-
 
 				//for {
 				// s <- doc.sentences
@@ -68,7 +69,6 @@ object agigParser {
 				if (t.startsWith("JJ"))
 					{
 
-					println("the string you gave starts with this inside world")
 
 					var w = s.words(i)
 
@@ -76,7 +76,7 @@ object agigParser {
 					//lemma = s.lemmas.get(i)
 					adjCounter = adjCounter + 1;
 
-					println("value of adjCounter is" + adjCounter);
+				//	println("value of adjCounter is" + adjCounter);
 					//to find if the adjective ends with -est or -er
 					if (w.matches(".*(est|er)$"))
 					{
@@ -153,6 +153,7 @@ def processDocument(doc: Document): Array[String] = {
 				//val doc = agiga.toDocument(fileName)
 				println("finished finding adjectives in" + fileName)
 				val adjectives = processDocument(doc)
+				println("value of adjCounter is" + adjCounter);
 				println("reaching here at 4")
 				// val uniqAdj = adjectives.distinct
 				//write to file
