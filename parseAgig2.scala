@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
-
+import scala.collection.mutable.ArrayBuffer;
 //import org.apache.commons.io.FileUtils;
 //import org.apache.commons.io.comparator.SizeFileComparator;
 
@@ -29,10 +29,10 @@ object agigParser {
 	//output path outside the work area on jenny
 	//val outputDirectoryPath = "./outputs/"
 	// the xml files are here
-	//val files = new File(baseDirectoryPath).listFiles.par
+	val files = new File(baseDirectoryPath).listFiles.par
 
 	/*dont parallelize it if its a single core machine*/
-	val files = new File(baseDirectoryPath).listFiles
+	//val files = new File(baseDirectoryPath).listFiles
 
 
 
@@ -50,47 +50,66 @@ object agigParser {
 	//Arrays.sort(files, SizeFileComparator.SIZE_COMPARATOR)
 	val nthreads = 8
 	// limit parallelization
-	//files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+	files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 	var adjCounter = 2
 	//var lemma="test"
 
-	/** extract words tagged as adjectives */
-	def processDocument(doc: Document): String = {
-		var mystring = "this is a string"
-		var lemma = "teststring"
-		for (s <- doc.sentences) {
-			for ((t, i) <- s.tags.get.zipWithIndex) {
+	/** code set 3  using for yield loops: note: we cannot do a var assigning withint this kind of for-yield declaratio. so ignoring this as of 110am oct 7th without using for loops.*/
+/*
+	def processDocument(doc: Document): String = 
+	for {
+	 s <- doc.sentences
+	 (t, i) <- s.tags.get.zipWithIndex
+				if (t.startsWith("JJ")==true)
+					{
 
-				//for {
-				// s <- doc.sentences
-				// (t, i) <- s.tags.get.zipWithIndex
-				// is it an adjective?i
-				//if (mystring.startsWith("this")) {
+					adjCounter = adjCounter + 1;
+
+					println("value of adjCounter is" + adjCounter);
+						lemma = s.lemmas.get(i)
+				println("found an adjective whose tag starts with JJ and its lemma  value is"+ lemma)
+					}
+				
+}yield lemma
+
+*/
+	/** code set 2 using for loops.Note: this is like any for loop in any language. No yeild shit. Plus extract words tagged as adjectives+concatenate into one big string */
+ 
+	def processDocument(doc: Document): ArrayBuffer[String] = {
+		var mystring = "this is a string"
+
+		var arrayOflemmas = ArrayBuffer[String]()
+		var lemma = "teststring"
+		for (s <- doc.sentences)
+		 {
+
+			for ((t, i) <- s.tags.get.zipWithIndex)
+				{
+
 				if (t.startsWith("JJ"))
 					{
 
 
-					var w = s.words(i)
+			//	println("found an adjective whose tag starts with JJ and its w value is"+ w)
 
 
-					//lemma = s.lemmas.get(i)
 					adjCounter = adjCounter + 1;
 
 				//	println("value of adjCounter is" + adjCounter);
-					//to find if the adjective ends with -est or -er
-					if (w.matches(".*(est|er)$"))
-					{
-						// get the lemma
+				//		// get the lemma
 						lemma = s.lemmas.get(i)
+//add this newly found lemma to the array of lemmas
+arrayOflemmas += lemma;
+				//println("found an adjective whose tag starts with JJ and its lemma  value is"+ lemma)
 					}
-				}
+				
 			}
 		}
-		return lemma;
+		return arrayOflemmas;
 	}
 
 
-	/*
+	/* code set 1which had the yeild statement without for loops
 def processDocument(doc: Document): Array[String] = {
 	//for {
 	// s <- doc.sentences
@@ -124,7 +143,6 @@ def processDocument(doc: Document): Array[String] = {
 	def readFiles(): Unit = {
 		println("reaching here at 1")
 
-		//def getCurrentDirectory = new java.io.File(".").getCanonicalPath
 		var getCurrentDirectory = new java.io.File(".").getCanonicalPath
 		println("value of present directory is: "+getCurrentDirectory)
 
@@ -141,7 +159,7 @@ def processDocument(doc: Document): Array[String] = {
 			for (individualFile <- files) {
 			val fileName = individualFile.getName
 			println("reaching here at 27")
-			val outFile = new File(outputDirectoryPath, "gradAdj" + fileName + ".txt")
+			val outFile = new File(outputDirectoryPath, "allAdj_" + fileName + ".txt")
 			// make sure the file hasn't been already processed
 			// useful when restarting
 			println("reaching here at 2")
@@ -155,9 +173,10 @@ def processDocument(doc: Document): Array[String] = {
 				val adjectives = processDocument(doc)
 				println("value of adjCounter is" + adjCounter);
 				println("reaching here at 4")
+				//println("value of adjectives collected so far is "+adjectives.mkString("\n"))
 				// val uniqAdj = adjectives.distinct
 				//write to file
-				println("reaching here at 5")
+				println(" returned value of adjectives reaching here at 5")
 				val bw = new BufferedWriter(new FileWriter(outFile))
 				bw.write(adjectives.mkString("\n "))
 				println("value of adjcounter is ")
