@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160930012034"/>
+		date="20161006001935"/>
 	<dependencies>
 		<module organisation="com.github.myedibleenso" name="processors-agiga_2.11">
 			<revision name="0.0.1" status="release" pubdate="20160928211240" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/myedibleenso/processors-agiga" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">

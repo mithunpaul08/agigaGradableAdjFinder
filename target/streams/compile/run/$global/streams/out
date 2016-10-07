@@ -1,7 +1,7 @@
 [0m[[0minfo[0m] [0mRunning agiga.Hi [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
-[0m[[0mdebug[0m] [0m	/net/kate/storage/work/mithunpaul/testbed/target/scala-2.11/classes[0m
+[0m[[0mdebug[0m] [0m	/net/kate/storage/work/mithunpaul/mithunsAgigaGradableAdjFinder/target/scala-2.11/classes[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.2.jar[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/com.github.myedibleenso/processors-agiga_2.11/jars/processors-agiga_2.11-0.0.1.jar[0m
@@ -38,133 +38,7 @@
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/com.ximpleware/vtd-xml/jars/vtd-xml-2.11.jar[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.10.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
-[0m[[31merror[0m] [0m(run-main-0) java.lang.OutOfMemoryError: Java heap space[0m
-java.lang.OutOfMemoryError: Java heap space
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-79[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-79[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-9[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-9[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-5[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-5[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-125[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-125[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-81[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-81[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-77[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-77[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-93[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-93[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-21[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-21[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-51[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-51[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-7[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-7[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-113[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-113[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-25[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-25[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-119[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-119[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-99[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-99[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-83[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-83[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-23[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-23[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-49[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-49[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-127[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-127[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-85[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-85[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-107[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-107[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-123[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-123[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-95[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-95[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-91[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-91[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-105[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-105[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-69[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-69[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-111[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-111[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-57[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-57[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-19[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-19[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-97[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-97[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-71[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-71[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-13[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-13[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-47[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-47[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-35[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-35[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-29[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-29[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-67[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-67[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-43[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-43[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-109[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-109[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-37[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-37[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-33[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-33[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-65[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-65[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-55[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-55[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-53[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-53[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-63[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-63[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-11[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-11[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-121[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-121[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-39[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-39[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-41[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-41[0m
-[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-27[0m
-[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-27[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
-java.lang.RuntimeException: Nonzero exit code: 1
-	at scala.sys.package$.error(package.scala:27)
-	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:2077)
-	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:2077)
-	at scala.Option.foreach(Option.scala:236)
-	at sbt.BuildCommon$class.toError(Defaults.scala:2077)
-	at sbt.Defaults$.toError(Defaults.scala:39)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$38$$anonfun$apply$39.apply(Defaults.scala:750)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$38$$anonfun$apply$39.apply(Defaults.scala:748)
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
-	at sbt.std.Transform$$anon$4.work(System.scala:63)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
-	at sbt.Execute.work(Execute.scala:237)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[0m[[31merror[0m] [0m(compile:[31mrun[0m) Nonzero exit code: 1[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m

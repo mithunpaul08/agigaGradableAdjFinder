@@ -39,23 +39,36 @@ val files = new File(baseDirectoryPath).listFiles.par
 val nthreads = 8
 // limit parallelization
 //files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+var adjCounter = 2;
+var lemma="test"
 
 /** extract words tagged as adjectives */
-def processDocument(doc: Document): Array[String] = for {
-  s <- doc.sentences
-  (t, i) <- s.tags.get.zipWithIndex
-  // is it an adjective?
-  //if t == "JJ"
-  if t.startsWith("JJ")
-  w = s.words(i)
-//to find if the adjective ends with -est or -er
-if w.matches(".*(est|er)$")
-  // get the lemma
-  lemma = s.lemmas.get(i)
+def processDocument(doc: Document): Array[String] =
+ { 
+//for {
+ // s <- doc.sentences
+ // (t, i) <- s.tags.get.zipWithIndex
+  // is it an adjective?i
+var mystring="this is a string"
+ // if (mystring.t.startsWith("JJ"))
+  if (mystring.startsWith("this"))
+	{
+	println("the string you gave starts with this inside world")
+	
+	//var w = s.words(i)
+
+	//lemma = s.lemmas.get(i)
+	/adjCounter =adjCounter + 1;
+	//println("value of adjCounter is"+adjCounter);
+	//to find if the adjective ends with -est or -er
+	//if w.matches(".*(est|er)$")
+	  // get the lemma
+	// lemma = s.lemmas.get(i)
+}
+//}	
 } yield lemma
 
 
-//} yield w
 
 
 def printLine (): Unit =
@@ -96,7 +109,8 @@ def readFiles (): Unit =
 	println("reaching here at 5")
 	val bw = new BufferedWriter(new FileWriter(outFile))
 	bw.write(adjectives.mkString("\n "))
-	println("reaching here at 6")
+	println("value of adjcounter is ")
+println(adjCounter)
 	bw.close()
  	}
 }
