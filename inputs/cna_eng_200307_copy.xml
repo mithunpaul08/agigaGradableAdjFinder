@@ -33,7 +33,7 @@
         <lemma>President</lemma>
         <CharacterOffsetBegin>0</CharacterOffsetBegin>
         <CharacterOffsetEnd>9</CharacterOffsetEnd>
-        <POS>NNP</POS>
+        <POS>RB</POS>
         <NER>O</NER>
       </token>
       <token id="2">
@@ -41,7 +41,7 @@
         <lemma>Chen</lemma>
         <CharacterOffsetBegin>10</CharacterOffsetBegin>
         <CharacterOffsetEnd>14</CharacterOffsetEnd>
-        <POS>NNP</POS>
+        <POS>RB</POS>
         <NER>PERSON</NER>
       </token>
       <token id="3">
@@ -182,11 +182,11 @@
         <NER>O</NER>
       </token>
       <token id="20">
-        <word>at</word>
-        <lemma>at</lemma>
+        <word>however</word>
+        <lemma>however</lemma>
         <CharacterOffsetBegin>117</CharacterOffsetBegin>
         <CharacterOffsetEnd>119</CharacterOffsetEnd>
-        <POS>IN</POS>
+        <POS>RB</POS>
         <NER>O</NER>
       </token>
       <token id="21">

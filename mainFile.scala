@@ -6,9 +6,9 @@ object Hi {
   def main(args: Array[String]) = println("Exiting main program")
 
   //call the adjective parser.
-  agigParser.readFiles();
+  //agigParser.readFiles();
 
   //call the adverb parser
-  //adverbParser.readFiles();
+  adverbParser.readFiles();
 }
 

@@ -1,3 +1,5 @@
 run
 scalac hello.scala
 exit
+run
+exit

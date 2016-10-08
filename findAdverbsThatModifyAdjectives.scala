@@ -14,75 +14,114 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
 import scala.collection.mutable.ArrayBuffer;
+import scala.io.Source
+//import scala.collection.mutable.Map;
+//import collection.mutable.HashMap
 
 
 object adverbParser {
-  val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+  //val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
   /* path in local machine */
   //val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
 
   //a relative path, instead of absolute path
-  //val baseDirectoryPath = "inputs/"
+  val baseDirectoryPath = "inputs/"
+  val resourcesDirectory = "resources/"
+
   //input folder in mithuns laptop
 //  val baseDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/inputs/"
 
 
-  //val outputDirectoryPath = "/data1/nlp/"
   //output path outside the work area on jenny
-   val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
-  //val outputDirectoryPath = "outputs/"
+  // val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
+
   //output directory in mithus laptop
+
+  val outputDirectoryPath = "outputs/"
+
   //val outputDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/outputs/"
   // the xml files are here
 
-  /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine*/
+  /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine
   val files = new File(baseDirectoryPath).listFiles.par
- val nthreads = 10
+  val nthreads = 10
   // limit parallelization
   files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
-
-  /*uncomment this if running on a non-core machine. i.e dont parallelize it if its a single core machine*/
-  //val files = new File(baseDirectoryPath).listFiles
-
-//nullcheck in java
-/*
-def myNullCheck : Option[QueueObject] = {
-  // Wrap the Java result in an Option (this will become a Some or a None)
-  Option(someJavaObject.getResponse)
-}
 */
+  /*uncomment this if running on a non-core machine. i.e dont parallelize it if its a single core machine*/
+  val files = new File(baseDirectoryPath).listFiles
+
+
+  //add each line from shivade's adverb list, i.e an adverb to a hashtable with keys as adverbs
+  //var hashMapOfAdverbs:Map[String, Int] = Map()
+ // val hashMapOfAdverbs = new HashMap[String,String]()
+  //{ override def default(key:Int) = "-" }
+  //var hashMapOfAdverbs = Map("red" -> "#FF0000", "azure" -> "#F0FFFF")
+  var hashMapOfAdverbs = Map("AL" -> "Alabama")
+  def ReadToHashmap(): Unit = {
+    //val filename = "no-such-file.scala"
+    //var A:Map[Char,Int] = Map()
+   // hashMapOfAdverbs += hashMapOfAdverbs + ("AK" -> "Alaska")
+    //hashMapOfAdverbs += ("AK" -> "Alaska");
+
+    //println(hashMapOfAdverbs)
+
+    val advInputFile = resourcesDirectory+ "adverbs_shivade.txt";
+    try {
+      var counterForHashmap=0;
+      for (line <- Source.fromFile(advInputFile).getLines()) {
+        hashMapOfAdverbs += (line -> "1");
+      }
+    } catch {
+      case ex: Exception => println("Bummer, an exception happened.")
+    }
+  }
+
 
   def processDocumentForAdverbs(doc: Document): ArrayBuffer[String] = {
     var arrayOflemmas = ArrayBuffer[String]()
     var lemma = "teststring";
-    for (individualSentence <- doc.sentences) {
+       for (individualSentence <- doc.sentences) {
       for ((tag, wordCount) <- individualSentence.tags.get.zipWithIndex) {
         if (tag == "RB") {
-         // println("found an adverb")
-          	         var advlemma = individualSentence.lemmas.get(wordCount)
-                      //find the word next to this adver
 
-          //we were hitting adverbs that end a sentence. So this wordcount+1 is hitting null. Doing a null check
-          Option(individualSentence.tags.get(wordCount+1))match {
-            case Some(i) => {
-             // println("given adjective word exists")
+          var advlemma = individualSentence.lemmas.get(wordCount)
 
-              {
-                var newTag = individualSentence.tags.get(wordCount + 1)
-                if (newTag.startsWith("JJ")) {
-                  var adjlemma = individualSentence.lemmas.get(wordCount + 1);
-                  println("found an adjective modified by adverb. The adverb is:" + advlemma + " and the adjective is:" + adjlemma);
-                  //add this newly found lemma to the array of lemmas
-                  arrayOflemmas += advlemma + " " +adjlemma;
-                 // arrayOflemmas += adjlemma;
+          //proceed to find the beighboring adjective only if this new found adverb is part of shivade's list
+          println("found an adverb. its value is: "+advlemma);
+          //println( "Keys in colors : " + hashMapOfAdverbs.keys )
+          //println( "Values in colors : " + hashMapOfAdverbs.values )
+          if( hashMapOfAdverbs.contains( advlemma )) {
+            println("Found adverb exists in shivade's list")
 
+
+            //find the word next to this adverb i.e wordcount+1
+
+
+            //we were hitting adverbs that end a sentence. So this wordcount+1 is hitting null. Doing a null check
+            Option(individualSentence.tags.get(wordCount + 1)) match {
+              case Some(i) => {
+                // println("given adjective word exists")
+
+                {
+                  var newTag = individualSentence.tags.get(wordCount + 1)
+                  if (newTag.startsWith("JJ")) {
+                    var adjlemma = individualSentence.lemmas.get(wordCount + 1);
+                    println("found an adjective modified by adverb. The adverb is:" + advlemma + " and the adjective is:" + adjlemma);
+                    //add this newly found lemma to the array of lemmas
+                    arrayOflemmas += advlemma + " " + adjlemma;
+                    // arrayOflemmas += adjlemma;
+
+                  }
                 }
               }
+              case None => println(" There is no adjective next to the given adverb. Quitting/moving onto next line.")
             }
-            case None => println("no the given adjective next to the adverb doesnt work.")
+          } else
+          {
+            println("Found adverb does not exist in shivade's list ")
           }
         }
-
       }
     }
     return arrayOflemmas;
@@ -94,6 +133,9 @@ def myNullCheck : Option[QueueObject] = {
 
   def readFiles(): Unit = {
     println("reaching here at 1")
+    ReadToHashmap();
+
+    //System.exit(1);
     for (individualFile <- files) {
       val fileName = individualFile.getName
       println("reaching here at 27")
