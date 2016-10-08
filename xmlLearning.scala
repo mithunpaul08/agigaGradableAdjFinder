@@ -1,41 +1,41 @@
 package agiga
 import scala.xml.XML
-//test
+//just a testbed kind of file used to learn new syntax
 
-object Hi {
-	def main(args: Array[String]) = println("Hi!")
+object Hello {
+	def myTestFunction(): Unit = {
 
-	val testFile = XML.loadFile("./inputs/testXml.xml")
-	println("reaching here at 21")
-	//	val hello= (testFile \ "DOC" \ "sentences" \ "sentence" \ "tokens"  ).map(_.text)
-	val hello = (testFile \\ "POS").map(_.text)
-	//just sample edit
-	println("reaching here at 22")
-	//	val hello= (testFile \ "DOC" \ "sentences" \ "sentence" \ "tokens"  ).map(_.text)
-	agigParser.readFiles()
-	println("reaching here at 23")
-	var counter = 1;
-	var mystring = "this is an immutable string"
+		val testFile = XML.loadFile("./inputs/testXml.xml")
+		println("reaching here at 21")
+		//	val hello= (testFile \ "DOC" \ "sentences" \ "sentence" \ "tokens"  ).map(_.text)
+		val hello = (testFile \\ "POS").map(_.text)
+		//just sample edit
+		println("reaching here at 22")
+		//	val hello= (testFile \ "DOC" \ "sentences" \ "sentence" \ "tokens"  ).map(_.text)
+		//agigParser.readFiles()
+		println("reaching here at 23")
+		var counter = 1;
+		var mystring = "this is an immutable string"
 
-	println(mystring)
+		println(mystring)
 
-	var mynewstring = "this is an immutable string";
-	var mylen = mynewstring.length()
+		var mynewstring = "this is an immutable string";
+		var mylen = mynewstring.length()
 
-	println(mynewstring)
+		println(mynewstring)
 
-	println("length of the string is" + mylen)
-	println("value of counter is" + counter)
+		println("length of the string is" + mylen)
+		println("value of counter is" + counter)
 
-	if (mynewstring.startsWith("this")) {
-		println("given string starts with this")
-		counter = counter + 1
+		if (mynewstring.startsWith("this")) {
+			println("given string starts with this")
+			counter = counter + 1
+		}
+		println("value of counter is" + counter)
+		println("reaching here at 24")
+
+
+		println(hello)
 	}
-	println("value of counter is" + counter)
-	agigParser.printLine()
-	println("reaching here at 24")
 
-
-	println(hello)
 }
-
