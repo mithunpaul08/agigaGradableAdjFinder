@@ -17,25 +17,25 @@ import scala.collection.mutable.ArrayBuffer;
 
 
 object adverbParser {
-  //val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+  val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
   /* path in local machine */
   //val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
 
   //a relative path, instead of absolute path
-  val baseDirectoryPath = "inputs/"
+  //val baseDirectoryPath = "inputs/"
   //val baseDirectoryPath = "/work/mithunpaul/gzipsJustOne/"
 
   //val outputDirectoryPath = "/data1/nlp/"
   //output path outside the work area on jenny
-  // val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
-  val outputDirectoryPath = "outputs/"
+   val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
+  //val outputDirectoryPath = "outputs/"
   // the xml files are here
 
   /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine*/
-  //val files = new File(baseDirectoryPath).listFiles.par
-  //val nthreads = 10
+ // val files = new File(baseDirectoryPath).listFiles.par
+//  val nthreads = 10
   // limit parallelization
-  //files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+//  files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 
   /*uncomment this if running on a non-core machine. i.e dont parallelize it if its a single core machine*/
   val files = new File(baseDirectoryPath).listFiles
@@ -91,8 +91,7 @@ object adverbParser {
         println("the absolute path of the current document is: " + individualFile.getAbsolutePath)
         //for some reason agiga doesnt process the file i had hand made in my laptop. If your code has reached till here,
         //it means, its time to push it to jenny and test there. Somehow it works fine there.
-        //val doc = agiga.toDocument(individualFile.getAbsolutePath)
-        val doc = agiga.toDocument(fileName)
+        val doc = agiga.toDocument(individualFile.getAbsolutePath)
         println("finished finding adverbs in" + fileName)
         val adverbs = processDocumentForAdverbs(doc)
         println("reaching here at 4")
