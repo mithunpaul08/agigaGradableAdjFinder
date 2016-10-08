@@ -17,31 +17,32 @@ import scala.collection.mutable.ArrayBuffer;
 
 
 object adverbParser {
-  //val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+  val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
   /* path in local machine */
   //val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
 
   //a relative path, instead of absolute path
   //val baseDirectoryPath = "inputs/"
   //input folder in mithuns laptop
-  val baseDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/inputs/"
+//  val baseDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/inputs/"
+
 
   //val outputDirectoryPath = "/data1/nlp/"
   //output path outside the work area on jenny
-  // val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
-  val outputDirectoryPath = "outputs/"
+   val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
+  //val outputDirectoryPath = "outputs/"
   //output directory in mithus laptop
   //val outputDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/outputs/"
   // the xml files are here
 
   /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine*/
- // val files = new File(baseDirectoryPath).listFiles.par
-//  val nthreads = 10
+  val files = new File(baseDirectoryPath).listFiles.par
+ val nthreads = 10
   // limit parallelization
-//  files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+  files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 
   /*uncomment this if running on a non-core machine. i.e dont parallelize it if its a single core machine*/
-  val files = new File(baseDirectoryPath).listFiles
+  //val files = new File(baseDirectoryPath).listFiles
 
 //nullcheck in java
 /*

@@ -48,7 +48,7 @@ object agigParser {
 	//filesRaw.sortWith(sortByLength)
 
 	//Arrays.sort(files, SizeFileComparator.SIZE_COMPARATOR)
-	val nthreads = 10 
+	val nthreads = 6 
 	// limit parallelization
 	files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 	var adjCounter = 2
@@ -65,9 +65,9 @@ object agigParser {
 
 					adjCounter = adjCounter + 1;
 
-					println("value of adjCounter is" + adjCounter);
+				//	println("value of adjCounter is" + adjCounter);
 						lemma = s.lemmas.get(i)
-				println("found an adjective whose tag starts with JJ and its lemma  value is"+ lemma)
+			//	println("found an adjective whose tag starts with JJ and its lemma  value is"+ lemma)
 					}
 				
 }yield lemma
