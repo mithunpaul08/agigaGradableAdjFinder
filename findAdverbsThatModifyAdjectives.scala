@@ -17,18 +17,21 @@ import scala.collection.mutable.ArrayBuffer;
 
 
 object adverbParser {
-  val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+  //val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
   /* path in local machine */
   //val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
 
   //a relative path, instead of absolute path
   //val baseDirectoryPath = "inputs/"
-  //val baseDirectoryPath = "/work/mithunpaul/gzipsJustOne/"
+  //input folder in mithuns laptop
+  val baseDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/inputs/"
 
   //val outputDirectoryPath = "/data1/nlp/"
   //output path outside the work area on jenny
-   val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
-  //val outputDirectoryPath = "outputs/"
+  // val outputDirectoryPath= "/data1/nlp/users/mithun/alladverbs/"
+  val outputDirectoryPath = "outputs/"
+  //output directory in mithus laptop
+  //val outputDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/outputs/"
   // the xml files are here
 
   /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine*/
@@ -56,20 +59,27 @@ def myNullCheck : Option[QueueObject] = {
         if (tag == "RB") {
          // println("found an adverb")
           	         var advlemma = individualSentence.lemmas.get(wordCount)
-          //            //find the word next to this adver
-println("the value of this tag is:"+tag+"and the corresponding wordcount is:"+wordCount);
+                      //find the word next to this adver
 
-if(individualSentence.tags.get(wordCount+1))!=null)
-{
-                      var newTag= individualSentence.tags.get(wordCount+1)
-          	         if (newTag.startsWith("JJ")) {
-          	          var adjlemma = individualSentence.lemmas.get(wordCount+1);
-println("found an adjective modified by adverb. The adverb is:"+advlemma+"and the adjective is:"+adjlemma);
-                        //add this newly found lemma to the array of lemmas
-                        arrayOflemmas += adjlemma;
-          
- }                     }
-                    
+          //we were hitting adverbs that end a sentence. So this wordcount+1 is hitting null. Doing a null check
+          Option(individualSentence.tags.get(wordCount+1))match {
+            case Some(i) => {
+             // println("given adjective word exists")
+
+              {
+                var newTag = individualSentence.tags.get(wordCount + 1)
+                if (newTag.startsWith("JJ")) {
+                  var adjlemma = individualSentence.lemmas.get(wordCount + 1);
+                  println("found an adjective modified by adverb. The adverb is:" + advlemma + " and the adjective is:" + adjlemma);
+                  //add this newly found lemma to the array of lemmas
+                  arrayOflemmas += advlemma + " " +adjlemma;
+                 // arrayOflemmas += adjlemma;
+
+                }
+              }
+            }
+            case None => println("no the given adjective next to the adverb doesnt work.")
+          }
         }
 
       }
@@ -77,18 +87,12 @@ println("found an adjective modified by adverb. The adverb is:"+advlemma+"and th
     return arrayOflemmas;
   }
 
-
   def printLine(): Unit = {
     println("finished writing adverbs to file")
   }
 
   def readFiles(): Unit = {
     println("reaching here at 1")
-
-    //var getCurrentDirectory = new java.io.File(".").getCanonicalPath
-    //println("value of present directory is: " + getCurrentDirectory)
-    //println("value of files is: " + files.mkString("\n"))
-
     for (individualFile <- files) {
       val fileName = individualFile.getName
       println("reaching here at 27")
