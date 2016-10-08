@@ -47,17 +47,18 @@ object adverbParser {
     for (individualSentence <- doc.sentences) {
       for ((tag, wordCount) <- individualSentence.tags.get.zipWithIndex) {
         if (tag == "RB") {
-          println("found an adverb")
-          //          if (the adverb we found now is an element of the list of 86 adverbs -will store in a hashmap and lookup) {
+         // println("found an adverb")
+          	         var advlemma = individualSentence.lemmas.get(wordCount)
           //            //find the word next to this adverb
-          //            newTag= individualSentence.tags(wordCount+1)
-          //            if (newTag.startsWith("JJ")) {
-          //              lemma = individualSentence.lemmas.get(wordCount+1)
-          //              //add this newly found lemma to the array of lemmas
-          //              arrayOflemmas += lemma;
-          //
-          //            }
-          //          }
+                      var newTag= individualSentence.tags.get(wordCount+1)
+          	         if (newTag.startsWith("JJ")) {
+          	          var adjlemma = individualSentence.lemmas.get(wordCount+1);
+println("found an adjective modified by adverb. The adverb is"+advlemma+"and the adjective is"+adjlemma);
+                        //add this newly found lemma to the array of lemmas
+                        arrayOflemmas += adjlemma;
+          
+                      }
+                    
         }
 
       }
