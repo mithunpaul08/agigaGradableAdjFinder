@@ -40,6 +40,13 @@ object adverbParser {
   /*uncomment this if running on a non-core machine. i.e dont parallelize it if its a single core machine*/
   val files = new File(baseDirectoryPath).listFiles
 
+//nullcheck in java
+/*
+def myNullCheck : Option[QueueObject] = {
+  // Wrap the Java result in an Option (this will become a Some or a None)
+  Option(someJavaObject.getResponse)
+}
+*/
 
   def processDocumentForAdverbs(doc: Document): ArrayBuffer[String] = {
     var arrayOflemmas = ArrayBuffer[String]()
@@ -49,15 +56,19 @@ object adverbParser {
         if (tag == "RB") {
          // println("found an adverb")
           	         var advlemma = individualSentence.lemmas.get(wordCount)
-          //            //find the word next to this adverb
+          //            //find the word next to this adver
+println("the value of this tag is:"+tag+"and the corresponding wordcount is:"+wordCount);
+
+if(individualSentence.tags.get(wordCount+1))!=null)
+{
                       var newTag= individualSentence.tags.get(wordCount+1)
           	         if (newTag.startsWith("JJ")) {
           	          var adjlemma = individualSentence.lemmas.get(wordCount+1);
-println("found an adjective modified by adverb. The adverb is"+advlemma+"and the adjective is"+adjlemma);
+println("found an adjective modified by adverb. The adverb is:"+advlemma+"and the adjective is:"+adjlemma);
                         //add this newly found lemma to the array of lemmas
                         arrayOflemmas += adjlemma;
           
-                      }
+ }                     }
                     
         }
 

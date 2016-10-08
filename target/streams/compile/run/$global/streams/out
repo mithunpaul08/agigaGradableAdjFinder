@@ -1,5 +1,6 @@
 [0m[[0minfo[0m] [0mRunning agiga.Hi [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/net/kate/storage/work/mithunpaul/mithunsAgigaGradableAdjFinder/target/scala-2.11/classes[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar[0m
@@ -37,7 +38,6 @@
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.7.jar[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/com.ximpleware/vtd-xml/jars/vtd-xml-2.11.jar[0m
 [0m[[0mdebug[0m] [0m	/work/mithunpaul/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.10.jar[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[31merror[0m] [0m(run-main-0) java.lang.ExceptionInInitializerError[0m
 java.lang.ExceptionInInitializerError
 	at agiga.Hi.main(mainFile.scala)
@@ -54,8 +54,8 @@ java.lang.ExceptionInInitializerError
 	at sbt.Logger$$anon$4.apply(Logger.scala:84)
 	at sbt.TrapExit$App.run(TrapExit.scala:248)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.ArrayIndexOutOfBoundsException: 6
-	at agiga.adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2.apply(findAdverbsThatModifyAdjectives.scala:53)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 13
+	at agiga.adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2.apply(findAdverbsThatModifyAdjectives.scala:54)
 	at agiga.adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2.apply(findAdverbsThatModifyAdjectives.scala:48)
 	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
@@ -66,11 +66,11 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: 6
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
 	at agiga.adverbParser$.processDocumentForAdverbs(findAdverbsThatModifyAdjectives.scala:47)
-	at agiga.adverbParser$$anonfun$readFiles$1.apply(findAdverbsThatModifyAdjectives.scala:97)
-	at agiga.adverbParser$$anonfun$readFiles$1.apply(findAdverbsThatModifyAdjectives.scala:81)
+	at agiga.adverbParser$$anonfun$readFiles$1.apply(findAdverbsThatModifyAdjectives.scala:98)
+	at agiga.adverbParser$$anonfun$readFiles$1.apply(findAdverbsThatModifyAdjectives.scala:82)
 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
-	at agiga.adverbParser$.readFiles(findAdverbsThatModifyAdjectives.scala:81)
+	at agiga.adverbParser$.readFiles(findAdverbsThatModifyAdjectives.scala:82)
 	at agiga.Hi$.<init>(mainFile.scala:12)
 	at agiga.Hi$.<clinit>(mainFile.scala)
 	at agiga.Hi.main(mainFile.scala)
