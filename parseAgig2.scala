@@ -48,7 +48,7 @@ object agigParser {
 	//filesRaw.sortWith(sortByLength)
 
 	//Arrays.sort(files, SizeFileComparator.SIZE_COMPARATOR)
-	val nthreads = 8
+	val nthreads = 10 
 	// limit parallelization
 	files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 	var adjCounter = 2
