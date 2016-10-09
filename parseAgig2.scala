@@ -29,7 +29,7 @@ object agigParser {
 	//output path outside the work area on jenny
 	//val outputDirectoryPath = "./outputs/"
 	// the xml files are here
-	val files = new File(baseDirectoryPath).listFiles.par
+	//val files = new File(baseDirectoryPath).listFiles.par
 
 	/*dont parallelize it if its a single core machine*/
 	//val files = new File(baseDirectoryPath).listFiles
@@ -37,9 +37,9 @@ object agigParser {
 
 
 	//val files = new File(baseDirectoryPath).listFiles
-	//val filesRaw = new File(baseDirectoryPath).listFiles
+	var filesRaw = new File(baseDirectoryPath).listFiles
 	//val files = filesRaw.sorted(Ordering.by(File.size).reverse)
-	//val files = filesRaw.sorted
+	var files = filesRaw.sorted
 	//val files = filesRaw.sorted(Ordering.Any.reverse)
 	//val files = filesRaw.sorted(Ordering.by(File.getTotalSpace()))
 	//val files = filesRaw.sortBy(_.size)
@@ -48,9 +48,9 @@ object agigParser {
 	//filesRaw.sortWith(sortByLength)
 
 	//Arrays.sort(files, SizeFileComparator.SIZE_COMPARATOR)
-	val nthreads = 6 
+	val nthreads = 2 
 	// limit parallelization
-	files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+//	files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 	var adjCounter = 2
 	//var lemma="test"
 
@@ -63,7 +63,7 @@ object agigParser {
 				if (t.startsWith("JJ")==true)
 					{
 
-					adjCounter = adjCounter + 1;
+				//	adjCounter = adjCounter + 1;
 
 				//	println("value of adjCounter is" + adjCounter);
 						lemma = s.lemmas.get(i)
