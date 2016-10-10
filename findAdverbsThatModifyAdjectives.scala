@@ -26,6 +26,8 @@ object adverbParser {
 
   //a relative path, instead of absolute path
 //  val baseDirectoryPath = "inputs/"
+
+  //directory for strong shivades adverbs
   val resourcesDirectory = "resources/"
 
   //input folder in mithuns laptop
@@ -35,8 +37,7 @@ object adverbParser {
   //output path outside the work area on jenny
    val outputDirectoryPath= "/data1/nlp/users/mithun/adverbsInShivadePlusModifiedAdj/"
 
-  //output directory in mithus laptop
-
+  //output directory in mithuns laptop
   //val outputDirectoryPath = "outputs/"
 
   //val outputDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/outputs/"
@@ -83,45 +84,50 @@ var files = filesRaw.sorted
     var lemma = "teststring";
        for (individualSentence <- doc.sentences) {
       for ((tag, wordCount) <- individualSentence.tags.get.zipWithIndex) {
-        if (tag == "RB") {
-
-          var advlemma = individualSentence.lemmas.get(wordCount)
-
-          //proceed to find the beighboring adjective only if this new found adverb is part of shivade's list
-          println("found an adverb. its value is: "+advlemma);
-          //println( "Keys in colors : " + hashMapOfAdverbs.keys )
-          //println( "Values in colors : " + hashMapOfAdverbs.values )
-          if( hashMapOfAdverbs.contains( advlemma )) {
-           // println("Found adverb exists in shivade's list")
-
-
-            //find the word next to this adverb i.e wordcount+1
-
-
-            //we were hitting adverbs that end a sentence. So this wordcount+1 is hitting null. Doing a null check
-            Option(individualSentence.tags.get(wordCount + 1)) match {
-              case Some(i) => {
-                // println("given adjective word exists")
-
-                {
-                  var newTag = individualSentence.tags.get(wordCount + 1)
-                  if (newTag.startsWith("JJ")) {
-                    var adjlemma = individualSentence.lemmas.get(wordCount + 1);
-                    println("found an adjective modified by adverb. The adverb is:" + advlemma + " and the adjective is:" + adjlemma);
-                    //add this newly found lemma to the array of lemmas
-                    arrayOflemmas += advlemma + " " + adjlemma;
-                    // arrayOflemmas += adjlemma;
-
-                  }
-                }
-              }
-              case None => println(" There is no adjective next to the given adverb. Quitting/moving onto next line.")
-            }
-          } else
+        if (tag == "RB")
           {
-           // println("Found adverb does not exist in shivade's list ")
+            var advlemma = individualSentence.lemmas.get(wordCount)
+            var numberOfTokens = individualSentence.words.length;
+           // println("value of wordCount is :"+wordCount+" and the value of numberOf Tokens is:"+numberOfTokens)
+
+            //If total number of tokens == wordCount, it means the adverb is the last word of the sentence. quit/move onto next sentence.
+            //wordcount:16 totaltokens:17
+            if (wordCount < (numberOfTokens-1)) {
+              //proceed to find the beighboring adjective only if this new found adverb is part of shivade's list
+              println("found an adverb. its value is: " + advlemma);
+              //println( "Keys in colors : " + hashMapOfAdverbs.keys )
+              //println( "Values in colors : " + hashMapOfAdverbs.values )
+              if (hashMapOfAdverbs.contains(advlemma)) {
+                // println("Found adverb exists in shivade's list")
+
+
+                //find the word next to this adverb i.e wordcount+1
+
+
+                //we were hitting adverbs that end a sentence. So this wordcount+1 is hitting null. Doing a null check
+                Option(individualSentence.tags.get(wordCount + 1)) match {
+                  case Some(i) => {
+                    // println("given adjective word exists")
+
+                    {
+                      var newTag = individualSentence.tags.get(wordCount + 1)
+                      if (newTag.startsWith("JJ")) {
+                        var adjlemma = individualSentence.lemmas.get(wordCount + 1);
+                        println("found an adjective modified by adverb. The adverb is:" + advlemma + " and the adjective is:" + adjlemma);
+                        //add this newly found lemma to the array of lemmas
+                        arrayOflemmas += advlemma + " " + adjlemma;
+                        // arrayOflemmas += adjlemma;
+
+                      }
+                    }
+                  }
+                  case None => println(" There is no adjective next to the given adverb. Quitting/moving onto next line.")
+                }
+              } else {
+                // println("Found adverb does not exist in shivade's list ")
+              }
+            }
           }
-        }
       }
     }
     return arrayOflemmas;
