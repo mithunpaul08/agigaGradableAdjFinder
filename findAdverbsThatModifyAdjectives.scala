@@ -20,56 +20,52 @@ import scala.io.Source
 
 
 object adverbParser {
-  val baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+  val runOnServer = false;
+  var rand = scala.util.Random
+  //local machine doesnt have more than 2 input files
+  var randomFileNumber = rand.nextInt(2)
+  //var randomFileNumber = 1
+
+  //var baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
   /* path in local machine */
   //val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
 
   //a relative path, instead of absolute path
-//  val baseDirectoryPath = "inputs/"
+    var baseDirectoryPath = "inputs/"
 
   //directory for strong shivades adverbs
-  val resourcesDirectory = "resources/"
+  var resourcesDirectory = "resources/"
 
   //input folder in mithuns laptop
-//  val baseDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/inputs/"
+  //  val baseDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/inputs/"
 
 
   //output path outside the work area on jenny
-   val outputDirectoryPath= "/data1/nlp/users/mithun/adverbsInShivadePlusModifiedAdj/"
+  //var outputDirectoryPath = "/data1/nlp/users/mithun/adverbsInShivadePlusModifiedAdj/"
 
   //output directory in mithuns laptop
-  //val outputDirectoryPath = "outputs/"
+  var outputDirectoryPath = "outputs/"
 
   //val outputDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/outputs/"
   // the xml files are here
 
+  var files = new File(baseDirectoryPath).listFiles
+
   /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine
-//  val files = new File(baseDirectoryPath).listFiles.par
- // val nthreads = 10
+  //screw parallel threads..its giving me way too many issues. am running it pure single thread
+var files = new File(baseDirectoryPath).listFiles.par
+var nthreads = 10
   // limit parallelization
   files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
 */
-  /*uncomment this if running on a non-core machine. i.e dont parallelize it if its a single core machine*/
-  var filesRaw = new File(baseDirectoryPath).listFiles
-var files = filesRaw.sorted
-
   //add each line from shivade's adverb list, i.e an adverb to a hashtable with keys as adverbs
-  //var hashMapOfAdverbs:Map[String, Int] = Map()
- // val hashMapOfAdverbs = new HashMap[String,String]()
-  //{ override def default(key:Int) = "-" }
-  //var hashMapOfAdverbs = Map("red" -> "#FF0000", "azure" -> "#F0FFFF")
+
   var hashMapOfAdverbs = Map("AL" -> "Alabama")
+
   def ReadToHashmap(): Unit = {
-    //val filename = "no-such-file.scala"
-    //var A:Map[Char,Int] = Map()
-   // hashMapOfAdverbs += hashMapOfAdverbs + ("AK" -> "Alaska")
-    //hashMapOfAdverbs += ("AK" -> "Alaska");
-
-    //println(hashMapOfAdverbs)
-
-    val advInputFile = resourcesDirectory+ "adverbs_shivade.txt";
+    val advInputFile = resourcesDirectory + "adverbs_shivade.txt";
     try {
-      var counterForHashmap=0;
+      var counterForHashmap = 0;
       for (line <- Source.fromFile(advInputFile).getLines()) {
         hashMapOfAdverbs += (line -> "1");
       }
@@ -82,52 +78,51 @@ var files = filesRaw.sorted
   def processDocumentForAdverbs(doc: Document): ArrayBuffer[String] = {
     var arrayOflemmas = ArrayBuffer[String]()
     var lemma = "teststring";
-       for (individualSentence <- doc.sentences) {
+    for (individualSentence <- doc.sentences) {
       for ((tag, wordCount) <- individualSentence.tags.get.zipWithIndex) {
-        if (tag == "RB")
-          {
-            var advlemma = individualSentence.lemmas.get(wordCount)
-            var numberOfTokens = individualSentence.words.length;
-           // println("value of wordCount is :"+wordCount+" and the value of numberOf Tokens is:"+numberOfTokens)
+        if (tag == "RB") {
+          var advlemma = individualSentence.lemmas.get(wordCount)
+          var numberOfTokens = individualSentence.words.length;
+          // println("value of wordCount is :"+wordCount+" and the value of numberOf Tokens is:"+numberOfTokens)
 
-            //If total number of tokens == wordCount, it means the adverb is the last word of the sentence. quit/move onto next sentence.
-            //wordcount:16 totaltokens:17
-            if (wordCount < (numberOfTokens-1)) {
-              //proceed to find the beighboring adjective only if this new found adverb is part of shivade's list
-              println("found an adverb. its value is: " + advlemma);
-              //println( "Keys in colors : " + hashMapOfAdverbs.keys )
-              //println( "Values in colors : " + hashMapOfAdverbs.values )
-              if (hashMapOfAdverbs.contains(advlemma)) {
-                // println("Found adverb exists in shivade's list")
-
-
-                //find the word next to this adverb i.e wordcount+1
+          //If total number of tokens == wordCount, it means the adverb is the last word of the sentence. quit/move onto next sentence.
+          //wordcount:16 totaltokens:17
+          if (wordCount < (numberOfTokens - 1)) {
+            //proceed to find the beighboring adjective only if this new found adverb is part of shivade's list
+            println("found an adverb. its value is: " + advlemma);
+            //println( "Keys in colors : " + hashMapOfAdverbs.keys )
+            //println( "Values in colors : " + hashMapOfAdverbs.values )
+            if (hashMapOfAdverbs.contains(advlemma)) {
+              // println("Found adverb exists in shivade's list")
 
 
-                //we were hitting adverbs that end a sentence. So this wordcount+1 is hitting null. Doing a null check
-                Option(individualSentence.tags.get(wordCount + 1)) match {
-                  case Some(i) => {
-                    // println("given adjective word exists")
+              //find the word next to this adverb i.e wordcount+1
 
-                    {
-                      var newTag = individualSentence.tags.get(wordCount + 1)
-                      if (newTag.startsWith("JJ")) {
-                        var adjlemma = individualSentence.lemmas.get(wordCount + 1);
-                        println("found an adjective modified by adverb. The adverb is:" + advlemma + " and the adjective is:" + adjlemma);
-                        //add this newly found lemma to the array of lemmas
-                        arrayOflemmas += advlemma + " " + adjlemma;
-                        // arrayOflemmas += adjlemma;
 
-                      }
+              //we were hitting adverbs that end a sentence. So this wordcount+1 is hitting null. Doing a null check
+              Option(individualSentence.tags.get(wordCount + 1)) match {
+                case Some(i) => {
+                  // println("given adjective word exists")
+
+                  {
+                    var newTag = individualSentence.tags.get(wordCount + 1)
+                    if (newTag.startsWith("JJ")) {
+                      var adjlemma = individualSentence.lemmas.get(wordCount + 1);
+                      println("found an adjective modified by adverb. The adverb is:" + advlemma + " and the adjective is:" + adjlemma);
+                      //add this newly found lemma to the array of lemmas
+                      arrayOflemmas += advlemma + " " + adjlemma;
+                      // arrayOflemmas += adjlemma;
+
                     }
                   }
-                  case None => println(" There is no adjective next to the given adverb. Quitting/moving onto next line.")
                 }
-              } else {
-                // println("Found adverb does not exist in shivade's list ")
+                case None => println(" There is no adjective next to the given adverb. Quitting/moving onto next line.")
               }
+            } else {
+              // println("Found adverb does not exist in shivade's list ")
             }
           }
+        }
       }
     }
     return arrayOflemmas;
@@ -139,13 +134,55 @@ var files = filesRaw.sorted
 
   def readFiles(): Unit = {
     println("reaching here at 1")
+    if (runOnServer == true) {
+      baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
+
+      //output path outside the work area on jenny
+      outputDirectoryPath = "/data1/nlp/users/mithun/adverbsInShivadePlusModifiedAdj/"
+
+      rand = scala.util.Random
+      randomFileNumber = rand.nextInt(1000)
+
+      //files = new File(baseDirectoryPath).listFiles
+
+      /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine
+      files = new File(baseDirectoryPath).listFiles.par
+      nthreads = 10
+      // limit parallelization
+      files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+*/
+    }
+    else {
+      //a relative path, instead of absolute path
+      baseDirectoryPath = "inputs/"
+
+      //output directory in mithuns laptop
+      val outputDirectoryPath = "outputs/"
+
+      /*uncomment this if running on a non-core machine. i.e dont parallelize it if its a single core machine*/
+      // files = new File(baseDirectoryPath).listFiles
+      //why sort if you are picking at random anyway
+      //files = filesRaw.sorted
+
+    }
+
     ReadToHashmap();
 
+
+
     //System.exit(1);
-    for (individualFile <- files) {
+    //run a random number generator inside an always true for loop- to pick files randomly and parse- right now all my threads are fighting for the same file
+
+    //for(1){
+    //
+    while (true) {
+
+      println("value of random number is:" + randomFileNumber)
+      val individualFile = files(randomFileNumber)
+      //for (individualFile <- files) {
       val fileName = individualFile.getName
       println("reaching here at 27")
-      println("name of this file am parsing is:"+fileName)
+      println("name of this file am parsing is:" + fileName)
       val outFile = new File(outputDirectoryPath, "adv_adj_" + fileName + ".txt")
       // make sure the file hasn't been already processed
       // useful when restarting
@@ -169,8 +206,6 @@ var files = filesRaw.sorted
         bw.close()
       }
     }
-
-
   }
 }
 
