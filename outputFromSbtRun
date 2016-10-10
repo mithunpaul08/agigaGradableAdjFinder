@@ -2,55 +2,8 @@
 [0m[[0minfo[0m] [0mSet current project to hello (in build file:/net/kate/storage/work/mithunpaul/mithunsAgigaGradableAdjFinder/)[0m
 [0m[[0minfo[0m] [0mRunning agiga.Hi [0m
 reaching here at 1
-reaching here at 27
-name of this file am parsing is:afp_eng_199405.xml.gz
-reaching here at 2
-starting identification of adverbs in agigafile:afp_eng_199405.xml.gz
-reaching here at 3
-the absolute path of the current document is: /net/kate/storage/data/nlp/corpora/agiga/data/xml/afp_eng_199405.xml.gz
-finished finding adverbs inafp_eng_199405.xml.gz
-found an adverb. its value is: very
-found an adverb. its value is: too
-found an adjective modified by adverb. The adverb is:too and the adjective is:early
-found an adverb. its value is: very
-found an adjective modified by adverb. The adverb is:very and the adjective is:close
-found an adverb. its value is: cruelly
-found an adverb. its value is: widely
-found an adverb. its value is: sorely
-found an adverb. its value is: also
-found an adverb. its value is: not
-found an adverb. its value is: just
-found an adverb. its value is: not
-found an adverb. its value is: meanwhile
-found an adverb. its value is: also
-found an adverb. its value is: unfortunately
-found an adverb. its value is: generally
-found an adverb. its value is: not
-found an adverb. its value is: here
-found an adverb. its value is: clearly
-found an adverb. its value is: not
-found an adverb. its value is: altogether
-found an adverb. its value is: just
-found an adverb. its value is: mainly
-found an adverb. its value is: not
-found an adverb. its value is: also
-found an adverb. its value is: firmly
-found an adverb. its value is: not
-found an adverb. its value is: so
-found an adverb. its value is: early
-found an adverb. its value is: not
-found an adverb. its value is: still
-found an adverb. its value is: as
-found an adverb. its value is: well
-found an adverb. its value is: largely
-found an adverb. its value is: overnight
-found an adverb. its value is: merely
-found an adverb. its value is: meanwhile
-found an adverb. its value is: just
-found an adverb. its value is: now
-found an adverb. its value is: scrupulously
-found an adverb. its value is: also
-found an adverb. its value is: here
+value of input folder is:/net/kate/storage/data/nlp/corpora/agiga/data/xml/and the value of output directory is:/data1/nlp/users/mithun/adverbsInShivadePlusModifiedAdj/
+value of random number is:995
 [0m[[31merror[0m] [0m(run-main-0) java.lang.ExceptionInInitializerError[0m
 java.lang.ExceptionInInitializerError
 	at agiga.Hi.main(mainFile.scala)
@@ -58,23 +11,8 @@ java.lang.ExceptionInInitializerError
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-Caused by: java.lang.ArrayIndexOutOfBoundsException: 17
-	at agiga.adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2.apply(findAdverbsThatModifyAdjectives.scala:102)
-	at agiga.adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2.apply(findAdverbsThatModifyAdjectives.scala:85)
-	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
-	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
-	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
-	at agiga.adverbParser$$anonfun$processDocumentForAdverbs$1.apply(findAdverbsThatModifyAdjectives.scala:85)
-	at agiga.adverbParser$$anonfun$processDocumentForAdverbs$1.apply(findAdverbsThatModifyAdjectives.scala:84)
-	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
-	at agiga.adverbParser$.processDocumentForAdverbs(findAdverbsThatModifyAdjectives.scala:84)
-	at agiga.adverbParser$$anonfun$readFiles$1.apply(findAdverbsThatModifyAdjectives.scala:155)
-	at agiga.adverbParser$$anonfun$readFiles$1.apply(findAdverbsThatModifyAdjectives.scala:139)
-	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
-	at agiga.adverbParser$.readFiles(findAdverbsThatModifyAdjectives.scala:139)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 995
+	at agiga.adverbParser$.readFiles(findAdverbsThatModifyAdjectives.scala:183)
 	at agiga.Hi$.<init>(mainFile.scala:12)
 	at agiga.Hi$.<clinit>(mainFile.scala)
 	at agiga.Hi.main(mainFile.scala)
@@ -87,4 +25,4 @@ java.lang.RuntimeException: Nonzero exit code: 1
 	at scala.sys.package$.error(package.scala:27)
 [0m[[31mtrace[0m] [0mStack trace suppressed: run [34mlast compile:run[0m for the full output.[0m
 [0m[[31merror[0m] [0m(compile:[31mrun[0m) Nonzero exit code: 1[0m
-[0m[[31merror[0m] [0mTotal time: 42 s, completed Oct 9, 2016 3:22:46 PM[0m
+[0m[[31merror[0m] [0mTotal time: 1 s, completed Oct 10, 2016 1:59:46 PM[0m

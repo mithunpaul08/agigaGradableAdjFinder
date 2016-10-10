@@ -20,10 +20,10 @@ import scala.io.Source
 
 
 object adverbParser {
-  val runOnServer = false;
-  var rand = scala.util.Random
+  val runOnServer = true;
+  //var r/and = scala.util.Random
   //local machine doesnt have more than 2 input files
-  var randomFileNumber = rand.nextInt(2)
+  //var randomFileNumber = rand.nextInt(2)
   //var randomFileNumber = 1
 
   //var baseDirectoryPath = "/net/kate/storage/data/nlp/corpora/agiga/data/xml/"
@@ -31,7 +31,7 @@ object adverbParser {
   //val baseDirectoryPath = "/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling/inputs/"
 
   //a relative path, instead of absolute path
-    var baseDirectoryPath = "inputs/"
+    var baseDirectoryPath = ""
 
   //directory for strong shivades adverbs
   var resourcesDirectory = "resources/"
@@ -49,15 +49,15 @@ object adverbParser {
   //val outputDirectoryPath = "/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/outputs/"
   // the xml files are here
 
-  var files = new File(baseDirectoryPath).listFiles
+//  var files = new File(baseDirectoryPath).listFiles
 
-  /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine
+  /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine*/
   //screw parallel threads..its giving me way too many issues. am running it pure single thread
-var files = new File(baseDirectoryPath).listFiles.par
-var nthreads = 10
+//var files = new File(baseDirectoryPath).listFiles.par
+//var nthreads = 10
   // limit parallelization
-  files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
-*/
+  //files.tasksupport = new ForkJoinTaskSupport(new scala.concurrent.forkjoin.ForkJoinPool(nthreads))
+
   //add each line from shivade's adverb list, i.e an adverb to a hashtable with keys as adverbs
 
   var hashMapOfAdverbs = Map("AL" -> "Alabama")
@@ -140,10 +140,7 @@ var nthreads = 10
       //output path outside the work area on jenny
       outputDirectoryPath = "/data1/nlp/users/mithun/adverbsInShivadePlusModifiedAdj/"
 
-      rand = scala.util.Random
-      randomFileNumber = rand.nextInt(1000)
 
-      //files = new File(baseDirectoryPath).listFiles
 
       /*uncomment this if running on a core machine. i.e dont parallelize it if its a single core machine
       files = new File(baseDirectoryPath).listFiles.par
@@ -166,6 +163,9 @@ var nthreads = 10
 
     }
 
+      var files = new File(baseDirectoryPath).listFiles
+     var rand = scala.util.Random
+
     ReadToHashmap();
 
 
@@ -177,9 +177,12 @@ var nthreads = 10
     //
     while (true) {
 
+     var  randomFileNumber = rand.nextInt(1009)
+    println("value of input folder is:"+baseDirectoryPath+"and the value of output directory is:"+outputDirectoryPath)
+    
       println("value of random number is:" + randomFileNumber)
-      val individualFile = files(randomFileNumber)
-      //for (individualFile <- files) {
+     val individualFile = files(randomFileNumber)
+     // for (individualFile <- files) {
       val fileName = individualFile.getName
       println("reaching here at 27")
       println("name of this file am parsing is:" + fileName)
