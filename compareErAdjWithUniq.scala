@@ -15,8 +15,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 import scala.collection.mutable.ArrayBuffer;
 import scala.io.Source
-//import scala.collection.mutable.Map;
-//import collection.mutable.HashMap
 
 
 object goodAdjectiveFinder {
@@ -26,13 +24,17 @@ object goodAdjectiveFinder {
 3. if not, this is not an adjective. For example, "kilometer" or "silver" are not valid adjectives, because their base form, "kilomet" and "silv", will not appear in text.
 */
 
-  var resourcesDirectory = "resources/"
+ //var resourcesDirectory = "/work/mithunpaul/newOutputs/allAdjectives/"
+ var resourcesDirectory = "/work/mithunpaul/testbed/"
+ // var resourcesDirectory = "resources/"
 
   var outputDirectoryPath = "outputs/"
 
-var completeAgigaFile="CompleteAgigaDump.txt";
+//	var completeAgigaFile="CompleteAgigaDump.txt";
+var completeAgigaFile="allAdjectivesFromAgigaButUniq.txt";
   var erRemovedFiles="uniqAdjectivesInAgiga_removedErEst.txt";
-  var hashMapOfUniqAdjectives = Map("Long" -> "1")
+
+  var hashMapOfAllUniqAdjectivesInAgiga = Map("Long" -> "1")
 
 
 
@@ -44,7 +46,7 @@ var completeAgigaFile="CompleteAgigaDump.txt";
       var counterForHashmap = 0;
       for (line <- Source.fromFile(advInputFile).getLines()) {
       //  println("reaching here at 184")
-        hashMapOfUniqAdjectives += (line -> "1");
+	 hashMapOfAllUniqAdjectivesInAgiga += (line -> "1");
       }
     } catch {
       case ex: Exception => println("Bummer, an exception happened.")
@@ -125,7 +127,6 @@ var completeAgigaFile="CompleteAgigaDump.txt";
 
     //read all lines of uniq adjectives to a hashmap
     ReadAllUniqAdjectivesToHashmap()
-
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
     val erRemovedInputFile = resourcesDirectory + erRemovedFiles;
     println("reaching here at 3")
@@ -136,7 +137,7 @@ var completeAgigaFile="CompleteAgigaDump.txt";
         adjToCheck = line;
         //println("reaching here at 8367. VALUE OF adjective is"+adjToCheck)
 
-        if (hashMapOfUniqAdjectives.contains(line)) {
+        if  (hashMapOfAllUniqAdjectivesInAgiga.contains(line)) {
           println("found that the given adjective:" + adjToCheck + " has its root form in the file. ")
         }
       }

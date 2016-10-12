@@ -4,7 +4,7 @@
 		module="mithunsagigagradableadjfinder-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20161010130413"
+		publication="20161012132456"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
