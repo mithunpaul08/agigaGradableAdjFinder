@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="518aba88-842a-4a0f-8f06-0fc9bacb4b88" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pizza.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$8.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testXml.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pizza.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/temperature.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hw.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$4.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$7.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testXml.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hw.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$$anonfun$root$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$860175f45335374f47e2$.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlLearning.scala" afterPath="$PROJECT_DIR$/xmlLearning.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parseAgig2.scala" afterPath="$PROJECT_DIR$/parseAgig2.scala" />
     </list>
@@ -46,26 +46,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="parseAgig2.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parseAgig2.scala">
+      <file leaf-file-name="compareErAdjWithUniq.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/compareErAdjWithUniq.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="157" selection-end-column="24" />
-              <folding>
-                <element signature="e#15#38#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="findAdverbsThatModifyAdjectives.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/findAdverbsThatModifyAdjectives.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-              <folding>
-                <element signature="e#15#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="136" column="10" selection-start-line="136" selection-start-column="10" selection-end-line="136" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,8 +59,8 @@
       <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainFile.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="210">
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -95,16 +81,16 @@
       <list>
         <option value="$PROJECT_DIR$/parseAgig2.scala" />
         <option value="$PROJECT_DIR$/xmlLearning.scala" />
-        <option value="$PROJECT_DIR$/mainFile.scala" />
         <option value="$PROJECT_DIR$/findAdverbsThatModifyAdjectives.scala" />
+        <option value="$PROJECT_DIR$/mainFile.scala" />
+        <option value="$PROJECT_DIR$/compareErAdjWithUniq.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="24" />
-    <option name="width" value="1682" />
-    <option name="height" value="1003" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -446,7 +432,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1682" height="1003" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -488,7 +474,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/compareErAdjWithUniq.scala</url>
+          <line>54</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -496,6 +491,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/parseAgig2.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="157" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findAdverbsThatModifyAdjectives.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainFile.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/findAdverbsThatModifyAdjectives.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -518,9 +539,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -544,9 +563,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -559,11 +576,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainFile.scala">
+    <entry file="file://$PROJECT_DIR$/findAdverbsThatModifyAdjectives.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#15#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -571,19 +590,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="157" selection-end-column="24" />
-          <folding>
-            <element signature="e#15#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/findAdverbsThatModifyAdjectives.scala">
+    <entry file="file://$PROJECT_DIR$/mainFile.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding>
-            <element signature="e#15#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compareErAdjWithUniq.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="136" column="10" selection-start-line="136" selection-start-column="10" selection-end-line="136" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

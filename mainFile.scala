@@ -9,6 +9,10 @@ object Hi {
 //  agigParser.readFiles();
 
   //call the adverb parser
-  adverbParser.readFiles();
+  //adverbParser.readFiles();
+
+  //call the adjective -er form checker
+  goodAdjectiveFinder.readErRemovedFile();
+
 }
 
