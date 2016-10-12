@@ -30,7 +30,7 @@ object goodAdjectiveFinder {
 
   var outputDirectoryPath = "outputs/"
 
-  var completeAgigaFile = "CompleteAgigaDump.txt";
+  var completeAgigaFile = "allAdjCombined.txt";
   //var completeAgigaFile = "allAdjectivesFromAgigaButUniq.txt";
   //var erRemovedFiles="uniqAdjectivesInAgiga_removedErEst.txt";
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
