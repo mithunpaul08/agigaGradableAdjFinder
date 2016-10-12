@@ -1,0 +1,47 @@
+est -> 
+bolder -> bold
+ -> 
+fuller -> full
+fewer -> few
+lowest -> low
+lowerer -> low
+lowerest -> low
+poorer -> poor
+boldest -> bold
+tallest -> tall
+quickest -> quick
+stiffest -> stiff
+meaner -> mean
+meanest -> mean
+taller -> tall
+poorest -> poor
+lower -> low
+broader -> broad
+busier -> busi
+fewest -> few
+deeper -> deep
+oldest -> old
+swiftest -> swift
+quicker -> quick
+stricter -> strict
+older -> old
+broadest -> broad
+erest -> 
+slower -> slow
+greatest -> great
+grander -> grand
+strictest -> strict
+slacker -> slack
+longest -> long
+fullest -> full
+longer -> long
+farer -> far
+swifter -> swift
+greater -> great
+deepest -> deep
+stiffer -> stiff
+slowest -> slow
+busiest -> busi
+er -> 
+grandest -> grand
+slackest -> slack
