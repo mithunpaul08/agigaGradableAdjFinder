@@ -1,3 +1,4 @@
+long
 busi
 bold
 far
@@ -18,4 +19,5 @@ tall
 slack
 few
 slow
+low
 
