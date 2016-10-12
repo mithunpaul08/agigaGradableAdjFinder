@@ -4,7 +4,7 @@
 		module="agigaparser-without-world-modeling-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20161010122032"
+		publication="20161012135257"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
