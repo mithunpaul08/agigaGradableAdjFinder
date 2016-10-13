@@ -30,8 +30,11 @@ object goodAdjectiveFinder {
 
   var outputDirectoryPath = "outputs/"
 
-  var completeAgigaFile = "allAdjCombined.txt";
-  //var completeAgigaFile = "allAdjectivesFromAgigaButUniq.txt";
+ // var completeAgigaFile = "allAdjCombined.txt";
+ // var completeAgigaFile = "allAdjectivesFromAgigaButUniq.txt";
+  
+
+var completeAgigaFile = "sortedUniqAllAdjFromAgiga";
   //var erRemovedFiles="uniqAdjectivesInAgiga_removedErEst.txt";
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
 
@@ -109,7 +112,8 @@ object goodAdjectiveFinder {
         //if the er and est removed root form exists in the hashtable store it into another hashtable in the form "deepest->deep
 
         if (hashMapOfAllUniqAdjectivesInAgiga.contains(erEstRemovedForm)) {
-          // println("found that the given adjective:" + adjToCheck + " has its root form in the file. adding to hash map")
+           println("found that the given adjective:" + adjToCheck + " has its root form in the file. adding to hash map")
+//System.exit(1);
           hashMapOfInflAdjToRootForm += (adjToCheck -> erEstRemovedForm);
         }
 
