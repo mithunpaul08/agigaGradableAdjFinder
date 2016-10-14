@@ -1,0 +1,651 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.8
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+23 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/classifierForAgro$.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/classifierForAgro.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder$$anonfun$ReadAllUniqAdjectivesToHashmap$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder$$anonfun$readErRemovedFile$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder$.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$ReadToHashmap$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$processDocumentForAdverbs$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/mainParser$.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/mainParser.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$processDocument$1$$anonfun$apply$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$processDocument$1$$anonfun$apply$2.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$processDocument$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$readFiles$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/Hello$$anonfun$1.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/Hello$.class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/Hello.class
+binary dependencies:
+20 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> /home/mithunpaul/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> /home/mithunpaul/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/.ivy2/cache/com.github.myedibleenso/processors-agiga_2.11/jars/processors-agiga_2.11-0.0.1.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.4.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/.ivy2/cache/com.github.myedibleenso/processors-agiga_2.11/jars/processors-agiga_2.11-0.0.1.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.4.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> /home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+1 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+23 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> agiga.classifierForAgro
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> agiga.classifierForAgro$
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> agiga.goodAdjectiveFinder
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> agiga.goodAdjectiveFinder$
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> agiga.goodAdjectiveFinder$$anonfun$ReadAllUniqAdjectivesToHashmap$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> agiga.goodAdjectiveFinder$$anonfun$readErRemovedFile$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> agiga.adverbParser
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> agiga.adverbParser$
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> agiga.adverbParser$$anonfun$ReadToHashmap$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> agiga.adverbParser$$anonfun$processDocumentForAdverbs$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> agiga.adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> agiga.adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> agiga.mainParser
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> agiga.mainParser$
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agiga.agigParser
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agiga.agigParser$
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agiga.agigParser$$anonfun$processDocument$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agiga.agigParser$$anonfun$processDocument$1$$anonfun$apply$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agiga.agigParser$$anonfun$processDocument$1$$anonfun$apply$2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agiga.agigParser$$anonfun$readFiles$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> agiga.Hello
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> agiga.Hello$
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> agiga.Hello$$anonfun$1
+used names:
+460 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> +
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> +=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> <init>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> <repeated>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Any
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> AnyRef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Array
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> ArrayBuffer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Arrays
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> BVFDatum
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> BufferedWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> ClassTag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Comparator
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Counter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Dataset
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Datasets
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Datum
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Document
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Double
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> F
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> File
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> FileWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> ForkJoinTaskSupport
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> IOException
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Int
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Iterable
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> L
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Nothing
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Object
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Option
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> PerceptronClassifier
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Predef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> RVFDataset
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> RVFDatum
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> ScaleRange
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Source
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> String
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> T
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Tuple2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Unit
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> WrappedArray
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> Writer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> _$7
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> agiga
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> apply
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> classOf
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> classifierForAgro
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> clulab
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> collection
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> counter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> dataset
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> datum
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> datum3
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> io
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> java
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> label
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> learning
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> materializeClassTag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> mutable
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> org
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> package
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> parallel
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> perceptron
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> println
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> processors
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> scala
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> setCount
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> struct
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> svmScaleDataset
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> train
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> util
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> wrapRefArray
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> +
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> ->
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> <init>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> <repeated>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> ==
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> A
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Any
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> AnyRef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> ArrayBuffer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Arrays
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> ArrowAssoc
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> B
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> B1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Boolean
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> BufferedSource
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> BufferedWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Codec
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Comparator
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Document
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Exception
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> File
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> FileWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> ForkJoinTaskSupport
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Function1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> IOException
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Iterator
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Map
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> MatchError
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> None
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Nothing
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Object
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Option
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Predef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> ReadAllUniqAdjectivesToHashmap
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Some
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Source
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> String
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> T0
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Tuple2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> U
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Unit
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> Writer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> adjToCheck
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> advInputFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> agiga
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> apply
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> asInstanceOf
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> bw
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> close
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> clulab
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> collection
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> completeAgigaFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> contains
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> erEstRemovedForm
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> erRemovedFiles
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> erRemovedInputFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> fallbackSystemCodec
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> foreach
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> fromFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> getLines
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> goodAdjectiveFinder
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> hashMapOfAllUniqAdjectivesInAgiga
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> hashMapOfAllUniqAdjectivesInAgiga_=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> hashMapOfInflAdjToRootForm
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> hashMapOfInflAdjToRootForm_=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> io
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> isInstanceOf
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> java
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> line
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> mkString
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> mutable
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> org
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> outFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> outputDirectoryPath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> outputFileName
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> package
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> parallel
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> println
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> processors
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> replaceAll
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> resourcesDirectory
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> s
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> scala
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> stringToWrite
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> util
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> write
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> writeToFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> x
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> +
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> +=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> -
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ->
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> <
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> <init>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> <repeated>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ==
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> A
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> A1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Any
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> AnyRef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Array
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ArrayBuffer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ArrayOps
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Arrays
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ArrowAssoc
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> B
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> B1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Boolean
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> BufferedSource
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> BufferedWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> CanBuildFrom
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ClassTag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Codec
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Comparator
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Document
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Exception
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> File
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> FileWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> FilterMonadic
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ForkJoinTaskSupport
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Function1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> IOException
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Int
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Iterator
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Map
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> MatchError
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> None
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Nothing
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Object
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Option
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Predef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Random
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ReadToHashmap
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Sentence
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Source
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> String
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> T
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> That
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Tuple2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> U
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Unit
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> Writer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> _$4
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> _$7
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> _1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> _2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> adjlemma
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> advInputFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> adverbParser
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> adverbs
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> advlemma
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> agiga
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> apply
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> arrayOflemmas
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> baseDirectoryPath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> baseDirectoryPath_=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> bw
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> canBuildFrom
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> close
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> clulab
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> collection
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> contains
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> doc
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> exists
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> fallbackSystemCodec
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> fileName
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> files
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> foreach
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> fromFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> get
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> getAbsolutePath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> getLines
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> getName
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> hashMapOfAdverbs
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> hashMapOfAdverbs_=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> individualFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> individualSentence
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> io
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> isInstanceOf
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> java
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> lemmas
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> length
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> line
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> listFiles
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> materializeClassTag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> mkString
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> mutable
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> ne
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> newTag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> nextInt
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> numberOfTokens
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> org
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> outFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> outputDirectoryPath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> outputDirectoryPath_=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> package
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> parallel
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> println
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> processDocumentForAdverbs
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> processors
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> rand
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> randomFileNumber
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> refArrayOps
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> resourcesDirectory
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> runOnServer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> scala
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> sentences
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> startsWith
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> tag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> tags
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> toDocument
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> unary_!
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> unchecked
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> util
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> while$1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> withFilter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> wordCount
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> words
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> write
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> zipWithIndex
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> <init>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> Any
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> AnyRef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> Array
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> Object
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> Predef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> String
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> Unit
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> XML
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> agiga
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> classifierForAgro
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> initializeAndClassify
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> mainParser
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> println
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> scala
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> xml
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> $conforms
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> +
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> +=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> <:<
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> <init>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> <repeated>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> A
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> A1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Any
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> AnyRef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Array
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> ArrayBuffer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> ArrayOps
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Arrays
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> B
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Boolean
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> BufferedWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> CanBuildFrom
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Class
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> ClassTag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Comparable
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Comparator
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Document
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> File
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> FileWriter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> FilterMonadic
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> ForkJoinTaskSupport
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Function1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> IOException
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Int
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> MatchError
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Nothing
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Object
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Option
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Ordering
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Predef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Sentence
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> String
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> T
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> That
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Tuple2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> U
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Unit
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> Writer
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> _$4
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> _$7
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> _1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> _2
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> adjCounter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> adjCounter_=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> adjectives
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agigParser
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> agiga
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> apply
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> arrayOflemmas
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> baseDirectoryPath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> bw
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> canBuildFrom
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> close
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> clulab
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> collection
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> doc
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> exists
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> fileName
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> files
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> filesRaw
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> foreach
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> get
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> getAbsolutePath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> getCanonicalPath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> getCurrentDirectory
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> getName
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> i
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> individualFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> io
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> java
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> lemma
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> lemmas
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> listFiles
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> materializeClassTag
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> math
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> mkString
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> mutable
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> ne
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> nthreads
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> ordered
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> org
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> outFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> outputDirectoryPath
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> package
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> parallel
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> println
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> processDocument
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> processors
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> refArrayOps
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> s
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> scala
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> sentences
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> sorted
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> startsWith
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> t
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> tags
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> toDocument
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> unary_!
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> unchecked
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> util
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> withFilter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> write
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> zipWithIndex
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> +
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> <init>
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> A
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Any
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> AnyRef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> B
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Boolean
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> CanBuildFrom
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Coll
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Elem
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Function1
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Hello
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Int
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Node
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> NodeSeq
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Nothing
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Object
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Predef
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Seq
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> String
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> That
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> Unit
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> XML
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> \\
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> agiga
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> canBuildFrom
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> counter
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> hello
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> immutable
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> length
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> loadFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> map
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> mylen
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> mynewstring
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> mystring
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> println
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> scala
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> startsWith
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> testFile
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> text
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> xml
+product stamps:
+23 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/Hello$$anonfun$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/Hello$.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/Hello.class -> lastModified(1476404795000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$ReadToHashmap$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$processDocumentForAdverbs$1$$anonfun$apply$2.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$$anonfun$processDocumentForAdverbs$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser$.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/adverbParser.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$processDocument$1$$anonfun$apply$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$processDocument$1$$anonfun$apply$2.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$processDocument$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$$anonfun$readFiles$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser$.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/agigParser.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/classifierForAgro$.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/classifierForAgro.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder$$anonfun$ReadAllUniqAdjectivesToHashmap$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder$$anonfun$readErRemovedFile$1.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder$.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/goodAdjectiveFinder.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/mainParser$.class -> lastModified(1476404796000)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/target/scala-2.11/classes/agiga/mainParser.class -> lastModified(1476404796000)
+source stamps:
+6 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> hash(f2a2ee2297afea78ee8dc22546f35de6d67dc300)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> hash(2960cb62c22d6ae1ebf8b43743b7bca14b9a7ca1)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> hash(5e4b8c010e6a04812f22f398f16ff2a7d7fdc3f8)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> hash(676e5d543c53c819df0bc33fee932e2aa104d45f)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> hash(915e3cad34a512cd87a5689150990ac2607299c7)
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> hash(52905188f223b7a6d38be5501daffbabccd42b33)
+binary stamps:
+5 items
+/home/mithunpaul/.ivy2/cache/com.github.myedibleenso/processors-agiga_2.11/jars/processors-agiga_2.11-0.0.1.jar -> lastModified(1475122357000)
+/home/mithunpaul/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar -> lastModified(1474306707000)
+/home/mithunpaul/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.4.jar -> lastModified(1430401983000)
+/home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> lastModified(1457105192000)
+/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar -> lastModified(1473723281000)
+class names:
+5 items
+/home/mithunpaul/.ivy2/cache/com.github.myedibleenso/processors-agiga_2.11/jars/processors-agiga_2.11-0.0.1.jar -> org.clulab.agiga.package$
+/home/mithunpaul/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar -> org.clulab.processors.Document
+/home/mithunpaul/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.4.jar -> scala.xml.XML
+/home/mithunpaul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> scala.collection.generic.GenericCompanion
+/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar -> java.lang.Object
+internal apis:
+6 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwGZPtpwAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwSzXQjnQABm5vdGlmeXNxAH4ADPuI8yx0AAR3YWl0c3EAfgAMAcLDU3QAFWluaXRpYWxpemVBbmRDbGFzc2lmeXNxAH4ADO0XTiR0AA0kYXNJbnN0YW5jZU9mc3EAfgAMcUWl43QABmVxdWFsc3NxAH4ADO2ZbEF0AAxhc0luc3RhbmNlT2ZzcQB+AAyBce6HdAAMc3luY2hyb25pemVkc3EAfgAMIqzZj3QADSRpc0luc3RhbmNlT2ZzcQB+AAyC+buadAAJbm90aWZ5QWxsc3EAfgAM/vrZ1nQADGlzSW5zdGFuY2VPZnNxAH4ADNJJ1S50AAI9PXNxAH4ADI4UYDF0AAVjbG9uZXNxAH4ADDR2rCR0AAh0b1N0cmluZ3NxAH4ADLxUKS90AAIhPXNxAH4ADAWZNoJ0AAhnZXRDbGFzc3NxAH4ADK+/Hxt0AAJuZXNxAH4ADDW1+px0AAJlcXNxAH4ADAWPKNt0AAIjI3NxAH4ADLxS6ER0AAhmaW5hbGl6ZXNxAH4ADBa40150AAhoYXNoQ29kZXNxAH4ADOFoBDV0ABFjbGFzc2lmaWVyRm9yQWdyb3NyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABdhZ2lnYS5jbGFzc2lmaWVyRm9yQWdyb3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AWXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBBTAAJaW5oZXJpdGVkcQB+AEFMAAdwYXJlbnRzcQB+AEF4cQB+AF5zcQB+AFl1cQB+ADwAAAAAc3EAfgBZdXEAfgA8AAAAAHNxAH4AWXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AXXQABk9iamVjdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAA3NyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAEamF2YXNxAH4AdnQABGxhbmdzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Ad3NxAH4AanQAA0FueXNxAH4AbnNxAH4AcXVxAH4AdAAAAAJzcQB+AHZ0AAVzY2FsYXEAfgB9dXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAFYWdpZ2FzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVfAlUIJdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAbi9ob21lL21pdGh1bnBhdWwvRGVza3RvcC9mYWxsMjAxNk5MUFJlc2VhcmNoL2FnaWdhUGFyc2VyLXdpdGhvdXQtd29ybGQtbW9kZWxpbmdfdjEuMi90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU8qLuIpev6njujcIlRvNd5tZ9wwA=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwp+X1pQAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAgc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwosjWP3QABm5vdGlmeXNxAH4ADBXy1Z50AAt0ZXN0Rm9yTnVsbHNxAH4ADGYWujd0ABNnb29kQWRqZWN0aXZlRmluZGVyc3EAfgAMq1Hyi3QABHdhaXRzcQB+AAxG2WwOdAANJGFzSW5zdGFuY2VPZnNxAH4ADEmxjjl0ABpoYXNoTWFwT2ZJbmZsQWRqVG9Sb290Rm9ybXNxAH4ADPEnI/h0AAZlcXVhbHNzcQB+AAyVlMp4dAAOb3V0cHV0RmlsZU5hbWVzcQB+AAyD650edAAMYXNJbnN0YW5jZU9mc3EAfgAMxmpx1HQADHN5bmNocm9uaXplZHNxAH4ADBJJ1FN0AA0kaXNJbnN0YW5jZU9mc3EAfgAMTYFm7XQADmVyUmVtb3ZlZEZpbGVzc3EAfgAMqlX4TnQAE291dHB1dERpcmVjdG9yeVBhdGhzcQB+AAyi62GZdAAJcHJpbnRMaW5lc3EAfgAMVoKKW3QAEWNvbXBsZXRlQWdpZ2FGaWxlc3EAfgAMWw1eXnQAIWhhc2hNYXBPZkFsbFVuaXFBZGplY3RpdmVzSW5BZ2lnYXNxAH4ADMUypzx0AAlub3RpZnlBbGxzcQB+AAwpMvwIdAAMaXNJbnN0YW5jZU9mc3EAfgAMezl8H3QAEXJlYWRFclJlbW92ZWRGaWxlc3EAfgAMQShudnQAEnJlc291cmNlc0RpcmVjdG9yeXNxAH4ADHIYtch0AAI9PXNxAH4ADHVr46Z0AAVjbG9uZXNxAH4ADKmuaeB0AAh0b1N0cmluZ3NxAH4ADCBO8kJ0AB5SZWFkQWxsVW5pcUFkamVjdGl2ZXNUb0hhc2htYXBzcQB+AAwxAZLpdAACIT1zcQB+AAzNEUSwdAAIZ2V0Q2xhc3NzcQB+AAxzTWNbdAALd3JpdGVUb0ZpbGVzcQB+AAxrZ5LwdAACbmVzcQB+AAx/qE8KdAACZXFzcQB+AAxlBTAHdAACIyNzcQB+AAyDMf/ldAAIZmluYWxpemVzcQB+AAwCgDhKdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBXeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnOX52HcEyZ7swIAAUIABWZsYWdzeHAAdAAZYWdpZ2EuZ29vZEFkamVjdGl2ZUZpbmRlcnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4Ab3NyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBXTAAJaW5oZXJpdGVkcQB+AFdMAAdwYXJlbnRzcQB+AFd4cQB+AHRzcQB+AG91cQB+AFIAAAAAc3EAfgBvdXEAfgBSAAAAAHNxAH4Ab3VyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4Ac3QABk9iamVjdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4Ac3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAA3NyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAEamF2YXNxAH4AjHQABGxhbmdzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AjXNxAH4AgHQAA0FueXNxAH4AhHNxAH4Ah3VxAH4AigAAAAJzcQB+AIx0AAVzY2FsYXEAfgCTdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAFYWdpZ2FzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVfAlUIJdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAbi9ob21lL21pdGh1bnBhdWwvRGVza3RvcC9mYWxsMjAxNk5MUFJlc2VhcmNoL2FnaWdhUGFyc2VyLXdpdGhvdXQtd29ybGQtbW9kZWxpbmdfdjEuMi90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUKWDLYsItauHr+LQ3Q7e8oUuafKE=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwL4kRWQAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAdc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwsPJrUXQABm5vdGlmeXNxAH4ADMJsch90AAlyZWFkRmlsZXNzcQB+AAw74OiqdAARYmFzZURpcmVjdG9yeVBhdGhzcQB+AAyIJPwPdAAEd2FpdHNxAH4ADHKvHPx0AA0kYXNJbnN0YW5jZU9mc3EAfgAMseSghnQABmVxdWFsc3NxAH4ADIvPKjZ0AAtydW5PblNlcnZlcnNxAH4ADIy0nFx0AAxhc0luc3RhbmNlT2ZzcQB+AAyXO03udAAMc3luY2hyb25pemVkc3EAfgAMi6eEvXQADSRpc0luc3RhbmNlT2ZzcQB+AAxs5zt9dAATb3V0cHV0RGlyZWN0b3J5UGF0aHNxAH4ADMNR8qF0AAlwcmludExpbmVzcQB+AAxhxpTidAAJbm90aWZ5QWxsc3EAfgAMqdiaQHQADGlzSW5zdGFuY2VPZnNxAH4ADKLL7Xl0ABJyZXNvdXJjZXNEaXJlY3RvcnlzcQB+AAwppAK4dAACPT1zcQB+AAxa7+wgdAAFY2xvbmVzcQB+AAyg1pwddAAMYWR2ZXJiUGFyc2Vyc3EAfgAMFtqxiHQAEGhhc2hNYXBPZkFkdmVyYnNzcQB+AAxJIjPkdAAIdG9TdHJpbmdzcQB+AAxaa/2QdAACIT1zcQB+AAzdkw6NdAAIZ2V0Q2xhc3NzcQB+AAyY9RAFdAACbmVzcQB+AAw6RkIVdAACZXFzcQB+AAyoMwgndAACIyNzcQB+AAzL6N6BdAAIZmluYWxpemVzcQB+AAx+fNkhdAANUmVhZFRvSGFzaG1hcHNxAH4ADBQ2pzl0AAhoYXNoQ29kZXNxAH4ADNPDNWh0ABlwcm9jZXNzRG9jdW1lbnRGb3JBZHZlcmJzc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AUXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAEmFnaWdhLmFkdmVyYlBhcnNlcnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AaXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBRTAAJaW5oZXJpdGVkcQB+AFFMAAdwYXJlbnRzcQB+AFF4cQB+AG5zcQB+AGl1cQB+AEwAAAAAc3EAfgBpdXEAfgBMAAAAAHNxAH4AaXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AbXQABk9iamVjdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AbXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAA3NyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAEamF2YXNxAH4AhnQABGxhbmdzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Ah3NxAH4AenQAA0FueXNxAH4AfnNxAH4AgXVxAH4AhAAAAAJzcQB+AIZ0AAVzY2FsYXEAfgCNdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAFYWdpZ2FzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVfAlUIJdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAbi9ob21lL21pdGh1bnBhdWwvRGVza3RvcC9mYWxsMjAxNk5MUFJlc2VhcmNoL2FnaWdhUGFyc2VyLXdpdGhvdXQtd29ybGQtbW9kZWxpbmdfdjEuMi90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUXkuMAQ5qBIEvIvOY8W/yp9f9w/g=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwCpv+9gAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwlQolKXQABm5vdGlmeXNxAH4ADEjIrI50AAR3YWl0c3EAfgAMRMYN+XQADSRhc0luc3RhbmNlT2ZzcQB+AAybFFyQdAAGZXF1YWxzc3EAfgAMOXdv9nQADGFzSW5zdGFuY2VPZnNxAH4ADDEWfLl0AAxzeW5jaHJvbml6ZWRzcQB+AAxJFXoFdAANJGlzSW5zdGFuY2VPZnNxAH4ADAfPQzN0AARtYWluc3EAfgAMjU9tunQACW5vdGlmeUFsbHNxAH4ADFZrXgd0AAxpc0luc3RhbmNlT2ZzcQB+AAxFrXkAdAACPT1zcQB+AAxDn8pidAAFY2xvbmVzcQB+AAxk4HxkdAAIdG9TdHJpbmdzcQB+AAxAxLZKdAACIT1zcQB+AAyW1RD3dAAIZ2V0Q2xhc3NzcQB+AAxASeQKdAAKbWFpblBhcnNlcnNxAH4ADAVTTCJ0AAJuZXNxAH4ADGwFf6N0AAJlcXNxAH4ADHcqSaV0AAIjI3NxAH4ADGk9SaR0AAhmaW5hbGl6ZXNxAH4ADJ1x9ul0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABBhZ2lnYS5tYWluUGFyc2VydXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBZc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXnNxAH4AWXVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AHXVxAH4AUQAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBddAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AeXVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGZ4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFR0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AG1bAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AF1zcQB+AGx0AAVBcnJheXEAfgBydXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AGx0AAZTdHJpbmdzcQB+AHBzcQB+AHN1cQB+AHYAAAADc3EAfgB4dAAEamF2YXNxAH4AeHQABGxhbmdxAH4AfXNxAH4AWXVxAH4APAAAAABzcQB+AFl1cQB+AJEAAAACc3EAfgBsdAAGT2JqZWN0cQB+AJVzcQB+AGx0AANBbnlxAH4AcnVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQABWFnaWdhc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFXwJVCCXVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AG4vaG9tZS9taXRodW5wYXVsL0Rlc2t0b3AvZmFsbDIwMTZOTFBSZXNlYXJjaC9hZ2lnYVBhcnNlci13aXRob3V0LXdvcmxkLW1vZGVsaW5nX3YxLjIvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFGduXVQ8U8gZ3wvDP+6TLiqhBNRf
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhw6zB6kwAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAdc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwi/7m2HQABm5vdGlmeXNxAH4ADF7V4qh0AAlyZWFkRmlsZXNzcQB+AAzyOHE2dAARYmFzZURpcmVjdG9yeVBhdGhzcQB+AAwPXZdodAAEd2FpdHNxAH4ADEWBdX50AA0kYXNJbnN0YW5jZU9mc3EAfgAMaCbYQnQACG50aHJlYWRzc3EAfgAMYTI1P3QABmVxdWFsc3NxAH4ADLD4P5Z0AAxhc0luc3RhbmNlT2ZzcQB+AAwqJNd/dAAMc3luY2hyb25pemVkc3EAfgAMUsq5EnQADSRpc0luc3RhbmNlT2ZzcQB+AAwWerhZdAATb3V0cHV0RGlyZWN0b3J5UGF0aHNxAH4ADFsI1fl0AAlwcmludExpbmVzcQB+AAwhAvUtdAAPcHJvY2Vzc0RvY3VtZW50c3EAfgAMx9Fs+3QABWZpbGVzc3EAfgAMLgLDEHQACW5vdGlmeUFsbHNxAH4ADIMMrWt0AAxpc0luc3RhbmNlT2ZzcQB+AAzBLSjtdAACPT1zcQB+AAwRBdNudAAFY2xvbmVzcQB+AAz+OkfEdAAKYWRqQ291bnRlcnNxAH4ADNt462t0AAhmaWxlc1Jhd3NxAH4ADJd3ws90AAh0b1N0cmluZ3NxAH4ADNyk0Kt0AAIhPXNxAH4ADEwo5+J0AAhnZXRDbGFzc3NxAH4ADMeovl90AAphZ2lnUGFyc2Vyc3EAfgAMKWTp+nQAAm5lc3EAfgAMWVI7RHQAAmVxc3EAfgAM/71dXXQAAiMjc3EAfgAMILmpMnQACGZpbmFsaXplc3EAfgAM2u+njXQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AUXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAEGFnaWdhLmFnaWdQYXJzZXJ1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AGlzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AUUwACWluaGVyaXRlZHEAfgBRTAAHcGFyZW50c3EAfgBReHEAfgBuc3EAfgBpdXEAfgBMAAAAAHNxAH4AaXVxAH4ATAAAAABzcQB+AGl1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAnNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AG10AAZPYmplY3RzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AG1zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAANzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABGphdmFzcQB+AIZ0AARsYW5nc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AIdzcQB+AHp0AANBbnlzcQB+AH5zcQB+AIF1cQB+AIQAAAACc3EAfgCGdAAFc2NhbGFxAH4AjXVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQABWFnaWdhc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFXwJVCCXVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AG4vaG9tZS9taXRodW5wYXVsL0Rlc2t0b3AvZmFsbDIwMTZOTFBSZXNlYXJjaC9hZ2lnYVBhcnNlci13aXRob3V0LXdvcmxkLW1vZGVsaW5nX3YxLjIvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFJFePK00pRLNh6VokVCZCsJgcpnH
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwsvV38AAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hw1ne7wnQABm5vdGlmeXNxAH4ADIjd6Cp0AAR3YWl0c3EAfgAMi5EIsnQADSRhc0luc3RhbmNlT2ZzcQB+AAwAILgGdAAGZXF1YWxzc3EAfgAMV0jW33QADGFzSW5zdGFuY2VPZnNxAH4ADFCn92F0AAxzeW5jaHJvbml6ZWRzcQB+AAzz3QnldAANJGlzSW5zdGFuY2VPZnNxAH4ADH8MSgZ0AAlub3RpZnlBbGxzcQB+AAwJS0Y9dAAMaXNJbnN0YW5jZU9mc3EAfgAM37EBjHQAAj09c3EAfgAM0T/uMHQABWNsb25lc3EAfgAMIWafpXQABUhlbGxvc3EAfgAMlTw9oXQADm15VGVzdEZ1bmN0aW9uc3EAfgAMjrLGHXQACHRvU3RyaW5nc3EAfgAMX57pAXQAAiE9c3EAfgAMBHOxeHQACGdldENsYXNzc3EAfgAM3/1HHXQAAm5lc3EAfgAMBmizInQAAmVxc3EAfgAMd/O1DHQAAiMjc3EAfgAMHHhbzHQACGZpbmFsaXplc3EAfgAMbrxXSHQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAC2FnaWdhLkhlbGxvdXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBZc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXnNxAH4AWXVxAH4APAAAAABzcQB+AFl1cQB+ADwAAAAAc3EAfgBZdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBddAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBdc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgB2dAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgB3c3EAfgBqdAADQW55c3EAfgBuc3EAfgBxdXEAfgB0AAAAAnNxAH4AdnQABXNjYWxhcQB+AH11cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AAVhZ2lnYXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABV8CVQgl1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdABuL2hvbWUvbWl0aHVucGF1bC9EZXNrdG9wL2ZhbGwyMDE2TkxQUmVzZWFyY2gvYWdpZ2FQYXJzZXItd2l0aG91dC13b3JsZC1tb2RlbGluZ192MS4yL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABRSkFGI8iO3ptOL5VAdr/urzNQrMw==
+external apis:
+0 items
+source infos:
+6 items
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/agroClassifier.scala -> 
+AAAAAAAAAAA=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/compareErAdjWithUniq.scala -> 
+AAAAAAAAAAA=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/findAdverbsThatModifyAdjectives.scala -> 
+AAAAAAAAAAA=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/mainFile.scala -> 
+AAAAAAAAAAA=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/parseAgig2.scala -> 
+AAAAAAAAAAA=
+/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.2/src/main/scala/xmlLearning.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABV8CVQgl1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAbi9ob21lL21pdGh1bnBhdWwvRGVza3RvcC9mYWxsMjAxNk5MUFJlc2VhcmNoL2FnaWdhUGFyc2VyLXdpdGhvdXQtd29ybGQtbW9kZWxpbmdfdjEuMi90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
