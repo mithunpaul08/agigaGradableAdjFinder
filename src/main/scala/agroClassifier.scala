@@ -39,10 +39,12 @@ object classifierForAgro {
      counter.setCount("feature1", 5.3)
      counter.setCount("feature2", 8.5)
 
-     val datum = new RVFDatum[String, String]("GRADABLE", counter)
+     val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
+     val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
 
      val dataset = new RVFDataset[String, String]
-     dataset += datum
+     dataset += datum1
+     dataset += datum2
      // add all your datums to the dataset
 
      val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
