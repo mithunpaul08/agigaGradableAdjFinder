@@ -18,7 +18,12 @@ object mainParser {
 
   //call the classifier class -note, as of now, this is for testing classifier only.
   // Once we have the frequency and labels from the corpus, we will be feeding it to this classifier
-  classifierForAgro.initializeAndClassify();
+  var inflRatioFromCode:Double =0.911;
+  var advrbModifiedRatioFromCode: Double= 0.041
+  var inflAndAdvModifiedFromCode :Double= 0.0465
+
+
+  classifierForAgro.initializeAndClassify(inflRatioFromCode, advrbModifiedRatioFromCode, inflAndAdvModifiedFromCode);
 
 }
 

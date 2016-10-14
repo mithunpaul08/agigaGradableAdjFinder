@@ -26,18 +26,18 @@ import org.clulab.struct.Counter
 
 object classifierForAgro {
 
-   def initializeAndClassify(): Unit = {
-     //     val datum1 = new BVFDatum[String, String]("NotSpam", Array("hello", "world"))
-     //     val datum2 = new BVFDatum[String, String]("Spam", Array("buy", "viagra"))
-     //     val dataset = new BVFDataset[String, String]
-     //
-     //     dataset += datum1
-     //     dataset += datum2
-
+   def initializeAndClassify( inflRatio:Double, advrbModifiedRatio:Double, inflAndAdvModified:Double ): String = {
 
      val counter = new Counter[String]
-     counter.setCount("feature1", 5.3)
-     counter.setCount("feature2", 8.5)
+//     counter.setCount("feature1", 0.7)
+//     counter.setCount("feature2", 0.1)
+//     counter.setCount("feature3", 0.3)
+//     counter.setCount("feature4", 0.1)
+
+     counter.setCount("feature1", inflRatio)
+     counter.setCount("feature2", advrbModifiedRatio)
+     counter.setCount("feature3", inflAndAdvModified)
+
 
      val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
      val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
@@ -53,10 +53,10 @@ object classifierForAgro {
      val perceptron = new PerceptronClassifier[String, String]
      println("Training the LABEL classifier...");
      perceptron.train(dataset)
-     //     val datum3 = new BVFDatum[String, String]("Spam", Array("buy", "something", "else"))
-     val datum3 = new RVFDatum[String, String]("LABEL", counter)
+     val datum3 = new RVFDatum[String, String]("heavy", counter)
      val label = perceptron.classOf(datum3)
      println("value of the classified label is:" + label);
+     return label;
    }
 }
 
