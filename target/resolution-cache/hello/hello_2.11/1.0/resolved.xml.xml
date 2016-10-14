@@ -4,7 +4,7 @@
 		module="hello_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161012154814"
+		publication="20161013150832"
 	>
 		<description>
 		hello
@@ -36,5 +36,8 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.scala-lang.modules" name="scala-xml_2.11" rev="1.0.2" conf="compile->default(compile)"/>
 		<dependency org="com.github.myedibleenso" name="processors-agiga_2.11" rev="0.0.1" conf="compile->default(compile)"/>
+		<dependency org="org.clulab" name="processors-corenlp_2.11" rev="6.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.clulab" name="processors-main_2.11" rev="6.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.clulab" name="processors-models_2.11" rev="6.0.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
