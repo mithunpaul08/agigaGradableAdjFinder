@@ -1,3 +1,5 @@
+package agiga
+
 import org.clulab.learning.{Datasets, PerceptronClassifier, RVFDataset, RVFDatum}
 import org.clulab.struct.Counter
 
@@ -10,32 +12,34 @@ object ratioCalculator {
 
 
   //var resourcesDirectory = "/work/mithunpaul/testbed/"
-  var resourcesDirectory = "resources/"
+  //var resourcesDirectory = "..resources/"
 
-  var outputDirectoryPath = "outputs/"
+  //on laptop
+  var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
+  var outputDirectoryPath = "..outputs/"
 
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
   //var outputFileName = "hashmapForErAdjectiveAndItsBaseForm.txt";
 
-  //var hashMapOfAllUniqAdjectivesInAgiga = Map("Long" -> "1")
+  // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
-  var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, Int] = Map()
+  var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, String] = Map()
 
-  def calculateInflectedAdjRatio( ): Double= {
+  def calculateInflectedAdjRatio(): Double = {
 
-    var myratio :Double=0.005;
+    var myratio: Double = 0.005;
     return myratio;
 
   }
 
-  def calculateAdvModifiedAdjRatio( ): Double= {
+  def calculateAdvModifiedAdjRatio(): Double = {
 
-    var myratio :Double=0.005;
+    var myratio: Double = 0.005;
     return myratio;
   }
 
-  def calculateBothInflectedAdvModifiedRatio( ): Double= {
+  def calculateBothInflectedAdvModifiedRatio(): Double = {
 
     var myratio: Double = 0.005;
     return myratio;
@@ -46,13 +50,23 @@ object ratioCalculator {
     val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
     try {
       //println("reaching here at 1263")
-      var counterForHashmap = 0;
+
+      //println("reaching here at 579084")
+
       for (line <- Source.fromFile(advInputFile).getLines()) {
-         println("reaching here at 204. value of line is:"+line)
-        //hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (line -> "1");
+
+        val content = line.split("\\s+");
+
+        if (content.length > 1) {
+
+          hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (content(1) -> content(0));
+        }
+
+        //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));
+
       }
     } catch {
-      case ex: Exception => println("An exception happened. Not able to find the file")
+      case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
     }
   }
 }

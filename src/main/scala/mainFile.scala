@@ -23,7 +23,11 @@ object mainParser {
   var inflAndAdvModifiedFromCode :Double= 0.0465
 
 
-  classifierForAgro.initializeAndClassify(inflRatioFromCode, advrbModifiedRatioFromCode, inflAndAdvModifiedFromCode);
+  //classifierForAgro.initializeAndClassify(inflRatioFromCode, advrbModifiedRatioFromCode, inflAndAdvModifiedFromCode);
+
+
+  //ratioCalculator
+  ratioCalculator.ReadAllAdjectivesAndFrequencyToHashmap();
 
 }
 
