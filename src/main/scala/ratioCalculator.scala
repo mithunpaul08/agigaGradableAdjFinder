@@ -71,7 +71,7 @@ object ratioCalculator {
     //println("reaching here at 347234")
 
     myratio = noOfTimesThisAdjInflected / totalBaseCount;
-    //println("value of this ratio is:" + myratio)
+    println("value of this ratio is:" + myratio)
 
     return myratio;
 
@@ -109,7 +109,7 @@ object ratioCalculator {
         //do the -er and -est removal in scala itself
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
-        println("reaching here at 234233")
+        //println("reaching here at 234233")
         //get its base form. Check the count of base form. Increase the count value, write it to the new hashmap which contains all adjectives and its counter
         if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(erEstRemovedForm)) {
           //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
