@@ -72,7 +72,9 @@ object classifierForAgro {
      //fill in the hashmaps. i.e the maps which has the count of base form adjectives (cold->2342342) and inflected
      //adjectives(colder/coldest:2344)
      ratioCalculator.triggerFunction(resourcesDirectory,outputDirectoryPath);
-     //todo: find if we should pick the top 300 adjectives
+     //todo: find if we should pick from the top 300 adjectives
+
+     //for each of the adjectives in top 300 adjectives, go through hash maps, get inflected count/total count ratio
      for (line <- Source.fromFile(inputFilename).getLines()) {
 
        var inflRatio: Double = 0.911;

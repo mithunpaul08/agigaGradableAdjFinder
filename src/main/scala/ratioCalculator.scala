@@ -42,11 +42,11 @@ object ratioCalculator {
   var hashMapOfInflectedAdjectivesAndItsCount: Map[String, Int] = Map()
 
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
-    println("reaching here at 4393897")
+    //println("reaching here at 4393897")
     var myratio: Double = 0.005;
-    var totalBaseCount = 444;
+    var totalBaseCount = 2;
     var noOfTimesThisAdjInflected = 1;
-    println("value of current adjective is :" + adjToGetRatio);
+   // println("value of current adjective is :" + adjToGetRatio);
     //Go through the uniq adjectives list in all the adjectives...for each adjective, pick the total count value and inflected count value.
     //    for (line <- Source.fromFile(resourcesDirectory+uniqAdjectivesInAgiga_removedErEst_uniq).getLines())
     //      {
@@ -59,7 +59,7 @@ object ratioCalculator {
       totalBaseCount = hashMapOfAllAdjectivesAndItsCount(adjToGetRatio)
       println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllAdjectivesAndItsCount and its base value is" + totalBaseCount)
     }
-    println("reaching here at 34522")
+    //println("reaching here at 34522")
     //get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
     var baseForm = adjToGetRatio.replaceAll("er", "")
     baseForm = baseForm.replaceAll("est", "")
@@ -68,9 +68,7 @@ object ratioCalculator {
       noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(baseForm)
       println("found that the given adjective:" + baseForm + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
     }
-    println("reaching here at 347234")
-
-    // }
+    //println("reaching here at 347234")
 
     myratio = noOfTimesThisAdjInflected / totalBaseCount;
     println("value of this ratio is:" + myratio)
