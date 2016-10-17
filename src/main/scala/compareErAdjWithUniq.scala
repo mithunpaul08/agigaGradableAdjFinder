@@ -63,18 +63,10 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga";
 
   def writeToFile(stringToWrite: String): Unit = {
     val outFile = new File(outputDirectoryPath, outputFileName)
-    // make sure the file hasn't been already processed
-    // useful when restarting
-    //    println("reaching here at 2")
-    //    File file = new File("temp");
-    //    FileOutputStream f = new FileOutputStream(file);
-    //    ObjectOutputStream s = new ObjectOutputStream(f);
-    //    s.writeObject(fileObj);
-    //    s.flush();
-    //
+
     val bw = new BufferedWriter(new FileWriter(outFile))
 
-    // bw.write(stringToWrite.mkString("\n "))
+
     bw.write(stringToWrite)
     bw.close()
 
@@ -112,8 +104,8 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga";
         //if the er and est removed root form exists in the hashtable store it into another hashtable in the form "deepest->deep
 
         if (hashMapOfAllUniqAdjectivesInAgiga.contains(erEstRemovedForm)) {
-           println("found that the given adjective:" + adjToCheck + " has its root form in the file. adding to hash map")
-//System.exit(1);
+          println("found that the given adjective:" + adjToCheck + " has its root form in the file. adding to hash map")
+          //System.exit(1);
           hashMapOfInflAdjToRootForm += (adjToCheck -> erEstRemovedForm);
         }
 

@@ -27,7 +27,7 @@ object mainParser {
 
 
   //ratioCalculator
-  ratioCalculator.ReadAllAdjectivesAndFrequencyToHashmap();
+  ratioCalculator.triggerFunction();
 
 }
 
