@@ -30,6 +30,9 @@ object ratioCalculator {
   var outputFileNameForInflectedAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
 
   var allAdjectivesFromAgigaButUniq= "allAdjectivesFromAgigaButUniq.txt"
+
+  var uniqAdjectivesInAgiga_removedErEst_uniq= "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
+
   // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
 
@@ -37,36 +40,39 @@ object ratioCalculator {
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfInflectedAdjectivesAndItsCount: Map[String, Int] = Map()
 
-  def calculateInflectedAdjRatio(): Double = {
-
+  def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
+    println("reaching here at 4393897")
     var myratio: Double = 0.005;
+    var totalBaseCount = 444;
+    var noOfTimesThisAdjInflected = 1;
+    println("value of current adjective is :" + adjToGetRatio);
     //Go through the uniq adjectives list in all the adjectives...for each adjective, pick the total count value and inflected count value.
-    for (line <- Source.fromFile(resourcesDirectory+allAdjectivesFromAgigaButUniq).getLines())
-      {
-       // println("getting into function calculateInflectedAdjRatio and the given adjective is:" +line)
-        //total count=basecount+inflectedErCount+inflectedEstCount
+    //    for (line <- Source.fromFile(resourcesDirectory+uniqAdjectivesInAgiga_removedErEst_uniq).getLines())
+    //      {
+    //       // println("getting into function calculateInflectedAdjRatio and the given adjective is:" +line)
+    //total count=basecount+inflectedErCount+inflectedEstCount
 
-        //get the total count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
-        if (hashMapOfAllAdjectivesAndItsCount.contains(line)) {
-          var totalBaseCount=0;
-          totalBaseCount=hashMapOfAllAdjectivesAndItsCount(line)
-          println("found that the given adjective:" +line+ " exists in the hashMapOfAllAdjectivesAndItsCount and its base value is"+totalBaseCount)
-        }
+    //get the total count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
+    if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio)) {
+      println("reaching here at 089345978")
+      totalBaseCount = hashMapOfAllAdjectivesAndItsCount(adjToGetRatio)
+      println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllAdjectivesAndItsCount and its base value is" + totalBaseCount)
+    }
+    println("reaching here at 34522")
+    //get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
+    var baseForm = adjToGetRatio.replaceAll("er", "")
+    baseForm = baseForm.replaceAll("est", "")
+    if (hashMapOfInflectedAdjectivesAndItsCount.contains(baseForm)) {
+      println("reaching here at 9876")
+      noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(baseForm)
+      println("found that the given adjective:" + baseForm + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
+    }
+    println("reaching here at 347234")
 
-        //get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
-        var baseForm = line.replaceAll("er", "")
-        baseForm = baseForm.replaceAll("est", "")
-        if (hashMapOfInflectedAdjectivesAndItsCount.contains(baseForm)) {
-          var noOfTimesThisAdjInflected=0;
-          noOfTimesThisAdjInflected=hashMapOfInflectedAdjectivesAndItsCount(baseForm)
-          println("found that the given adjective:" +baseForm+ " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is"+noOfTimesThisAdjInflected)
-        }
+    // }
 
-
-      }
-
-    //myratio=inflectedValueOfThisAdj/totalBaseCount;
-    println("value of this ratio is:"+myratio)
+    myratio = noOfTimesThisAdjInflected / totalBaseCount;
+    println("value of this ratio is:" + myratio)
 
     return myratio;
 
@@ -75,8 +81,7 @@ object ratioCalculator {
   def triggerFunction(): Unit = {
     ReadAllAdjectivesAndFrequencyToHashmap();
     readErRemovedFileAndIncreaseCounter();
-    calculateInflectedAdjRatio();
-  }
+     }
 
   def calculateAdvModifiedAdjRatio(): Double = {
 
