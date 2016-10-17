@@ -71,7 +71,7 @@ object ratioCalculator {
     //println("reaching here at 347234")
 
     myratio = noOfTimesThisAdjInflected / totalBaseCount;
-    println("value of this ratio is:" + myratio)
+    //println("value of this ratio is:" + myratio)
 
     return myratio;
 
