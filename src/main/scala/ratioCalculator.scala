@@ -19,7 +19,8 @@ object ratioCalculator {
   //on laptop
   //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
 
-  var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+  //var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+ // var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
 
  // var outputDirectoryPath = "..outputs/"
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
@@ -78,9 +79,9 @@ object ratioCalculator {
 
   }
 
-  def triggerFunction(resourcesDirectory:String): Unit = {
-    ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory);
-    readErRemovedFileAndIncreaseCounter(resourcesDirectory);
+  def triggerFunction(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
+    ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
+    readErRemovedFileAndIncreaseCounter(resourcesDirectory,outputDirectoryPath);
      }
 
   def calculateAdvModifiedAdjRatio(): Double = {
@@ -96,7 +97,7 @@ object ratioCalculator {
   }
 
 
-  def readErRemovedFileAndIncreaseCounter(resourcesDirectory:String): Unit = {
+  def readErRemovedFileAndIncreaseCounter(resourcesDirectory:String,outputDirectoryPath :String): Unit = {
     //read all lines of uniq adjectives to a hashmap
     //ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
@@ -164,15 +165,17 @@ object ratioCalculator {
       case ex: Exception => println("Exception occured:")
     }
    // println("value of hashmap is:" + hashMapOfAllAdjectivesAndItsCount.mkString("\n "));
-    writeToFile(hashMapOfAllAdjectivesAndItsCount.mkString("\n"),outputFileNameForAllAdjectiveCount)
+    writeToFile(hashMapOfAllAdjectivesAndItsCount.mkString("\n"),outputFileNameForAllAdjectiveCount,outputDirectoryPath)
 
    // println("value of hashmap is:" + hashMapOfInflectedAdjectivesAndItsCount.mkString("\n "));
     //write the inflected value count also to file
-    writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"),outputFileNameForInflectedAdjectiveCount)
+    writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"),outputFileNameForInflectedAdjectiveCount,outputDirectoryPath)
 
   }
 
-  def writeToFile(stringToWrite: String, outputFilename: String): Unit = {
+  def writeToFile(stringToWrite: String, outputFilename: String,outputDirectoryPath :String): Unit = {
+
+
     val outFile = new File(outputDirectoryPath, outputFilename)
 
     val bw = new BufferedWriter(new FileWriter(outFile))
@@ -183,7 +186,7 @@ object ratioCalculator {
 
 
   }
-  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory:String): Unit = {
+  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
     println("reaching here at 36857")
 
     //read from all the adjectives and its frequency into a hash table

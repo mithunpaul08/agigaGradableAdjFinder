@@ -67,7 +67,7 @@ object classifierForAgro {
 
      //fill in the hashmaps. i.e the maps which has the count of base form adjectives (cold->2342342) and inflected
      //adjectives(colder/coldest:2344)
-     ratioCalculator.triggerFunction(resourcesDirectory);
+     ratioCalculator.triggerFunction(resourcesDirectory,outputDirectoryPath);
      //todo: find if we should pick the top 300 adjectives
      for (line <- Source.fromFile(inputFilename).getLines()) {
 
