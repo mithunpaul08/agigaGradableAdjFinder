@@ -1,5 +1,5 @@
-last -> 2106
-second -> 6
-cold -> 8076
-new -> 10926
-first -> 24
+last -> 1404
+second -> 4
+cold -> 5384
+new -> 7284
+first -> 16

@@ -47,17 +47,18 @@ object classifierForAgro {
      val dataset = new RVFDataset[String, String]
      //
      val runOnServer=true;
-
+     var getCurrentDirectory = new java.io.File(".").getCanonicalPath
+     println("value of present directory is: "+getCurrentDirectory)
      if(runOnServer)
        {
-         var resourcesDirectory = "../src/main/resources/"
+          resourcesDirectory = "./src/main/resources/"
 
-         var outputDirectoryPath = "../src/main/outputs/"
+          outputDirectoryPath = "./src/main/outputs/"
 
          // var outputDirectoryPath = "..outputs/"
-         var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
+          erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
 
-         var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
+          completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
        }
      var inputFilename= resourcesDirectory + uniqAdjectivesInAgiga_removedErEst_uniq;
