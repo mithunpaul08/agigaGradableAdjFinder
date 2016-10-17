@@ -51,9 +51,10 @@ object classifierForAgro {
      println("value of present directory is: "+getCurrentDirectory)
      if(runOnServer)
        {
-          resourcesDirectory = "./src/main/resources/"
+          //resourcesDirectory = "./src/main/resources/"
+         resourcesDirectory = "~/testbed/"
 
-          outputDirectoryPath = "./src/main/outputs/"
+          outputDirectoryPath = "~/testbed/"
 
          // var outputDirectoryPath = "..outputs/"
           erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
@@ -64,6 +65,9 @@ object classifierForAgro {
      var inputFilename= resourcesDirectory + uniqAdjectivesInAgiga_removedErEst_uniq;
      println("reaching here at 9870987")
 
+     //fill in the hashmaps. i.e the maps which has the count of base form adjectives (cold->2342342) and inflected
+     //adjectives(colder/coldest:2344)
+     ratioCalculator.triggerFunction(resourcesDirectory);
      //todo: find if we should pick the top 300 adjectives
      for (line <- Source.fromFile(inputFilename).getLines()) {
 
@@ -74,7 +78,7 @@ object classifierForAgro {
        println("reaching here at 876467")
        println("value of current adjective is :" + line );
        //for each of the adjectives' root forms, get the inflected ratio.
-       ratioCalculator.triggerFunction();
+
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(line);
 
        println("value of current adjective is :" + line + "and its inflected ratio is:" + inflRatio)

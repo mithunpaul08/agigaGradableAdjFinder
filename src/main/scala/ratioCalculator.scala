@@ -17,7 +17,7 @@ object ratioCalculator {
   //var resourcesDirectory = "..resources/"
 
   //on laptop
-  var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
+  //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
 
   var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
 
@@ -78,9 +78,9 @@ object ratioCalculator {
 
   }
 
-  def triggerFunction(): Unit = {
-    ReadAllAdjectivesAndFrequencyToHashmap();
-    readErRemovedFileAndIncreaseCounter();
+  def triggerFunction(resourcesDirectory:String): Unit = {
+    ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory);
+    readErRemovedFileAndIncreaseCounter(resourcesDirectory);
      }
 
   def calculateAdvModifiedAdjRatio(): Double = {
@@ -96,12 +96,12 @@ object ratioCalculator {
   }
 
 
-  def readErRemovedFileAndIncreaseCounter(): Unit = {
+  def readErRemovedFileAndIncreaseCounter(resourcesDirectory:String): Unit = {
     //read all lines of uniq adjectives to a hashmap
     //ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
     val erRemovedInputFile = resourcesDirectory + erRemovedFiles;
-   // println("reaching here at 3")
+   println("reaching here at 3")
     var adjToCheck = "NULL";
     try {
       //var counterForHashmap = 0;
@@ -110,7 +110,7 @@ object ratioCalculator {
         //do the -er and -est removal in scala itself
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
-        //println("reaching here at 234233")
+        println("reaching here at 234233")
         //get its base form. Check the count of base form. Increase the count value, write it to the new hashmap which contains all adjectives and its counter
         if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(erEstRemovedForm)) {
           //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
@@ -183,13 +183,13 @@ object ratioCalculator {
 
 
   }
-  def ReadAllAdjectivesAndFrequencyToHashmap(): Unit = {
-    //println("reaching here at 36857")
+  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory:String): Unit = {
+    println("reaching here at 36857")
+
+    //read from all the adjectives and its frequency into a hash table
     val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
     try {
-      //println("reaching here at 1263")
-
-      //println("reaching here at 579084")
+      println("reaching here at 1263")
 
       for (line <- Source.fromFile(advInputFile).getLines()) {
 
