@@ -1,5 +1,7 @@
 package agiga
 
+import java.io.{BufferedWriter, File, FileWriter}
+
 import org.clulab.learning.{Datasets, PerceptronClassifier, RVFDataset, RVFDatum}
 import org.clulab.struct.Counter
 
@@ -16,16 +18,18 @@ object ratioCalculator {
 
   //on laptop
   var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
-  var outputDirectoryPath = "..outputs/"
+
+  var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+
+ // var outputDirectoryPath = "..outputs/"
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
 
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
-  //var outputFileName = "hashmapForErAdjectiveAndItsBaseForm.txt";
+  var outputFileName = "hashmapForAllAdjectivesAndItsCount.txt";
 
   // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
-  var inflectedCounter = 0;
 
   var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, String] = Map()
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
@@ -60,7 +64,7 @@ object ratioCalculator {
     //ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
     val erRemovedInputFile = resourcesDirectory + erRemovedFiles;
-    println("reaching here at 3")
+   // println("reaching here at 3")
     var adjToCheck = "NULL";
     try {
       //var counterForHashmap = 0;
@@ -69,14 +73,14 @@ object ratioCalculator {
         //do the -er and -est removal in scala itself
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
-        println("reaching here at 234233")
+        //println("reaching here at 234233")
         //get its base form. Check the count of base form. Increase the count value, write it to the new hashmap which contains all adjectives and its counter
         if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(erEstRemovedForm)) {
           //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
           var baseCounter = 0;
           baseCounter = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(erEstRemovedForm).toInt;
           baseCounter=baseCounter+1;
-          println("value of basecounter for adjective "+erEstRemovedForm+"is "+baseCounter);
+          //println("value of basecounter for adjective "+erEstRemovedForm+"is "+baseCounter);
 
           // var inflectedCounter = 0;
           //println("value of basecounter is "+baseCounter);
@@ -91,18 +95,38 @@ object ratioCalculator {
 
 
         }
+        var inflectedCounter = 0;
 
+        //if it exists, retrieve it, increase its counter value and write it back. Else just write 1
+        if (hashMapOfAllAdjectivesAndItsCount.contains(adjToCheck)){
+          inflectedCounter = hashMapOfAllAdjectivesAndItsCount(adjToCheck).toInt;
+          inflectedCounter = inflectedCounter + 1;
+        }
+        else {
+          inflectedCounter = 1
+        }
+        hashMapOfAllAdjectivesAndItsCount += (adjToCheck -> inflectedCounter);
 
       }
     } catch {
       case ex: Exception => println("Exception occured:")
     }
-    // println("value of hashmap is:" + hashMapOfInflAdjToRootForm);
-    //writeToFile(hashMapOfInflAdjToRootForm.mkString("\n"))
+    println("value of hashmap is:" + hashMapOfAllAdjectivesAndItsCount.mkString("\n "));
+    writeToFile(hashMapOfAllAdjectivesAndItsCount.mkString("\n"))
     //writeToFile(hashMapOfInflAdjToRootForm.mkString)
   }
 
+  def writeToFile(stringToWrite: String): Unit = {
+    val outFile = new File(outputDirectoryPath, outputFileName)
 
+    val bw = new BufferedWriter(new FileWriter(outFile))
+
+
+    bw.write(stringToWrite)
+    bw.close()
+
+
+  }
   def ReadAllAdjectivesAndFrequencyToHashmap(): Unit = {
     //println("reaching here at 36857")
     val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
