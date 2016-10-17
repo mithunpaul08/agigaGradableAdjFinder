@@ -20,4 +20,7 @@ slack
 few
 slow
 low
+cold
+colder
+coldest
 

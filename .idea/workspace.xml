@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b413b9cf-b32b-44fb-8587-c908e4e92012" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/outputs/hashmapForAllAdjectivesAndItsCount.txt" afterPath="$PROJECT_DIR$/src/main/outputs/hashmapForAllAdjectivesAndItsCount.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/allAdjectivesFromAgigaButUniq.txt" afterPath="$PROJECT_DIR$/src/main/resources/allAdjectivesFromAgigaButUniq.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" afterPath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
     </list>
     <ignored path="hello.iws" />
@@ -63,8 +65,8 @@
       <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="100" column="65" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
+            <state relative-caret-position="465">
+              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <element signature="e#15#64#0" expanded="true" />
               </folding>
@@ -842,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="100" column="65" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
+        <state relative-caret-position="465">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
             <element signature="e#15#64#0" expanded="true" />
           </folding>

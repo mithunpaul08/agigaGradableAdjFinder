@@ -1,5 +1,4 @@
 [0m[[0minfo[0m] [0mRunning agiga.mainParser [0m
-[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/scala-2.11/classes[0m
 [0m[[0mdebug[0m] [0m	/Users/mithun/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar[0m
@@ -41,6 +40,7 @@
 [0m[[0mdebug[0m] [0m	/Users/mithun/.ivy2/cache/com.googlecode.efficient-java-matrix-library/ejml/jars/ejml-0.23.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/mithun/.ivy2/cache/javax.json/javax.json-api/bundles/javax.json-api-1.0.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/mithun/.ivy2/cache/org.clulab/processors-models_2.11/jars/processors-models_2.11-6.0.0.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
