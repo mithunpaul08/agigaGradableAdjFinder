@@ -46,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="516">
-              <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+              <caret line="73" column="67" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
               <folding>
                 <element signature="e#15#64#0" expanded="true" />
               </folding>
@@ -69,28 +69,28 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
@@ -1070,7 +1070,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+          <caret line="73" column="67" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
           <folding>
             <element signature="e#15#64#0" expanded="true" />
           </folding>

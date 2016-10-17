@@ -70,8 +70,8 @@ object ratioCalculator {
     }
     //println("reaching here at 347234")
 
-    myratio = noOfTimesThisAdjInflected / totalBaseCount;
-    println("value of this ratio is:" + myratio)
+    myratio = noOfTimesThisAdjInflected.toDouble/ totalBaseCount.toDouble;
+    println("value of this ratio is:" + myratio.toDouble.toString())
 
     return myratio;
 
