@@ -53,9 +53,12 @@ object classifierForAgro {
      if(runOnServer)
        {
           //resourcesDirectory = "./src/main/resources/"
-         resourcesDirectory = "~/testbed/"
+         //resourcesDirectory = "~/testbed/"
+         resourcesDirectory = "/work/mithunpaul/testbed/"
 
-          outputDirectoryPath = "~/testbed/"
+
+          outputDirectoryPath = "/work/mithunpaul/testbed/"
+         //outputDirectoryPath = "~/testbed/"
 
          // var outputDirectoryPath = "..outputs/"
           erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
