@@ -45,8 +45,25 @@ object classifierForAgro {
    def initializeAndClassify( ): Unit = {
      val counter = new Counter[String];
      val dataset = new RVFDataset[String, String]
+     //
+     val runOnServer=true;
+
+     if(runOnServer)
+       {
+         var resourcesDirectory = "../src/main/resources/"
+
+         var outputDirectoryPath = "../src/main/outputs/"
+
+         // var outputDirectoryPath = "..outputs/"
+         var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
+
+         var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
+
+       }
      var inputFilename= resourcesDirectory + uniqAdjectivesInAgiga_removedErEst_uniq;
      println("reaching here at 9870987")
+
+     //todo: find if we should pick the top 300 adjectives
      for (line <- Source.fromFile(inputFilename).getLines()) {
 
        var inflRatio: Double = 0.911;
