@@ -195,7 +195,7 @@ object ratioCalculator {
       println("reaching here at 1263")
 
       for (line <- Source.fromFile(advInputFile).getLines()) {
-
+        println("reaching here at 3462323")
         val content = line.split("\\s+");
 
         if (content.length > 1) {

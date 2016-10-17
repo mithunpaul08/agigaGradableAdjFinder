@@ -32,6 +32,7 @@ object classifierForAgro {
   var allAdjectivesFromAgigaButUniq= "allAdjectivesFromAgigaButUniq.txt"
 
   var uniqAdjectivesInAgiga_removedErEst_uniq= "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
+
   var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
 
   var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
