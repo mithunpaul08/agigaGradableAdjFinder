@@ -87,7 +87,9 @@ object classifierForAgro {
 
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(line);
 
-       println("value of current adjective is :" + line + "and its inflected ratio is:" + inflRatio)
+       if(inflRatio>0) {
+         println("value of current adjective is :" + line + "and its inflected ratio is:" + inflRatio)
+       }
        //System.exit(1);
        //for each of the adjectives' root forms, get the inflected ratio.
 
@@ -118,9 +120,10 @@ object classifierForAgro {
      val perceptron = new PerceptronClassifier[String, String]
      println("Training the LABEL classifier...");
      perceptron.train(dataset)
-     val datum3 = new RVFDatum[String, String]("heavy", counter)
+     val stringToTest="loud";
+     val datum3 = new RVFDatum[String, String](stringToTest, counter)
      val label = perceptron.classOf(datum3)
-     println("value of the classified label is:" + label);
+     println("class of the given string:"+stringToTest+" is :"+ label);
    }
 }
 
