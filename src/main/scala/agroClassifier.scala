@@ -33,11 +33,15 @@ object classifierForAgro {
 
   var uniqAdjectivesInAgiga_removedErEst_uniq= "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
 
-  var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
+  //path in laptop
+  //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
 
-  var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+  //path in chung.cs.arizona.edu
+  var resourcesDirectory = "./src/main/resources/"
 
-  // var outputDirectoryPath = "..outputs/"
+  //var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+
+  var outputDirectoryPath = "./src/main/outputs/"
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
 
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
@@ -47,7 +51,7 @@ object classifierForAgro {
      val counter = new Counter[String];
      val dataset = new RVFDataset[String, String]
      //
-     val runOnServer=true;
+     val runOnServer=false;
      var getCurrentDirectory = new java.io.File(".").getCanonicalPath
      println("value of present directory is: "+getCurrentDirectory)
      if(runOnServer)
@@ -73,6 +77,12 @@ object classifierForAgro {
      //adjectives(colder/coldest:2344)
      ratioCalculator.triggerFunction(resourcesDirectory,outputDirectoryPath);
      //todo: find if we should pick from the top 300 adjectives
+
+     //testing for count of adjectives modified by adverb
+     var dadvrbModifiedRatio: Double = 0.041
+      dadvrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio("happy");
+
+     System.exit(1);
 
      //for each of the adjectives in top 300 adjectives, go through hash maps, get inflected count/total count ratio
      for (line <- Source.fromFile(inputFilename).getLines()) {

@@ -13,26 +13,14 @@ import scala.io.Source
 object ratioCalculator {
 
 
-  //var resourcesDirectory = "/work/mithunpaul/testbed/"
-  //var resourcesDirectory = "..resources/"
 
-  //on laptop
-  //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
-
-  //var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
- // var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
-
- // var outputDirectoryPath = "..outputs/"
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
-
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
-
   var outputFileNameForAllAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
   var outputFileNameForInflectedAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
-
   var allAdjectivesFromAgigaButUniq= "allAdjectivesFromAgigaButUniq.txt"
-
   var uniqAdjectivesInAgiga_removedErEst_uniq= "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
+  var FreqOfAdjAdv_withoutAgainAt = "FreqOfAdjAdv_withoutAgainAt.txt";
 
   // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
@@ -40,6 +28,7 @@ object ratioCalculator {
   var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, String] = Map()
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfInflectedAdjectivesAndItsCount: Map[String, Int] = Map()
+  var hashMapOfAdvModifiedAdjCount: Map[String, Int] = Map()
 
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
     //println("reaching here at 4393897")
@@ -78,14 +67,49 @@ object ratioCalculator {
   }
 
   def triggerFunction(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
-    ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
-    readErRemovedFileAndIncreaseCounter(resourcesDirectory,outputDirectoryPath);
+    //ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
+    //readErRemovedFileAndIncreaseCounter(resourcesDirectory,outputDirectoryPath);
+    ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
      }
 
-  def calculateAdvModifiedAdjRatio(): Double = {
+  def calculateAdvModifiedAdjRatio(adjToSearch: String): Double = {
 
     var myratio: Double = 0.005;
-    return myratio;
+
+    //read from the frequency file of adverb modified//    For a given adjective (string input),
+    //For any given adjective (string input),
+
+    var baseCounter = 0.005;
+
+  try
+    {
+
+    if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToSearch)) {
+      println("reaching here at 53573687");
+      //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
+
+      //  For each line in the hash table, if the line contains “happy”,
+       for ((k,v) <- hashMapOfAllUniqAdjectivesInAgigaWithFrequency){
+        if (k.contains(adjToSearch)) {
+          println("reaching here at 345436");
+
+          //    Split that line, and get the frequency out
+          //    Add those frequencies.
+          //      Sum it up to a global variable
+          //retuern the global variable
+
+          //add to my result list
+          baseCounter = v.toInt;
+          baseCounter += baseCounter ;
+        }
+      }
+    }
+    }
+    catch {
+      case ex: Exception => println("Exception occured:")
+    }
+    println("value of total times the word "+adjToSearch+" occurs is"+baseCounter)
+    return baseCounter;
   }
 
   def calculateBothInflectedAdvModifiedRatio(): Double = {
@@ -183,6 +207,43 @@ object ratioCalculator {
     bw.close()
 
 
+  }
+
+  //read all adjective phrases and its count to a hash table
+  def ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
+    println("reaching here at 2342")
+
+    val advInputFile = new File(getClass.getClassLoader.getResource(FreqOfAdjAdv_withoutAgainAt).getPath)
+
+    //var getCurrentDirectory = new java.io.File(".").getCanonicalPath
+    //println("value of present directory is: "+getCurrentDirectory)
+
+    //read from all the adjectives and its frequency into a hash table
+    //val advInputFile = resourcesDirectory + FreqOfAdjAdv_withoutAgainAt;
+    println("path of input file is:"+advInputFile)
+    try {
+      println("reaching here at 45645")
+
+      for (line <- Source.fromFile(advInputFile).getLines()) {
+        //println("reaching here at 3462323")
+        val content = line.split("\\s+");
+        println("reaching here at 5435435")
+        println("value of content 0 is"+content(0) )
+        println("value of content 1 is"+content(1) )
+        println("value of content 2 is"+content(2) )
+        println("reaching here at 5435435")
+        if (content.length > 1) {
+          println("reaching here at 21304562")
+
+           hashMapOfAdvModifiedAdjCount += (content(1) -> content(0).toInt);
+        }
+
+        //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));
+
+      }
+    } catch {
+      case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
+    }
   }
   def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
     println("reaching here at 36857")
