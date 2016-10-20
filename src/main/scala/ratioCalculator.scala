@@ -24,6 +24,8 @@ object ratioCalculator {
 
   // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
+  //the denominator remains same for a given adjective for all the ratios
+  var denominatorOfRatio: Double= 0.0000001;
 
   var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, String] = Map()
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
@@ -33,7 +35,7 @@ object ratioCalculator {
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
     //println("reaching here at 4393897")
     var myratio: Double = 0.005;
-    var totalBaseCount = 2;
+  var totalBaseCount: Double =3.000002
     var noOfTimesThisAdjInflected = 1;
    // println("value of current adjective is :" + adjToGetRatio);
     //Go through the uniq adjectives list in all the adjectives...for each adjective, pick the total count value and inflected count value.
@@ -58,17 +60,18 @@ object ratioCalculator {
       println("found that the given adjective:" + baseForm + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
     }
     //println("reaching here at 347234")
-
-    myratio = noOfTimesThisAdjInflected.toDouble/ totalBaseCount.toDouble;
-    println("value of this ratio is:" + myratio.toDouble.toString())
+    denominatorOfRatio=totalBaseCount.toDouble
+    //println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
+    myratio = noOfTimesThisAdjInflected.toDouble/ denominatorOfRatio;
+    //println("value of this ratio is:" + myratio.toDouble.toString())
 
     return myratio;
 
   }
 
   def triggerFunction(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
-    //ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
-    //readErRemovedFileAndIncreaseCounter(resourcesDirectory,outputDirectoryPath);
+    ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
+    readErRemovedFileAndIncreaseCounter(resourcesDirectory,outputDirectoryPath);
     ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
      }
 
@@ -79,14 +82,14 @@ object ratioCalculator {
     //read from the frequency file of adverb modified//    For a given adjective (string input),
     //For any given adjective (string input),
 
-    var baseCounter = 0.005;
+    var adverbModifiedCounter = 2.005;
     //println("reaching here at 345345");
     try {
 
       if (hashMapOfAdvModifiedAdjCount.contains(adjToSearch)) {
         //println("reaching here at 53573687");
         //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
-        baseCounter = hashMapOfAdvModifiedAdjCount(adjToSearch);
+        adverbModifiedCounter = hashMapOfAdvModifiedAdjCount(adjToSearch);
       }
       else {
         //throw new CustomException("Given adjective is not found in the file.")
@@ -97,8 +100,15 @@ object ratioCalculator {
 
       case ex: Exception => println("An exception occoured.:\n" + ex.getStackTrace.mkString("\n"))
     }
-    println("value of total times the word " + adjToSearch + " occurs is" + baseCounter)
-    return baseCounter;
+   // println("value of total times the word " + adjToSearch + " is modified by an adverb is" + adverbModifiedCounter)
+
+    //the denominator remains same for all ratios. This will be filled by now, hopefully
+    //println("value of total times the word " + adjToSearch + " occurs is" + denominatorOfRatio)
+
+    var advModifiedratio:Double=0.00001
+    advModifiedratio=adverbModifiedCounter/denominatorOfRatio;
+
+    return advModifiedratio;
   }
 
   def calculateBothInflectedAdvModifiedRatio(): Double = {
