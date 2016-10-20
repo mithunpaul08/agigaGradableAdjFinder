@@ -80,35 +80,24 @@ object ratioCalculator {
     //For any given adjective (string input),
 
     var baseCounter = 0.005;
+    //println("reaching here at 345345");
+    try {
 
-  try
-    {
-
-    if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToSearch)) {
-      println("reaching here at 53573687");
-      //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
-
-      //  For each line in the hash table, if the line contains “happy”,
-       for ((k,v) <- hashMapOfAllUniqAdjectivesInAgigaWithFrequency){
-        if (k.contains(adjToSearch)) {
-          println("reaching here at 345436");
-
-          //    Split that line, and get the frequency out
-          //    Add those frequencies.
-          //      Sum it up to a global variable
-          //retuern the global variable
-
-          //add to my result list
-          baseCounter = v.toInt;
-          baseCounter += baseCounter ;
-        }
+      if (hashMapOfAdvModifiedAdjCount.contains(adjToSearch)) {
+        //println("reaching here at 53573687");
+        //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
+        baseCounter = hashMapOfAdvModifiedAdjCount(adjToSearch);
+      }
+      else {
+        //throw new CustomException("Given adjective is not found in the file.")
+        println("not able to find the given adjective");
       }
     }
-    }
     catch {
-      case ex: Exception => println("Exception occured:")
+
+      case ex: Exception => println("An exception occoured.:\n" + ex.getStackTrace.mkString("\n"))
     }
-    println("value of total times the word "+adjToSearch+" occurs is"+baseCounter)
+    println("value of total times the word " + adjToSearch + " occurs is" + baseCounter)
     return baseCounter;
   }
 
@@ -211,55 +200,52 @@ object ratioCalculator {
 
   //read all adjective phrases and its count to a hash table
   def ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
-    println("reaching here at 2342")
+   // println("reaching here at 2342")
 
     //to get the relative path from resources file
     val advInputFile = new File(getClass.getClassLoader.getResource(FreqOfAdjAdv_withoutAgainAt).getPath)
 
 
     //read from all the adjectives and its frequency into a hash table
-    //val advInputFile = resourcesDirectory + FreqOfAdjAdv_withoutAgainAt;
-    println("path of input file is:"+advInputFile)
+
+    //println("path of input file is:"+advInputFile)
     try {
-      println("reaching here at 45645")
+     // println("reaching here at 45645")
 
       var loopCounter=1;
       for (line <- Source.fromFile(advInputFile).getLines()) {
         //println("reaching here at 3462323")
         val content = line.split("\\s+");
         //println("reaching here at 5435435")
-        loopCounter=loopCounter+1;
+        loopCounter = loopCounter + 1;
         //if it already contains the word, increase its count by the present count. Else initiate it as present count
 
         if (content.length > 1) {
           //println("reaching here at 21304562")
 
-          var countOfPresentAdj= content(0).toInt;
+          var countOfPresentAdj = content(0).toInt;
 
           //assuming the file has data of the form "234234  very much"- then content(2) should have the adjective we are
           //looking for
-          var adjToCheck= content(2);
+          var adjToCheck = content(2);
 
 
           if (hashMapOfAdvModifiedAdjCount.contains(adjToCheck)) {
-            println("found that the given adjective:" + adjToCheck + " already exists in the hash map")
+          //  println("found that the given adjective:" + adjToCheck + " already exists in the hash map")
 
             //retreive the current value
-            println("value of its present counter is:" + countOfPresentAdj)
-            var totalCount= hashMapOfAdvModifiedAdjCount(adjToCheck);
-            totalCount=totalCount+countOfPresentAdj
-            println("value of total count is:" + totalCount)
+            //println("value of its present counter is:" + countOfPresentAdj)
+            var totalCount = hashMapOfAdvModifiedAdjCount(adjToCheck);
+            totalCount = totalCount + countOfPresentAdj
+            //println("value of total count is:" + totalCount)
             hashMapOfAdvModifiedAdjCount += (adjToCheck -> totalCount);
           }
           else {
-            println("found that the given adjective:" + adjToCheck + " does not already exists in the hash map")
-            hashMapOfAdvModifiedAdjCount += (adjToCheck-> content(0).toInt);
-            println("value of its present counter is:" + countOfPresentAdj)
+            //println("found that the given adjective:" + adjToCheck + " does not already exists in the hash map")
+            hashMapOfAdvModifiedAdjCount += (adjToCheck -> content(0).toInt);
+            //println("value of its present counter is:" + countOfPresentAdj)
           }
         }
-//        if(loopCounter>4)
-//          {System.exit(1);}
-
       }
      // println(hashMapOfAdvModifiedAdjCount.mkString("\n"));
     //println(hashMapOfAdvModifiedAdjCount("happy"))

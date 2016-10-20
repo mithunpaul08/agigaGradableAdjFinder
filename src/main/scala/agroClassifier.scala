@@ -100,8 +100,6 @@ object classifierForAgro {
        if(inflRatio>0) {
          println("value of current adjective is :" + line + "and its inflected ratio is:" + inflRatio)
        }
-       //System.exit(1);
-       //for each of the adjectives' root forms, get the inflected ratio.
 
        //for each of the adjectives' root forms, get the inflected ratio.
 

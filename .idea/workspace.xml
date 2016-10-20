@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b413b9cf-b32b-44fb-8587-c908e4e92012" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" afterPath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" afterPath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
     </list>
     <ignored path="hello.iws" />
@@ -30,22 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="parseAgig2.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/parseAgig2.scala">
+      <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-429">
-              <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compareErAdjWithUniq.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="109" column="9" selection-start-line="105" selection-start-column="8" selection-end-line="109" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="436">
+              <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+              <folding>
+                <element signature="e#15#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,11 +46,12 @@
       <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="263" column="7" selection-start-line="263" selection-start-column="7" selection-end-line="263" selection-end-column="7" />
+            <state relative-caret-position="784">
+              <caret line="279" column="1" selection-start-line="279" selection-start-column="1" selection-end-line="279" selection-end-column="1" />
               <folding>
                 <element signature="e#15#64#0" expanded="true" />
-                <element signature="e#4873#9121#0" expanded="false" />
+                <element signature="e#4634#8882#0" expanded="false" />
+                <element signature="e#11539#12379#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -860,28 +854,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-          <folding>
-            <element signature="e#15#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/findAdverbsThatModifyAdjectives.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="197" column="80" selection-start-line="197" selection-start-column="76" selection-end-line="197" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/parseAgig2.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-429">
-          <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -896,19 +872,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
+        <state relative-caret-position="560">
           <caret line="109" column="9" selection-start-line="105" selection-start-column="8" selection-end-line="109" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/parseAgig2.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-415">
+          <caret line="152" column="20" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+          <folding>
+            <element signature="e#15#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="263" column="7" selection-start-line="263" selection-start-column="7" selection-end-line="263" selection-end-column="7" />
+        <state relative-caret-position="784">
+          <caret line="279" column="1" selection-start-line="279" selection-start-column="1" selection-end-line="279" selection-end-column="1" />
           <folding>
             <element signature="e#15#64#0" expanded="true" />
-            <element signature="e#4873#9121#0" expanded="false" />
+            <element signature="e#4634#8882#0" expanded="false" />
+            <element signature="e#11539#12379#0" expanded="false" />
           </folding>
         </state>
       </provider>
