@@ -4,7 +4,6 @@
     <list default="true" id="b413b9cf-b32b-44fb-8587-c908e4e92012" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" afterPath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" afterPath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
     </list>
     <ignored path="hello.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +34,8 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="307" column="80" selection-start-line="307" selection-start-column="80" selection-end-line="307" selection-end-column="80" />
+            <state relative-caret-position="395">
+              <caret line="307" column="7" selection-start-line="307" selection-start-column="7" selection-end-line="307" selection-end-column="7" />
               <folding>
                 <element signature="e#15#45#0" expanded="true" />
               </folding>
@@ -47,8 +46,8 @@
       <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+            <state relative-caret-position="271">
+              <caret line="151" column="55" selection-start-line="151" selection-start-column="52" selection-end-line="151" selection-end-column="55" />
               <folding>
                 <element signature="e#15#64#0" expanded="true" />
                 <element signature="e#12151#12991#0" expanded="false" />
@@ -888,8 +887,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+        <state relative-caret-position="271">
+          <caret line="151" column="55" selection-start-line="151" selection-start-column="52" selection-end-line="151" selection-end-column="55" />
           <folding>
             <element signature="e#15#64#0" expanded="true" />
             <element signature="e#12151#12991#0" expanded="false" />
@@ -899,8 +898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="307" column="80" selection-start-line="307" selection-start-column="80" selection-end-line="307" selection-end-column="80" />
+        <state relative-caret-position="395">
+          <caret line="307" column="7" selection-start-line="307" selection-start-column="7" selection-end-line="307" selection-end-column="7" />
           <folding>
             <element signature="e#15#45#0" expanded="true" />
           </folding>

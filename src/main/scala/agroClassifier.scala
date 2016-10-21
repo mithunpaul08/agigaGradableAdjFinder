@@ -22,6 +22,7 @@ import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 import org.clulab.struct
 import org.clulab.struct.Counter
+import org.clulab.learning.Datasets
 
 
 
@@ -275,54 +276,97 @@ object classifierForAgro {
      //train the classifier
 
 
-     val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-     val perceptron = new PerceptronClassifier[String, String]
-     println("Training the LABEL classifier...");
+     //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
+     //val perceptron = new PerceptronClassifier[String, String]
+     println("starting ten fold cross validation...");
+
+     def factory() = new PerceptronClassifier[String, String]
+
+     //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
+     val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
+    // println(labels.mkString("\n"))
+
+     //calculate acccuracy.
+     //i.e number of times the labels match each other...divided by the total number, will be your accuracy
+
+     var totalCount=0;
+     var countCorrectlyPredicted=0;
+    // while(labels.hasNext)
+     //for(predicted, actual <- labels.getLines())
+
+//     labels foreach println
+
+     //var z:Array[String] = new Array[String](3)
+     //z(0) = "Zara"; z(1) = "Nuha"; z(4/2) = "Ayan"
 
 
 
-     perceptron.train(dataset)
+     for ((predictedLabel,actualLabel) <- predictedLabels)
 
-     //test the classifier for a custom string as of now. Note, we should do the 80-20 thing ideally on COBUILD
-
+     //    labels foreach
      {
-
-       val adjToTest="able";
        
-       println("reaching here at 4576")
-       var inflRatio: Double = 0.911;
-       var advrbModifiedRatio: Double = 0.041
-       var inflAndAdvModified: Double = 0.0465
+       println("value of first value of array is"+actualLabel);
 
-       //println("reaching here at 876467")
-       println("value of current adjective is :" + adjToTest );
+       //println(elem[0])
+      // println(it.next())
 
-       //for each of the adjectives' root forms, get the inflected ratio.
-       inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToTest);
+       totalCount = totalCount +1;
 
-       if(inflRatio>0) {
-         println("value of current adjective is :" + adjToTest + " and its inflected ratio is:" + inflRatio)
-       }
+       if(predictedLabel==actualLabel )
+         {
+           countCorrectlyPredicted = countCorrectlyPredicted+1;
 
-
-       advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToTest);
-
-       if(advrbModifiedRatio>0) {
-         println("value of current adjective is :" + adjToTest + " and its adverb modified ratio is:" + advrbModifiedRatio)
-       }
-       
-       counter.setCount("feature1", inflRatio)
-       counter.setCount("feature2", advrbModifiedRatio)
-       counter.setCount("feature3", inflAndAdvModified)
-
-
-       
-       val datum3 = new RVFDatum[String, String](adjToTest, counter)
-
-       val label = perceptron.classOf(datum3)
-       println("class of the given string:"+adjToTest+" is :"+ label);
+         }
 
      }
+
+     val accuracy=countCorrectlyPredicted/totalCount;
+     println("value of accuracy is:"+accuracy)
+
+
+     //     perceptron.train(dataset)
+//
+//     //test the classifier for a custom string as of now. Note, we should do the 80-20 thing ideally on COBUILD
+//
+//     {
+//
+//       val adjToTest="able";
+//
+//       println("reaching here at 4576")
+//       var inflRatio: Double = 0.911;
+//       var advrbModifiedRatio: Double = 0.041
+//       var inflAndAdvModified: Double = 0.0465
+//
+//       //println("reaching here at 876467")
+//       println("value of current adjective is :" + adjToTest );
+//
+//       //for each of the adjectives' root forms, get the inflected ratio.
+//       inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToTest);
+//
+//       if(inflRatio>0) {
+//         println("value of current adjective is :" + adjToTest + " and its inflected ratio is:" + inflRatio)
+//       }
+//
+//
+//       advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToTest);
+//
+//       if(advrbModifiedRatio>0) {
+//         println("value of current adjective is :" + adjToTest + " and its adverb modified ratio is:" + advrbModifiedRatio)
+//       }
+//
+//       counter.setCount("feature1", inflRatio)
+//       counter.setCount("feature2", advrbModifiedRatio)
+//       counter.setCount("feature3", inflAndAdvModified)
+//
+//
+//
+//       val datum3 = new RVFDatum[String, String](adjToTest, counter)
+//
+//       val label = perceptron.classOf(datum3)
+//       println("class of the given string:"+adjToTest+" is :"+ label);
+//
+//     }
 
 
    }
