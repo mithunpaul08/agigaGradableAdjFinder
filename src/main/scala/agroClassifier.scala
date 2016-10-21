@@ -289,24 +289,14 @@ object classifierForAgro {
      //calculate acccuracy.
      //i.e number of times the labels match each other...divided by the total number, will be your accuracy
 
-     var totalCount=0;
-     var countCorrectlyPredicted=0;
-    // while(labels.hasNext)
-     //for(predicted, actual <- labels.getLines())
-
-//     labels foreach println
-
-     //var z:Array[String] = new Array[String](3)
-     //z(0) = "Zara"; z(1) = "Nuha"; z(4/2) = "Ayan"
-
-
+     var totalCount:Double=0;
+     var countCorrectlyPredicted: Double=0;
 
      for ((predictedLabel,actualLabel) <- predictedLabels)
 
-     //    labels foreach
      {
-       
-       println("value of first value of array is"+actualLabel);
+
+      // println("value of first value of array is"+actualLabel);
 
        //println(elem[0])
       // println(it.next())
@@ -321,8 +311,10 @@ object classifierForAgro {
 
      }
 
-     val accuracy=countCorrectlyPredicted/totalCount;
-     println("value of accuracy is:"+accuracy)
+     val accuracy =(countCorrectlyPredicted/totalCount)*100;
+     println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
+     println("value of totalCount is:"+totalCount)
+     println("value of accuracy is:"+accuracy +"%")
 
 
      //     perceptron.train(dataset)
