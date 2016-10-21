@@ -73,10 +73,16 @@ object classifierForAgro {
 
        }
 
-     val cobuildGradableAuto = new File(getClass.getClassLoader.getResource("GPauto").getPath)
-     val cobuildNonGradableAuto = new File(getClass.getClassLoader.getResource("GMauto").getPath)
-     val cobuildNonGradableManual = new File(getClass.getClassLoader.getResource("GMman").getPath)
-     val cobuildGradableManual = new File(getClass.getClassLoader.getResource("GPman").getPath)
+//     val cobuildGradableAuto = new File(getClass.getClassLoader.getResource("GPauto").getPath)
+//     val cobuildNonGradableAuto = new File(getClass.getClassLoader.getResource("GMauto").getPath)
+//     val cobuildNonGradableManual = new File(getClass.getClassLoader.getResource("GMman").getPath)
+//     val cobuildGradableManual = new File(getClass.getClassLoader.getResource("GPman").getPath)
+
+     //The gradable adjective files provided by COBUILD had lots of overlapping adjectives. Hence combined them both and too uniq.
+     // read through only this file
+
+     val cobuildNonGradable = new File(getClass.getClassLoader.getResource("GMCombined_Uniq").getPath)
+     val cobuildGradable = new File(getClass.getClassLoader.getResource("GPCombined_Uniq").getPath)
 
      //var inputFilename= resourcesDirectory + uniqAdjectivesInAgiga_removedErEst_uniq;
      //println("reaching here at 9870987")
@@ -92,7 +98,7 @@ object classifierForAgro {
     // System.exit(1);
 
      //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
-     for (adjToCheck <- Source.fromFile(cobuildGradableAuto).getLines()) {
+     for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
         //todo: read input from all agiga files
 
        var inflRatio: Double = 0.911;
@@ -124,70 +130,20 @@ object classifierForAgro {
 
 
        val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
-       //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-
 
        dataset += datum1
-      // println("reaching here at 2345245")
 
-
-       //dataset += datum2
-       // add all your datums to the dataset
-     }
-
-     //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
-     for (adjToCheck <- Source.fromFile(cobuildGradableManual).getLines()) {
-       //todo: read input from all agiga files
-
-       var inflRatio: Double = 0.911;
-       var advrbModifiedRatio: Double = 0.041
-       var inflAndAdvModified: Double = 0.0465
-
-       //println("reaching here at 876467")
-       //println("value of current adjective is :" + adjToCheck );
-
-       //for each of the adjectives' root forms, get the inflected ratio.
-       inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
-
-       if(inflRatio>0) {
-         println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
-       }
-
-
-       advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
-
-       if(advrbModifiedRatio>0) {
-         println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
-       }
-
-
-
-       counter.setCount("feature1", inflRatio)
-       counter.setCount("feature2", advrbModifiedRatio)
-       counter.setCount("feature3", inflAndAdvModified)
-
-
-       val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
-       //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-
-
-       dataset += datum1
-       // println("reaching here at 2345245")
-
-
-       //dataset += datum2
-       // add all your datums to the dataset
      }
 
 
      //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
-     for (adjToCheck <- Source.fromFile(cobuildNonGradableAuto).getLines()) {
+     for (adjToCheck <- Source.fromFile(cobuildNonGradable).getLines()) {
        //todo: read input from all agiga files
 
        println("reaching here at 4576")
-       var inflRatio: Double = 0.911;
-       var advrbModifiedRatio: Double = 0.041
-       var inflAndAdvModified: Double = 0.0465
+       var inflRatio: Double = 0;
+       var advrbModifiedRatio: Double = 0
+       var inflAndAdvModified: Double = 0
 
        //println("reaching here at 876467")
        println("value of current adjective is :" + adjToCheck );
@@ -213,101 +169,39 @@ object classifierForAgro {
        counter.setCount("feature3", inflAndAdvModified)
 
 
-       val datum1 = new RVFDatum[String, String]("NOT GRADABLE", counter)
+       val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
        //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
 
 
-       dataset += datum1
+       dataset += datum2
        println("reaching here at 2462467")
 
 
-       //dataset += datum2
-       // add all your datums to the dataset
 
      }
 
-
-     //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
-     for (adjToCheck <- Source.fromFile(cobuildNonGradableManual).getLines()) {
-       //todo: read input from all agiga files
-
-       println("reaching here at 4576")
-       var inflRatio: Double = 0.911;
-       var advrbModifiedRatio: Double = 0.041
-       var inflAndAdvModified: Double = 0.0465
-
-       //println("reaching here at 876467")
-       println("value of current adjective is :" + adjToCheck );
-
-       //for each of the adjectives' root forms, get the inflected ratio.
-       inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
-
-       if(inflRatio>0) {
-         println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
-       }
-
-
-       advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
-
-       if(advrbModifiedRatio>0) {
-         println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
-       }
-
-
-
-       counter.setCount("feature1", inflRatio)
-       counter.setCount("feature2", advrbModifiedRatio)
-       counter.setCount("feature3", inflAndAdvModified)
-
-
-       val datum1 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-       //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-
-
-       dataset += datum1
-       println("reaching here at 2462467")
-
-
-       //dataset += datum2
-       // add all your datums to the dataset
-
-     }
 
      //train the classifier
-
-
-     //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-     //val perceptron = new PerceptronClassifier[String, String]
      println("starting ten fold cross validation...");
 
+     //the crossValidate needs a class of the classifier
      def factory() = new PerceptronClassifier[String, String]
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
-    // println(labels.mkString("\n"))
+
 
      //calculate acccuracy.
      //i.e number of times the labels match each other...divided by the total number, will be your accuracy
-
      var totalCount:Double=0;
      var countCorrectlyPredicted: Double=0;
+     for ((predictedLabel,actualLabel) <- predictedLabels) {
+       totalCount = totalCount + 1;
 
-     for ((predictedLabel,actualLabel) <- predictedLabels)
+       if (predictedLabel == actualLabel) {
+         countCorrectlyPredicted = countCorrectlyPredicted + 1;
 
-     {
-
-      // println("value of first value of array is"+actualLabel);
-
-       //println(elem[0])
-      // println(it.next())
-
-       totalCount = totalCount +1;
-
-       if(predictedLabel==actualLabel )
-         {
-           countCorrectlyPredicted = countCorrectlyPredicted+1;
-
-         }
+       }
 
      }
 
@@ -317,48 +211,6 @@ object classifierForAgro {
      println("value of accuracy is:"+accuracy +"%")
 
 
-     //     perceptron.train(dataset)
-//
-//     //test the classifier for a custom string as of now. Note, we should do the 80-20 thing ideally on COBUILD
-//
-//     {
-//
-//       val adjToTest="able";
-//
-//       println("reaching here at 4576")
-//       var inflRatio: Double = 0.911;
-//       var advrbModifiedRatio: Double = 0.041
-//       var inflAndAdvModified: Double = 0.0465
-//
-//       //println("reaching here at 876467")
-//       println("value of current adjective is :" + adjToTest );
-//
-//       //for each of the adjectives' root forms, get the inflected ratio.
-//       inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToTest);
-//
-//       if(inflRatio>0) {
-//         println("value of current adjective is :" + adjToTest + " and its inflected ratio is:" + inflRatio)
-//       }
-//
-//
-//       advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToTest);
-//
-//       if(advrbModifiedRatio>0) {
-//         println("value of current adjective is :" + adjToTest + " and its adverb modified ratio is:" + advrbModifiedRatio)
-//       }
-//
-//       counter.setCount("feature1", inflRatio)
-//       counter.setCount("feature2", advrbModifiedRatio)
-//       counter.setCount("feature3", inflAndAdvModified)
-//
-//
-//
-//       val datum3 = new RVFDatum[String, String](adjToTest, counter)
-//
-//       val label = perceptron.classOf(datum3)
-//       println("class of the given string:"+adjToTest+" is :"+ label);
-//
-//     }
 
 
    }
