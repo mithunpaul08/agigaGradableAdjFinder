@@ -1,5 +1,6 @@
 package agiga
 
+import util.control.Breaks._
 import java.io.{BufferedWriter, File, FileWriter}
 
 import org.clulab.learning.{Datasets, PerceptronClassifier, RVFDataset, RVFDatum}
@@ -38,22 +39,29 @@ object ratioCalculator {
     var noOfTimesThisAdjInflected = 0;
     println("value of current adjective is :" + adjToGetRatio);
 
-    //get the total count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
+    //get the total number of times this adjective occurs in AGIGA.
+    // //count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
     //if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio))
       if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
         println("reaching here at 089345978")
         totalBaseCount = hashMapOfAllAdjectivesAndItsCount(adjToGetRatio)
         println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllAdjectivesAndItsCount and its base value is" + totalBaseCount)
+
+        println("reaching here at 34522")
+        //if the adjective exists get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
+        var baseForm = adjToGetRatio.replaceAll("er", "")
+        baseForm = baseForm.replaceAll("est", "")
+        if (hashMapOfInflectedAdjectivesAndItsCount.contains(baseForm)) {
+          println("reaching here at 9876")
+          noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(baseForm)
+          println("found that the given adjective:" + baseForm + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
+        }
       }
-    //println("reaching here at 34522")
-    //get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
-    var baseForm = adjToGetRatio.replaceAll("er", "")
-    baseForm = baseForm.replaceAll("est", "")
-    if (hashMapOfInflectedAdjectivesAndItsCount.contains(baseForm)) {
-      println("reaching here at 9876")
-      noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(baseForm)
-      println("found that the given adjective:" + baseForm + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
-    }
+      else {
+        //if the adjective doesnt exist, return a dummy value- no point continuing---dont add it to the loop...so break?
+        println("the given adjective:" + adjToGetRatio + " does not exist in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency")
+        break;
+      }
     //println("reaching here at 347234")
     denominatorOfRatio = totalBaseCount.toDouble
     //println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
