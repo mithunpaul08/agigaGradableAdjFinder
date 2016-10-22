@@ -14,7 +14,7 @@ import scala.io.Source
 object ratioCalculator {
 
 
-  var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
+  var AllErEstEndingAdjectivesUniq = "AllErEstEndingAdjectivesUniq.txt"
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
   var outputFileNameForAllAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
   var outputFileNameForInflectedAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
@@ -139,12 +139,12 @@ object ratioCalculator {
     //read all lines of uniq adjectives to a hashmap
     //ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
-    val erRemovedInputFile = resourcesDirectory + erRemovedFiles;
+    val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectivesUniq;
     println("reaching here at 3")
     var adjToCheck = "NULL";
     try {
       //var counterForHashmap = 0;
-      for (line <- Source.fromFile(erRemovedInputFile).getLines()) {
+      for (line <- Source.fromFile(adjWithErEstEnding).getLines()) {
         adjToCheck = line;
         //do the -er and -est removal in scala itself
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
@@ -156,16 +156,19 @@ object ratioCalculator {
           var baseCounter = 0;
           baseCounter = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(erEstRemovedForm).toInt;
           baseCounter = baseCounter + 1;
+          //hashmap for an  adjectives in its inflected form and its count. Note it will start from zero
           hashMapOfAllAdjectivesAndItsCount += (erEstRemovedForm -> baseCounter);
 
-          //hashmap for an  adjectives in its inflected form and its count. Note it will start from zero
-          //if two adjectives has the same root form, increase teh counter by 2. I.e colder, and coldest, will have the same base forms-cold
-          //so the inflectedCounter for Cold must increase+2. Because cold was inflected twice.Store that in another hashmap
+          //the parent big hashmap which has ALLLLL adjectives (hashMapOfAllAdjectivesAndItsCount), now gets split into two: viz., one hashmap
+          //which has base forms and its count (hashMapOfAllAdjectivesAndItsCount)
+
+          //if two adjectives has the same root form, increase teh counter by 1. I.e colder, and coldest, will have the same base forms-cold
+          //so the inflectedCounter for Cold must increase+1 every time such an inflection happened. Store that in another hashmap
 
           //so at the end of the day, you must have the value, which is a sum of the number of times colder appears,
           //and the number of times coldest appears.
           // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
-          //i.e very first time you encounter, coldest- initialize its value to zero. Now if you see colder again,
+          //i.e very first time you encounter, coldest- initialize its value to 1. Now if you see colder again,
           //this value must increase. Note that the key here will be the base: cold
           var inflectedCounterForSameWord = 0;
           if (hashMapOfInflectedAdjectivesAndItsCount.contains(erEstRemovedForm)) {
