@@ -37,11 +37,6 @@ object ratioCalculator {
     var totalBaseCount: Double = 3.000002
     var noOfTimesThisAdjInflected = 1;
     // println("value of current adjective is :" + adjToGetRatio);
-    //Go through the uniq adjectives list in all the adjectives...for each adjective, pick the total count value and inflected count value.
-    //    for (line <- Source.fromFile(resourcesDirectory+uniqAdjectivesInAgiga_removedErEst_uniq).getLines())
-    //      {
-    //       // println("getting into function calculateInflectedAdjRatio and the given adjective is:" +line)
-    //total count=basecount+inflectedErCount+inflectedEstCount
 
     //get the total count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
     //if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio))
@@ -118,11 +113,8 @@ object ratioCalculator {
     var adverbModifiedInflectedCounter = 0.000000005;
     //if the given adjective is self inflected, check if its modified by an adverb also
     if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToCheck))
-
-    //for((inflAdjective,inflAdjectiveCount) <- hashMapOfInflectedAdjectivesAndItsCount)
     {
-    //for (inflAdjective <- inflAdjective.keys()) {
-      //println("reaching here at 2553863876")
+      println("reaching here at 2553863876")
       if (hashMapOfAdvModifiedAdjCount.contains(adjToCheck)) {
         println("found that the adjective" + adjToCheck + "is both modified by an adverb and self inflected")
         //System.exit(1)
