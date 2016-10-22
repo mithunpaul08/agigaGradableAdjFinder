@@ -52,10 +52,13 @@ object classifierForAgro {
    def initializeAndClassify( ): Unit = {
      val counter = new Counter[String];
      val dataset = new RVFDataset[String, String]
-     //
+
+
+     //when on jenny we want all the files to come from the testbed folder, and not resources folder. Because the files in
+     //resources folder are just smaller subset versions of the actual files, which are really huge in JENNY
      val runOnServer=true;
-     var getCurrentDirectory = new java.io.File(".").getCanonicalPath
-     println("value of present directory is: "+getCurrentDirectory)
+     //var getCurrentDirectory = new java.io.File(".").getCanonicalPath
+     //println("value of present directory is: "+getCurrentDirectory)
      if(runOnServer)
        {
           //resourcesDirectory = "./src/main/resources/"

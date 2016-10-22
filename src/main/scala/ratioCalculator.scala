@@ -32,11 +32,11 @@ object ratioCalculator {
   var hashMapOfAdvModifiedAdjCount: Map[String, Int] = Map()
 
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
-    //println("reaching here at 4393897")
-    var myratio: Double = 0.005;
-    var totalBaseCount: Double = 3.000002
-    var noOfTimesThisAdjInflected = 1;
-    // println("value of current adjective is :" + adjToGetRatio);
+    println("reaching here at 4393897")
+    var myratio: Double = 0;
+    var totalBaseCount: Double = 0
+    var noOfTimesThisAdjInflected = 0;
+    println("value of current adjective is :" + adjToGetRatio);
 
     //get the total count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
     //if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio))
