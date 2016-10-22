@@ -73,10 +73,6 @@ object classifierForAgro {
 
        }
 
-//     val cobuildGradableAuto = new File(getClass.getClassLoader.getResource("GPauto").getPath)
-//     val cobuildNonGradableAuto = new File(getClass.getClassLoader.getResource("GMauto").getPath)
-//     val cobuildNonGradableManual = new File(getClass.getClassLoader.getResource("GMman").getPath)
-//     val cobuildGradableManual = new File(getClass.getClassLoader.getResource("GPman").getPath)
 
      //The gradable adjective files provided by COBUILD had lots of overlapping adjectives. Hence combined them both and too uniq.
      // read through only this file
@@ -84,18 +80,17 @@ object classifierForAgro {
      val cobuildNonGradable = new File(getClass.getClassLoader.getResource("GMCombined_Uniq").getPath)
      val cobuildGradable = new File(getClass.getClassLoader.getResource("GPCombined_Uniq").getPath)
 
-     //var inputFilename= resourcesDirectory + uniqAdjectivesInAgiga_removedErEst_uniq;
      //println("reaching here at 9870987")
 
      //fill in the hashmaps. i.e the maps which has the count of base form adjectives (cold->2342342) and inflected
      //adjectives(colder/coldest:2344)
+
+
      ratioCalculator.triggerFunction(resourcesDirectory,outputDirectoryPath);
      //todo: find if we should pick from the top 300 adjectives
 
-     //testing for count of adjectives modified by adverb
 
 
-    // System.exit(1);
 
      //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
      for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
@@ -103,34 +98,36 @@ object classifierForAgro {
 
        var inflRatio: Double = 0.911;
        var advrbModifiedRatio: Double = 0.041
-       var inflAndAdvModified: Double = 0.0465
+
 
        //println("reaching here at 876467")
        //println("value of current adjective is :" + adjToCheck );
 
+       var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+
+
+       if(inflAndAdvModified>0) {
+         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+       }
+       else
+       {
+         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+       }
+        //System.exit(1);
        //for each of the adjectives' root forms, get the inflected ratio.
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
 
        if(inflRatio>0) {
          println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
        }
-
-
        advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
-
        if(advrbModifiedRatio>0) {
          println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
        }
-
-
-
        counter.setCount("feature1", inflRatio)
        counter.setCount("feature2", advrbModifiedRatio)
        counter.setCount("feature3", inflAndAdvModified)
-
-
        val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
-
        dataset += datum1
 
      }
@@ -206,8 +203,8 @@ object classifierForAgro {
      }
 
      val accuracy =(countCorrectlyPredicted/totalCount)*100;
-     println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
-     println("value of totalCount is:"+totalCount)
+    // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
+    // println("value of totalCount is:"+totalCount)
      println("value of accuracy is:"+accuracy +"%")
 
 

@@ -13,19 +13,18 @@ import scala.io.Source
 object ratioCalculator {
 
 
-
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
   var outputFileNameForAllAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
   var outputFileNameForInflectedAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
-  var allAdjectivesFromAgigaButUniq= "allAdjectivesFromAgigaButUniq.txt"
-  var uniqAdjectivesInAgiga_removedErEst_uniq= "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
+  var allAdjectivesFromAgigaButUniq = "allAdjectivesFromAgigaButUniq.txt"
+  var uniqAdjectivesInAgiga_removedErEst_uniq = "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
   var FreqOfAdjAdv_withoutAgainAt = "FreqOfAdjAdv_withoutAgainAt.txt";
 
   // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
   //the denominator remains same for a given adjective for all the ratios
-  var denominatorOfRatio: Double= 0.0000001;
+  var denominatorOfRatio: Double = 0.0000001;
 
   var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, String] = Map()
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
@@ -35,9 +34,9 @@ object ratioCalculator {
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
     //println("reaching here at 4393897")
     var myratio: Double = 0.005;
-  var totalBaseCount: Double =3.000002
+    var totalBaseCount: Double = 3.000002
     var noOfTimesThisAdjInflected = 1;
-   // println("value of current adjective is :" + adjToGetRatio);
+    // println("value of current adjective is :" + adjToGetRatio);
     //Go through the uniq adjectives list in all the adjectives...for each adjective, pick the total count value and inflected count value.
     //    for (line <- Source.fromFile(resourcesDirectory+uniqAdjectivesInAgiga_removedErEst_uniq).getLines())
     //      {
@@ -45,11 +44,12 @@ object ratioCalculator {
     //total count=basecount+inflectedErCount+inflectedEstCount
 
     //get the total count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
-    if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio)) {
-      println("reaching here at 089345978")
-      totalBaseCount = hashMapOfAllAdjectivesAndItsCount(adjToGetRatio)
-      println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllAdjectivesAndItsCount and its base value is" + totalBaseCount)
-    }
+    //if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio))
+      if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
+        println("reaching here at 089345978")
+        totalBaseCount = hashMapOfAllAdjectivesAndItsCount(adjToGetRatio)
+        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllAdjectivesAndItsCount and its base value is" + totalBaseCount)
+      }
     //println("reaching here at 34522")
     //get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
     var baseForm = adjToGetRatio.replaceAll("er", "")
@@ -60,20 +60,20 @@ object ratioCalculator {
       println("found that the given adjective:" + baseForm + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
     }
     //println("reaching here at 347234")
-    denominatorOfRatio=totalBaseCount.toDouble
+    denominatorOfRatio = totalBaseCount.toDouble
     //println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
-    myratio = noOfTimesThisAdjInflected.toDouble/ denominatorOfRatio;
+    myratio = noOfTimesThisAdjInflected.toDouble / denominatorOfRatio;
     //println("value of this ratio is:" + myratio.toDouble.toString())
 
     return myratio;
 
   }
 
-  def triggerFunction(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
-    ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
-    readErRemovedFileAndIncreaseCounter(resourcesDirectory,outputDirectoryPath);
-    ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory,outputDirectoryPath);
-     }
+  def triggerFunction(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
+    ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
+    readErRemovedFileAndIncreaseCounter(resourcesDirectory, outputDirectoryPath);
+    ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
+  }
 
   def calculateAdvModifiedAdjRatio(adjToSearch: String): Double = {
 
@@ -82,14 +82,15 @@ object ratioCalculator {
     //read from the frequency file of adverb modified//    For a given adjective (string input),
     //For any given adjective (string input),
 
-    var adverbModifiedCounter = 2.005;
-    //println("reaching here at 345345");
+    var adverbModifiedCounter = 0.000000005;
+    println("reaching here at 345345");
     try {
 
       if (hashMapOfAdvModifiedAdjCount.contains(adjToSearch)) {
-        //println("reaching here at 53573687");
-        //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
+        println("reaching here at 53573687");
+        println("reaching here at 34345 . value of base form is:"+adjToSearch)
         adverbModifiedCounter = hashMapOfAdvModifiedAdjCount(adjToSearch);
+        println("reaching here at 52577676. value of adverbModifiedCounter is:"+ adverbModifiedCounter)
       }
       else {
         //throw new CustomException("Given adjective is not found in the file.")
@@ -100,30 +101,46 @@ object ratioCalculator {
 
       case ex: Exception => println("An exception occoured.:\n" + ex.getStackTrace.mkString("\n"))
     }
-   // println("value of total times the word " + adjToSearch + " is modified by an adverb is" + adverbModifiedCounter)
+     println("value of total times the word " + adjToSearch + " is modified by an adverb is" + adverbModifiedCounter)
 
     //the denominator remains same for all ratios. This will be filled by now, hopefully
-    //println("value of total times the word " + adjToSearch + " occurs is" + denominatorOfRatio)
+    println("value of total times the word " + adjToSearch + " occurs is" + denominatorOfRatio)
 
-    var advModifiedratio:Double=0.00001
-    advModifiedratio=adverbModifiedCounter/denominatorOfRatio;
+    var advModifiedratio: Double = adverbModifiedCounter / denominatorOfRatio;
 
     return advModifiedratio;
   }
 
-  def calculateBothInflectedAdvModifiedRatio(): Double = {
+  def calculateBothInflectedAdvModifiedRatio(adjToCheck:String): Double = {
 
-    var myratio: Double = 0.005;
+    var myratio: Double = 0.0000001;
+    println("reaching here at 208763")
+    var adverbModifiedInflectedCounter = 0.000000005;
+    //if the given adjective is self inflected, check if its modified by an adverb also
+    if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToCheck))
+
+    //for((inflAdjective,inflAdjectiveCount) <- hashMapOfInflectedAdjectivesAndItsCount)
+    {
+    //for (inflAdjective <- inflAdjective.keys()) {
+      //println("reaching here at 2553863876")
+      if (hashMapOfAdvModifiedAdjCount.contains(adjToCheck)) {
+        println("found that the adjective" + adjToCheck + "is both modified by an adverb and self inflected")
+        //System.exit(1)
+      }
+    }
+
+
+
     return myratio;
   }
 
 
-  def readErRemovedFileAndIncreaseCounter(resourcesDirectory:String,outputDirectoryPath :String): Unit = {
+  def readErRemovedFileAndIncreaseCounter(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
     //read all lines of uniq adjectives to a hashmap
     //ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
     val erRemovedInputFile = resourcesDirectory + erRemovedFiles;
-   println("reaching here at 3")
+    println("reaching here at 3")
     var adjToCheck = "NULL";
     try {
       //var counterForHashmap = 0;
@@ -138,7 +155,7 @@ object ratioCalculator {
           //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
           var baseCounter = 0;
           baseCounter = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(erEstRemovedForm).toInt;
-          baseCounter=baseCounter+1;
+          baseCounter = baseCounter + 1;
           hashMapOfAllAdjectivesAndItsCount += (erEstRemovedForm -> baseCounter);
 
           //hashmap for an  adjectives in its inflected form and its count. Note it will start from zero
@@ -150,8 +167,8 @@ object ratioCalculator {
           // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
           //i.e very first time you encounter, coldest- initialize its value to zero. Now if you see colder again,
           //this value must increase. Note that the key here will be the base: cold
-         var inflectedCounterForSameWord=0;
-          if (hashMapOfInflectedAdjectivesAndItsCount.contains(erEstRemovedForm)){
+          var inflectedCounterForSameWord = 0;
+          if (hashMapOfInflectedAdjectivesAndItsCount.contains(erEstRemovedForm)) {
             inflectedCounterForSameWord = hashMapOfInflectedAdjectivesAndItsCount(erEstRemovedForm).toInt;
             inflectedCounterForSameWord = inflectedCounterForSameWord + 1;
           }
@@ -172,7 +189,7 @@ object ratioCalculator {
 
 
         // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
-        if (hashMapOfAllAdjectivesAndItsCount.contains(adjToCheck)){
+        if (hashMapOfAllAdjectivesAndItsCount.contains(adjToCheck)) {
           inflectedCounter = hashMapOfAllAdjectivesAndItsCount(adjToCheck).toInt;
           inflectedCounter = inflectedCounter + 1;
         }
@@ -185,16 +202,16 @@ object ratioCalculator {
     } catch {
       case ex: Exception => println("Exception occured:")
     }
-   // println("value of hashmap is:" + hashMapOfAllAdjectivesAndItsCount.mkString("\n "));
+    // println("value of hashmap is:" + hashMapOfAllAdjectivesAndItsCount.mkString("\n "));
     //writeToFile(hashMapOfAllAdjectivesAndItsCount.mkString("\n"),outputFileNameForAllAdjectiveCount,outputDirectoryPath)
 
-   // println("value of hashmap is:" + hashMapOfInflectedAdjectivesAndItsCount.mkString("\n "));
+    // println("value of hashmap is:" + hashMapOfInflectedAdjectivesAndItsCount.mkString("\n "));
     //write the inflected value count also to file
     //writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"),outputFileNameForInflectedAdjectiveCount,outputDirectoryPath)
 
   }
 
-  def writeToFile(stringToWrite: String, outputFilename: String,outputDirectoryPath :String): Unit = {
+  def writeToFile(stringToWrite: String, outputFilename: String, outputDirectoryPath: String): Unit = {
 
 
     val outFile = new File(outputDirectoryPath, outputFilename)
@@ -209,8 +226,8 @@ object ratioCalculator {
   }
 
   //read all adjective phrases and its count to a hash table
-  def ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
-   // println("reaching here at 2342")
+  def ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
+    // println("reaching here at 2342")
 
     //to get the relative path from resources file
     val advInputFile = new File(getClass.getClassLoader.getResource(FreqOfAdjAdv_withoutAgainAt).getPath)
@@ -220,9 +237,9 @@ object ratioCalculator {
 
     //println("path of input file is:"+advInputFile)
     try {
-     // println("reaching here at 45645")
+      // println("reaching here at 45645")
 
-      var loopCounter=1;
+      var loopCounter = 1;
       for (line <- Source.fromFile(advInputFile).getLines()) {
         //println("reaching here at 3462323")
         val content = line.split("\\s+");
@@ -241,7 +258,7 @@ object ratioCalculator {
 
 
           if (hashMapOfAdvModifiedAdjCount.contains(adjToCheck)) {
-          //  println("found that the given adjective:" + adjToCheck + " already exists in the hash map")
+            //  println("found that the given adjective:" + adjToCheck + " already exists in the hash map")
 
             //retreive the current value
             //println("value of its present counter is:" + countOfPresentAdj)
@@ -257,13 +274,14 @@ object ratioCalculator {
           }
         }
       }
-     // println(hashMapOfAdvModifiedAdjCount.mkString("\n"));
-    //println(hashMapOfAdvModifiedAdjCount("happy"))
+      // println(hashMapOfAdvModifiedAdjCount.mkString("\n"));
+      //println(hashMapOfAdvModifiedAdjCount("happy"))
     } catch {
       case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
     }
   }
-  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory:String,outputDirectoryPath:String): Unit = {
+
+  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
     println("reaching here at 36857")
 
     //read from all the adjectives and its frequency into a hash table
