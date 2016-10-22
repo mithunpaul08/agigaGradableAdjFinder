@@ -23,6 +23,7 @@ import scala.io.Source
 import org.clulab.struct
 import org.clulab.struct.Counter
 import org.clulab.learning.Datasets
+import util.control.Breaks._
 
 
 
@@ -114,7 +115,13 @@ object classifierForAgro {
        if(inflRatio>0) {
          println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
        }
-       System.exit(1);
+       else {
+         println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
+         break;
+
+       }
+
+       //System.exit(1);
 
        //for each of the adjectives' root forms, get the adverb modified ratio.
        advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);

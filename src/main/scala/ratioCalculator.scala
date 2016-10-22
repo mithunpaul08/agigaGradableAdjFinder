@@ -60,7 +60,7 @@ object ratioCalculator {
       else {
         //if the adjective doesnt exist, return a dummy value- no point continuing---dont add it to the loop...so break?
         println("the given adjective:" + adjToGetRatio + " does not exist in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency")
-        break;
+        return 0;
       }
     //println("reaching here at 347234")
     denominatorOfRatio = totalBaseCount.toDouble
