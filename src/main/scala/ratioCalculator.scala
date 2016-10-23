@@ -14,7 +14,7 @@ import scala.io.Source
 object ratioCalculator {
 
 
-  var AllErEstEndingAdjectivesUniq = "AllErEstEndingAdjectivesUniq.txt"
+  var AllErEstEndingAdjectivesUniq = "AllErEstEndingAdjectives.txt"
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
   var outputFileNameForAllAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
   var outputFileNameForInflectedAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
@@ -27,7 +27,7 @@ object ratioCalculator {
   //the denominator remains same for a given adjective for all the ratios
   var denominatorOfRatio: Double = 0.0000001;
 
-  var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, String] = Map()
+  var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, Int] = Map()
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfInflectedAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfAdvModifiedAdjCount: Map[String, Int] = Map()
@@ -44,17 +44,17 @@ object ratioCalculator {
     //if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio))
       if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
         println("reaching here at 089345978")
-        totalBaseCount = hashMapOfAllAdjectivesAndItsCount(adjToGetRatio)
-        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllAdjectivesAndItsCount and its base value is" + totalBaseCount)
+        totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
+        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and its base value is" + totalBaseCount)
 
         println("reaching here at 34522")
         //if the adjective exists get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
-        var baseForm = adjToGetRatio.replaceAll("er", "")
-        baseForm = baseForm.replaceAll("est", "")
-        if (hashMapOfInflectedAdjectivesAndItsCount.contains(baseForm)) {
+        //var baseForm = adjToGetRatio.replaceAll("er", "")
+        //baseForm = baseForm.replaceAll("est", "")
+        if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToGetRatio)) {
           println("reaching here at 9876")
-          noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(baseForm)
-          println("found that the given adjective:" + baseForm + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
+          noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(adjToGetRatio)
+          println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
         }
       }
       else {
@@ -63,10 +63,14 @@ object ratioCalculator {
         return 0;
       }
     //println("reaching here at 347234")
+
+    //note: this value is the sum of number of times cold occurs by itself + number of times its inflected
     denominatorOfRatio = totalBaseCount.toDouble
-    //println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
+    println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
+    println("value of this numerator  is:" + noOfTimesThisAdjInflected.toDouble.toString())
     myratio = noOfTimesThisAdjInflected.toDouble / denominatorOfRatio;
     //println("value of this ratio is:" + myratio.toDouble.toString())
+
 
     return myratio;
 
@@ -136,40 +140,63 @@ object ratioCalculator {
 
 
   def readErRemovedFileAndIncreaseCounter(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
-    //read all lines of uniq adjectives to a hashmap
-    //ReadAllUniqAdjectivesToHashmap()
-    //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
-    val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectivesUniq;
-    println("reaching here at 3")
+
+    //read all lines of adjectives that end in er or est. Note: this is the actual number of times that adjective
+    // occurs, not unique.
+     val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectivesUniq;
+    println("reaching here at 242343")
     var adjToCheck = "NULL";
     try {
       //var counterForHashmap = 0;
       for (line <- Source.fromFile(adjWithErEstEnding).getLines()) {
         adjToCheck = line;
         //do the -er and -est removal in scala itself
+        //note: ideally we should pass it through the coldest->cold hashmap to get the base value. This is a wrong method
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
-        //println("reaching here at 234233")
-        //get its base form. Check the count of base form. Increase the count value, write it to the new hashmap which contains all adjectives and its counter
+        println("reaching here at 79578")
+
+        //This is where we are increasing the count for base form. i.e cold might be already occuring say 434354 times in
+        // the corpus. For every time we see colder, or coldest, we need to increase that count by one. In this code here,
+        // we check if the base form exists in the hash map hashMapOfAllUniqAdjectivesInAgigaWithFrequency- which we had
+        //filled in last step. If it exists, get its current count, and increase by one.
         if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(erEstRemovedForm)) {
-          //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
+          println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
           var baseCounter = 0;
           baseCounter = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(erEstRemovedForm).toInt;
+          println("reaching here at 234234 . value of base form  frequency is:"+baseCounter)
           baseCounter = baseCounter + 1;
+
+          //This is a mistake, we must be increasing the counter of the same hashmap..
           //hashmap for an  adjectives in its inflected form and its count. Note it will start from zero
-          hashMapOfAllAdjectivesAndItsCount += (erEstRemovedForm -> baseCounter);
+          //hashMapOfAllAdjectivesAndItsCount += (erEstRemovedForm -> baseCounter);
 
-          //the parent big hashmap which has ALLLLL adjectives (hashMapOfAllAdjectivesAndItsCount), now gets split into two: viz., one hashmap
-          //which has base forms and its count (hashMapOfAllAdjectivesAndItsCount)
+          hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (erEstRemovedForm -> baseCounter);
 
-          //if two adjectives has the same root form, increase teh counter by 1. I.e colder, and coldest, will have the same base forms-cold
-          //so the inflectedCounter for Cold must increase+1 every time such an inflection happened. Store that in another hashmap
+
+          //the parent big hashmap which has ALLLLL adjectives (hashMapOfAllUniqAdjectivesInAgigaWithFrequency),
+          // now gets split into two: viz., one hashmap
+          //which has base forms and its count (hashMapOfAllUniqAdjectivesInAgigaWithFrequency) -note: This is the same
+          // as the parent hashmap...also this is
+          // the number of times
+          //cold occurs in its base form plus number of times it was inflected. This becomes the denominator of the big
+          //ratio henceforth
+          //and another hashmap which has ONLY the inflected count:hashMapOfInflectedAdjectivesAndItsCount
+
+          //if two adjectives has the same root form, increase teh counter by 1. I.e colder, and coldest,
+          // will have the same base forms-cold
+          //so the inflectedCounter for Cold must increase+1 every time such an inflection happened.
+          // Store that in another hashmap
 
           //so at the end of the day, you must have the value, which is a sum of the number of times colder appears,
           //and the number of times coldest appears.
           // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
           //i.e very first time you encounter, coldest- initialize its value to 1. Now if you see colder again,
           //this value must increase. Note that the key here will be the base: cold
+
+          //in other words, the hashmap:hashMapOfInflectedAdjectivesAndItsCount, is simply the number of times the
+          //base word, cold, was inflected.
+
           var inflectedCounterForSameWord = 0;
           if (hashMapOfInflectedAdjectivesAndItsCount.contains(erEstRemovedForm)) {
             inflectedCounterForSameWord = hashMapOfInflectedAdjectivesAndItsCount(erEstRemovedForm).toInt;
@@ -192,14 +219,14 @@ object ratioCalculator {
 
 
         // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
-        if (hashMapOfAllAdjectivesAndItsCount.contains(adjToCheck)) {
-          inflectedCounter = hashMapOfAllAdjectivesAndItsCount(adjToCheck).toInt;
-          inflectedCounter = inflectedCounter + 1;
-        }
-        else {
-          inflectedCounter = 1
-        }
-        hashMapOfAllAdjectivesAndItsCount += (adjToCheck -> inflectedCounter);
+//        if (hashMapOfAllAdjectivesAndItsCount.contains(adjToCheck)) {
+//          inflectedCounter = hashMapOfAllAdjectivesAndItsCount(adjToCheck).toInt;
+//          inflectedCounter = inflectedCounter + 1;
+//        }
+//        else {
+//          inflectedCounter = 1
+//        }
+//        hashMapOfAllAdjectivesAndItsCount += (adjToCheck -> inflectedCounter);
 
       }
     } catch {
@@ -232,8 +259,11 @@ object ratioCalculator {
   def ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
     // println("reaching here at 2342")
 
+    //this file must be present in the testbed directory in jenny- didnt want to move 1gb file onto github
+    val advInputFile = resourcesDirectory + FreqOfAdjAdv_withoutAgainAt;
+
     //to get the relative path from resources file
-    val advInputFile = new File(getClass.getClassLoader.getResource(FreqOfAdjAdv_withoutAgainAt).getPath)
+   // val advInputFile = new File(getClass.getClassLoader.getResource(FreqOfAdjAdv_withoutAgainAt).getPath)
 
 
     //read from all the adjectives and its frequency into a hash table
@@ -295,10 +325,11 @@ object ratioCalculator {
       for (line <- Source.fromFile(advInputFile).getLines()) {
         //println("reaching here at 3462323")
         val content = line.split("\\s+");
+        val frequency:Int=content(0).toInt;
 
         if (content.length > 1) {
 
-          hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (content(1) -> content(0));
+          hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (content(1) -> frequency);
         }
 
         //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));

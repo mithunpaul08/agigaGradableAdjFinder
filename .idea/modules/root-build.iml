@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="root-build" external.linked.project.path="$MODULE_DIR$/../../project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="sbt._, Keys._, dsl._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, $55026ddb62cbf4661292.root" sbt.resolvers="https://jcenter.bintray.com/|maven|jcenter, https://repo1.maven.org/maven2/|maven|public, /home/mithunpaul/.ivy2/cache|ivy|Local cache" type="SBT_MODULE" version="4">
+<module external.linked.project.id="root-build" external.linked.project.path="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="sbt._, Keys._, dsl._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, $633f5c703bf53df63d6e.root" sbt.resolvers="https://jcenter.bintray.com/|maven|jcenter, https://repo1.maven.org/maven2/|maven|public, /Users/mithun/.ivy2/cache|ivy|Local cache" type="SBT_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/../../project/target/idea-classes" />
-    <output-test url="file://$MODULE_DIR$/../../project/target/idea-test-classes" />
+    <output url="file://$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project/target/idea-classes" />
+    <output-test url="file://$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project/target/idea-test-classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../project">
-      <sourceFolder url="file://$MODULE_DIR$/../../project" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../project/project/target" />
-      <excludeFolder url="file://$MODULE_DIR$/../../project/target" />
+    <content url="file://$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project">
+      <sourceFolder url="file://$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project" isTestSource="false" />
+      <excludeFolder url="file://$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project/project/target" />
+      <excludeFolder url="file://$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -34,7 +34,9 @@ object classifierForAgro {
   var allAdjectivesFromAgigaButUniq= "allAdjectivesFromAgigaButUniq.txt"
 
   var uniqAdjectivesInAgiga_removedErEst_uniq= "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
+  var GMCombined_Uniq="GMCombined_Uniq"
 
+ var GPCombined_Uniq="GPCombined_Uniq"
 
   //path in laptop
   //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
@@ -57,7 +59,7 @@ object classifierForAgro {
 
      //when on jenny we want all the files to come from the testbed folder, and not resources folder. Because the files in
      //resources folder are just smaller subset versions of the actual files, which are really huge in JENNY
-     val runOnServer=true;
+     val runOnServer=false;
      //var getCurrentDirectory = new java.io.File(".").getCanonicalPath
      //println("value of present directory is: "+getCurrentDirectory)
      if(runOnServer)
@@ -81,8 +83,11 @@ object classifierForAgro {
      //The gradable adjective files provided by COBUILD had lots of overlapping adjectives. Hence combined them both and too uniq.
      // read through only this file
 
-     val cobuildNonGradable = new File(getClass.getClassLoader.getResource("GMCombined_Uniq").getPath)
-     val cobuildGradable = new File(getClass.getClassLoader.getResource("GPCombined_Uniq").getPath)
+     val cobuildNonGradable = resourcesDirectory + GMCombined_Uniq;
+     val cobuildGradable = resourcesDirectory + GPCombined_Uniq;
+
+     //val cobuildNonGradable = new File(getClass.getClassLoader.getResource("GMCombined_Uniq").getPath)
+     //val cobuildGradable = new File(getClass.getClassLoader.getResource("GPCombined_Uniq").getPath)
 
      //println("reaching here at 9870987")
 
@@ -100,8 +105,8 @@ object classifierForAgro {
      for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
         //todo: read input from all agiga files
 
-       var inflRatio: Double = 0.911;
-       var advrbModifiedRatio: Double = 0.041
+       var inflRatio: Double = 0;
+       var advrbModifiedRatio: Double = 0
 
 
        //println("reaching here at 876467")
@@ -121,14 +126,13 @@ object classifierForAgro {
 
        }
 
-       //System.exit(1);
 
        //for each of the adjectives' root forms, get the adverb modified ratio.
        advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
        if(advrbModifiedRatio>0) {
          println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
        }
-
+       
        //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
        var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
 
