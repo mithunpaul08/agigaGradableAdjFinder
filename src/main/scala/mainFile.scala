@@ -6,24 +6,22 @@ import scala.xml.XML
 object mainParser {
   def main(args: Array[String]) = println("Exiting main program")
 
+  val runOnServer = false;
   //call the adjective parser.
-//  agigParser.readFiles();
+  //  agigParser.readFiles();
 
   //call the adverb parser
   //adverbParser.readFiles();
-  val runOnServer=false;
+
   //call the adjective -er form checker
- var hashmapOfColderCold= goodAdjectiveFinder.readErRemovedFile(runOnServer);
+  var hashmapOfColderCold = goodAdjectiveFinder.readErRemovedFile(runOnServer);
 
 
   //functions that fill up the hashmaps
   //ratioCalculator.triggerFunction();
 
   //once the hashmaps are filled up with word frequency, call the classifier class
-  classifierForAgro.initializeAndClassify(runOnServer,hashmapOfColderCold);
-
-
-
+  classifierForAgro.initializeAndClassify(runOnServer, hashmapOfColderCold);
 
 }
 

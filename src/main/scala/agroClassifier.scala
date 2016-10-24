@@ -103,7 +103,7 @@ object classifierForAgro {
 
      //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
      for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
-        //todo: read input from all agiga files
+       //todo: read input from all agiga files
 
        var inflRatio: Double = 0;
        var advrbModifiedRatio: Double = 0
@@ -113,43 +113,45 @@ object classifierForAgro {
        //println("value of current adjective is :" + adjToCheck );
 
 
-
        //for each of the adjectives' root forms, get the inflected ratio.
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
 
-       if(inflRatio>0) {
+       if (inflRatio > 0) {
          println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
+
+
+
+         //for each of the adjectives' root forms, get the adverb modified ratio.
+         advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+         if (advrbModifiedRatio > 0) {
+           println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+         }
+
+         //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+         var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+
+
+         if (inflAndAdvModified > 0) {
+           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+         }
+         else {
+           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+         }
+
+         counter.setCount("feature1", inflRatio)
+         counter.setCount("feature2", advrbModifiedRatio)
+         counter.setCount("feature3", inflAndAdvModified)
+         val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
+         dataset += datum1
        }
        else {
+         //if the given adjective is not found, the return value will be zero. In that case
+         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+
          println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
-         break;
+
 
        }
-
-
-       //for each of the adjectives' root forms, get the adverb modified ratio.
-       advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
-       if(advrbModifiedRatio>0) {
-         println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
-       }
-
-       //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-       var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
-
-
-       if(inflAndAdvModified>0) {
-         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-       }
-       else
-       {
-         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-       }
-       
-       counter.setCount("feature1", inflRatio)
-       counter.setCount("feature2", advrbModifiedRatio)
-       counter.setCount("feature3", inflAndAdvModified)
-       val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
-       dataset += datum1
 
      }
 
