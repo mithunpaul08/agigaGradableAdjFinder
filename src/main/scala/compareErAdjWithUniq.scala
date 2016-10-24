@@ -46,10 +46,10 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
 
 
   def ReadAllUniqAdjectivesToHashmap(): Unit = {
-    println("reaching here at 1325")
+  //  println("reaching here at 1325")
     val advInputFile = resourcesDirectory + completeAgigaFile;
     try {
-      println("reaching here at 1263.value of the path of the file is :"+advInputFile)
+    //  println("reaching here at 1263.value of the path of the file is :"+advInputFile)
       var counterForHashmap = 0;
       for (line <- Source.fromFile(advInputFile).getLines()) {
          // println("reaching here at 184")
@@ -103,8 +103,8 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
     ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
     val erRemovedInputFile = resourcesDirectory + AllErEstEndingAdjectivesUniq;
-    println("reaching here at 956395.value of the path of the file is :"+erRemovedInputFile)
-    println("reaching here at 3")
+   // println("reaching here at 956395.value of the path of the file is :"+erRemovedInputFile)
+   // println("reaching here at 3")
     var adjToCheck = "NULL";
     try {
       //var counterForHashmap = 0;
@@ -127,7 +127,7 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
     } catch {
       case ex: Exception => println("Exception occured:")
     }
-    println("value of hashmap is:" + hashMapOfInflAdjToRootForm);
+   // println("value of hashmap is:" + hashMapOfInflAdjToRootForm);
     //System.exit(1)
     writeToFile(hashMapOfInflAdjToRootForm.mkString("\n"))
     return hashMapOfInflAdjToRootForm;
