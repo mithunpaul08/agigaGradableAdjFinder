@@ -52,14 +52,14 @@ object classifierForAgro {
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
 
-   def initializeAndClassify( ): Unit = {
+   def initializeAndClassify( runOnServer: Boolean, hashmapOfColderCold: Map[String, String]): Unit = {
      val counter = new Counter[String];
      val dataset = new RVFDataset[String, String]
 
 
      //when on jenny we want all the files to come from the testbed folder, and not resources folder. Because the files in
      //resources folder are just smaller subset versions of the actual files, which are really huge in JENNY
-     val runOnServer=false;
+
      //var getCurrentDirectory = new java.io.File(".").getCanonicalPath
      //println("value of present directory is: "+getCurrentDirectory)
      if(runOnServer)
@@ -132,7 +132,7 @@ object classifierForAgro {
        if(advrbModifiedRatio>0) {
          println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
        }
-       
+
        //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
        var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
 
@@ -144,7 +144,7 @@ object classifierForAgro {
        {
          println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
        }
-
+       
        counter.setCount("feature1", inflRatio)
        counter.setCount("feature2", advrbModifiedRatio)
        counter.setCount("feature3", inflAndAdvModified)

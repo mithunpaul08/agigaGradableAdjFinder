@@ -11,16 +11,16 @@ object mainParser {
 
   //call the adverb parser
   //adverbParser.readFiles();
-
+  val runOnServer=false;
   //call the adjective -er form checker
-  //goodAdjectiveFinder.readErRemovedFile();
+ var hashmapOfColderCold= goodAdjectiveFinder.readErRemovedFile(runOnServer);
 
 
   //functions that fill up the hashmaps
   //ratioCalculator.triggerFunction();
 
   //once the hashmaps are filled up with word frequency, call the classifier class
-  classifierForAgro.initializeAndClassify();
+  classifierForAgro.initializeAndClassify(runOnServer,hashmapOfColderCold);
 
 
 

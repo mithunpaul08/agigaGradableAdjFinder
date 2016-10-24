@@ -34,9 +34,9 @@ object goodAdjectiveFinder {
  // var completeAgigaFile = "allAdjectivesFromAgigaButUniq.txt";
   
 
-var completeAgigaFile = "sortedUniqAllAdjFromAgiga";
+var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
   //var erRemovedFiles="uniqAdjectivesInAgiga_removedErEst.txt";
-  var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
+  var AllErEstEndingAdjectivesUniq = "AllErEstEndingAdjectivesUniq.txt"
 
   var outputFileName = "hashmapForErAdjectiveAndItsBaseForm.txt";
 
@@ -49,10 +49,10 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga";
     println("reaching here at 1325")
     val advInputFile = resourcesDirectory + completeAgigaFile;
     try {
-      //println("reaching here at 1263")
+      println("reaching here at 1263.value of the path of the file is :"+advInputFile)
       var counterForHashmap = 0;
       for (line <- Source.fromFile(advInputFile).getLines()) {
-        //  println("reaching here at 184")
+         // println("reaching here at 184")
         hashMapOfAllUniqAdjectivesInAgiga += (line -> "1");
       }
     } catch {
@@ -83,13 +83,27 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga";
     case None => "value not found"
   }
 
-  def readErRemovedFile(): Unit = {
+  def readErRemovedFile(runOnServer: Boolean): Map[String, String] = {
     //println("reaching here at 1")
+    if (runOnServer) {
+       resourcesDirectory = "/work/mithunpaul/testbed/"
+      //var resourcesDirectory = "resources/"
 
+       outputDirectoryPath = "outputs/"
+    }
+    else {
+
+      //resourcesDirectory = "src/main/resources/"
+     resourcesDirectory= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
+
+     // outputDirectoryPath = "src/main/outputs/"
+      outputDirectoryPath= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+    }
     //read all lines of uniq adjectives to a hashmap
     ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
-    val erRemovedInputFile = resourcesDirectory + erRemovedFiles;
+    val erRemovedInputFile = resourcesDirectory + AllErEstEndingAdjectivesUniq;
+    println("reaching here at 956395.value of the path of the file is :"+erRemovedInputFile)
     println("reaching here at 3")
     var adjToCheck = "NULL";
     try {
@@ -114,8 +128,10 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga";
       case ex: Exception => println("Exception occured:")
     }
     println("value of hashmap is:" + hashMapOfInflAdjToRootForm);
+    //System.exit(1)
     writeToFile(hashMapOfInflAdjToRootForm.mkString("\n"))
-    //writeToFile(hashMapOfInflAdjToRootForm.mkString)
+    return hashMapOfInflAdjToRootForm;
+
   }
 }
 

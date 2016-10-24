@@ -1,0 +1,2 @@
+colder -> cold
+coldest -> cold

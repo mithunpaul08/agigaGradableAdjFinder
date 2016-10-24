@@ -25,7 +25,7 @@ object ratioCalculator {
   // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
   //the denominator remains same for a given adjective for all the ratios
-  var denominatorOfRatio: Double = 0.0000001;
+  var denominatorOfRatio: Double = 0.000000;
 
   var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, Int] = Map()
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
@@ -43,16 +43,16 @@ object ratioCalculator {
     // //count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
     //if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio))
       if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
-        println("reaching here at 089345978")
+       // println("reaching here at 089345978")
         totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
         println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and its base value is" + totalBaseCount)
 
-        println("reaching here at 34522")
+        //println("reaching here at 34522")
         //if the adjective exists get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
         //var baseForm = adjToGetRatio.replaceAll("er", "")
         //baseForm = baseForm.replaceAll("est", "")
         if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToGetRatio)) {
-          println("reaching here at 9876")
+         // println("reaching here at 9876")
           noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(adjToGetRatio)
           println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
         }
@@ -66,8 +66,8 @@ object ratioCalculator {
 
     //note: this value is the sum of number of times cold occurs by itself + number of times its inflected
     denominatorOfRatio = totalBaseCount.toDouble
-    println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
-    println("value of this numerator  is:" + noOfTimesThisAdjInflected.toDouble.toString())
+    //println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
+    //println("value of this numerator  is:" + noOfTimesThisAdjInflected.toDouble.toString())
     myratio = noOfTimesThisAdjInflected.toDouble / denominatorOfRatio;
     //println("value of this ratio is:" + myratio.toDouble.toString())
 
@@ -90,12 +90,12 @@ object ratioCalculator {
     //For any given adjective (string input),
 
     var adverbModifiedCounter = 0.000000005;
-    println("reaching here at 345345");
+    //println("reaching here at 345345");
     try {
 
       if (hashMapOfAdvModifiedAdjCount.contains(adjToSearch)) {
-        println("reaching here at 53573687");
-        println("reaching here at 34345 . value of base form is:"+adjToSearch)
+        //println("reaching here at 53573687");
+        println("reaching here at 7896564 . value of base form is:"+adjToSearch)
         adverbModifiedCounter = hashMapOfAdvModifiedAdjCount(adjToSearch);
         println("reaching here at 52577676. value of adverbModifiedCounter is:"+ adverbModifiedCounter)
       }
@@ -120,22 +120,42 @@ object ratioCalculator {
 
   def calculateBothInflectedAdvModifiedRatio(adjToCheck:String): Double = {
 
-    var myratio: Double = 0.0000001;
+    //aim: find phrases like "much colder" where its both self inflected and also modified by adverb
+
+    var advInflModifiedratio: Double = 0.0;
     println("reaching here at 208763")
-    var adverbModifiedInflectedCounter = 0.000000005;
+    var adverbModifiedInflectedCounter = 0.0;
     //if the given adjective is self inflected, check if its modified by an adverb also
-    if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToCheck))
-    {
-      println("reaching here at 2553863876")
-      if (hashMapOfAdvModifiedAdjCount.contains(adjToCheck)) {
-        println("found that the adjective" + adjToCheck + "is both modified by an adverb and self inflected")
-        //System.exit(1)
+    //val testAdjective="colder"
+
+    //go through the Colder->cold hashmap and find the er version of given adjective: i.e cold
+    //get both versions of cold: coldest and colder.
+   // var inflectedAndModifiedCount=0;
+    var totalInflectedAndModifiedCount=0;
+    for ((key,value) <-goodAdjectiveFinder.hashMapOfInflAdjToRootForm) {
+      if (value == adjToCheck)
+
+      //now for each of these versions (Eg: colder, coldest), see if its present in hashMapOfAdvModifiedAdjCount
+      //if yes, pick its count.
+      {
+        printf("key: %s, value: %s\n", key, value)
+        if (hashMapOfAdvModifiedAdjCount.contains(key)) {
+          val inflectedAndModifiedCount = hashMapOfAdvModifiedAdjCount(key);
+          println("found that the adjective inflected:" + key + "is both modified by an adverb and self inflected and its frequency is:" + inflectedAndModifiedCount)
+          //System.exit(1)
+          totalInflectedAndModifiedCount=totalInflectedAndModifiedCount+inflectedAndModifiedCount;
+        }
       }
     }
 
+    //the denominator remains same for all ratios. This will be filled by now, hopefully
+    println("value of total times the word " + adjToCheck + " occurs is" + denominatorOfRatio)
+    println("found that the adjective inflected:" + adjToCheck + "is both modified by an adverb and self inflected and its frequency is:" +totalInflectedAndModifiedCount )
 
+     advInflModifiedratio= totalInflectedAndModifiedCount / denominatorOfRatio;
+    println("ratio is:" +advInflModifiedratio )
 
-    return myratio;
+    return advInflModifiedratio;
   }
 
 
@@ -154,7 +174,7 @@ object ratioCalculator {
         //note: ideally we should pass it through the coldest->cold hashmap to get the base value. This is a wrong method
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
-        println("reaching here at 79578")
+        //println("reaching here at 79578")
 
         //This is where we are increasing the count for base form. i.e cold might be already occuring say 434354 times in
         // the corpus. For every time we see colder, or coldest, we need to increase that count by one. In this code here,
