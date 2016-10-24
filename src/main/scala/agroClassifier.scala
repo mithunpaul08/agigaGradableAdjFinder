@@ -166,19 +166,19 @@ object classifierForAgro {
        var inflAndAdvModified: Double = 0
 
        //println("reaching here at 876467")
-       println("value of current adjective is :" + adjToCheck );
+       println("value of current adjective is :" + adjToCheck);
 
        //for each of the adjectives' root forms, get the inflected ratio.
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
 
-       if(inflRatio>0) {
+       if (inflRatio > 0) {
          println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
-       }
 
 
-       advrbModifiedRatio=ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
 
-       if(advrbModifiedRatio>0) {
+       advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+
+       if (advrbModifiedRatio > 0) {
          println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
        }
 
@@ -195,8 +195,16 @@ object classifierForAgro {
 
        dataset += datum2
        println("reaching here at 2462467")
+     }
+
+       else {
+         //if the given adjective is not found, the return value will be zero. In that case
+         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+
+         println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
 
 
+       }
 
      }
 
