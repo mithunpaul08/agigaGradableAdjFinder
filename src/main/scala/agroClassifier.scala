@@ -86,9 +86,6 @@ object classifierForAgro {
      val cobuildNonGradable = resourcesDirectory + GMCombined_Uniq;
      val cobuildGradable = resourcesDirectory + GPCombined_Uniq;
 
-     //val cobuildNonGradable = new File(getClass.getClassLoader.getResource("GMCombined_Uniq").getPath)
-     //val cobuildGradable = new File(getClass.getClassLoader.getResource("GPCombined_Uniq").getPath)
-
      //println("reaching here at 9870987")
 
      //fill in the hashmaps. i.e the maps which has the count of base form adjectives (cold->2342342) and inflected
@@ -214,6 +211,9 @@ object classifierForAgro {
 
      //the crossValidate needs a class of the classifier
      def factory() = new PerceptronClassifier[String, String]
+
+     //try with svm classifier
+     //def factory() = new LibSVMClassifier[String, String](LinearKernel)
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
