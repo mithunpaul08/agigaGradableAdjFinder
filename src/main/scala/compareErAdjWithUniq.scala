@@ -89,7 +89,7 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
        resourcesDirectory = "/work/mithunpaul/testbed/"
       //var resourcesDirectory = "resources/"
 
-       outputDirectoryPath = "outputs/"
+       outputDirectoryPath = "/work/mithunpaul/testbed/"
     }
     else {
 
@@ -118,7 +118,7 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
         //if the er and est removed root form exists in the hashtable store it into another hashtable in the form "deepest->deep
 
         if (hashMapOfAllUniqAdjectivesInAgiga.contains(erEstRemovedForm)) {
-          println("found that the given adjective:" + adjToCheck + " has its root form in the file. adding to hash map")
+          //println("found that the given adjective:" + adjToCheck + " has its root form in the file. adding to hash map")
           //System.exit(1);
           hashMapOfInflAdjToRootForm += (adjToCheck -> erEstRemovedForm);
         }

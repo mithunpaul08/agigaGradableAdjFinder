@@ -181,10 +181,10 @@ object ratioCalculator {
         // we check if the base form exists in the hash map hashMapOfAllUniqAdjectivesInAgigaWithFrequency- which we had
         //filled in last step. If it exists, get its current count, and increase by one.
         if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(erEstRemovedForm)) {
-          println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
+          //println("reaching here at 34345 . value of base form is:"+erEstRemovedForm)
           var baseCounter = 0;
           baseCounter = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(erEstRemovedForm).toInt;
-          println("reaching here at 234234 . value of base form  frequency is:"+baseCounter)
+          //println("reaching here at 234234 . value of base form  frequency is:"+baseCounter)
           baseCounter = baseCounter + 1;
 
           //This is a mistake, we must be increasing the counter of the same hashmap..
@@ -288,9 +288,9 @@ object ratioCalculator {
 
     //read from all the adjectives and its frequency into a hash table
 
-    //println("path of input file is:"+advInputFile)
+  println("path of input file is:"+advInputFile)
     try {
-      // println("reaching here at 45645")
+      println("reaching here at 45645")
 
       var loopCounter = 1;
       for (line <- Source.fromFile(advInputFile).getLines()) {
@@ -340,12 +340,14 @@ object ratioCalculator {
     //read from all the adjectives and its frequency into a hash table
     val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
     try {
-      println("reaching here at 1263")
+      println("reaching here at 1263. value of the file path is:"+advInputFile)
 
       for (line <- Source.fromFile(advInputFile).getLines()) {
-        //println("reaching here at 3462323")
+       // println("reaching here at 3462323")
         val content = line.split("\\s+");
-        val frequency:Int=content(0).toInt;
+        //println("value of content0 is:"+content(0))
+//println("value of content1 is:"+content(1))
+val frequency:Int=content(0).toInt;
 
         if (content.length > 1) {
 
