@@ -173,26 +173,33 @@ object classifierForAgro {
 
 
 
-       advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+         advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
 
-       if (advrbModifiedRatio > 0) {
-         println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+         if (advrbModifiedRatio > 0) {
+           println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+         }
+         //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+         var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+
+
+         if (inflAndAdvModified > 0) {
+           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+         }
+         else {
+           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+         }
+
+         counter.setCount("feature1", inflRatio)
+         counter.setCount("feature2", advrbModifiedRatio)
+         counter.setCount("feature3", inflAndAdvModified)
+
+         val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
+         //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
+
+
+         dataset += datum2
+         println("reaching here at 2462467")
        }
-
-
-
-       counter.setCount("feature1", inflRatio)
-       counter.setCount("feature2", advrbModifiedRatio)
-       counter.setCount("feature3", inflAndAdvModified)
-
-
-       val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-       //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-
-
-       dataset += datum2
-       println("reaching here at 2462467")
-     }
 
        else {
          //if the given adjective is not found, the return value will be zero. In that case
