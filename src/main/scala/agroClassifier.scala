@@ -193,6 +193,7 @@ object classifierForAgro {
          counter.setCount("feature2", advrbModifiedRatio)
          counter.setCount("feature3", inflAndAdvModified)
 
+         println(counter.toString())
          val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
          //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
 
@@ -216,6 +217,7 @@ object classifierForAgro {
      //train the classifier
      println("starting ten fold cross validation...");
 
+     val ranges = new Sc
      //the crossValidate needs a class of the classifier
     // def factory() = new PerceptronClassifier[String, String]
 
