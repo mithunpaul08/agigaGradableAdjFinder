@@ -210,11 +210,12 @@ object classifierForAgro {
      println("starting ten fold cross validation...");
 
      //the crossValidate needs a class of the classifier
-     def factory() = new PerceptronClassifier[String, String]
+    // def factory() = new PerceptronClassifier[String, String]
 
      //try with svm classifier
-     //def factory() = new LibSVMClassifier[String, String](LinearKernel)
-     println("doing libsvm...");
+     //def factory() = new SVMClassifier[String, String](LinearKernel)
+      def factory() = new LiblinearClassifier[String, String]
+     println("doing LiblinearClassifier...");
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
