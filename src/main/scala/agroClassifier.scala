@@ -109,6 +109,9 @@ object classifierForAgro {
        //println("reaching here at 876467")
        //println("value of current adjective is :" + adjToCheck );
 
+       println("\n")
+       println("****************************************");
+       println("Starting a new adjective. Whose value is : " + adjToCheck )
 
        //for each of the adjectives' root forms, get the inflected ratio.
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
@@ -116,7 +119,15 @@ object classifierForAgro {
        if (inflRatio > 0) {
          println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
 
+       }
+       else {
+         //if the given adjective is not found, the return value will be zero. In that case
+         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
 
+         println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
+
+
+       }
 
          //for each of the adjectives' root forms, get the adverb modified ratio.
          advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
@@ -140,15 +151,7 @@ object classifierForAgro {
          counter.setCount("feature3", inflAndAdvModified)
          val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
          dataset += datum1
-       }
-       else {
-         //if the given adjective is not found, the return value will be zero. In that case
-         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
 
-         println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
-
-
-       }
 
      }
 
@@ -157,7 +160,7 @@ object classifierForAgro {
      for (adjToCheck <- Source.fromFile(cobuildNonGradable).getLines()) {
        //todo: read input from all agiga files
 
-       println("reaching here at 4576")
+       //println("reaching here at 4576")
        var inflRatio: Double = 0;
        var advrbModifiedRatio: Double = 0
        var inflAndAdvModified: Double = 0

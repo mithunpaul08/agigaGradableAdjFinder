@@ -33,10 +33,10 @@ object ratioCalculator {
   var hashMapOfAdvModifiedAdjCount: Map[String, Int] = Map()
 
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
-    println("reaching here at 4393897")
+    //println("reaching here at 4393897")
     var myratio: Double = 0;
     var totalBaseCount: Double = 0
-    var noOfTimesThisAdjInflected = 0;
+    var noOfTimesThisAdjInflected = 1;
     println("value of current adjective is :" + adjToGetRatio);
 
     //get the total number of times this adjective occurs in AGIGA.
@@ -45,7 +45,7 @@ object ratioCalculator {
       if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
        // println("reaching here at 089345978")
         totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
-        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and its base value is" + totalBaseCount)
+        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and its base value is:" + totalBaseCount)
 
         //println("reaching here at 34522")
         //if the adjective exists get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
@@ -60,7 +60,7 @@ object ratioCalculator {
       else {
         //if the adjective doesnt exist, return a dummy value- no point continuing---dont add it to the loop...so break?
         println("the given adjective:" + adjToGetRatio + " does not exist in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency")
-        return 0;
+        //return 0;
       }
     //println("reaching here at 347234")
 
