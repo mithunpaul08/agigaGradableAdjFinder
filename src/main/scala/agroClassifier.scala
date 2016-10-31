@@ -95,11 +95,14 @@ object classifierForAgro {
      ratioCalculator.triggerFunction(resourcesDirectory,outputDirectoryPath);
      //todo: find if we should pick from the top 300 adjectives
 
-
+     var numberOfGoldGradable=0;
 
 
      //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
      for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
+
+       numberOfGoldGradable=numberOfGoldGradable+1
+
        //todo: read input from all agiga files
 
        var inflRatio: Double = 0;
@@ -156,10 +159,14 @@ object classifierForAgro {
 
      }
 
-
+var numberOfGoldNonGradable=0;
      //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
      for (adjToCheck <- Source.fromFile(cobuildNonGradable).getLines()) {
-       //todo: read input from all agiga files
+
+       //total number of gold non gradable adjectives
+       numberOfGoldNonGradable=numberOfGoldNonGradable+1;
+
+
        println("\n")
        println("****************************************");
        println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
@@ -268,8 +275,8 @@ object classifierForAgro {
      // Calculate accuracy for each class
      // label pairs (GOLD, PREDICTED)
      val overallAccuracy = predictedLabels.count{ case (g, p) => g == p} / predictedLabels.size.toDouble * 100
-     val gradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == POS_CLASS) && (g == p) } / predictedLabels.size.toDouble * 100
-     val nonGradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == NEG_CLASS) && (g == p) } / predictedLabels.size.toDouble * 100
+     val gradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == POS_CLASS) && (g == p) } / numberOfGoldGradable.toDouble * 100
+     val nonGradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == NEG_CLASS) && (g == p) } / numberOfGoldNonGradable.toDouble * 100
 
      val accuracy1 =
        f"""
