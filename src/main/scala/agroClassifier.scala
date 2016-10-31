@@ -107,11 +107,10 @@ object classifierForAgro {
 
 
        //println("reaching here at 876467")
-       //println("value of current adjective is :" + adjToCheck );
 
        println("\n")
        println("****************************************");
-       println("Starting a new adjective. Whose value is : " + adjToCheck )
+       println("Starting a new gradable adjective check, whose value is : " + adjToCheck )
 
        //for each of the adjectives' root forms, get the inflected ratio.
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
@@ -159,8 +158,10 @@ object classifierForAgro {
      //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
      for (adjToCheck <- Source.fromFile(cobuildNonGradable).getLines()) {
        //todo: read input from all agiga files
-
-       //println("reaching here at 4576")
+       println("\n")
+       println("****************************************");
+       println("Starting a new gradable adjective check, whose value is : " + adjToCheck )
+       //println("reaching here at 57633")
        var inflRatio: Double = 0;
        var advrbModifiedRatio: Double = 0
        var inflAndAdvModified: Double = 0
@@ -174,7 +175,16 @@ object classifierForAgro {
        if (inflRatio > 0) {
          println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
 
+       }
 
+       else {
+         //if the given adjective is not found, the return value will be zero. In that case
+         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+
+         println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
+
+
+       }
 
          advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
 
@@ -203,16 +213,7 @@ object classifierForAgro {
 
          dataset += datum2
          println("reaching here at 2462467")
-       }
 
-       else {
-         //if the given adjective is not found, the return value will be zero. In that case
-         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
-
-         println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
-
-
-       }
 
      }
 
