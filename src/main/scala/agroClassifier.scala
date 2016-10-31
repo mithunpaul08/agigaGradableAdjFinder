@@ -151,6 +151,8 @@ object classifierForAgro {
          val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
          dataset += datum1
 
+       val scaleRanges2 = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
+       println("new value of ranges is:" +scaleRanges2.maxs.toString());
 
      }
 
@@ -216,19 +218,22 @@ object classifierForAgro {
      }
 
      val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-     println("new value of ranges is:" +scaleRanges.toString());
+     println("new value of ranges is:" +scaleRanges.maxs.toString());
 
      //train the classifier
      println("starting ten fold cross validation...");
 
      //val ranges = new Sc
      //the crossValidate needs a class of the classifier
-    // def factory() = new PerceptronClassifier[String, String]
+     def factory() = new PerceptronClassifier[String, String]
+     println("doing PerceptronClassifier...");
 
      //try with svm classifier
      //def factory() = new SVMClassifier[String, String](LinearKernel)
-      def factory() = new LiblinearClassifier[String, String]
-     println("doing LiblinearClassifier...");
+
+
+//     def factory() = new LiblinearClassifier[String, String]
+//     println("doing LiblinearClassifier...");
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
