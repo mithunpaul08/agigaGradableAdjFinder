@@ -231,16 +231,18 @@ var numberOfGoldNonGradable=0;
      println("starting ten fold cross validation...");
 
      //val ranges = new Sc
-     //the crossValidate needs a class of the classifier
-     def factory() = new PerceptronClassifier[String, String]
-     println("doing PerceptronClassifier...");
+
+     //Try with perceptron classifier
+//     def factory() = new PerceptronClassifier[String, String]
+//     println("doing PerceptronClassifier...");
 
      //try with svm classifier
-     //def factory() = new SVMClassifier[String, String](LinearKernel)
+    // def factory() = new SVMClassifier[String, String](LinearKernel)
+    // println("doing SVMClassifier...");
 
 
-//     def factory() = new LiblinearClassifier[String, String]
-//     println("doing LiblinearClassifier...");
+   def factory() = new LiblinearClassifier[String, String]
+     println("doing LiblinearClassifier...");
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
@@ -266,7 +268,7 @@ var numberOfGoldNonGradable=0;
      println("value of accuracy is:"+accuracy +"%")
      println("value of numberOfGoldGradable is:"+numberOfGoldGradable +"%")
      println("value of numberOfGoldNonGradable is:"+numberOfGoldNonGradable +"%")
-     
+
     //gus' code on accuracy
      val numFolds = 10
 
