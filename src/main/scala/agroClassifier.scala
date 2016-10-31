@@ -192,7 +192,7 @@ object classifierForAgro {
            println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
          }
          //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-         var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+          inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
 
 
          if (inflAndAdvModified > 0) {
