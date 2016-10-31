@@ -160,7 +160,7 @@ object classifierForAgro {
        //todo: read input from all agiga files
        println("\n")
        println("****************************************");
-       println("Starting a new gradable adjective check, whose value is : " + adjToCheck )
+       println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
        //println("reaching here at 57633")
        var inflRatio: Double = 0;
        var advrbModifiedRatio: Double = 0
@@ -186,37 +186,37 @@ object classifierForAgro {
 
        }
 
-         advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+       advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
 
-         if (advrbModifiedRatio > 0) {
-           println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
-         }
-         //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-          inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
-
-
-         if (inflAndAdvModified > 0) {
-           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-         }
-         else {
-           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-         }
-
-         counter.setCount("feature1", inflRatio)
-         counter.setCount("feature2", advrbModifiedRatio)
-         counter.setCount("feature3", inflAndAdvModified)
-
-         println(counter.toString())
-         val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-         //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
+       if (advrbModifiedRatio > 0) {
+         println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+       }
+       //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+       inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
 
 
-         dataset += datum2
-         println("reaching here at 2462467")
+       if (inflAndAdvModified > 0) {
+         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+       }
+       else {
+         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+       }
 
+       counter.setCount("feature1", inflRatio)
+       counter.setCount("feature2", advrbModifiedRatio)
+       counter.setCount("feature3", inflAndAdvModified)
 
+       println(counter.toString())
+       val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
+       //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
+       //println("number of features is:" + datum2.getFeatureCount(counter))
+
+       dataset += datum2
+       println("reaching here at 2462467")
      }
 
+     val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
+     println("new value of ranges is:" +scaleRanges.toString());
 
      //train the classifier
      println("starting ten fold cross validation...");
