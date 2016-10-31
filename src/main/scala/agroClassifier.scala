@@ -237,12 +237,12 @@ var numberOfGoldNonGradable=0;
 //     println("doing PerceptronClassifier...");
 
      //try with svm classifier
-    // def factory() = new SVMClassifier[String, String](LinearKernel)
-    // println("doing SVMClassifier...");
+     def factory() = new LibSVMClassifier[String, String](LinearKernel)
+     println("doing SVMClassifier...");
 
 
-   def factory() = new LiblinearClassifier[String, String]
-     println("doing LiblinearClassifier...");
+   //def factory() = new LiblinearClassifier[String, String]
+    // println("doing LiblinearClassifier...");
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
