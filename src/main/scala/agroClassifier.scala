@@ -217,7 +217,7 @@ object classifierForAgro {
      //train the classifier
      println("starting ten fold cross validation...");
 
-     val ranges = new Sc
+     //val ranges = new Sc
      //the crossValidate needs a class of the classifier
     // def factory() = new PerceptronClassifier[String, String]
 
@@ -250,7 +250,30 @@ object classifierForAgro {
      println("value of accuracy is:"+accuracy +"%")
 
 
+    //gus' code on accuracy
+     val numFolds = 10
 
+     val POS_CLASS = "GRADABLE"
+     val NEG_CLASS = "NOT GRADABLE"
+
+     // Calculate accuracy for each class
+     // label pairs (GOLD, PREDICTED)
+     val overallAccuracy = predictedLabels.count{ case (g, p) => g == p} / predictedLabels.size.toDouble * 100
+     val gradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == POS_CLASS) && (g == p) } / predictedLabels.size.toDouble * 100
+     val nonGradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == NEG_CLASS) && (g == p) } / predictedLabels.size.toDouble * 100
+
+     val accuracy1 =
+       f"""
+          |FOLDS:\t$numFolds
+          |Number of '$POS_CLASS' class instances in dataset:\t${predictedLabels.count(_._1 == POS_CLASS)}
+          |Number of '$NEG_CLASS' class instances in dataset:\t${predictedLabels.count(_._1 == NEG_CLASS)}
+          |========================================
+          |OVERALL ACCURACY:\t$overallAccuracy%3.2f
+          |'$POS_CLASS' ACCURACY:\t$gradableClassAccuracy%3.2f
+          |'$NEG_CLASS' ACCURACY:\t$nonGradableClassAccuracy%3.2f
+     """.stripMargin
+
+     println(accuracy1)
 
    }
 }

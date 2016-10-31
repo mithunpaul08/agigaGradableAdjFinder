@@ -58,7 +58,7 @@ java.lang.ExceptionInInitializerError
 	at sbt.Logger$$anon$4.apply(Logger.scala:84)
 	at sbt.TrapExit$App.run(TrapExit.scala:248)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.FileNotFoundException: /Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/hashmapForErAdjectiveAndItsBaseForm.txt (No such file or directory)
+Caused by: java.io.FileNotFoundException: /work/mithunpaul/testbed/hashmapForErAdjectiveAndItsBaseForm.txt (No such file or directory)
 	at java.io.FileOutputStream.open0(Native Method)
 	at java.io.FileOutputStream.open(FileOutputStream.java:270)
 	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
