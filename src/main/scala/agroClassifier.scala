@@ -264,8 +264,9 @@ var numberOfGoldNonGradable=0;
     // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
     // println("value of totalCount is:"+totalCount)
      println("value of accuracy is:"+accuracy +"%")
-
-
+     println("value of numberOfGoldGradable is:"+numberOfGoldGradable +"%")
+     println("value of numberOfGoldNonGradable is:"+numberOfGoldNonGradable +"%")
+     
     //gus' code on accuracy
      val numFolds = 10
 
