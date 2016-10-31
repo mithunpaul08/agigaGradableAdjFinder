@@ -167,7 +167,7 @@ object classifierForAgro {
        var inflAndAdvModified: Double = 0
 
        //println("reaching here at 876467")
-       println("value of current adjective is :" + adjToCheck);
+       //println("value of current adjective is :" + adjToCheck);
 
        //for each of the adjectives' root forms, get the inflected ratio.
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);

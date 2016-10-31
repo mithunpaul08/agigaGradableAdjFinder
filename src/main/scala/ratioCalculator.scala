@@ -37,7 +37,8 @@ object ratioCalculator {
     var myratio: Double = 0;
     var totalBaseCount: Double = 0
     var noOfTimesThisAdjInflected = 1;
-    println("value of current adjective is :" + adjToGetRatio);
+    println("---starting calculateInflectedAdjRatio. value of base form is:"+adjToGetRatio)
+
 
     //get the total number of times this adjective occurs in AGIGA.
     // //count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
@@ -89,15 +90,15 @@ object ratioCalculator {
     //read from the frequency file of adverb modified//    For a given adjective (string input),
     //For any given adjective (string input),
 
-    var adverbModifiedCounter = 0.000000005;
+    var adverbModifiedCounter = 1;
     //println("reaching here at 345345");
     try {
 
       if (hashMapOfAdvModifiedAdjCount.contains(adjToSearch)) {
         //println("reaching here at 53573687");
-        println("reaching here at 7896564 . value of base form is:"+adjToSearch)
+        println("---starting calculateAdvModifiedAdjRatio. value of base form is:"+adjToSearch)
         adverbModifiedCounter = hashMapOfAdvModifiedAdjCount(adjToSearch);
-        println("reaching here at 52577676. value of adverbModifiedCounter is:"+ adverbModifiedCounter)
+        println("number of times this adjective was modified by an adverb is is:"+ adverbModifiedCounter)
       }
       else {
         //throw new CustomException("Given adjective is not found in the file.")
@@ -108,10 +109,9 @@ object ratioCalculator {
 
       case ex: Exception => println("An exception occoured.:\n" + ex.getStackTrace.mkString("\n"))
     }
-     println("value of total times the word " + adjToSearch + " is modified by an adverb is" + adverbModifiedCounter)
 
     //the denominator remains same for all ratios. This will be filled by now, hopefully
-    println("value of total times the word " + adjToSearch + " occurs is" + denominatorOfRatio)
+    println("value of total times the word " + adjToSearch + " occurs in AGIGA is" + denominatorOfRatio)
 
     var advModifiedratio: Double = adverbModifiedCounter / denominatorOfRatio;
 
@@ -123,10 +123,10 @@ object ratioCalculator {
     //aim: find phrases like "much colder" where its both self inflected and also modified by adverb
 
     var advInflModifiedratio: Double = 0.0;
-    println("reaching here at 208763")
+    println("---starting calculateBothInflectedAdvModifiedRatio. value of base form is:"+adjToCheck)
+
     var adverbModifiedInflectedCounter = 0.0;
     //if the given adjective is self inflected, check if its modified by an adverb also
-    //val testAdjective="colder"
 
     //go through the Colder->cold hashmap and find the er version of given adjective: i.e cold
     //get both versions of cold: coldest and colder.
