@@ -1,5 +1,6 @@
 package agiga
 
+import java.io._
 import org.slf4j.LoggerFactory
 import org.clulab.agiga
 import org.clulab.processors.Document
@@ -168,7 +169,7 @@ object classifierForAgro {
 
        println("\n")
        println("****************************************");
-       println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
+       println("Starting a new non-gradable adjective check, whose value is : " + adjToCheck)
        //println("reaching here at 57633")
        var inflRatio: Double = 0;
        var advrbModifiedRatio: Double = 0
@@ -187,9 +188,9 @@ object classifierForAgro {
 
        else {
          //if the given adjective is not found, the return value will be zero. In that case
-         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
 
-         println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
+
+         println("current adjective :" + adjToCheck + " doesnt have an inflected ratio ")
 
 
        }
@@ -199,6 +200,14 @@ object classifierForAgro {
        if (advrbModifiedRatio > 0) {
          println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
        }
+       else {
+         //if the given adjective is not found, the return value will be zero. In that case
+         // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+
+         println("current adjective :" + adjToCheck + " doesnt have an advrbModifiedRatio  ")
+
+
+       }
        //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
        inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
 
@@ -207,7 +216,8 @@ object classifierForAgro {
          println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
        }
        else {
-         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+         println("current adjective :" + adjToCheck + " doesnt have an inflAndAdvModified  ")
+
        }
 
        counter.setCount("feature1", inflRatio)
@@ -216,8 +226,8 @@ object classifierForAgro {
 
        println(counter.toString())
        val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-       //val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
-       //println("number of features is:" + datum2.getFeatureCount(counter))
+
+      // println("number of features is:" + datum2.features())
 
        dataset += datum2
        println("reaching here at 2462467")
@@ -227,7 +237,8 @@ object classifierForAgro {
      //println("new value of ranges is:" +scaleRanges.maxs.toString());
 
      //train the classifier
-     println("starting ten fold cross validation...");
+     println("\n")
+     println("###############done with adding features. starting ten fold cross validation...");
 
      //val ranges = new Sc
 
@@ -261,6 +272,9 @@ object classifierForAgro {
 
      }
 
+     val writer = new PrintWriter(new File("test.txt" ))
+
+     factory.displayWeights(writer);
      val accuracy = (countCorrectlyPredicted / totalCount) * 100;
      // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
      // println("value of totalCount is:"+totalCount)
