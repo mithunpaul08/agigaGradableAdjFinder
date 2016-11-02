@@ -252,11 +252,12 @@ object classifierForAgro {
 
 
      def factory() = new LiblinearClassifier[String, String]
+     val myClassifier = new LiblinearClassifier[String, String]
       println("doing LiblinearClassifier...");
      factory.train(dataset)
 
 
-     val weights = factory.getWeights()
+     val weights = myClassifier.getWeights()
      println(s"""Weights for the positive class: ${weights.get("gradable")}""")
      println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
 
