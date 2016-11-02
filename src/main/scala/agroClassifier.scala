@@ -243,16 +243,16 @@ object classifierForAgro {
      //val ranges = new Sc
 
      //Try with perceptron classifier
-     def factory() = new PerceptronClassifier[String, String]
-     println("doing PerceptronClassifier...");
+//     def factory() = new PerceptronClassifier[String, String]
+//     println("doing PerceptronClassifier...");
 
      //try with svm classifier--giving 4.27 as accuracy. Ignoring
      //     def factory() = new LibSVMClassifier[String, String](LinearKernel)
      //     println("doing SVMClassifier...");
 
 
-     //def factory() = new LiblinearClassifier[String, String]
-     // println("doing LiblinearClassifier...");
+     def factory() = new LiblinearClassifier[String, String]
+      println("doing LiblinearClassifier...");
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
@@ -272,9 +272,10 @@ object classifierForAgro {
 
      }
 
-     val writer = new PrintWriter(new File("test.txt" ))
+     //val writer = new PrintWriter(new File("test.txt" ))
 
-     factory.displayWeights(writer);
+     //factory.displayWeights(writer);
+     factory.getWeights(true)
      val accuracy = (countCorrectlyPredicted / totalCount) * 100;
      // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
      // println("value of totalCount is:"+totalCount)

@@ -31,8 +31,20 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="254">
+              <caret line="246" column="48" selection-start-line="245" selection-start-column="7" selection-end-line="246" selection-end-column="48" />
+              <folding>
+                <element signature="e#15#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Datasets.scala" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datasets.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="343" column="22" selection-start-line="343" selection-start-column="17" selection-end-line="343" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -61,7 +73,7 @@
       <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-616">
+            <state relative-caret-position="-526">
               <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
               <folding />
             </state>
@@ -809,7 +821,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="229" column="39" selection-start-line="229" selection-start-column="39" selection-end-line="229" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -817,6 +831,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
           <caret line="470" column="37" selection-start-line="470" selection-start-column="37" selection-end-line="470" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -924,13 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datasets.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="470" column="37" selection-start-line="470" selection-start-column="37" selection-end-line="470" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-513">
@@ -968,9 +976,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datasets.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="343" column="22" selection-start-line="343" selection-start-column="17" selection-end-line="343" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-616">
+        <state relative-caret-position="-526">
           <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
           <folding />
         </state>
@@ -978,9 +994,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="254">
+          <caret line="246" column="48" selection-start-line="245" selection-start-column="7" selection-end-line="246" selection-end-column="48" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
