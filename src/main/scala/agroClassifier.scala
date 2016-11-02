@@ -25,7 +25,7 @@ import org.clulab.struct
 import org.clulab.struct.Counter
 import org.clulab.learning.Datasets
 import util.control.Breaks._
-
+import org.clulab.discourse.rstparser
 
 
 object classifierForAgro {
@@ -252,13 +252,18 @@ object classifierForAgro {
 
 
      def factory() = new LiblinearClassifier[String, String]
+     println("doing LiblinearClassifier...going to print weights");
+     org.clulab.discourse.rstparser.Utils.printTopWeights(factory())
+
      //val myClassifier = new LiblinearClassifier[String, String]
+
      val myClassifier = new LogisticRegressionClassifier[String, String]()
-      println("doing LiblinearClassifier...");
+      println("doing LogisticRegressionClassifier...");
      factory.train(dataset)
 
 
      val weights = myClassifier.getWeights()
+     println("done with getting weights...");
      println(s"""Weights for the positive class: ${weights.get("gradable")}""")
      println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
 
