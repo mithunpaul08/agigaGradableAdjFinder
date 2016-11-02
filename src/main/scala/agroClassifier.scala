@@ -62,22 +62,21 @@ object classifierForAgro {
 
      //var getCurrentDirectory = new java.io.File(".").getCanonicalPath
      //println("value of present directory is: "+getCurrentDirectory)
-     if(runOnServer)
-       {
-          //resourcesDirectory = "./src/main/resources/"
-         //resourcesDirectory = "~/testbed/"
-         resourcesDirectory = "/work/mithunpaul/testbed/"
+     if (runOnServer) {
+       //resourcesDirectory = "./src/main/resources/"
+       //resourcesDirectory = "~/testbed/"
+       resourcesDirectory = "/work/mithunpaul/testbed/"
 
 
-          outputDirectoryPath = "/work/mithunpaul/testbed/"
-         //outputDirectoryPath = "~/testbed/"
+       outputDirectoryPath = "/work/mithunpaul/testbed/"
+       //outputDirectoryPath = "~/testbed/"
 
-         // var outputDirectoryPath = "..outputs/"
-          erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
+       // var outputDirectoryPath = "..outputs/"
+       erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
 
-          completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
+       completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
-       }
+     }
 
 
      //The gradable adjective files provided by COBUILD had lots of overlapping adjectives. Hence combined them both and too uniq.
@@ -92,16 +91,16 @@ object classifierForAgro {
      //adjectives(colder/coldest:2344)
 
 
-     ratioCalculator.triggerFunction(resourcesDirectory,outputDirectoryPath);
+     ratioCalculator.triggerFunction(resourcesDirectory, outputDirectoryPath);
      //todo: find if we should pick from the top 300 adjectives
 
-     var numberOfGoldGradable=0;
+     var numberOfGoldGradable = 0;
 
 
      //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
      for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
 
-       numberOfGoldGradable=numberOfGoldGradable+1
+       numberOfGoldGradable = numberOfGoldGradable + 1
 
        //todo: read input from all agiga files
 
@@ -113,7 +112,7 @@ object classifierForAgro {
 
        println("\n")
        println("****************************************");
-       println("Starting a new gradable adjective check, whose value is : " + adjToCheck )
+       println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
 
        //for each of the adjectives' root forms, get the inflected ratio.
        inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
@@ -131,40 +130,40 @@ object classifierForAgro {
 
        }
 
-         //for each of the adjectives' root forms, get the adverb modified ratio.
-         advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
-         if (advrbModifiedRatio > 0) {
-           println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
-         }
+       //for each of the adjectives' root forms, get the adverb modified ratio.
+       advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+       if (advrbModifiedRatio > 0) {
+         println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+       }
 
-         //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-         var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+       //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+       var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
 
 
-         if (inflAndAdvModified > 0) {
-           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-         }
-         else {
-           println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-         }
+       if (inflAndAdvModified > 0) {
+         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+       }
+       else {
+         println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+       }
 
-         counter.setCount("feature1", inflRatio)
-         counter.setCount("feature2", advrbModifiedRatio)
-         counter.setCount("feature3", inflAndAdvModified)
-         val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
-         dataset += datum1
+       counter.setCount("feature1", inflRatio)
+       counter.setCount("feature2", advrbModifiedRatio)
+       counter.setCount("feature3", inflAndAdvModified)
+       val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
+       dataset += datum1
 
        val scaleRanges2 = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-       println("new value of ranges is:" +scaleRanges2.maxs.toString());
+       println("new value of ranges is:" + scaleRanges2.maxs.toString());
 
      }
 
-var numberOfGoldNonGradable=0;
+     var numberOfGoldNonGradable = 0;
      //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
      for (adjToCheck <- Source.fromFile(cobuildNonGradable).getLines()) {
 
        //total number of gold non gradable adjectives
-       numberOfGoldNonGradable=numberOfGoldNonGradable+1;
+       numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
 
 
        println("\n")
@@ -233,26 +232,26 @@ var numberOfGoldNonGradable=0;
      //val ranges = new Sc
 
      //Try with perceptron classifier
-//     def factory() = new PerceptronClassifier[String, String]
-//     println("doing PerceptronClassifier...");
+     def factory() = new PerceptronClassifier[String, String]
+     println("doing PerceptronClassifier...");
 
-     //try with svm classifier
-     def factory() = new LibSVMClassifier[String, String](LinearKernel)
-     println("doing SVMClassifier...");
+     //try with svm classifier--giving 4.27 as accuracy. Ignoring
+     //     def factory() = new LibSVMClassifier[String, String](LinearKernel)
+     //     println("doing SVMClassifier...");
 
 
-   //def factory() = new LiblinearClassifier[String, String]
-    // println("doing LiblinearClassifier...");
+     //def factory() = new LiblinearClassifier[String, String]
+     // println("doing LiblinearClassifier...");
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
-     val predictedLabels = Datasets.crossValidate(dataset, factory, 10)  // for 10-fold cross-validation
+     val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
 
      //calculate acccuracy.
      //i.e number of times the labels match each other...divided by the total number, will be your accuracy
-     var totalCount:Double=0;
-     var countCorrectlyPredicted: Double=0;
-     for ((predictedLabel,actualLabel) <- predictedLabels) {
+     var totalCount: Double = 0;
+     var countCorrectlyPredicted: Double = 0;
+     for ((predictedLabel, actualLabel) <- predictedLabels) {
        totalCount = totalCount + 1;
 
        if (predictedLabel == actualLabel) {
@@ -262,14 +261,14 @@ var numberOfGoldNonGradable=0;
 
      }
 
-     val accuracy =(countCorrectlyPredicted/totalCount)*100;
-    // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
-    // println("value of totalCount is:"+totalCount)
-     println("value of accuracy is:"+accuracy +"%")
-     println("value of numberOfGoldGradable is:"+numberOfGoldGradable +"%")
-     println("value of numberOfGoldNonGradable is:"+numberOfGoldNonGradable +"%")
+     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
+     // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
+     // println("value of totalCount is:"+totalCount)
+     println("value of accuracy is:" + accuracy + "%")
+     println("value of numberOfGoldGradable is:" + numberOfGoldGradable + "%")
+     println("value of numberOfGoldNonGradable is:" + numberOfGoldNonGradable + "%")
 
-    //gus' code on accuracy
+     //gus' code on accuracy
      val numFolds = 10
 
      val POS_CLASS = "GRADABLE"
@@ -277,9 +276,9 @@ var numberOfGoldNonGradable=0;
 
      // Calculate accuracy for each class
      // label pairs (GOLD, PREDICTED)
-     val overallAccuracy = predictedLabels.count{ case (g, p) => g == p} / predictedLabels.size.toDouble * 100
-     val gradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == POS_CLASS) && (g == p) } / numberOfGoldGradable.toDouble * 100
-     val nonGradableClassAccuracy = predictedLabels.count{ case (g, p) => (g == NEG_CLASS) && (g == p) } / numberOfGoldNonGradable.toDouble * 100
+     val overallAccuracy = predictedLabels.count { case (g, p) => g == p } / predictedLabels.size.toDouble * 100
+     val gradableClassAccuracy = predictedLabels.count { case (g, p) => (g == POS_CLASS) && (g == p) } / numberOfGoldGradable.toDouble * 100
+     val nonGradableClassAccuracy = predictedLabels.count { case (g, p) => (g == NEG_CLASS) && (g == p) } / numberOfGoldNonGradable.toDouble * 100
 
      val accuracy1 =
        f"""
