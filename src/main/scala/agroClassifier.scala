@@ -151,7 +151,7 @@ object classifierForAgro {
        counter.setCount("feature1", inflRatio)
        counter.setCount("feature2", advrbModifiedRatio)
        counter.setCount("feature3", inflAndAdvModified)
-       val datum1 = new RVFDatum[String, String]("GRADABLE", counter)
+       val datum1 = new RVFDatum[String, String]("gradable", counter)
        dataset += datum1
 
        val scaleRanges2 = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
@@ -225,7 +225,7 @@ object classifierForAgro {
        counter.setCount("feature3", inflAndAdvModified)
 
        println(counter.toString())
-       val datum2 = new RVFDatum[String, String]("NOT GRADABLE", counter)
+       val datum2 = new RVFDatum[String, String]("notgradable", counter)
 
       // println("number of features is:" + datum2.features())
 
@@ -253,6 +253,12 @@ object classifierForAgro {
 
      def factory() = new LiblinearClassifier[String, String]
       println("doing LiblinearClassifier...");
+     factory.train(dataset)
+
+
+     val weights = factory.getWeights()
+     println(s"""Weights for the positive class: ${weights.get("gradable")}""")
+     println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
@@ -275,7 +281,6 @@ object classifierForAgro {
      //val writer = new PrintWriter(new File("test.txt" ))
 
      //factory.displayWeights(writer);
-     factory.getWeights(true)
      val accuracy = (countCorrectlyPredicted / totalCount) * 100;
      // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
      // println("value of totalCount is:"+totalCount)
