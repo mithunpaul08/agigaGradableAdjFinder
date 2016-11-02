@@ -258,7 +258,7 @@ object classifierForAgro {
      println("doing LiblinearClassifier...going to print weights");
 
 
-     org.clulab.discourse.rstparser.Utils.printTopWeights(factory())
+     //org.clulab.discourse.rstparser.Utils.printTopWeights(factory)
 
      //val myClassifier = new LiblinearClassifier[String, String]
 
