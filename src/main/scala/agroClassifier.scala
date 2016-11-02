@@ -224,8 +224,8 @@ var numberOfGoldNonGradable=0;
        println("reaching here at 2462467")
      }
 
-     val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-     println("new value of ranges is:" +scaleRanges.maxs.toString());
+     //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
+     //println("new value of ranges is:" +scaleRanges.maxs.toString());
 
      //train the classifier
      println("starting ten fold cross validation...");
