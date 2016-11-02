@@ -252,7 +252,8 @@ object classifierForAgro {
 
 
      def factory() = new LiblinearClassifier[String, String]
-     val myClassifier = new LiblinearClassifier[String, String]
+     //val myClassifier = new LiblinearClassifier[String, String]
+     val myClassifier = new LogisticRegressionClassifier[String, String]()
       println("doing LiblinearClassifier...");
      factory.train(dataset)
 
