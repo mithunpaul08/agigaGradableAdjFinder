@@ -252,8 +252,8 @@ object classifierForAgro {
 
 
 
-     def factory() = new LiblinearClassifier[String, String]
-     factory.train(dataset)
+//     def factory() = new LiblinearClassifier[String, String]
+//     factory.train(dataset)
 
      println("doing LiblinearClassifier...going to print weights");
 
@@ -261,7 +261,7 @@ object classifierForAgro {
      //org.clulab.discourse.rstparser.Utils.printTopWeights(factory)
 
      //val myClassifier = new LiblinearClassifier[String, String]
-
+     def factory() = new LogisticRegressionClassifier[String, String]
      val myClassifier = new LogisticRegressionClassifier[String, String]()
      println("doing LogisticRegressionClassifier...");
      myClassifier.train(dataset)
