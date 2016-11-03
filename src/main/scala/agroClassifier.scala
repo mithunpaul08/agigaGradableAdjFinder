@@ -148,9 +148,9 @@ object classifierForAgro {
          println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
        }
 
-       counter.setCount("feature1", inflRatio)
-       counter.setCount("feature2", advrbModifiedRatio)
-       counter.setCount("feature3", inflAndAdvModified)
+       counter.setCount("inflRatio", inflRatio)
+       counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
+       counter.setCount("inflAndAdvModified", inflAndAdvModified)
        val datum1 = new RVFDatum[String, String]("gradable", counter)
        dataset += datum1
 
@@ -220,9 +220,9 @@ object classifierForAgro {
 
        }
 
-       counter.setCount("feature1", inflRatio)
-       counter.setCount("feature2", advrbModifiedRatio)
-       counter.setCount("feature3", inflAndAdvModified)
+       counter.setCount("inflectedRatio", inflRatio)
+       counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
+       counter.setCount("inflAndAdvModified", inflAndAdvModified)
 
        println(counter.toString())
        val datum2 = new RVFDatum[String, String]("notgradable", counter)
