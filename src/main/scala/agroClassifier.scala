@@ -233,7 +233,7 @@ object classifierForAgro {
        println("reaching here at 2462467")
      }
 
-     //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
+     val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
      //println("new value of ranges is:" +scaleRanges.maxs.toString());
 
      //train the classifier
@@ -303,8 +303,8 @@ object classifierForAgro {
      //gus' code on accuracy
      val numFolds = 10
 
-     val POS_CLASS = "GRADABLE"
-     val NEG_CLASS = "NOT GRADABLE"
+     val POS_CLASS = "gradable"
+     val NEG_CLASS = "notgradable"
 
      // Calculate accuracy for each class
      // label pairs (GOLD, PREDICTED)
