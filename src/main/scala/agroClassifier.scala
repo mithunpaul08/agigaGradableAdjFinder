@@ -258,20 +258,18 @@ object classifierForAgro {
      println("doing LiblinearClassifier...going to print weights");
 
 
-     //org.clulab.discourse.rstparser.Utils.printTopWeights(factory)
 
-//     //val myClassifier = new LiblinearClassifier[String, String]
-//     def factory() = new LogisticRegressionClassifier[String, String]
-//     val myClassifier = new LogisticRegressionClassifier[String, String]()
-//     println("doing LogisticRegressionClassifier...");
-//     myClassifier.train(dataset)
+     def factory() = new LogisticRegressionClassifier[String, String]
+     val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
+     println("doing LogisticRegressionClassifier...");
+     myClassifier.train(dataset)
 
      //replacing myClassifier with liblinear
-     val myClassifier = new LiblinearClassifier[String, String]
-     def factory() = new LiblinearClassifier[String, String]
-
-     println("doing LiblinearClassifier...");
-     myClassifier.train(dataset)
+//     val myClassifier = new LiblinearClassifier[String, String]
+//     def factory() = new LiblinearClassifier[String, String]
+//
+//     println("doing LiblinearClassifier...");
+//     myClassifier.train(dataset)
 
 
      val weights = myClassifier.getWeights()
