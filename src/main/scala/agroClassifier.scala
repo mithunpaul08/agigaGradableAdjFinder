@@ -265,16 +265,16 @@ object classifierForAgro {
 //     myClassifier.train(dataset)
 
      //replacing myClassifier with LibSVMClassifier
-     val myClassifier = new LibSVMClassifier[String, String]()
-     def factory() = new LibSVMClassifier[String, String]()
+     val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
+     def factory() = new LibSVMClassifier[String, String](LinearKernel)
      println("doing LiblinearClassifier...");
      myClassifier.train(dataset)
 
-     //random comment to test git pull on jenny
-     val weights = myClassifier.getWeights()
-     println("done with getting weights...");
-     println(s"""Weights for the positive class: ${weights.get("gradable")}""")
-     println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
+     //cant get weights for LibSVMClassifier
+//     val weights = myClassifier.getWeights()
+//     println("done with getting weights...");
+//     println(s"""Weights for the positive class: ${weights.get("gradable")}""")
+//     println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
 
      //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
      val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
