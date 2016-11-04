@@ -260,10 +260,17 @@ object classifierForAgro {
 
      //org.clulab.discourse.rstparser.Utils.printTopWeights(factory)
 
-     //val myClassifier = new LiblinearClassifier[String, String]
-     def factory() = new LogisticRegressionClassifier[String, String]
-     val myClassifier = new LogisticRegressionClassifier[String, String]()
-     println("doing LogisticRegressionClassifier...");
+//     //val myClassifier = new LiblinearClassifier[String, String]
+//     def factory() = new LogisticRegressionClassifier[String, String]
+//     val myClassifier = new LogisticRegressionClassifier[String, String]()
+//     println("doing LogisticRegressionClassifier...");
+//     myClassifier.train(dataset)
+
+     //replacing myClassifier with liblinear
+     val myClassifier = new LiblinearClassifier[String, String]
+     def factory() = new LiblinearClassifier[String, String]
+
+     println("doing LiblinearClassifier...");
      myClassifier.train(dataset)
 
 
