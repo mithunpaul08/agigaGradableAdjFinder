@@ -252,17 +252,17 @@ object classifierForAgro {
 
 
 
-      //code for LogisticRegressionClassifier with bias
-     def factory() = new LogisticRegressionClassifier[String, String](bias = true)
-     val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
-     println("doing LogisticRegressionClassifier...");
-     myClassifier.train(dataset)
-
-//     //replacing myClassifier with liblinear
-//     val myClassifier = new LiblinearClassifier[String, String](bias = true)
-//     def factory() = new LiblinearClassifier[String, String](bias = true)
-//     println("doing LiblinearClassifier...");
+//      //code for LogisticRegressionClassifier with bias
+//     def factory() = new LogisticRegressionClassifier[String, String](bias = true)
+//     val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
+//     println("doing LogisticRegressionClassifier...");
 //     myClassifier.train(dataset)
+
+     //replacing myClassifier with liblinear
+     val myClassifier = new LiblinearClassifier[String, String](bias = true)
+     def factory() = new LiblinearClassifier[String, String](bias = true)
+     println("doing LiblinearClassifier...");
+     myClassifier.train(dataset)
 
      val weights = myClassifier.getWeights()
      println("done with getting weights...");
@@ -294,8 +294,8 @@ object classifierForAgro {
      // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
      // println("value of totalCount is:"+totalCount)
      println("value of accuracy is:" + accuracy + "%")
-     println("value of numberOfGoldGradable is:" + numberOfGoldGradable + "%")
-     println("value of numberOfGoldNonGradable is:" + numberOfGoldNonGradable + "%")
+     println("value of numberOfGoldGradable is:" + numberOfGoldGradable)
+     println("value of numberOfGoldNonGradable is:" + numberOfGoldNonGradable)
 
      //gus' code on accuracy
      val numFolds = 10
