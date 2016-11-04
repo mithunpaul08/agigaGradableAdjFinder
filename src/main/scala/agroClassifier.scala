@@ -252,25 +252,17 @@ object classifierForAgro {
 
 
 
-//     def factory() = new LiblinearClassifier[String, String]
-//     factory.train(dataset)
-
-     println("doing LiblinearClassifier...going to print weights");
-
-
-
-     def factory() = new LogisticRegressionClassifier[String, String]
+      //code for LogisticRegressionClassifier with bias
+     def factory() = new LogisticRegressionClassifier[String, String](bias = true)
      val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
      println("doing LogisticRegressionClassifier...");
      myClassifier.train(dataset)
 
-     //replacing myClassifier with liblinear
-//     val myClassifier = new LiblinearClassifier[String, String]
-//     def factory() = new LiblinearClassifier[String, String]
-//
+//     //replacing myClassifier with liblinear
+//     val myClassifier = new LiblinearClassifier[String, String](bias = true)
+//     def factory() = new LiblinearClassifier[String, String](bias = true)
 //     println("doing LiblinearClassifier...");
 //     myClassifier.train(dataset)
-
 
      val weights = myClassifier.getWeights()
      println("done with getting weights...");
