@@ -224,6 +224,8 @@ object classifierForAgro {
       counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
       counter.setCount("inflAndAdvModified", inflAndAdvModified)
 
+      //println("printing the value of counter below me in double")
+      //println(f"$counter%1.5f")
       println(counter.toString())
       val datum2 = new RVFDatum[String, String]("notgradable", counter)
 
@@ -234,7 +236,8 @@ object classifierForAgro {
     }
 
     val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-    //println("new value of ranges is:" +scaleRanges.maxs.toString());
+    println("new max value of ranges is:" +scaleRanges.maxs.toString());
+    println("new min value of ranges is:" +scaleRanges.mins.toString());
 
     //train the classifier
     println("\n")
@@ -295,10 +298,6 @@ object classifierForAgro {
       }
 
     }
-
-    //val writer = new PrintWriter(new File("test.txt" ))
-
-    //factory.displayWeights(writer);
     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
     // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
     // println("value of totalCount is:"+totalCount)
