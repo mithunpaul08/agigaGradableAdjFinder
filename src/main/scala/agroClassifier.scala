@@ -249,11 +249,11 @@ object classifierForAgro {
     //     println("doing SVMClassifier...");
 
 
-          //code for LogisticRegressionClassifier with bias
-         def factory() = new LogisticRegressionClassifier[String, String](bias = true)
-         val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
-         println("doing LogisticRegressionClassifier...");
-         myClassifier.train(dataset)
+//          //code for LogisticRegressionClassifier with bias
+//         def factory() = new LogisticRegressionClassifier[String, String](bias = true)
+//         val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
+//         println("doing LogisticRegressionClassifier...");
+//         myClassifier.train(dataset)
 
     //replacing myClassifier with liblinear
     //     val myClassifier = new LiblinearClassifier[String, String](bias = true)
@@ -262,10 +262,10 @@ object classifierForAgro {
     //     myClassifier.train(dataset)
 
     //replacing myClassifier with LibSVMClassifier
-//    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
-//    def factory() = new LibSVMClassifier[String, String](LinearKernel)
-//    println("doing LiblinearClassifier...");
-//    myClassifier.train(dataset)
+    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
+    def factory() = new LibSVMClassifier[String, String](LinearKernel)
+    println("doing LibSVMClassifier...");
+    myClassifier.train(dataset)
 
     //cant get weights for LibSVMClassifier
     //     val weights = myClassifier.getWeights()
