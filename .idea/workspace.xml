@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="" />
+    <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/.idea/workspace.xml" afterPath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" afterPath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
+    </list>
     <ignored path="hello.iws" />
     <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/target/" />
-    <ignored path="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/project/project/target/" />
-    <ignored path="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/project/target/" />
+    <ignored path="$USER_HOME$/fall2016/agigaGradableAdjFinder/target/" />
+    <ignored path="$USER_HOME$/fall2016/agigaGradableAdjFinder/project/project/target/" />
+    <ignored path="$USER_HOME$/fall2016/agigaGradableAdjFinder/project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +34,8 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="272" column="5" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="44" />
+            <state relative-caret-position="114">
+              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
               </folding>
@@ -43,7 +46,7 @@
       <file leaf-file-name="Datasets.scala" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datasets.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="5055">
               <caret line="343" column="22" selection-start-line="343" selection-start-column="17" selection-end-line="343" selection-end-column="22" />
               <folding />
             </state>
@@ -53,7 +56,7 @@
       <file leaf-file-name="Datum.scala" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datum.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="1140">
               <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="23" />
               <folding />
             </state>
@@ -63,7 +66,7 @@
       <file leaf-file-name="Counter.scala" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/struct/Counter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="315">
               <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding />
             </state>
@@ -73,7 +76,7 @@
       <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-526">
+            <state relative-caret-position="855">
               <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
               <folding />
             </state>
@@ -81,6 +84,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -90,10 +96,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala" />
-        <option value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/mainFile.scala" />
-        <option value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
+        <option value="$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala" />
+        <option value="$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala" />
+        <option value="$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/mainFile.scala" />
+        <option value="$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
@@ -102,10 +108,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="24" />
-    <option name="width" value="1682" />
-    <option name="height" value="1003" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -135,10 +140,10 @@
       <pane id="PackagesPane">
         <subPane />
       </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files" />
@@ -505,11 +510,11 @@
             <list>
               <ExternalProjectPojo>
                 <option name="name" value="root" />
-                <option name="path" value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder" />
+                <option name="path" value="$USER_HOME$/fall2016/agigaGradableAdjFinder" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value="root-build" />
-                <option name="path" value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/project" />
+                <option name="path" value="$USER_HOME$/fall2016/agigaGradableAdjFinder/project" />
               </ExternalProjectPojo>
             </list>
           </value>
@@ -539,19 +544,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1682" height="1003" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33906072" sideWeight="0.50238097" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33783785" sideWeight="0.50238097" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33906072" sideWeight="0.49761903" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33783785" sideWeight="0.49761903" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -566,6 +569,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -586,108 +591,108 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>116</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>118</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>97</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>108</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>104</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>139</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>133</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>134</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala</url>
           <line>130</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala</url>
           <line>49</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala</url>
           <line>50</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
           <line>126</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
           <line>140</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
           <line>141</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
           <line>151</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
           <line>152</line>
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
           <line>154</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
+          <url>file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala</url>
           <line>155</line>
           <properties />
           <option name="timeStamp" value="30" />
@@ -768,8 +773,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/findAdverbsThatModifyAdjectives.scala" />
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/findAdverbsThatModifyAdjectives.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/lang/String.java" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/StringBuilder.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -778,9 +783,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/mainFile.scala" />
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala" />
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/mainFile.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -792,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,8 +917,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/findAdverbsThatModifyAdjectives.scala" />
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/findAdverbsThatModifyAdjectives.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/compareErAdjWithUniq.scala" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/lang/String.java" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/StringBuilder.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -923,9 +927,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/mainFile.scala" />
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala" />
-    <entry file="file://$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/mainFile.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/ratioCalculator.scala" />
+    <entry file="file://$USER_HOME$/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/LibSVMClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
@@ -937,7 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +967,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/struct/Counter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
+        <state relative-caret-position="315">
           <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding />
         </state>
@@ -972,7 +975,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datum.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="1140">
           <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="23" />
           <folding />
         </state>
@@ -980,7 +983,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datasets.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="5055">
           <caret line="343" column="22" selection-start-line="343" selection-start-column="17" selection-end-line="343" selection-end-column="22" />
           <folding />
         </state>
@@ -988,7 +991,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-526">
+        <state relative-caret-position="855">
           <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
           <folding />
         </state>
@@ -996,8 +999,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="272" column="5" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="44" />
+        <state relative-caret-position="114">
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
           </folding>
