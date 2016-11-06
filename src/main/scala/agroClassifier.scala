@@ -51,7 +51,7 @@ object classifierForAgro {
   var erRemovedFiles = "AllErEstEndingAdjectivesUniq.txt"
 
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
- 
+
 
   def initializeAndClassify(runOnServer: Boolean, hashmapOfColderCold: Map[String, String]): Unit = {
     val counter = new Counter[String];
@@ -314,7 +314,7 @@ object classifierForAgro {
     val nonGradableClassAccuracy = predictedLabels.count { case (g, p) => (g == NEG_CLASS) && (g == p) } / numberOfGoldNonGradable.toDouble * 100
 
     val accuracy1 =
-      f
+      
       """
           |FOLDS:\t$numFolds
 

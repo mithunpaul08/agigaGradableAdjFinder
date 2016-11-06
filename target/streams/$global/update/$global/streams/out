@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/}root...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/}root...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: hello#hello_2.11;1.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -1116,11 +1116,11 @@
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: xom#xom;1.2.5[0m
 [0m[[0mdebug[0m] [0m	found xom#xom;1.2.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->joda-time#joda-time;2.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -2337,11 +2337,11 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->joda-time#joda-time;2.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -3690,11 +3690,11 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->joda-time#joda-time;2.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -5126,11 +5126,11 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->joda-time#joda-time;2.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -6579,11 +6579,11 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->joda-time#joda-time;2.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -8156,11 +8156,11 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->xom#xom;1.2.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xml-apis#xml-apis;1.3.03 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xerces#xercesImpl;2.8.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xom#xom;1.2.5->xalan#xalan;2.7.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies edu.stanford.nlp#stanford-corenlp;1.3.5->joda-time#joda-time;2.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.11.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -8810,19 +8810,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] edu.stanford.nlp#stanford-corenlp;3.5.1!stanford-corenlp.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.googlecode.efficient-java-matrix-library#ejml;0.23!ejml.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.json#javax.json-api;1.0!javax.json-api.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2853ms :: artifacts dl 102ms[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 compile produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 runtime produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 test produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 provided produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 optional produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 compile-internal produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 runtime-internal produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 test-internal produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 plugin produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 sources produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 docs produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 pom produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 scala-tool produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2853ms resolve - 102ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2182ms :: artifacts dl 39ms[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 compile produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 runtime produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 test produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 provided produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 optional produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 compile-internal produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 runtime-internal produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 test-internal produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 plugin produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 sources produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 docs produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 pom produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for hello#hello_2.11;1.0 scala-tool produced in /Users/mithun/Desktop/fall2016/agigaGradableAdjFinder/target/resolution-cache/reports/hello-hello_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (2182ms resolve - 39ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
