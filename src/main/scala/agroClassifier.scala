@@ -314,24 +314,14 @@ object classifierForAgro {
     val nonGradableClassAccuracy = predictedLabels.count { case (g, p) => (g == NEG_CLASS) && (g == p) } / numberOfGoldNonGradable.toDouble * 100
 
     val accuracy1 =
-      
-      """
-          |FOLDS:\t$numFolds
-
-          |Number of '$POS_CLASS' class instances in dataset:\t${predictedLabels.count(_._1 ==
-        POS_CLASS)}
-          |Number of '$NEG_CLASS' class instances in dataset:\t${predictedLabels.
-        count(_._1 == NEG_CLASS)}
-
-          |========================================
-          |OVERALL ACCURACY:\t$overallAccuracy%3.2f
-          |'$
-         POS_CLASS' ACCURACY:\t$gradableClassAccuracy%3.2f
-          |'$NEG_CLASS
-
-' ACCURACY:\t$
-
-  nonGradableClassAccuracy%3.2f
+      f"""
+         |FOLDS:\t$numFolds
+         |Number of '$POS_CLASS' class instances in dataset:\t${predictedLabels.count(_._1 == POS_CLASS)}
+         |Number of '$NEG_CLASS' class instances in dataset:\t${predictedLabels.count(_._1 == NEG_CLASS)}
+         |========================================
+         |OVERALL ACCURACY:\t$overallAccuracy%3.2f
+         |'$POS_CLASS' ACCURACY:\t$gradableClassAccuracy%3.2f
+         |'$NEG_CLASS' ACCURACY:\t$nonGradableClassAccuracy%3.2f
      """.stripMargin
 
      println(accuracy1)
