@@ -244,9 +244,6 @@ object classifierForAgro {
     //     def factory() = new PerceptronClassifier[String, String]
     //     println("doing PerceptronClassifier...");
 
-    //try with svm classifier--giving 4.27 as accuracy. Ignoring
-    //     def factory() = new LibSVMClassifier[String, String](LinearKernel)
-    //     println("doing SVMClassifier...");
 
 
 //          //code for LogisticRegressionClassifier with bias
@@ -255,17 +252,25 @@ object classifierForAgro {
 //         println("doing LogisticRegressionClassifier...");
 //         myClassifier.train(dataset)
 
-    //replacing myClassifier with liblinear
-         val myClassifier = new LiblinearClassifier[String, String](bias = true)
-         def factory() = new LiblinearClassifier[String, String](bias = true)
-         println("doing LiblinearClassifier...");
-         myClassifier.train(dataset)
+//    //replacing myClassifier with liblinear
+//         val myClassifier = new LiblinearClassifier[String, String](bias = true)
+//         def factory() = new LiblinearClassifier[String, String](bias = true)
+//         println("doing LiblinearClassifier...");
+//         myClassifier.train(dataset)
 
 //    //replacing myClassifier with LibSVMClassifier
 //    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
 //    def factory() = new LibSVMClassifier[String, String](LinearKernel)
 //    println("doing LibSVMClassifier...");
 //    myClassifier.train(dataset)
+
+    //replacing myClassifier with liblinear
+    val myClassifier = new PerceptronClassifier[String, String]
+    def factory() = new PerceptronClassifier[String, String]
+    println("doing PerceptronClassifier...");
+    myClassifier.train(dataset)
+
+
 
     //cant get weights for LibSVMClassifier
     //     val weights = myClassifier.getWeights()

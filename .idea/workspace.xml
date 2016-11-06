@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="" />
+    <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/.idea/workspace.xml" afterPath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" afterPath="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
+    </list>
     <ignored path="hello.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/fall2016/agigaGradableAdjFinder/target/" />
@@ -31,8 +34,8 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="257" column="6" selection-start-line="257" selection-start-column="6" selection-end-line="257" selection-end-column="6" />
+            <state relative-caret-position="137">
+              <caret line="258" column="38" selection-start-line="254" selection-start-column="5" selection-end-line="258" selection-end-column="38" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
               </folding>
@@ -996,8 +999,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="257" column="6" selection-start-line="257" selection-start-column="6" selection-end-line="257" selection-end-column="6" />
+        <state relative-caret-position="137">
+          <caret line="258" column="38" selection-start-line="254" selection-start-column="5" selection-end-line="258" selection-end-column="38" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
           </folding>
