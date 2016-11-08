@@ -249,11 +249,11 @@ object classifierForAgro {
 
 
 
-//          //code for LogisticRegressionClassifier with bias
-//         def factory() = new LogisticRegressionClassifier[String, String](bias = true)
-//         val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
-//         println("doing LogisticRegressionClassifier...");
-//         myClassifier.train(dataset)
+          //code for LogisticRegressionClassifier with bias
+         def factory() = new LogisticRegressionClassifier[String, String](bias = true)
+         val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
+         println("doing LogisticRegressionClassifier...");
+         myClassifier.train(dataset)
 
 //    //replacing myClassifier with liblinear
 //         val myClassifier = new LiblinearClassifier[String, String](bias = true)
@@ -267,11 +267,11 @@ object classifierForAgro {
 //    println("doing LibSVMClassifier...");
 //    myClassifier.train(dataset)
 
-    //replacing myClassifier with liblinear
-    val myClassifier = new PerceptronClassifier[String, String]
-    def factory() = new PerceptronClassifier[String, String]
-    println("doing PerceptronClassifier...");
-    myClassifier.train(dataset)
+//    //replacing myClassifier with liblinear
+//    val myClassifier = new PerceptronClassifier[String, String]
+//    def factory() = new PerceptronClassifier[String, String]
+//    println("doing PerceptronClassifier...");
+//    myClassifier.train(dataset)
 
 
 
