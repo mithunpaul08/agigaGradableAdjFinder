@@ -246,8 +246,8 @@ object classifierForAgro {
     println("###############done with adding features. starting ten fold cross validation...");
 
     //    //Try with perceptron classifier
-    //         def factory() = new PerceptronClassifier[String, String]
-    //         println("doing PerceptronClassifier...");
+             def factory() = new PerceptronClassifier[String, String]
+             println("doing PerceptronClassifier...");
 
 
     //          //code for LogisticRegressionClassifier with bias
@@ -257,10 +257,10 @@ object classifierForAgro {
     //         myClassifier.train(dataset)
 
     //replacing myClassifier with liblinear
-    val myClassifier = new LiblinearClassifier[String, String](bias = true)
-    def factory() = new LiblinearClassifier[String, String](bias = true)
-    println("doing LiblinearClassifier...");
-    myClassifier.train(dataset)
+//    val myClassifier = new LiblinearClassifier[String, String](bias = true)
+//    def factory() = new LiblinearClassifier[String, String](bias = true)
+//    println("doing LiblinearClassifier...");
+//    myClassifier.train(dataset)
 
     //replacing myClassifier with LibSVMClassifier
     //    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
