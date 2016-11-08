@@ -244,8 +244,8 @@ object classifierForAgro {
     println("###############done with adding features. starting ten fold cross validation...");
 
     //Try with perceptron classifier
-    //     def factory() = new PerceptronClassifier[String, String]
-    //     println("doing PerceptronClassifier...");
+         def factory() = new PerceptronClassifier[String, String]
+         println("doing PerceptronClassifier...");
 
 
 
@@ -262,10 +262,10 @@ object classifierForAgro {
 //         myClassifier.train(dataset)
 
     //replacing myClassifier with LibSVMClassifier
-    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
-    def factory() = new LibSVMClassifier[String, String](LinearKernel)
-    println("doing LibSVMClassifier...");
-    myClassifier.train(dataset)
+//    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
+//    def factory() = new LibSVMClassifier[String, String](LinearKernel)
+//    println("doing LibSVMClassifier...");
+//    myClassifier.train(dataset)
 
 
 
