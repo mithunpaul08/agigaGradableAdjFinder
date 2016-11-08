@@ -255,17 +255,17 @@ object classifierForAgro {
 //         println("doing LogisticRegressionClassifier...");
 //         myClassifier.train(dataset)
 
-    //replacing myClassifier with liblinear
-         val myClassifier = new LiblinearClassifier[String, String](bias = true)
-         def factory() = new LiblinearClassifier[String, String](bias = true)
-         println("doing LiblinearClassifier...");
-         myClassifier.train(dataset)
+//    //replacing myClassifier with liblinear
+//         val myClassifier = new LiblinearClassifier[String, String](bias = true)
+//         def factory() = new LiblinearClassifier[String, String](bias = true)
+//         println("doing LiblinearClassifier...");
+//         myClassifier.train(dataset)
 
-//    //replacing myClassifier with LibSVMClassifier
-//    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
-//    def factory() = new LibSVMClassifier[String, String](LinearKernel)
-//    println("doing LibSVMClassifier...");
-//    myClassifier.train(dataset)
+    //replacing myClassifier with LibSVMClassifier
+    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
+    def factory() = new LibSVMClassifier[String, String](LinearKernel)
+    println("doing LibSVMClassifier...");
+    myClassifier.train(dataset)
 
 
 
