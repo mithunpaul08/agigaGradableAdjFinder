@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaSbtSettings">
+    <option name="customVMEnabled" value="true" />
+    <option name="customVMPath" value="/usr/lib/jvm/java-8-oracle" />
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="createEmptyContentRootDirectories" value="true" />
@@ -8,8 +10,8 @@
         <option name="jdk" value="1.8" />
         <option name="modules">
           <set>
-            <option value="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder" />
-            <option value="$USER_HOME$/Desktop/fall2016/agigaGradableAdjFinder/project" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/project" />
           </set>
         </option>
         <option name="resolveJavadocs" value="true" />

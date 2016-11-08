@@ -167,46 +167,32 @@ object ratioCalculator {
     //read all lines of adjectives that end in er or est. Note: this is the actual number of times that adjective
     // occurs, not unique.
      val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectives;
-    println("reaching here at 242343")
+
+    println("path of input file is:"+adjWithErEstEnding)
     var adjToCheck = "NULL";
     try {
+
+
       //var counterForHashmap = 0;
       for (line <- Source.fromFile(adjWithErEstEnding).getLines()) {
+
         adjToCheck = line;
         //do the -er and -est removal in scala itself
         //note: ideally we should pass it through the coldest->cold hashmap to get the base value. This is a wrong method
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
 
-        //if after removing -er and -est it ends in a 'i'. Eg: happier-> happi--replace it with a y, and add to the list.
-
-
-
-
-          if(erEstRemovedForm.endsWith("i"))
-          {
-          //  println("value of the er-est removed and ending in i is:"+erEstRemovedForm)
+        //convert happier->happy
+        val numPattern = new Regex(".*i$")
+        val match1 = numPattern.findFirstIn(erEstRemovedForm)
+        match1 match {
+          case Some(s) => {
+            println(s"Found: $s")
             erEstRemovedForm=erEstRemovedForm.dropRight(1)
             erEstRemovedForm=erEstRemovedForm+"y"
-
-//            val pattern = new Regex("[i$]")
-//            val match1 = pattern.findFirstIn(erEstRemovedForm)
-//            println("value of the er-est removed and ending in i is:"+match1)
-//            System.exit(1);
-
-
-//            erEstRemovedForm = erEstRemovedForm.replaceFirst("[i$]", "y")
-//
-//            val pattern =
-//            charToRepalce='y';
-//            val result = erEstRemovedForm.replaceFirst(pattern,"y")
-//            lastLetterReplacedString=(pattern replaceFirstIn(erEstRemovedForm, charToRepalce))
-
-         //   println("value of the er-est after replacing with y is:"+erEstRemovedForm)
-
           }
-
-
+          case None =>println("pattern not found")
+        }
 
         //This is where we are increasing the count for base form. i.e cold might be already occuring say 434354 times in
         // the corpus. For every time we see colder, or coldest, we need to increase that count by one. In this code here,
@@ -278,7 +264,8 @@ object ratioCalculator {
 
       }
     } catch {
-      case ex: Exception => println("Exception occured:")
+      case ex: Exception => println("Exception occured:"+ex.toString())
+
     }
 
      //println("reaching here at 79578")
