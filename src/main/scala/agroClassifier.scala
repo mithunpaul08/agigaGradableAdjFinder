@@ -109,6 +109,7 @@ object classifierForAgro {
 
       var inflRatio: Double = 0;
       var advrbModifiedRatio: Double = 0
+      var ngramInflectedRatio: Double = 0;
 
 
       println("reaching here at 876467")
@@ -116,6 +117,8 @@ object classifierForAgro {
       println("\n")
       println("****************************************");
       println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
+
+
 
       //for each of the adjectives' root forms, get the inflected ratio.
       inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
@@ -132,6 +135,7 @@ object classifierForAgro {
 
 
       }
+      ngramInflectedRatio = ratioCalculator.calculateNgramInflectedRatio(adjToCheck);
 
       //for each of the adjectives' root forms, get the adverb modified ratio.
       advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);

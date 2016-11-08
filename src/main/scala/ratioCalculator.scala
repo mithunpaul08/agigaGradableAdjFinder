@@ -34,6 +34,38 @@ object ratioCalculator {
   var hashMapOfInflectedAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfAdvModifiedAdjCount: Map[String, Int] = Map()
 
+
+  def calculateNgramInflectedRatio (adjToGetRatio: String): Double = {
+
+    var myratio: Double = 0;
+    var totalBaseCount: Double = 0
+    var noOfTimesThisAdjInflected = 1;
+
+    //split it into ngrams
+    var splitAdj = characterNgramSplitter(adjToGetRatio,3)
+    if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
+
+      totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
+
+      for (trigrams <- splitAdj) {
+
+        if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
+          noOfTimesThisAdjInflected = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
+        }
+        myratio = noOfTimesThisAdjInflected.toDouble / totalBaseCount;
+        println("ratio for the trigram:" + trigrams + " is:" + noOfTimesThisAdjInflected + "/" + totalBaseCount + "which is:" + myratio)
+
+      }
+    }
+
+
+    return myratio;
+
+
+  }
+
+
+
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
     //println("reaching here at 4393897")
     var myratio: Double = 0;
