@@ -8,7 +8,7 @@ import org.clulab.learning.{Datasets, PerceptronClassifier, RVFDataset, RVFDatum
 import org.clulab.struct.Counter
 
 import scala.io.Source
-
+import scala.collection.immutable.ListMap
 /**
   * Created by mithunpaul on 10/14/16.
   */
@@ -28,6 +28,7 @@ object ratioCalculator {
   //the denominator remains same for a given adjective for all the ratios
   var denominatorOfRatio: Double = 0.000000;
 
+  var hashMapCharacterNgramsAndFrequency: Map[String, Int] = Map()
   var hashMapOfAllUniqAdjectivesInAgigaWithFrequency: Map[String, Int] = Map()
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfInflectedAdjectivesAndItsCount: Map[String, Int] = Map()
@@ -79,10 +80,10 @@ object ratioCalculator {
   }
 
   def triggerFunction(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
+
+    FindNgramCharacterFrequency(resourcesDirectory, outputDirectoryPath)
     ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
     readErRemovedFileAndIncreaseCounter(resourcesDirectory, outputDirectoryPath);
-
-
     ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
   }
 
@@ -161,7 +162,20 @@ object ratioCalculator {
     return advInflModifiedratio;
   }
 
+  def characterNgramSplitter(adjectiveToCalculate: String, noOfgrams: Int): List[String] = {
 
+
+
+    //attach a special character. this is to make sure there is no est in the word itself
+    var modifiedAdjectiveToCalculate="$"+adjectiveToCalculate+"$"
+    var splitChars= modifiedAdjectiveToCalculate.sliding(3).toList
+
+
+
+    return splitChars;
+
+
+  }
   def readErRemovedFileAndIncreaseCounter(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
 
     //read all lines of adjectives that end in er or est. Note: this is the actual number of times that adjective
@@ -242,7 +256,7 @@ object ratioCalculator {
 
           //so at the end of the day, you must have the value, which is a sum of the number of times colder appears,
           //and the number of times coldest appears.
-          // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
+
           //i.e very first time you encounter, coldest- initialize its value to 1. Now if you see colder again,
           //this value must increase. Note that the key here will be the base: cold
 
@@ -255,6 +269,7 @@ object ratioCalculator {
             inflectedCounterForSameWord = inflectedCounterForSameWord + 1;
           }
           else {
+            // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
             inflectedCounterForSameWord = 1
           }
           hashMapOfInflectedAdjectivesAndItsCount += (erEstRemovedForm -> inflectedCounterForSameWord);
@@ -368,6 +383,49 @@ object ratioCalculator {
       }
       // println(hashMapOfAdvModifiedAdjCount.mkString("\n"));
       //println(hashMapOfAdvModifiedAdjCount("happy"))
+    } catch {
+      case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
+    }
+  }
+
+
+
+  def FindNgramCharacterFrequency(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
+    //read from all the adjectives and its frequency into a hash table
+    //val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
+    val adjWithErEstEndingInputFile = resourcesDirectory + AllErEstEndingAdjectives;
+    try {
+
+      //for each adjective-split it to trigrams
+      for (line <- Source.fromFile(adjWithErEstEndingInputFile).getLines()) {
+        //println("reaching here at 3462323")
+        if (!line.isEmpty()) {
+          var splitAdj = characterNgramSplitter(line,3)
+
+          for(trigrams<-splitAdj)
+          {
+            var inflectedCounterForSameWord = 0;
+            if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
+              inflectedCounterForSameWord = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
+              inflectedCounterForSameWord = inflectedCounterForSameWord + 1;
+            }
+            else {
+              // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
+              inflectedCounterForSameWord = 1
+            }
+            hashMapCharacterNgramsAndFrequency += (trigrams -> inflectedCounterForSameWord);
+
+
+          }
+
+
+        }
+      }
+
+      //sort it by the most common trigrams
+      var sortedhashMapCharacterNgramsAndFrequency= ListMap(hashMapCharacterNgramsAndFrequency.toSeq.sortWith(_._2 < _._2):_*)
+      //println(sortedhashMapCharacterNgramsAndFrequency.mkString("\n"));
+
     } catch {
       case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
     }

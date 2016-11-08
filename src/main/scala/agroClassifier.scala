@@ -246,8 +246,8 @@ object classifierForAgro {
     println("###############done with adding features. starting ten fold cross validation...");
 
     //    //Try with perceptron classifier
-//             def factory() = new PerceptronClassifier[String, String]
-//             println("doing PerceptronClassifier...");
+    //             def factory() = new PerceptronClassifier[String, String]
+    //             println("doing PerceptronClassifier...");
 
 
     //          //code for LogisticRegressionClassifier with bias
@@ -257,16 +257,16 @@ object classifierForAgro {
     //         myClassifier.train(dataset)
 
     //replacing myClassifier with liblinear
-//    val myClassifier = new LiblinearClassifier[String, String](bias = true)
-//    def factory() = new LiblinearClassifier[String, String](bias = true)
-//    println("doing LiblinearClassifier...");
-//    myClassifier.train(dataset)
+    //    val myClassifier = new LiblinearClassifier[String, String](bias = true)
+    //    def factory() = new LiblinearClassifier[String, String](bias = true)
+    //    println("doing LiblinearClassifier...");
+    //    myClassifier.train(dataset)
 
     //replacing myClassifier with LibSVMClassifier
-        val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
-        def factory() = new LibSVMClassifier[String, String](LinearKernel)
-        println("doing LibSVMClassifier...");
-        myClassifier.train(dataset)
+    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
+    def factory() = new LibSVMClassifier[String, String](LinearKernel)
+    println("doing LibSVMClassifier...");
+    myClassifier.train(dataset)
 
 
     //cant get weights for LibSVMClassifier
@@ -278,6 +278,7 @@ object classifierForAgro {
     //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
     //val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
+    //code for scaling only the 9 folds of training data set, and not the 1 fold of test dataset
     val predictedLabels = mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
 
@@ -352,7 +353,6 @@ object classifierForAgro {
         output += new Tuple2(unScaledDataset.labelLexicon.get(gold), sys)
       }
     }
-
     output.toList
   }
 }
