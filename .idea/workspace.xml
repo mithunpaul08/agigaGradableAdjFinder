@@ -28,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -41,8 +41,8 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="274" column="0" selection-start-line="269" selection-start-column="6" selection-end-line="274" selection-end-column="0" />
+            <state relative-caret-position="163">
+              <caret line="90" column="94" selection-start-line="90" selection-start-column="92" selection-end-line="90" selection-end-column="94" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
               </folding>
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="223">
+              <caret line="384" column="12" selection-start-line="384" selection-start-column="12" selection-end-line="384" selection-end-column="12" />
               <folding>
                 <element signature="e#15#47#0" expanded="true" />
               </folding>
@@ -109,9 +109,9 @@
         <option value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/mainFile.scala" />
         <option value="$PROJECT_DIR$/../../fall2016/agigaGradableAdjFinder/src/main/scala/agroClassifier.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
       </list>
     </option>
   </component>
@@ -1014,31 +1014,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#47#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="274" column="0" selection-start-line="269" selection-start-column="6" selection-end-line="274" selection-end-column="0" />
+        <state relative-caret-position="163">
+          <caret line="90" column="94" selection-start-line="90" selection-start-column="92" selection-end-line="90" selection-end-column="94" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="223">
+          <caret line="384" column="12" selection-start-line="384" selection-start-column="12" selection-end-line="384" selection-end-column="12" />
+          <folding>
+            <element signature="e#15#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

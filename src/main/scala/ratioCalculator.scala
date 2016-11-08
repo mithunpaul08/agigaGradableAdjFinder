@@ -378,11 +378,11 @@ object ratioCalculator {
       println("reaching here at 1263. value of the file path is:" + advInputFile)
 
       for (line <- Source.fromFile(advInputFile).getLines()) {
-        println("reaching here at 3462323")
+        //println("reaching here at 3462323")
         if (!line.isEmpty()) {
           val content = line.split("\\s+");
-          println("value of content0 is:" + content(0))
-          println("value of content1 is:" + content(1))
+          //println("value of content0 is:" + content(0))
+          //println("value of content1 is:" + content(1))
           val frequency: Int = content(0).toInt;
 
           if (content.length > 1) {

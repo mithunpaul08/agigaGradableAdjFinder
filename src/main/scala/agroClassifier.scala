@@ -267,11 +267,6 @@ object classifierForAgro {
 //    println("doing LibSVMClassifier...");
 //    myClassifier.train(dataset)
 
-//    //replacing myClassifier with liblinear
-//    val myClassifier = new PerceptronClassifier[String, String]
-//    def factory() = new PerceptronClassifier[String, String]
-//    println("doing PerceptronClassifier...");
-//    myClassifier.train(dataset)
 
 
 
