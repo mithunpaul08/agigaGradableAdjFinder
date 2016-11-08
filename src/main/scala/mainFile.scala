@@ -6,8 +6,8 @@ import scala.xml.XML
 object mainParser {
   def main(args: Array[String]) = println("Exiting main program")
 
-  //val runOnServer = true;
-  val runOnServer = false;
+  val runOnServer = true;
+  //val runOnServer = false;
   //call the adjective parser.
   //  agigParser.readFiles();
 

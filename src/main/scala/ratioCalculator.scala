@@ -194,6 +194,21 @@ object ratioCalculator {
           case None =>println("pattern not found")
         }
 
+        //convert fattest->fat
+        //find repeating letters repeating twice at the end
+        val fatPattern= new Regex("(\\w)\\1+$")
+        val match2 = fatPattern.findFirstIn(erEstRemovedForm)
+        match2 match {
+          case Some(s) => {
+            //println(s"Found: $s")
+            //remove that last repeating letter Eg:Fatt->fat
+            erEstRemovedForm=erEstRemovedForm.dropRight(1)
+          }
+          case None =>println("pattern not found")
+        }
+
+
+
         //This is where we are increasing the count for base form. i.e cold might be already occuring say 434354 times in
         // the corpus. For every time we see colder, or coldest, we need to increase that count by one. In this code here,
         // we check if the base form exists in the hash map hashMapOfAllUniqAdjectivesInAgigaWithFrequency- which we had
