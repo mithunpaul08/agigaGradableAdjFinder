@@ -154,8 +154,8 @@ object classifierForAgro {
       val datum1 = new RVFDatum[String, String]("gradable", counter)
       dataset += datum1
 
-     // val scaleRanges2 = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-     // println("new value of ranges is:" + scaleRanges2.maxs.toString());
+      // val scaleRanges2 = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
+      // println("new value of ranges is:" + scaleRanges2.maxs.toString());
 
     }
 
@@ -236,38 +236,35 @@ object classifierForAgro {
     }
 
     val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-    println("new max value of ranges is:" +scaleRanges.maxs.toString());
-    println("new min value of ranges is:" +scaleRanges.mins.toString());
+    println("new max value of ranges is:" + scaleRanges.maxs.toString());
+    println("new min value of ranges is:" + scaleRanges.mins.toString());
 
     //train the classifier
     println("\n")
     println("###############done with adding features. starting ten fold cross validation...");
 
-//    //Try with perceptron classifier
-//         def factory() = new PerceptronClassifier[String, String]
-//         println("doing PerceptronClassifier...");
+    //    //Try with perceptron classifier
+    //         def factory() = new PerceptronClassifier[String, String]
+    //         println("doing PerceptronClassifier...");
 
 
+    //          //code for LogisticRegressionClassifier with bias
+    //         def factory() = new LogisticRegressionClassifier[String, String](bias = true)
+    //         val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
+    //         println("doing LogisticRegressionClassifier...");
+    //         myClassifier.train(dataset)
 
-          //code for LogisticRegressionClassifier with bias
-         def factory() = new LogisticRegressionClassifier[String, String](bias = true)
-         val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
-         println("doing LogisticRegressionClassifier...");
-         myClassifier.train(dataset)
-
-//    //replacing myClassifier with liblinear
-//         val myClassifier = new LiblinearClassifier[String, String](bias = true)
-//         def factory() = new LiblinearClassifier[String, String](bias = true)
-//         println("doing LiblinearClassifier...");
-//         myClassifier.train(dataset)
+    //replacing myClassifier with liblinear
+    val myClassifier = new LiblinearClassifier[String, String](bias = true)
+    def factory() = new LiblinearClassifier[String, String](bias = true)
+    println("doing LiblinearClassifier...");
+    myClassifier.train(dataset)
 
     //replacing myClassifier with LibSVMClassifier
-//    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
-//    def factory() = new LibSVMClassifier[String, String](LinearKernel)
-//    println("doing LibSVMClassifier...");
-//    myClassifier.train(dataset)
-
-
+    //    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
+    //    def factory() = new LibSVMClassifier[String, String](LinearKernel)
+    //    println("doing LibSVMClassifier...");
+    //    myClassifier.train(dataset)
 
 
     //cant get weights for LibSVMClassifier
@@ -323,9 +320,9 @@ object classifierForAgro {
          |'$NEG_CLASS' ACCURACY:\t$nonGradableClassAccuracy%3.2f
      """.stripMargin
 
-     println(accuracy1)
+    println(accuracy1)
 
-   }
+  }
 }
 
 
