@@ -1,6 +1,7 @@
 package agiga
 
 import java.io._
+
 import org.slf4j.LoggerFactory
 import org.clulab.agiga
 import org.clulab.processors.Document
@@ -19,11 +20,12 @@ import java.util.Comparator
 
 import org.clulab.learning._
 
-import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.io.Source
 import org.clulab.struct
 import org.clulab.struct.Counter
 import org.clulab.learning.Datasets
+
 import util.control.Breaks._
 import org.clulab.discourse.rstparser
 
@@ -274,7 +276,8 @@ object classifierForAgro {
     //     println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
 
     //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
-    val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
+    //val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
+    val predictedLabels =     mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
 
     //calculate acccuracy.
@@ -322,6 +325,30 @@ object classifierForAgro {
 
     println(accuracy1)
 
+  }
+
+  /**
+    * Implements classic cross validation; producing pairs of gold/predicted labels across the training dataset
+    */
+  def mithunsCrossValidate[L, F](
+                           dataset:Dataset[L, F],
+                           classifierFactory: () => Classifier[L, F],
+                           numFolds:Int):Iterable[(L, L)] = {
+
+    val folds = Datasets.mkFolds(numFolds, dataset.size)
+    val output = new ListBuffer[(L, L)]
+
+    for(fold <- folds) {
+      val classifier = classifierFactory()
+      classifier.train(dataset, Some(fold.trainFolds))
+      for(i <- fold.testFold._1 until fold.testFold._2) {
+        val sys = classifier.classOf(dataset.mkDatum(i))
+        val gold = dataset.labels(i)
+        output += new Tuple2(dataset.labelLexicon.get(gold), sys)
+      }
+    }
+
+    output.toList
   }
 }
 

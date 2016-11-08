@@ -191,7 +191,8 @@ object ratioCalculator {
             erEstRemovedForm=erEstRemovedForm.dropRight(1)
             erEstRemovedForm=erEstRemovedForm+"y"
           }
-          case None =>println("pattern not found")
+          case None =>
+            //println("pattern not found")
         }
 
         //convert fattest->fat
@@ -204,7 +205,8 @@ object ratioCalculator {
             //remove that last repeating letter Eg:Fatt->fat
             erEstRemovedForm=erEstRemovedForm.dropRight(1)
           }
-          case None =>println("pattern not found")
+          case None =>
+            //println("pattern not found")
         }
 
 
