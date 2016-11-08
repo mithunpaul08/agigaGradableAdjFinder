@@ -237,9 +237,9 @@ object classifierForAgro {
       println("reaching here at 2462467")
     }
 
-    val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-    println("new max value of ranges is:" + scaleRanges.maxs.toString());
-    println("new min value of ranges is:" + scaleRanges.mins.toString());
+    //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
+    //    println("new max value of ranges is:" + scaleRanges.maxs.toString());
+    //    println("new min value of ranges is:" + scaleRanges.mins.toString());
 
     //train the classifier
     println("\n")
@@ -277,7 +277,7 @@ object classifierForAgro {
 
     //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
     //val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
-    val predictedLabels =     mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
+    val predictedLabels = mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
 
     //calculate acccuracy.
@@ -331,20 +331,24 @@ object classifierForAgro {
     * Implements classic cross validation; producing pairs of gold/predicted labels across the training dataset
     */
   def mithunsCrossValidate[L, F](
-                           dataset:Dataset[L, F],
-                           classifierFactory: () => Classifier[L, F],
-                           numFolds:Int):Iterable[(L, L)] = {
+                                  dataset: Dataset[L, F],
+                                  classifierFactory: () => Classifier[L, F],
+                                  numFolds: Int): Iterable[(L, L)] = {
 
     val folds = Datasets.mkFolds(numFolds, dataset.size)
     val output = new ListBuffer[(L, L)]
+    for (fold <- folds) {
 
-    for(fold <- folds) {
+      //make a copy of unscaled dataset, and give it to testing. Then scale the rest and give it to training
+      val unScaledDataset = dataset;
       val classifier = classifierFactory()
+      //scale it before training, but not in testing.
+      val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
       classifier.train(dataset, Some(fold.trainFolds))
-      for(i <- fold.testFold._1 until fold.testFold._2) {
-        val sys = classifier.classOf(dataset.mkDatum(i))
-        val gold = dataset.labels(i)
-        output += new Tuple2(dataset.labelLexicon.get(gold), sys)
+      for (i <- fold.testFold._1 until fold.testFold._2) {
+        val sys = classifier.classOf(unScaledDataset.mkDatum(i))
+        val gold = unScaledDataset.labels(i)
+        output += new Tuple2(unScaledDataset.labelLexicon.get(gold), sys)
       }
     }
 

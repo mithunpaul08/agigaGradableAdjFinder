@@ -187,7 +187,7 @@ object ratioCalculator {
         val match1 = numPattern.findFirstIn(erEstRemovedForm)
         match1 match {
           case Some(s) => {
-            println(s"Found: $s")
+            //println(s"Found: $s")
             erEstRemovedForm=erEstRemovedForm.dropRight(1)
             erEstRemovedForm=erEstRemovedForm+"y"
           }
