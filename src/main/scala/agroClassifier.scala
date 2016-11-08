@@ -43,7 +43,7 @@ object classifierForAgro {
   //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
 
   //path in chung.cs.arizona.edu
-  var resourcesDirectory = "./src/main/resources/"
+  var resourcesDirectory = "src/main/resources/"
 
   //var outputDirectoryPath = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
 
@@ -86,7 +86,7 @@ object classifierForAgro {
     val cobuildNonGradable = resourcesDirectory + GMCombined_Uniq;
     val cobuildGradable = resourcesDirectory + GPCombined_Uniq;
 
-    //println("reaching here at 9870987")
+    println("reaching here at 9870987")
 
     //fill in the hashmaps. i.e the maps which has the count of base form adjectives (cold->2342342) and inflected
     //adjectives(colder/coldest:2344)
@@ -109,7 +109,7 @@ object classifierForAgro {
       var advrbModifiedRatio: Double = 0
 
 
-      //println("reaching here at 876467")
+      println("reaching here at 876467")
 
       println("\n")
       println("****************************************");

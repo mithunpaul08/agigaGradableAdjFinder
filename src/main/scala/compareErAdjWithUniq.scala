@@ -38,7 +38,7 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
   //var erRemovedFiles="uniqAdjectivesInAgiga_removedErEst.txt";
   var AllErEstEndingAdjectivesUniq = "AllErEstEndingAdjectivesUniq.txt"
 
-  var outputFileName = "hashmapForErAdjectiveAndItsBaseForm.txt";
+  var outputFileForhashmapForErAdjectiveAndItsBaseForm = "hashmapForErAdjectiveAndItsBaseForm.txt";
 
   var hashMapOfAllUniqAdjectivesInAgiga = Map("Long" -> "1")
 
@@ -46,10 +46,10 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
 
 
   def ReadAllUniqAdjectivesToHashmap(): Unit = {
-  //  println("reaching here at 1325")
+
     val advInputFile = resourcesDirectory + completeAgigaFile;
     try {
-    //  println("reaching here at 1263.value of the path of the file is :"+advInputFile)
+     println("reaching here at 1263.value of the path of the file is :"+advInputFile)
       var counterForHashmap = 0;
       for (line <- Source.fromFile(advInputFile).getLines()) {
          // println("reaching here at 184")
@@ -62,7 +62,8 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
 
 
   def writeToFile(stringToWrite: String): Unit = {
-    val outFile = new File(outputDirectoryPath, outputFileName)
+    println("reaching here at 1325")
+    val outFile = new File(outputDirectoryPath, outputFileForhashmapForErAdjectiveAndItsBaseForm)
 
     val bw = new BufferedWriter(new FileWriter(outFile))
 
@@ -93,17 +94,24 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
     }
     else {
 
-      //resourcesDirectory = "src/main/resources/"
-     resourcesDirectory= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
+      //path on local machine
+      resourcesDirectory = "src/main/resources/"
+     //resourcesDirectory= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
+      //resourcesDirectory= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
 
-     // outputDirectoryPath = "src/main/outputs/"
-      outputDirectoryPath= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+
+       outputDirectoryPath = "src/main/outputs/"
+      //outputDirectoryPath= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+      //outputDirectoryPath= "/Users/mithun/agro/agigaGradableAdjFinder/src/main/outputs/"
+      //val f = new File(getClass.getClassLoader.getResource("movies.txt").getPath)
+
+
     }
     //read all lines of uniq adjectives to a hashmap
     ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
     val erRemovedInputFile = resourcesDirectory + AllErEstEndingAdjectivesUniq;
-   // println("reaching here at 956395.value of the path of the file is :"+erRemovedInputFile)
+    println("reaching here at 956395.value of the path of the file is :"+erRemovedInputFile)
    // println("reaching here at 3")
     var adjToCheck = "NULL";
     try {
@@ -125,10 +133,12 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
 
       }
     } catch {
-      case ex: Exception => println("Exception occured:")
+      case ex: Exception => println("Exception occured in function readErRemovedFile:")
     }
    // println("value of hashmap is:" + hashMapOfInflAdjToRootForm);
-    //System.exit(1)
+
+
+
     writeToFile(hashMapOfInflAdjToRootForm.mkString("\n"))
     return hashMapOfInflAdjToRootForm;
 

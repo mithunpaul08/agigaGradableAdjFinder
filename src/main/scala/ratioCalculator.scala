@@ -1,5 +1,6 @@
 package agiga
 
+import scala.util.matching.Regex
 import util.control.Breaks._
 import java.io.{BufferedWriter, File, FileWriter}
 
@@ -14,7 +15,7 @@ import scala.io.Source
 object ratioCalculator {
 
 
-  var AllErEstEndingAdjectivesUniq = "AllErEstEndingAdjectives.txt"
+  var AllErEstEndingAdjectives = "AllErEstEndingAdjectives.txt"
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
   var outputFileNameForAllAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
   var outputFileNameForInflectedAdjectiveCount = "hashmapForAllAdjectivesAndItsCount.txt";
@@ -80,6 +81,8 @@ object ratioCalculator {
   def triggerFunction(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
     ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
     readErRemovedFileAndIncreaseCounter(resourcesDirectory, outputDirectoryPath);
+
+
     ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
   }
 
@@ -163,7 +166,7 @@ object ratioCalculator {
 
     //read all lines of adjectives that end in er or est. Note: this is the actual number of times that adjective
     // occurs, not unique.
-     val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectivesUniq;
+     val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectives;
     println("reaching here at 242343")
     var adjToCheck = "NULL";
     try {
@@ -174,7 +177,36 @@ object ratioCalculator {
         //note: ideally we should pass it through the coldest->cold hashmap to get the base value. This is a wrong method
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
-        //println("reaching here at 79578")
+
+        //if after removing -er and -est it ends in a 'i'. Eg: happier-> happi--replace it with a y, and add to the list.
+
+
+
+
+          if(erEstRemovedForm.endsWith("i"))
+          {
+          //  println("value of the er-est removed and ending in i is:"+erEstRemovedForm)
+            erEstRemovedForm=erEstRemovedForm.dropRight(1)
+            erEstRemovedForm=erEstRemovedForm+"y"
+
+//            val pattern = new Regex("[i$]")
+//            val match1 = pattern.findFirstIn(erEstRemovedForm)
+//            println("value of the er-est removed and ending in i is:"+match1)
+//            System.exit(1);
+
+
+//            erEstRemovedForm = erEstRemovedForm.replaceFirst("[i$]", "y")
+//
+//            val pattern =
+//            charToRepalce='y';
+//            val result = erEstRemovedForm.replaceFirst(pattern,"y")
+//            lastLetterReplacedString=(pattern replaceFirstIn(erEstRemovedForm, charToRepalce))
+
+         //   println("value of the er-est after replacing with y is:"+erEstRemovedForm)
+
+          }
+
+
 
         //This is where we are increasing the count for base form. i.e cold might be already occuring say 434354 times in
         // the corpus. For every time we see colder, or coldest, we need to increase that count by one. In this code here,
@@ -187,9 +219,6 @@ object ratioCalculator {
           //println("reaching here at 234234 . value of base form  frequency is:"+baseCounter)
           baseCounter = baseCounter + 1;
 
-          //This is a mistake, we must be increasing the counter of the same hashmap..
-          //hashmap for an  adjectives in its inflected form and its count. Note it will start from zero
-          //hashMapOfAllAdjectivesAndItsCount += (erEstRemovedForm -> baseCounter);
 
           hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (erEstRemovedForm -> baseCounter);
 
@@ -230,7 +259,6 @@ object ratioCalculator {
 
         }
 
-
         //below hash table hashMapOfAllAdjectivesAndItsCount just shows all the adjectives in its 3 forms and the counts
         //Eg: Cold:234234 colder:154 coldest:231. Now the problem is, how to sum the counts of colder and coldest. How
         //do we determine, that they are both inflections of same word, cold...So created hashMapOfInflectedAdjectivesAndItsCount.
@@ -252,8 +280,15 @@ object ratioCalculator {
     } catch {
       case ex: Exception => println("Exception occured:")
     }
-    // println("value of hashmap is:" + hashMapOfAllAdjectivesAndItsCount.mkString("\n "));
+
+     //println("reaching here at 79578")
+
+
+    //println("value of hashmap is:" + hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n "));
     //writeToFile(hashMapOfAllAdjectivesAndItsCount.mkString("\n"),outputFileNameForAllAdjectiveCount,outputDirectoryPath)
+    // println("reaching here at 9217468")
+
+    //System.exit(1);
 
     // println("value of hashmap is:" + hashMapOfInflectedAdjectivesAndItsCount.mkString("\n "));
     //write the inflected value count also to file
@@ -340,22 +375,23 @@ object ratioCalculator {
     //read from all the adjectives and its frequency into a hash table
     val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
     try {
-      println("reaching here at 1263. value of the file path is:"+advInputFile)
+      println("reaching here at 1263. value of the file path is:" + advInputFile)
 
       for (line <- Source.fromFile(advInputFile).getLines()) {
-       // println("reaching here at 3462323")
-        val content = line.split("\\s+");
-        //println("value of content0 is:"+content(0))
-//println("value of content1 is:"+content(1))
-val frequency:Int=content(0).toInt;
+        println("reaching here at 3462323")
+        if (!line.isEmpty()) {
+          val content = line.split("\\s+");
+          println("value of content0 is:" + content(0))
+          println("value of content1 is:" + content(1))
+          val frequency: Int = content(0).toInt;
 
-        if (content.length > 1) {
+          if (content.length > 1) {
 
-          hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (content(1) -> frequency);
+            hashMapOfAllUniqAdjectivesInAgigaWithFrequency += (content(1) -> frequency);
+          }
+
+          //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));
         }
-
-        //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));
-
       }
     } catch {
       case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
