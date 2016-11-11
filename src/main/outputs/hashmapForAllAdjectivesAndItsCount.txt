@@ -1,0 +1,9 @@
+big -> 2005
+bold -> 1374
+last -> 351
+second -> 1
+cold -> 1347
+happy -> 1617
+new -> 1821
+early -> 2001
+first -> 4

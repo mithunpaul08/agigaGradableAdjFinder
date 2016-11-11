@@ -343,7 +343,7 @@ object ratioCalculator {
 
     // println("value of hashmap is:" + hashMapOfInflectedAdjectivesAndItsCount.mkString("\n "));
     //write the inflected value count also to file
-    //writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"),outputFileNameForInflectedAdjectiveCount,outputDirectoryPath)
+    writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"),outputFileNameForInflectedAdjectiveCount,outputDirectoryPath)
 
   }
 

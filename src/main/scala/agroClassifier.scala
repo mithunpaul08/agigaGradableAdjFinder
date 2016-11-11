@@ -1,7 +1,7 @@
 package agiga
 
 import java.io._
-
+import scala.collection.mutable.ArrayBuffer
 import org.slf4j.LoggerFactory
 import org.clulab.agiga
 import org.clulab.processors.Document
@@ -54,6 +54,8 @@ object classifierForAgro {
 
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
+  var outputFileForPredictedLabels= "outputFileForPredictedLabels.txt";
+
 
   def initializeAndClassify(runOnServer: Boolean, hashmapOfColderCold: Map[String, String]): Unit = {
     val counter = new Counter[String];
@@ -79,6 +81,8 @@ object classifierForAgro {
 
       completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
+
+
     }
 
 
@@ -87,6 +91,7 @@ object classifierForAgro {
 
     val cobuildNonGradable = resourcesDirectory + GMCombined_Uniq;
     val cobuildGradable = resourcesDirectory + GPCombined_Uniq;
+
 
     println("reaching here at 9870987")
 
@@ -285,6 +290,7 @@ object classifierForAgro {
     //code for scaling only the 9 folds of training data set, and not the 1 fold of test dataset
     val predictedLabels = mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
+    val matrix = Array.ofDim[Int](2,2)
 
     //calculate acccuracy.
     //i.e number of times the labels match each other...divided by the total number, will be your accuracy
@@ -293,10 +299,21 @@ object classifierForAgro {
     for ((predictedLabel, actualLabel) <- predictedLabels) {
       totalCount = totalCount + 1;
 
+      //just store into an array of strings for printing purposes
+      var predictedValuesToPrint = ArrayBuffer[String]()
+      predictedValuesToPrint += "nameOfAdjective"
+        predictedValuesToPrint += actualLabel
+      predictedValuesToPrint += predictedLabel
+
       if (predictedLabel == actualLabel) {
         countCorrectlyPredicted = countCorrectlyPredicted + 1;
 
       }
+
+      val predictedAdjLabel :String="Name"+ " "+ actualLabel +" "+ predictedLabel
+      println(predictedAdjLabel)
+      ratioCalculator.writeToFile(predictedAdjLabel,outputFileForPredictedLabels,outputDirectoryPath)
+
 
     }
     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
