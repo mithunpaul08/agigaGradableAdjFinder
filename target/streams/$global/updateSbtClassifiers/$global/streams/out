@@ -748,9 +748,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.9!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.9!apply-macro.jar
-[debug] :: resolution report :: resolve 2873ms :: artifacts dl 107ms
+[debug] :: resolution report :: resolve 1991ms :: artifacts dl 167ms
 [debug] 	report for hello#hello$sbt_2.11;1.0 default produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello$sbt_2.11-default.xml
-[debug] 	resolve done (2873ms resolve - 107ms download)
+[debug] 	resolve done (1991ms resolve - 167ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: hello#hello$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1120,6 +1120,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.9!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.9!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.9!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 454ms :: artifacts dl 114ms
+[debug] :: resolution report :: resolve 251ms :: artifacts dl 48ms
 [debug] 	report for hello#hello$sources_2.11;1.0 default produced in /home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/target/resolution-cache/reports/hello-hello$sources_2.11-default.xml
-[debug] 	resolve done (454ms resolve - 114ms download)
+[debug] 	resolve done (251ms resolve - 48ms download)

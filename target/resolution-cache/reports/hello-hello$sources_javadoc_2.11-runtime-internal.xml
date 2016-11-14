@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161107232550"/>
+		date="20161114124600"/>
 	<dependencies>
 		<module organisation="org.clulab" name="processors-corenlp_2.11">
 			<revision name="6.0.0" status="release" pubdate="20160919103819" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/clulab/processors" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="33">

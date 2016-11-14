@@ -54,12 +54,18 @@ object classifierForAgro {
 
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
-  var outputFileForPredictedLabels= "outputFileForPredictedLabels.txt";
+  var outputFileForPredictedLabels = "outputFileForPredictedLabels.txt";
 
 
   def initializeAndClassify(runOnServer: Boolean, hashmapOfColderCold: Map[String, String]): Unit = {
     val counter = new Counter[String];
     val dataset = new RVFDataset[String, String]
+    //var adjGoldPredicted = ArrayBuffer.fill(508,3)("")
+    var adjGoldPredicted = ArrayBuffer.fill(509,3)("")
+    var listOfAllAdjectives = ArrayBuffer[String]()
+
+
+
 
 
     //when on jenny we want all the files to come from the testbed folder, and not resources folder. Because the files in
@@ -82,7 +88,6 @@ object classifierForAgro {
       completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
 
-
     }
 
 
@@ -103,12 +108,14 @@ object classifierForAgro {
     //todo: find if we should pick from the top 300 adjectives
 
     var numberOfGoldGradable = 0;
+    var counterForAdjLabelMatrix=0;
 
 
     //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
     for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
 
       numberOfGoldGradable = numberOfGoldGradable + 1
+      counterForAdjLabelMatrix=counterForAdjLabelMatrix+1;
 
       //todo: read input from all agiga files
 
@@ -165,6 +172,18 @@ object classifierForAgro {
       val datum1 = new RVFDatum[String, String]("gradable", counter)
       dataset += datum1
 
+
+//      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
+//      var adjLabelBuilder = ArrayBuffer[String]()
+//      adjLabelBuilder += adjToCheck
+//      adjGoldPredicted += adjLabelBuilder
+
+      listOfAllAdjectives+= adjToCheck
+      //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
+      //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
+
+
+
       // val scaleRanges2 = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
       // println("new value of ranges is:" + scaleRanges2.maxs.toString());
 
@@ -176,6 +195,7 @@ object classifierForAgro {
 
       //total number of gold non gradable adjectives
       numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
+      counterForAdjLabelMatrix=counterForAdjLabelMatrix+1;
 
 
       println("\n")
@@ -244,7 +264,17 @@ object classifierForAgro {
 
       dataset += datum2
       println("reaching here at 2462467")
+
+//      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
+      listOfAllAdjectives += adjToCheck
+      //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
+//      var adjLabelBuilder = ArrayBuffer[String]()
+//      adjLabelBuilder += adjToCheck
+//      adjGoldPredicted += adjLabelBuilder
     }
+
+
+
 
     //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
     //    println("new max value of ranges is:" + scaleRanges.maxs.toString());
@@ -290,10 +320,10 @@ object classifierForAgro {
     //code for scaling only the 9 folds of training data set, and not the 1 fold of test dataset
     val predictedLabels = mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
-    val matrix = Array.ofDim[Int](2,2)
 
     //calculate acccuracy.
     //i.e number of times the labels match each other...divided by the total number, will be your accuracy
+    var countForAdjArray=0
     var totalCount: Double = 0;
     var countCorrectlyPredicted: Double = 0;
     for ((predictedLabel, actualLabel) <- predictedLabels) {
@@ -301,8 +331,8 @@ object classifierForAgro {
 
       //just store into an array of strings for printing purposes
       var predictedValuesToPrint = ArrayBuffer[String]()
-      predictedValuesToPrint += "nameOfAdjective"
-        predictedValuesToPrint += actualLabel
+      predictedValuesToPrint += listOfAllAdjectives(countForAdjArray)
+      predictedValuesToPrint += actualLabel
       predictedValuesToPrint += predictedLabel
 
       if (predictedLabel == actualLabel) {
@@ -310,12 +340,33 @@ object classifierForAgro {
 
       }
 
-      val predictedAdjLabel :String="Name"+ " "+ actualLabel +" "+ predictedLabel
-      println(predictedAdjLabel)
-      ratioCalculator.writeToFile(predictedAdjLabel,outputFileForPredictedLabels,outputDirectoryPath)
+      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
+
+      adjGoldPredicted(countForAdjArray) = predictedValuesToPrint
+      countForAdjArray=countForAdjArray+1
+
+//      val predictedAdjLabel: String = "Name" + " " + actualLabel + " " + predictedLabel
+//      println(predictedAdjLabel)
+
 
 
     }
+
+
+//    println("value of countForAdjArray is: ")
+//    println(countForAdjArray)
+//    println("value of 0,0 in adjGoldPredicted is: ")
+//    println(adjGoldPredicted(0)(0).mkString("\n"))
+//    println("value of totalCount is: ")
+//    println(totalCount)
+//    println("value of 55 adjGoldPredicted is: ")
+//    println(adjGoldPredicted(55).mkString("\n"))
+
+
+    println("value of adjGoldPredicted is: ")
+    println(adjGoldPredicted.mkString("\n"))
+    ratioCalculator.writeToFile(adjGoldPredicted.mkString("\n"), outputFileForPredictedLabels, outputDirectoryPath)
+
     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
     // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
     // println("value of totalCount is:"+totalCount)
