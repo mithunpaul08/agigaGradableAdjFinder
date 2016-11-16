@@ -228,32 +228,32 @@ object ratioCalculator {
         var erEstRemovedForm = adjToCheck.replaceAll("er", "")
         erEstRemovedForm = erEstRemovedForm.replaceAll("est", "")
 
-//        //convert happier->happy
-//        val numPattern = new Regex(".*i$")
-//        val match1 = numPattern.findFirstIn(erEstRemovedForm)
-//        match1 match {
-//          case Some(s) => {
-//            //println(s"Found: $s")
-//            erEstRemovedForm=erEstRemovedForm.dropRight(1)
-//            erEstRemovedForm=erEstRemovedForm+"y"
-//          }
-//          case None =>
-//            //println("pattern not found")
-//        }
-//
-//        //convert fattest->fat
-//        //find repeating letters repeating twice at the end
-//        val fatPattern= new Regex("(\\w)\\1+$")
-//        val match2 = fatPattern.findFirstIn(erEstRemovedForm)
-//        match2 match {
-//          case Some(s) => {
-//            //println(s"Found: $s")
-//            //remove that last repeating letter Eg:Fatt->fat
-//            erEstRemovedForm=erEstRemovedForm.dropRight(1)
-//          }
-//          case None =>
-//            //println("pattern not found")
-//        }
+        //convert happier->happy
+        val numPattern = new Regex(".*i$")
+        val match1 = numPattern.findFirstIn(erEstRemovedForm)
+        match1 match {
+          case Some(s) => {
+            //println(s"Found: $s")
+            erEstRemovedForm=erEstRemovedForm.dropRight(1)
+            erEstRemovedForm=erEstRemovedForm+"y"
+          }
+          case None =>
+            //println("pattern not found")
+        }
+
+        //convert fattest->fat
+        //find repeating letters repeating twice at the end
+        val fatPattern= new Regex("(\\w)\\1+$")
+        val match2 = fatPattern.findFirstIn(erEstRemovedForm)
+        match2 match {
+          case Some(s) => {
+            //println(s"Found: $s")
+            //remove that last repeating letter Eg:Fatt->fat
+            erEstRemovedForm=erEstRemovedForm.dropRight(1)
+          }
+          case None =>
+            //println("pattern not found")
+        }
 
 
 
