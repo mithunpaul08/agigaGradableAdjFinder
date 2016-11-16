@@ -61,7 +61,7 @@ object classifierForAgro {
     val counter = new Counter[String];
     val dataset = new RVFDataset[String, String]
     //var adjGoldPredicted = ArrayBuffer.fill(508,3)("")
-    var adjGoldPredicted = ArrayBuffer.fill(509,3)("")
+    var adjGoldPredicted = ArrayBuffer.fill(509, 3)("")
     var listOfAllAdjectives = ArrayBuffer[String]()
 
 
@@ -108,14 +108,14 @@ object classifierForAgro {
     //todo: find if we should pick from the top 300 adjectives
 
     var numberOfGoldGradable = 0;
-    var counterForAdjLabelMatrix=0;
+    var counterForAdjLabelMatrix = 0;
 
 
     //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
     for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
 
       numberOfGoldGradable = numberOfGoldGradable + 1
-      counterForAdjLabelMatrix=counterForAdjLabelMatrix+1;
+      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
 
       //todo: read input from all agiga files
 
@@ -173,15 +173,14 @@ object classifierForAgro {
       dataset += datum1
 
 
-//      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
-//      var adjLabelBuilder = ArrayBuffer[String]()
-//      adjLabelBuilder += adjToCheck
-//      adjGoldPredicted += adjLabelBuilder
+      //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
+      //      var adjLabelBuilder = ArrayBuffer[String]()
+      //      adjLabelBuilder += adjToCheck
+      //      adjGoldPredicted += adjLabelBuilder
 
-      listOfAllAdjectives+= adjToCheck
+      listOfAllAdjectives += adjToCheck
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
-
 
 
       // val scaleRanges2 = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
@@ -195,7 +194,7 @@ object classifierForAgro {
 
       //total number of gold non gradable adjectives
       numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
-      counterForAdjLabelMatrix=counterForAdjLabelMatrix+1;
+      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
 
 
       println("\n")
@@ -265,12 +264,12 @@ object classifierForAgro {
       dataset += datum2
       println("reaching here at 2462467")
 
-//      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
+      //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
       listOfAllAdjectives += adjToCheck
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
-//      var adjLabelBuilder = ArrayBuffer[String]()
-//      adjLabelBuilder += adjToCheck
-//      adjGoldPredicted += adjLabelBuilder
+      //      var adjLabelBuilder = ArrayBuffer[String]()
+      //      adjLabelBuilder += adjToCheck
+      //      adjGoldPredicted += adjLabelBuilder
     }
 
 
@@ -289,30 +288,26 @@ object classifierForAgro {
     //             println("doing PerceptronClassifier...");
 
 
-    //          //code for LogisticRegressionClassifier with bias
-    //         def factory() = new LogisticRegressionClassifier[String, String](bias = true)
-    //         val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
-    //         println("doing LogisticRegressionClassifier...");
-    //         myClassifier.train(dataset)
-
-    //replacing myClassifier with liblinear
-    //    val myClassifier = new LiblinearClassifier[String, String](bias = true)
-    //    def factory() = new LiblinearClassifier[String, String](bias = true)
-    //    println("doing LiblinearClassifier...");
-    //    myClassifier.train(dataset)
-
-    //replacing myClassifier with LibSVMClassifier
-    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
-    def factory() = new LibSVMClassifier[String, String](LinearKernel)
-    println("doing LibSVMClassifier...");
+    //code for LogisticRegressionClassifier with bias
+    def factory() = new LogisticRegressionClassifier[String, String](bias = true)
+    val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
+    println("doing LogisticRegressionClassifier...");
     myClassifier.train(dataset)
 
 
+
+    //    //replacing myClassifier with LibSVMClassifier
+    //    val myClassifier = new LibSVMClassifier[String, String](LinearKernel)
+    //    def factory() = new LibSVMClassifier[String, String](LinearKernel)
+    //    println("doing LibSVMClassifier...");
+    //    myClassifier.train(dataset)
+
+
     //cant get weights for LibSVMClassifier
-    //     val weights = myClassifier.getWeights()
-    //     println("done with getting weights...");
-    //     println(s"""Weights for the positive class: ${weights.get("gradable")}""")
-    //     println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
+    val weights = myClassifier.getWeights()
+    println("done with getting weights...");
+    println(s"""Weights for the positive class: ${weights.get("gradable")}""")
+    println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
 
     //this returns a label of the type [predicted, original] Eg: [NON-GRADABLE, GRADABLE]
     //val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
@@ -323,7 +318,7 @@ object classifierForAgro {
 
     //calculate acccuracy.
     //i.e number of times the labels match each other...divided by the total number, will be your accuracy
-    var countForAdjArray=0
+    var countForAdjArray = 0
     var totalCount: Double = 0;
     var countCorrectlyPredicted: Double = 0;
     for ((predictedLabel, actualLabel) <- predictedLabels) {
@@ -343,28 +338,13 @@ object classifierForAgro {
       //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
 
       adjGoldPredicted(countForAdjArray) = predictedValuesToPrint
-      countForAdjArray=countForAdjArray+1
-
-//      val predictedAdjLabel: String = "Name" + " " + actualLabel + " " + predictedLabel
-//      println(predictedAdjLabel)
-
+      countForAdjArray = countForAdjArray + 1
 
 
     }
 
-
-//    println("value of countForAdjArray is: ")
-//    println(countForAdjArray)
-//    println("value of 0,0 in adjGoldPredicted is: ")
-//    println(adjGoldPredicted(0)(0).mkString("\n"))
-//    println("value of totalCount is: ")
-//    println(totalCount)
-//    println("value of 55 adjGoldPredicted is: ")
-//    println(adjGoldPredicted(55).mkString("\n"))
-
-
-    println("value of adjGoldPredicted is: ")
-    println(adjGoldPredicted.mkString("\n"))
+    //println("value of adjGoldPredicted is: ")
+    //println(adjGoldPredicted.mkString("\n"))
     ratioCalculator.writeToFile(adjGoldPredicted.mkString("\n"), outputFileForPredictedLabels, outputDirectoryPath)
 
     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
