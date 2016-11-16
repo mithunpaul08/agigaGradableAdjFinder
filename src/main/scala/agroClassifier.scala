@@ -169,6 +169,8 @@ object classifierForAgro {
       counter.setCount("inflectedRatio", inflRatio)
       counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
       counter.setCount("inflAndAdvModified", inflAndAdvModified)
+      println(counter.toString())
+      
       val datum1 = new RVFDatum[String, String]("gradable", counter)
       dataset += datum1
 

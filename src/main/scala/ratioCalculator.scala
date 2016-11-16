@@ -70,7 +70,7 @@ object ratioCalculator {
     //println("reaching here at 4393897")
     var myratio: Double = 0;
     var totalBaseCount: Double = 0
-    var noOfTimesThisAdjInflected = 1;
+    var noOfTimesThisAdjInflected = 0;
     println("---starting calculateInflectedAdjRatio. value of base form is:"+adjToGetRatio)
 
 
@@ -80,7 +80,7 @@ object ratioCalculator {
       if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
        // println("reaching here at 089345978")
         totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
-        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and its base value is:" + totalBaseCount)
+        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and the number of times its modified in total is:" + totalBaseCount)
 
         //println("reaching here at 34522")
         //if the adjective exists get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
@@ -89,11 +89,16 @@ object ratioCalculator {
         if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToGetRatio)) {
          // println("reaching here at 9876")
           noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(adjToGetRatio)
-          println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
+          //println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
+          println("found that the given adjective:" + adjToGetRatio + " is inflected so many times: " + noOfTimesThisAdjInflected)
         }
+        else
+          {
+            println("the given adjective:" + adjToGetRatio + " is not ever inflected")
+          }
       }
       else {
-        //if the adjective doesnt exist, return a dummy value- no point continuing---dont add it to the loop...so break?
+        //if the adjective doesnt exist, return a dummy value- no point continuing---dont add it to the loop...so break?-i.e we encounter an adjective which is there in cobuild b ut not there in agiga
         println("the given adjective:" + adjToGetRatio + " does not exist in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency")
         return 0;
       }
