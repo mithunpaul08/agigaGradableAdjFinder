@@ -170,7 +170,7 @@ object classifierForAgro {
       counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
       counter.setCount("inflAndAdvModified", inflAndAdvModified)
       println(counter.toString())
-      
+
       val datum1 = new RVFDatum[String, String]("gradable", counter)
       dataset += datum1
 
@@ -274,9 +274,23 @@ object classifierForAgro {
       //      adjGoldPredicted += adjLabelBuilder
     }
 
+    //util.Random.shuffle(listOfAllAdjectives)
+    //util.Random.shuffle(dataset)
+    //java.util.Collections.shuffle(dataset.asList)
+    //myShuffle(dataset);
+//    println(dataset.mkString("\n"))
+//    for(datumIndex <- 0 until dataset.size)
+//      {
+//        val datumCounter = dataset.featuresCounter(datumIndex)
+//        val datumLabel = dataset.labels(datumIndex)
+//        val datasetLabelLexicon = dataset.labelLexicon
+//        val datum = new RVFDatum[String, String](datasetLabelLexicon.get(datumLabel), datumCounter)
+//        println(datum.toString())
+//      }
 
-
-
+    java.util.Collections.shuffle(java.util.Arrays.asList(dataset))
+    //java.util.Collections.shuffle(listOfAllAdjectives)
+    //println(dataset.mkString("\n"))
     //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
     //    println("new max value of ranges is:" + scaleRanges.maxs.toString());
     //    println("new min value of ranges is:" + scaleRanges.mins.toString());
@@ -381,6 +395,16 @@ object classifierForAgro {
 
     println(accuracy1)
 
+  }
+
+  // Fisher-Yates shuffle, see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+  def myShuffle[T](array: Array[T]): Array[T] = {
+    val rnd = new java.util.Random
+    for (n <- Iterator.range(array.length - 1, 0, -1)) {
+      val k = rnd.nextInt(n + 1)
+      val t = array(k); array(k) = array(n); array(n) = t
+    }
+    return array
   }
 
   /**
