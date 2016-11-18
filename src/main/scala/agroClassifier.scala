@@ -114,72 +114,72 @@ object classifierForAgro {
 
     //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
     for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
-
-      numberOfGoldGradable = numberOfGoldGradable + 1
-      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
-
-      //todo: read input from all agiga files
-
-      var inflRatio: Double = 0;
-      var advrbModifiedRatio: Double = 0
-      var ngramInflectedRatio: Double = 0;
-
-
-      println("reaching here at 876467")
-
-      println("\n")
-      println("****************************************");
-      println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
-
-
-
-      //for each of the adjectives' root forms, get the inflected ratio.
-      inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
-
-      if (inflRatio > 0) {
-        println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
-
-      }
-      else {
-        //if the given adjective is not found, the return value will be zero. In that case
-        // ignore it and move onto the next one. We dont want to add zeroes to the datum.
-
-        println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
-
-
-      }
-      ngramInflectedRatio = ratioCalculator.calculateNgramInflectedRatio(adjToCheck);
-
-      //for each of the adjectives' root forms, get the adverb modified ratio.
-      advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
-      if (advrbModifiedRatio > 0) {
-        println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
-      }
-
-      //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-      var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
-
-
-      if (inflAndAdvModified > 0) {
-        println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-      }
-      else {
-        println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-      }
-
-      counter.setCount("inflectedRatio", inflRatio)
-      counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
-      counter.setCount("inflAndAdvModified", inflAndAdvModified)
-      println(counter.toString())
-
-      val datum1 = new RVFDatum[String, String]("gradable", counter)
-      dataset += datum1
-
-
-      //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
-      //      var adjLabelBuilder = ArrayBuffer[String]()
-      //      adjLabelBuilder += adjToCheck
-      //      adjGoldPredicted += adjLabelBuilder
+//
+//      numberOfGoldGradable = numberOfGoldGradable + 1
+//      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
+//
+//      //todo: read input from all agiga files
+//
+//      var inflRatio: Double = 0;
+//      var advrbModifiedRatio: Double = 0
+//      var ngramInflectedRatio: Double = 0;
+//
+//
+//      println("reaching here at 876467")
+//
+//      println("\n")
+//      println("****************************************");
+//      println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
+//
+//
+//
+//      //for each of the adjectives' root forms, get the inflected ratio.
+//      inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
+//
+//      if (inflRatio > 0) {
+//        println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
+//
+//      }
+//      else {
+//        //if the given adjective is not found, the return value will be zero. In that case
+//        // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+//
+//        println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
+//
+//
+//      }
+//      ngramInflectedRatio = ratioCalculator.calculateNgramInflectedRatio(adjToCheck);
+//
+//      //for each of the adjectives' root forms, get the adverb modified ratio.
+//      advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+//      if (advrbModifiedRatio > 0) {
+//        println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+//      }
+//
+//      //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+//      var inflAndAdvModified: Double = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+//
+//
+//      if (inflAndAdvModified > 0) {
+//        println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+//      }
+//      else {
+//        println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+//      }
+//
+//      counter.setCount("inflectedRatio", inflRatio)
+//      counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
+//      counter.setCount("inflAndAdvModified", inflAndAdvModified)
+//      println(counter.toString())
+//
+//      val datum1 = new RVFDatum[String, String]("gradable", counter)
+//      dataset += datum1
+//
+//
+//      //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
+//      //      var adjLabelBuilder = ArrayBuffer[String]()
+//      //      adjLabelBuilder += adjToCheck
+//      //      adjGoldPredicted += adjLabelBuilder
 
 
       val adjLabel= ArrayBuffer(adjToCheck,"gradable")
@@ -197,82 +197,82 @@ object classifierForAgro {
 
     var numberOfGoldNonGradable = 0;
     //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
-    for (adjToCheck <- Source.fromFile(cobuildNonGradable).getLines()) {
+    for (adjToCheckNG <- Source.fromFile(cobuildNonGradable).getLines()) {
 
-      //total number of gold non gradable adjectives
-      numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
-      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
-
-
-      println("\n")
-      println("****************************************");
-      println("Starting a new non-gradable adjective check, whose value is : " + adjToCheck)
-      //println("reaching here at 57633")
-      var inflRatio: Double = 0;
-      var advrbModifiedRatio: Double = 0
-      var inflAndAdvModified: Double = 0
-
-      //println("reaching here at 876467")
-      //println("value of current adjective is :" + adjToCheck);
-
-      //for each of the adjectives' root forms, get the inflected ratio.
-      inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
-
-      if (inflRatio > 0) {
-        println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
-
-      }
-
-      else {
-        //if the given adjective is not found, the return value will be zero. In that case
-
-
-        println("current adjective :" + adjToCheck + " doesnt have an inflected ratio ")
-
-
-      }
-
-      advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
-
-      if (advrbModifiedRatio > 0) {
-        println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
-      }
-      else {
-        //if the given adjective is not found, the return value will be zero. In that case
-        // ignore it and move onto the next one. We dont want to add zeroes to the datum.
-
-        println("current adjective :" + adjToCheck + " doesnt have an advrbModifiedRatio  ")
-
-
-      }
-      //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-      inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
-
-
-      if (inflAndAdvModified > 0) {
-        println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
-      }
-      else {
-        println("current adjective :" + adjToCheck + " doesnt have an inflAndAdvModified  ")
-
-      }
-
-      counter.setCount("inflectedRatio", inflRatio)
-      counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
-      counter.setCount("inflAndAdvModified", inflAndAdvModified)
-
-      //println("printing the value of counter below me in double")
-      //println(f"$counter%1.5f")
-      println(counter.toString())
-      val datum2 = new RVFDatum[String, String]("notgradable", counter)
-
-      // println("number of features is:" + datum2.features())
-
-      dataset += datum2
-      println("reaching here at 2462467")
+//      //total number of gold non gradable adjectives
+//      numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
+//      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
+//
+//
+//      println("\n")
+//      println("****************************************");
+//      println("Starting a new non-gradable adjective check, whose value is : " + adjToCheck)
+//      //println("reaching here at 57633")
+//      var inflRatio: Double = 0;
+//      var advrbModifiedRatio: Double = 0
+//      var inflAndAdvModified: Double = 0
+//
+//      //println("reaching here at 876467")
+//      //println("value of current adjective is :" + adjToCheck);
+//
+//      //for each of the adjectives' root forms, get the inflected ratio.
+//      inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
+//
+//      if (inflRatio > 0) {
+//        println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
+//
+//      }
+//
+//      else {
+//        //if the given adjective is not found, the return value will be zero. In that case
+//
+//
+//        println("current adjective :" + adjToCheck + " doesnt have an inflected ratio ")
+//
+//
+//      }
+//
+//      advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+//
+//      if (advrbModifiedRatio > 0) {
+//        println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+//      }
+//      else {
+//        //if the given adjective is not found, the return value will be zero. In that case
+//        // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+//
+//        println("current adjective :" + adjToCheck + " doesnt have an advrbModifiedRatio  ")
+//
+//
+//      }
+//      //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+//      inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+//
+//
+//      if (inflAndAdvModified > 0) {
+//        println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+//      }
+//      else {
+//        println("current adjective :" + adjToCheck + " doesnt have an inflAndAdvModified  ")
+//
+//      }
+//
+//      counter.setCount("inflectedRatio", inflRatio)
+//      counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
+//      counter.setCount("inflAndAdvModified", inflAndAdvModified)
+//
+//      //println("printing the value of counter below me in double")
+//      //println(f"$counter%1.5f")
+//      println(counter.toString())
+//      val datum2 = new RVFDatum[String, String]("notgradable", counter)
+//
+//      // println("number of features is:" + datum2.features())
+//
+//      dataset += datum2
+//      println("reaching here at 2462467")
 
       //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
-      val adjLabel= ArrayBuffer(adjToCheck,"notgradable")
+      val adjLabel= ArrayBuffer(adjToCheckNG,"notgradable")
 
       listOfAllAdjectives += adjLabel;
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
