@@ -113,7 +113,7 @@ object classifierForAgro {
 
 
     //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
-    for (adjToCheck <- Source.fromFile(cobuildGradable).getLines()) {
+    for (adjToCheckG <- Source.fromFile(cobuildGradable).getLines()) {
 //
 //      numberOfGoldGradable = numberOfGoldGradable + 1
 //      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
@@ -182,8 +182,8 @@ object classifierForAgro {
 //      //      adjGoldPredicted += adjLabelBuilder
 
 
-      val adjLabel= ArrayBuffer(adjToCheck,"gradable")
-      listOfAllAdjectives += adjLabel
+      val adjLabelG= ArrayBuffer(adjToCheckG,"gradable")
+      listOfAllAdjectives += adjLabelG
       //listOfAllAdjectives += adjToCheck
 
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
@@ -197,29 +197,29 @@ object classifierForAgro {
 
     var numberOfGoldNonGradable = 0;
     //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
-    for (adjToCheckNG <- Source.fromFile(cobuildNonGradable).getLines()) {
+    for (adjToCheckNG<- Source.fromFile(cobuildNonGradable).getLines()) {
 
-//      //total number of gold non gradable adjectives
-//      numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
-//      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
+      //total number of gold non gradable adjectives
+      numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
+      counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
 //
 //
 //      println("\n")
 //      println("****************************************");
 //      println("Starting a new non-gradable adjective check, whose value is : " + adjToCheck)
 //      //println("reaching here at 57633")
-//      var inflRatio: Double = 0;
-//      var advrbModifiedRatio: Double = 0
-//      var inflAndAdvModified: Double = 0
+      var inflRatio: Double = 0;
+      var advrbModifiedRatio: Double = 0
+      var inflAndAdvModified: Double = 0
 //
 //      //println("reaching here at 876467")
 //      //println("value of current adjective is :" + adjToCheck);
 //
 //      //for each of the adjectives' root forms, get the inflected ratio.
-//      inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
-//
+//     inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheckNG);
+////
 //      if (inflRatio > 0) {
-//        println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
+//        println("value of current adjective is :" + adjToCheckNG + " and its inflected ratio is:" + inflRatio)
 //
 //      }
 //
@@ -227,12 +227,12 @@ object classifierForAgro {
 //        //if the given adjective is not found, the return value will be zero. In that case
 //
 //
-//        println("current adjective :" + adjToCheck + " doesnt have an inflected ratio ")
+//        println("current adjective :" + adjToCheckNG + " doesnt have an inflected ratio ")
 //
 //
 //      }
 //
-//      advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+   //   advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
 //
 //      if (advrbModifiedRatio > 0) {
 //        println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
@@ -245,10 +245,10 @@ object classifierForAgro {
 //
 //
 //      }
-//      //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-//      inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
-//
-//
+      //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+    //  inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+
+
 //      if (inflAndAdvModified > 0) {
 //        println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
 //      }
@@ -256,7 +256,7 @@ object classifierForAgro {
 //        println("current adjective :" + adjToCheck + " doesnt have an inflAndAdvModified  ")
 //
 //      }
-//
+
 //      counter.setCount("inflectedRatio", inflRatio)
 //      counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
 //      counter.setCount("inflAndAdvModified", inflAndAdvModified)
@@ -272,9 +272,9 @@ object classifierForAgro {
 //      println("reaching here at 2462467")
 
       //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
-      val adjLabel= ArrayBuffer(adjToCheckNG,"notgradable")
+      val adjLabelNG= ArrayBuffer(adjToCheckNG,"notgradable")
 
-      listOfAllAdjectives += adjLabel;
+      listOfAllAdjectives += adjLabelNG;
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
       //      var adjLabelBuilder = ArrayBuffer[String]()
       //      adjLabelBuilder += adjToCheck
@@ -429,24 +429,24 @@ object classifierForAgro {
   }
 
 
-  //def findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheck: ArrayBuffer[String, String], datasetToAdd:RVFDataset[String, String]): RVFDataset = {
+
     def findRatiosOfGivenAdjectivesAndAddToDataset(adjLabelBuffer: ArrayBuffer[String], datasetToAdd:RVFDataset[String, String]): Unit = {
     //for each given adjective find all 3 ratios, attach its corresponding label, and send back a full filled RVFdataset
-    val adjToCheck=adjLabelBuffer(0);
+    val myAdjToCheck=adjLabelBuffer(0);
     val labelOfGivenAdj=adjLabelBuffer(1);
     //println("reaching here at 57633")
-    var inflRatio: Double = 0;
-    var advrbModifiedRatio: Double = 0
-    var inflAndAdvModified: Double = 0
+    var inflectedRatio: Double = 0;
+    var adverbModifiedRatio: Double = 0
+    var inflectedAndAdvModified: Double = 0
 
     //println("reaching here at 876467")
     //println("value of current adjective is :" + adjToCheck);
 
     //for each of the adjectives' root forms, get the inflected ratio.
-    inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
+      inflectedRatio = ratioCalculator.calculateInflectedAdjRatio(myAdjToCheck);
 
-    if (inflRatio > 0) {
-      println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
+    if (inflectedRatio > 0) {
+      println("value of current adjective is :" + myAdjToCheck + " and its inflected ratio is:" + inflectedRatio)
 
     }
 
@@ -454,39 +454,39 @@ object classifierForAgro {
       //if the given adjective is not found, the return value will be zero. In that case
 
 
-      println("current adjective :" + adjToCheck + " doesnt have an inflected ratio ")
+      println("current adjective :" + myAdjToCheck + " doesnt have an inflected ratio ")
 
 
     }
 
-    advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+      adverbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(myAdjToCheck);
 
-    if (advrbModifiedRatio > 0) {
-      println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+    if (adverbModifiedRatio > 0) {
+      println("value of current adjective is :" + myAdjToCheck + " and its adverb modified ratio is:" + adverbModifiedRatio)
     }
     else {
       //if the given adjective is not found, the return value will be zero. In that case
       // ignore it and move onto the next one. We dont want to add zeroes to the datum.
 
-      println("current adjective :" + adjToCheck + " doesnt have an advrbModifiedRatio  ")
+      println("current adjective :" + myAdjToCheck + " doesnt have an advrbModifiedRatio  ")
 
 
     }
     //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-    inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+      inflectedAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(myAdjToCheck);
 
 
-    if (inflAndAdvModified > 0) {
-      println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+    if (inflectedAndAdvModified > 0) {
+      println("value of current adjective is :" + myAdjToCheck + " and its inflected and modified ratio is:" + inflectedAndAdvModified)
     }
     else {
-      println("current adjective :" + adjToCheck + " doesnt have an inflAndAdvModified  ")
+      println("current adjective :" + myAdjToCheck + " doesnt have an inflAndAdvModified  ")
 
     }
     val counter = new Counter[String];
-    counter.setCount("inflectedRatio", inflRatio)
-    counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
-    counter.setCount("inflAndAdvModified", inflAndAdvModified)
+    counter.setCount("inflectedRatio", inflectedRatio )
+    counter.setCount("advrbModifiedRatio", adverbModifiedRatio)
+    counter.setCount("inflAndAdvModified", inflectedAndAdvModified )
 
     println("printing the value of counter below me in double")
     //println(f"$counter(1)%1.5f")
