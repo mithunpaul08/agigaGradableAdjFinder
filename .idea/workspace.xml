@@ -37,8 +37,8 @@
       <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -57,8 +57,8 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="289" column="0" selection-start-line="280" selection-start-column="6" selection-end-line="289" selection-end-column="0" />
+            <state relative-caret-position="-49">
+              <caret line="352" column="80" selection-start-line="352" selection-start-column="80" selection-end-line="352" selection-end-column="80" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
               </folding>
@@ -66,51 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dataset.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar!/org/clulab/learning/Dataset.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="133" selection-start-line="1" selection-start-column="133" selection-end-line="1" selection-end-column="133" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dataset.scala" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Dataset.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="435" column="26" selection-start-line="435" selection-start-column="6" selection-end-line="435" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Datum.scala" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datum.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="87" column="63" selection-start-line="87" selection-start-column="61" selection-end-line="87" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Counter.scala" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/struct/Counter.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+            <state relative-caret-position="230">
+              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -714,7 +674,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33906072" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33906072" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -751,15 +711,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>290</line>
+          <line>294</line>
           <properties />
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
+          <line>318</line>
+          <properties />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="45" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1081,18 +1047,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datum.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="87" column="63" selection-start-line="87" selection-start-column="61" selection-end-line="87" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="230">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/struct/Counter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        <state relative-caret-position="167">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1105,34 +1079,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar!/org/clulab/learning/Dataset.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="133" selection-start-line="1" selection-start-column="133" selection-end-line="1" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Dataset.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="435" column="26" selection-start-line="435" selection-start-column="6" selection-end-line="435" selection-end-column="26" />
+        <state relative-caret-position="167">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datum.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/jars/processors-main_2.11-6.0.0.jar!/org/clulab/learning/Dataset.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="87" column="63" selection-start-line="87" selection-start-column="61" selection-end-line="87" selection-end-column="63" />
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="289" column="0" selection-start-line="280" selection-start-column="6" selection-end-line="289" selection-end-column="0" />
+        <state relative-caret-position="-49">
+          <caret line="352" column="80" selection-start-line="352" selection-start-column="80" selection-end-line="352" selection-end-column="80" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
           </folding>
@@ -1141,8 +1107,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>

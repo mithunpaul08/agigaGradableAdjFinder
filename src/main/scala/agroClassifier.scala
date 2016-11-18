@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory
 import org.clulab.agiga
 import org.clulab.processors.Document
 import java.io.File
-
+import scala.util.Random
 import scala.collection.parallel.ForkJoinTaskSupport
 import java.io
 import java.io.Writer
@@ -62,7 +62,8 @@ object classifierForAgro {
     val dataset = new RVFDataset[String, String]
     //var adjGoldPredicted = ArrayBuffer.fill(508,3)("")
     var adjGoldPredicted = ArrayBuffer.fill(509, 3)("")
-    var listOfAllAdjectives = ArrayBuffer[String]()
+    //var listOfAllAdjectives = ArrayBuffer[ArrayBuffer[String,String]]()
+    var listOfAllAdjectives = ArrayBuffer.fill(1,2)("");
 
 
 
@@ -180,7 +181,11 @@ object classifierForAgro {
       //      adjLabelBuilder += adjToCheck
       //      adjGoldPredicted += adjLabelBuilder
 
-      listOfAllAdjectives += adjToCheck
+
+      val adjLabel= ArrayBuffer(adjToCheck,"gradable")
+      listOfAllAdjectives += adjLabel
+      //listOfAllAdjectives += adjToCheck
+
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
 
@@ -267,14 +272,29 @@ object classifierForAgro {
       println("reaching here at 2462467")
 
       //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
-      listOfAllAdjectives += adjToCheck
+      val adjLabel= ArrayBuffer(adjToCheck,"notgradable")
+
+      listOfAllAdjectives += adjLabel;
       //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
       //      var adjLabelBuilder = ArrayBuffer[String]()
       //      adjLabelBuilder += adjToCheck
       //      adjGoldPredicted += adjLabelBuilder
     }
 
-    //util.Random.shuffle(listOfAllAdjectives)
+
+    //not inplace shuffling
+    val listOfAllAdjectivesShuffled= util.Random.shuffle(listOfAllAdjectives)
+
+    val datasetForFillingAdjCounterLabels = new RVFDataset[String, String]
+
+    //for each of the adjectives, find its ratios and labels and add it into the dataset.
+    for(individualAdjLabels <- listOfAllAdjectivesShuffled) {
+      findRatiosOfGivenAdjectivesAndAddToDataset(individualAdjLabels,datasetForFillingAdjCounterLabels)
+    }
+
+    println(datasetForFillingAdjCounterLabels.labels.length);
+
+
     //util.Random.shuffle(dataset)
     //java.util.Collections.shuffle(dataset.asList)
     //myShuffle(dataset);
@@ -288,7 +308,7 @@ object classifierForAgro {
 //        println(datum.toString())
 //      }
 
-    java.util.Collections.shuffle(java.util.Arrays.asList(dataset))
+    //java.util.Collections.shuffle(java.util.Arrays.asList(dataset))
     //java.util.Collections.shuffle(listOfAllAdjectives)
     //println(dataset.mkString("\n"))
     //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
@@ -308,7 +328,8 @@ object classifierForAgro {
     def factory() = new LogisticRegressionClassifier[String, String](bias = true)
     val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
     println("doing LogisticRegressionClassifier...");
-    myClassifier.train(dataset)
+    //myClassifier.train(dataset)
+    myClassifier.train(datasetForFillingAdjCounterLabels)
 
 
 
@@ -329,7 +350,7 @@ object classifierForAgro {
     //val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
     //code for scaling only the 9 folds of training data set, and not the 1 fold of test dataset
-    val predictedLabels = mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
+    val predictedLabels = mithunsCrossValidate(datasetForFillingAdjCounterLabels, factory, 10) // for 10-fold cross-validation
 
 
     //calculate acccuracy.
@@ -341,10 +362,10 @@ object classifierForAgro {
       totalCount = totalCount + 1;
 
       //just store into an array of strings for printing purposes
-      var predictedValuesToPrint = ArrayBuffer[String]()
-      predictedValuesToPrint += listOfAllAdjectives(countForAdjArray)
-      predictedValuesToPrint += actualLabel
-      predictedValuesToPrint += predictedLabel
+//      var predictedValuesToPrint = ArrayBuffer[String]()
+//      predictedValuesToPrint += listOfAllAdjectives(countForAdjArray)
+//      predictedValuesToPrint += actualLabel
+//      predictedValuesToPrint += predictedLabel
 
       if (predictedLabel == actualLabel) {
         countCorrectlyPredicted = countCorrectlyPredicted + 1;
@@ -353,7 +374,7 @@ object classifierForAgro {
 
       //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
 
-      adjGoldPredicted(countForAdjArray) = predictedValuesToPrint
+      //adjGoldPredicted(countForAdjArray) = predictedValuesToPrint
       countForAdjArray = countForAdjArray + 1
 
 
@@ -361,7 +382,7 @@ object classifierForAgro {
 
     //println("value of adjGoldPredicted is: ")
     //println(adjGoldPredicted.mkString("\n"))
-    ratioCalculator.writeToFile(adjGoldPredicted.mkString("\n"), outputFileForPredictedLabels, outputDirectoryPath)
+    //ratioCalculator.writeToFile(adjGoldPredicted.mkString("\n"), outputFileForPredictedLabels, outputDirectoryPath)
 
     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
     // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
@@ -407,6 +428,87 @@ object classifierForAgro {
     return array
   }
 
+
+  //def findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheck: ArrayBuffer[String, String], datasetToAdd:RVFDataset[String, String]): RVFDataset = {
+    def findRatiosOfGivenAdjectivesAndAddToDataset(adjLabelBuffer: ArrayBuffer[String], datasetToAdd:RVFDataset[String, String]): Unit = {
+    //for each given adjective find all 3 ratios, attach its corresponding label, and send back a full filled RVFdataset
+    val adjToCheck=adjLabelBuffer(0);
+    val labelOfGivenAdj=adjLabelBuffer(1);
+    //println("reaching here at 57633")
+    var inflRatio: Double = 0;
+    var advrbModifiedRatio: Double = 0
+    var inflAndAdvModified: Double = 0
+
+    //println("reaching here at 876467")
+    //println("value of current adjective is :" + adjToCheck);
+
+    //for each of the adjectives' root forms, get the inflected ratio.
+    inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
+
+    if (inflRatio > 0) {
+      println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
+
+    }
+
+    else {
+      //if the given adjective is not found, the return value will be zero. In that case
+
+
+      println("current adjective :" + adjToCheck + " doesnt have an inflected ratio ")
+
+
+    }
+
+    advrbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(adjToCheck);
+
+    if (advrbModifiedRatio > 0) {
+      println("value of current adjective is :" + adjToCheck + " and its adverb modified ratio is:" + advrbModifiedRatio)
+    }
+    else {
+      //if the given adjective is not found, the return value will be zero. In that case
+      // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+
+      println("current adjective :" + adjToCheck + " doesnt have an advrbModifiedRatio  ")
+
+
+    }
+    //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+    inflAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(adjToCheck);
+
+
+    if (inflAndAdvModified > 0) {
+      println("value of current adjective is :" + adjToCheck + " and its inflected and modified ratio is:" + inflAndAdvModified)
+    }
+    else {
+      println("current adjective :" + adjToCheck + " doesnt have an inflAndAdvModified  ")
+
+    }
+    val counter = new Counter[String];
+    counter.setCount("inflectedRatio", inflRatio)
+    counter.setCount("advrbModifiedRatio", advrbModifiedRatio)
+    counter.setCount("inflAndAdvModified", inflAndAdvModified)
+
+    println("printing the value of counter below me in double")
+    //println(f"$counter(1)%1.5f")
+    println(counter.toString())
+    //val datum2 = new RVFDatum[String, String]("notgradable", counter)
+    val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
+
+    // println("number of features is:" + datum2.features())
+
+    datasetToAdd += datum2
+    println("reaching here at 2462467")
+
+    //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
+    //val adjLabel= ArrayBuffer(adjToCheck,"notgradable")
+
+    //listOfAllAdjectives += adjLabel;
+    //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
+    //      var adjLabelBuilder = ArrayBuffer[String]()
+    //      adjLabelBuilder += adjToCheck
+    //      adjGoldPredicted += adjLabelBuilder
+    //return datasetToAdd;
+  }
   /**
     * Implements classic cross validation; producing pairs of gold/predicted labels across the training dataset
     */
