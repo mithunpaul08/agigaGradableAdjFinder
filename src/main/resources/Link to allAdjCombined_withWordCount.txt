@@ -1,1 +1,0 @@
-/home/mithunpaul/Desktop/fall2016NLPResearch/agigaParser-without-world-modeling_v1.3/src/main/resources/allAdjCombined_withWordCount.txt
