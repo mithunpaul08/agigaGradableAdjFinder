@@ -150,7 +150,12 @@ object classifierForAgro {
 
     //for each of the adjectives, find its ratios and labels and add it into the dataset.
     for (individualAdjLabels <- listOfAllAdjectivesShuffled) {
-      findRatiosOfGivenAdjectivesAndAddToDataset(individualAdjLabels, datasetForFillingMixedAdjCounterLabels)
+      val adjToCheckD=individualAdjLabels(0);
+      val labelOfGivenAdj = individualAdjLabels(1);
+      //add only if the adj is not present in both files
+      if (!ratioCalculator.isAdjPresentInBothClasses(adjToCheckD)) {
+        findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD,labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
+      }
     }
 
     println(datasetForFillingMixedAdjCounterLabels.labels.length);
@@ -291,84 +296,77 @@ object classifierForAgro {
   }
 
 
-  def findRatiosOfGivenAdjectivesAndAddToDataset(adjLabelBuffer: ArrayBuffer[String], datasetToAdd: RVFDataset[String, String]): Unit = {
+  def findRatiosOfGivenAdjectivesAndAddToDataset(myAdjToCheck: String, labelOfGivenAdj: String, datasetToAdd: RVFDataset[String, String]): Unit = {
     //for each given adjective find all 3 ratios, attach its corresponding label, and send back a full filled RVFdataset
-    val myAdjToCheck = adjLabelBuffer(0);
-    val labelOfGivenAdj = adjLabelBuffer(1);
+
     //println("reaching here at 57633")
     var inflectedRatio: Double = 0;
     var adverbModifiedRatio: Double = 0
     var inflectedAndAdvModified: Double = 0
 
-    //println("reaching here at 876467")
-    //println("value of current adjective is :" + adjToCheck);
+    //if an adjective is present in cobuild but not in AGIGA. Low probability, but we should capture that
+    //instance also. Because we encountered some edge cases in which this was true, and the denominator
+    //was getting added as zero, resulting in division by zero.
+    if (ratioCalculator.checkIfExistsInAgiga(myAdjToCheck)) {
 
-    //for each of the adjectives' root forms, get the inflected ratio.
-    inflectedRatio = ratioCalculator.calculateInflectedAdjRatio(myAdjToCheck);
+      //for each of the adjectives' root forms, get the inflected ratio.
+      inflectedRatio = ratioCalculator.calculateInflectedAdjRatio(myAdjToCheck);
 
-    if (inflectedRatio > 0) {
-      println("value of current adjective is :" + myAdjToCheck + " and its inflected ratio is:" + inflectedRatio)
+      if (inflectedRatio > 0) {
+        println("value of current adjective is :" + myAdjToCheck + " and its inflected ratio is:" + inflectedRatio)
 
+      }
+
+      else {
+        //if the given adjective is not found, the return value will be zero. In that case
+
+        println("current adjective :" + myAdjToCheck + " doesnt have an inflected ratio ")
+
+
+      }
+
+      adverbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(myAdjToCheck);
+
+      if (adverbModifiedRatio > 0) {
+        println("value of current adjective is :" + myAdjToCheck + " and its adverb modified ratio is:" + adverbModifiedRatio)
+      }
+      else {
+        //if the given adjective is not found, the return value will be zero. In that case
+        // ignore it and move onto the next one. We dont want to add zeroes to the datum.
+
+        println("current adjective :" + myAdjToCheck + " doesnt have an advrbModifiedRatio  ")
+
+
+      }
+      //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
+      inflectedAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(myAdjToCheck);
+
+
+      if (inflectedAndAdvModified > 0) {
+        println("value of current adjective is :" + myAdjToCheck + " and its inflected and modified ratio is:" + inflectedAndAdvModified)
+      }
+      else {
+        println("current adjective :" + myAdjToCheck + " doesnt have an inflAndAdvModified  ")
+
+      }
     }
+      val counter = new Counter[String];
+      counter.setCount("inflectedRatio", inflectedRatio)
+      counter.setCount("advrbModifiedRatio", adverbModifiedRatio)
+      counter.setCount("inflAndAdvModified", inflectedAndAdvModified)
 
-    else {
-      //if the given adjective is not found, the return value will be zero. In that case
+      println("printing the value of counter below me in double")
+      //println(f"$counter(1)%1.5f")
+      println(counter.toString())
+      //val datum2 = new RVFDatum[String, String]("notgradable", counter)
+      val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
 
+      // println("number of features is:" + datum2.features())
 
-      println("current adjective :" + myAdjToCheck + " doesnt have an inflected ratio ")
-
-
-    }
-
-    adverbModifiedRatio = ratioCalculator.calculateAdvModifiedAdjRatio(myAdjToCheck);
-
-    if (adverbModifiedRatio > 0) {
-      println("value of current adjective is :" + myAdjToCheck + " and its adverb modified ratio is:" + adverbModifiedRatio)
-    }
-    else {
-      //if the given adjective is not found, the return value will be zero. In that case
-      // ignore it and move onto the next one. We dont want to add zeroes to the datum.
-
-      println("current adjective :" + myAdjToCheck + " doesnt have an advrbModifiedRatio  ")
+      datasetToAdd += datum2
+      println("reaching here at 2462467")
 
 
-    }
-    //for each of the adjectives' root forms, get the adverb and adjective modified ratio.
-    inflectedAndAdvModified = ratioCalculator.calculateBothInflectedAdvModifiedRatio(myAdjToCheck);
-
-
-    if (inflectedAndAdvModified > 0) {
-      println("value of current adjective is :" + myAdjToCheck + " and its inflected and modified ratio is:" + inflectedAndAdvModified)
-    }
-    else {
-      println("current adjective :" + myAdjToCheck + " doesnt have an inflAndAdvModified  ")
-
-    }
-    val counter = new Counter[String];
-    counter.setCount("inflectedRatio", inflectedRatio)
-    counter.setCount("advrbModifiedRatio", adverbModifiedRatio)
-    counter.setCount("inflAndAdvModified", inflectedAndAdvModified)
-
-    println("printing the value of counter below me in double")
-    //println(f"$counter(1)%1.5f")
-    println(counter.toString())
-    //val datum2 = new RVFDatum[String, String]("notgradable", counter)
-    val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
-
-    // println("number of features is:" + datum2.features())
-
-    datasetToAdd += datum2
-    println("reaching here at 2462467")
-
-    //      //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
-    //val adjLabel= ArrayBuffer(adjToCheck,"notgradable")
-
-    //listOfAllAdjectives += adjLabel;
-    //adjGoldPredicted (counterForAdjLabelMatrix)(0) =adjToCheck
-    //      var adjLabelBuilder = ArrayBuffer[String]()
-    //      adjLabelBuilder += adjToCheck
-    //      adjGoldPredicted += adjLabelBuilder
-    //return datasetToAdd;
   }
 
   /**

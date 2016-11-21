@@ -22,6 +22,7 @@ object ratioCalculator {
   var allAdjectivesFromAgigaButUniq = "allAdjectivesFromAgigaButUniq.txt"
   var uniqAdjectivesInAgiga_removedErEst_uniq = "uniqAdjectivesInAgiga_removedErEst_uniq.txt"
   var FreqOfAdjAdv_withoutAgainAt = "FreqOfAdjAdv_withoutAgainAt.txt";
+  val fileAdjPresentInBothClasses = "adjPresentInBothClasses.txt";
 
   // var hashMapOfAllUniqAdjectivesInAgigaWithFrequency = Map("Long" -> "1")
 
@@ -33,16 +34,17 @@ object ratioCalculator {
   var hashMapOfAllAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfInflectedAdjectivesAndItsCount: Map[String, Int] = Map()
   var hashMapOfAdvModifiedAdjCount: Map[String, Int] = Map()
+  var hashMapOfAdjInBothClasses: Map[String, String] = Map()
 
 
-  def calculateNgramInflectedRatio (adjToGetRatio: String): Double = {
+  def calculateNgramInflectedRatio(adjToGetRatio: String): Double = {
 
     var myratio: Double = 0;
     var totalBaseCount: Double = 0
     var noOfTimesThisAdjInflected = 1;
 
     //split it into ngrams
-    var splitAdj = characterNgramSplitter(adjToGetRatio,3)
+    var splitAdj = characterNgramSplitter(adjToGetRatio, 3)
     if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
 
       totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
@@ -64,47 +66,56 @@ object ratioCalculator {
 
   }
 
-
+  def checkIfExistsInAgiga(adjToCheckExists: String): Boolean = {
+    if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToCheckExists)) {
+      return true;
+    }
+      else
+    {
+      return false;
+    }
+  }
+    //println("reaching here at 4393897")
 
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
     //println("reaching here at 4393897")
     var myratio: Double = 0;
     var totalBaseCount: Double = 0
     var noOfTimesThisAdjInflected = 0;
-    println("---starting calculateInflectedAdjRatio. value of base form is:"+adjToGetRatio)
+    println("---starting calculateInflectedAdjRatio. value of base form is:" + adjToGetRatio)
 
 
     //get the total number of times this adjective occurs in AGIGA.
     // //count from the total count hashmap:hashMapOfAllAdjectivesAndItsCount
     //if (hashMapOfAllAdjectivesAndItsCount.contains(adjToGetRatio))
-      if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
-       // println("reaching here at 089345978")
-        totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
-        println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and the number of times its modified in total is:" + totalBaseCount)
+    if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
+      // println("reaching here at 089345978")
+      totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
+      println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency and the number of times its modified in total is:" + totalBaseCount)
 
-        //println("reaching here at 34522")
-        //if the adjective exists get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
-        //var baseForm = adjToGetRatio.replaceAll("er", "")
-        //baseForm = baseForm.replaceAll("est", "")
-        if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToGetRatio)) {
-         // println("reaching here at 9876")
-          noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(adjToGetRatio)
-          //println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
-          println("found that the given adjective:" + adjToGetRatio + " is inflected so many times: " + noOfTimesThisAdjInflected)
-        }
-        else
-          {
-            println("the given adjective:" + adjToGetRatio + " is not ever inflected")
-          }
+      //println("reaching here at 34522")
+      //if the adjective exists get the inflected count from the inflected count hashmap:hashMapOfInflectedAdjectivesAndItsCount
+      //var baseForm = adjToGetRatio.replaceAll("er", "")
+      //baseForm = baseForm.replaceAll("est", "")
+      if (hashMapOfInflectedAdjectivesAndItsCount.contains(adjToGetRatio)) {
+        // println("reaching here at 9876")
+        noOfTimesThisAdjInflected = hashMapOfInflectedAdjectivesAndItsCount(adjToGetRatio)
+        //println("found that the given adjective:" + adjToGetRatio + " exists in the hashMapOfInflectedAdjectivesAndItsCount and its  value is" + noOfTimesThisAdjInflected)
+        println("found that the given adjective:" + adjToGetRatio + " is inflected so many times: " + noOfTimesThisAdjInflected)
       }
       else {
-        //if the adjective doesnt exist, return a dummy value- no point continuing---dont add it to the loop...so break?-i.e we encounter an adjective which is there in cobuild b ut not there in agiga
-        println("the given adjective:" + adjToGetRatio + " does not exist in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency")
-        return 0;
+        println("the given adjective:" + adjToGetRatio + " is not ever inflected")
       }
+    }
+    else {
+      //if the adjective doesnt exist, return a dummy value- no point continuing---dont add it to the loop...so break?
+      // -i.e we encounter an adjective which is there in cobuild but not there in agiga
+      println("the given adjective:" + adjToGetRatio + " does not exist in the hashMapOfAllUniqAdjectivesInAgigaWithFrequency")
+      return 0;
+    }
     //println("reaching here at 347234")
 
-    //note: this value is the sum of number of times cold occurs by itself + number of times its inflected
+    //note: this value is the sum of number of times cold occurs by itself + number of times its inflected+number of times its modified by an adverb
     denominatorOfRatio = totalBaseCount.toDouble
     //println("value of this denominatorOfRatio is:" + denominatorOfRatio.toDouble.toString())
     //println("value of this numerator  is:" + noOfTimesThisAdjInflected.toDouble.toString())
@@ -122,11 +133,21 @@ object ratioCalculator {
     ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
     readErRemovedFileAndIncreaseCounter(resourcesDirectory, outputDirectoryPath);
     ReadAllAdvAdjectivesAndFrequencyToHashmap(resourcesDirectory, outputDirectoryPath);
+    ReadCommonAdjInBothClassesToHashmap(resourcesDirectory, outputDirectoryPath, fileAdjPresentInBothClasses)
+
   }
+
+  def isAdjPresentInBothClasses(adjToSearch: String): Boolean = {
+    if (hashMapOfAdjInBothClasses.contains(adjToSearch))
+      return true
+    else
+      return false;
+  }
+
 
   def calculateAdvModifiedAdjRatio(adjToSearch: String): Double = {
 
-    var myratio: Double = 0.005;
+    var myratio: Double = 0.000;
 
     //read from the frequency file of adverb modified//    For a given adjective (string input),
     //For any given adjective (string input),
@@ -137,9 +158,9 @@ object ratioCalculator {
 
       if (hashMapOfAdvModifiedAdjCount.contains(adjToSearch)) {
         //println("reaching here at 53573687");
-        println("---starting calculateAdvModifiedAdjRatio. value of base form is:"+adjToSearch)
+        println("---starting calculateAdvModifiedAdjRatio. value of base form is:" + adjToSearch)
         adverbModifiedCounter = hashMapOfAdvModifiedAdjCount(adjToSearch);
-        println("number of times this adjective was modified by an adverb is is:"+ adverbModifiedCounter)
+        println("number of times this adjective was modified by an adverb is is:" + adverbModifiedCounter)
       }
       else {
         //throw new CustomException("Given adjective is not found in the file.")
@@ -154,26 +175,35 @@ object ratioCalculator {
     //the denominator remains same for all ratios. This will be filled by now, hopefully
     println("value of total times the word " + adjToSearch + " occurs in AGIGA is" + denominatorOfRatio)
 
-    var advModifiedratio: Double = adverbModifiedCounter / denominatorOfRatio;
-
+    // At this point if denominatorOfRatio=0 , it means there are adjectives,
+    // which are not inflected, but only modified by adverbs...
+    // assign denominatorOfRatio= same as adverbModifiedCounter- because it is atleast modified so many times now
+    //denominatorOfRatio= adverbModifiedCounter
+    var advModifiedratio: Double = 0;
+    //if it the given adjective doesnt exist in agiga, THE DENOMinator will be zero. So dont divide
+    if (denominatorOfRatio > 0) {
+      advModifiedratio = adverbModifiedCounter / denominatorOfRatio;
+    } else {
+      advModifiedratio = 0
+    }
     return advModifiedratio;
   }
 
-  def calculateBothInflectedAdvModifiedRatio(adjToCheck:String): Double = {
+  def calculateBothInflectedAdvModifiedRatio(adjToCheck: String): Double = {
 
     //aim: find phrases like "much colder" where its both self inflected and also modified by adverb
 
     var advInflModifiedratio: Double = 0.0;
-    println("---starting calculateBothInflectedAdvModifiedRatio. value of base form is:"+adjToCheck)
+    println("---starting calculateBothInflectedAdvModifiedRatio. value of base form is:" + adjToCheck)
 
     var adverbModifiedInflectedCounter = 0.0;
     //if the given adjective is self inflected, check if its modified by an adverb also
 
     //go through the Colder->cold hashmap and find the er version of given adjective: i.e cold
     //get both versions of cold: coldest and colder.
-   // var inflectedAndModifiedCount=0;
-    var totalInflectedAndModifiedCount=0;
-    for ((key,value) <-goodAdjectiveFinder.hashMapOfInflAdjToRootForm) {
+    // var inflectedAndModifiedCount=0;
+    var totalInflectedAndModifiedCount = 0;
+    for ((key, value) <- goodAdjectiveFinder.hashMapOfInflAdjToRootForm) {
       if (value == adjToCheck)
 
       //now for each of these versions (Eg: colder, coldest), see if its present in hashMapOfAdvModifiedAdjCount
@@ -184,20 +214,27 @@ object ratioCalculator {
           val inflectedAndModifiedCount = hashMapOfAdvModifiedAdjCount(key);
           println("found that the adjective inflected:" + key + "is both modified by an adverb and self inflected and its frequency is:" + inflectedAndModifiedCount)
           //System.exit(1)
-          totalInflectedAndModifiedCount=totalInflectedAndModifiedCount+inflectedAndModifiedCount;
+          totalInflectedAndModifiedCount = totalInflectedAndModifiedCount + inflectedAndModifiedCount;
         }
       }
     }
 
     //the denominator remains same for all ratios. This will be filled by now, hopefully
     println("value of total times the word " + adjToCheck + " occurs is" + denominatorOfRatio)
-    println("found that the adjective inflected:" + adjToCheck + "is both modified by an adverb and self inflected and its frequency is:" +totalInflectedAndModifiedCount )
+    println("found that the adjective inflected:" + adjToCheck + "is both modified by an adverb and self inflected and its frequency is:" + totalInflectedAndModifiedCount)
 
-     advInflModifiedratio= totalInflectedAndModifiedCount / denominatorOfRatio;
-    println("ratio is:" +advInflModifiedratio )
+    if (denominatorOfRatio > 0) {
+      advInflModifiedratio = totalInflectedAndModifiedCount / denominatorOfRatio
+    }
+    else {
+      advInflModifiedratio = 0
+    }
 
-    return advInflModifiedratio;
-  }
+
+  println("ratio is:" + advInflModifiedratio)
+
+  return advInflModifiedratio;
+}
 
   def characterNgramSplitter(adjectiveToCalculate: String, noOfgrams: Int): List[String] = {
 
@@ -468,7 +505,7 @@ object ratioCalculator {
     }
   }
 
-  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
+  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory: String, outputDirectoryPath: String):Unit = {
     println("reaching here at 36857")
 
     //read from all the adjectives and its frequency into a hash table
@@ -496,4 +533,37 @@ object ratioCalculator {
       case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
     }
   }
+  def ReadCommonAdjInBothClassesToHashmap(resourcesDirectory: String, outputDirectoryPath: String, fileToRead: String): Unit = {
+    //println("reaching here at 36857")
+
+    //read from all the adjectives and its frequency into a hash table
+    val advInputFile = resourcesDirectory + fileToRead;
+    try {
+      //println("reaching here at 1263. value of the file path is:" + advInputFile)
+      for (line <- Source.fromFile(advInputFile).getLines()) {
+        //println("reaching here at 3462323")
+        if (!line.isEmpty()) {
+          val content = line.split("\\s+")
+          val columnCount = content.length
+
+            //add if 2nd column exists add it to hashmap as value, else initialize value to 1
+            if(columnCount>1) {
+              hashMapOfAdjInBothClasses += (content(0) -> content(1));
+            }
+            else
+            {
+              hashMapOfAdjInBothClasses += (content(0) -> "1");
+            }
+          }
+          //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));
+        }
+      }
+
+     catch {
+      case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
+    }
+
+  }
+
+
 }
