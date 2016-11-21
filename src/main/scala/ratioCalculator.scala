@@ -38,46 +38,46 @@ object ratioCalculator {
   var hashMapOfAdjInBothClasses: Map[String, String] = Map()
 
 
-//  def calculateNgramInflectedRatio(adjToGetRatio: String): Double = {
-//
-//    var myratio: Double = 0;
-//    var totalBaseCount: Double = 0
-//    var noOfTimesThisAdjInflected = 1;
-//
-//    //split it into ngrams
-//    var splitAdj = characterNgramSplitter(adjToGetRatio, 3)
-//    if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
-//
-//      totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
-//
-//      for (trigrams <- splitAdj) {
-//
-//        if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
-//          noOfTimesThisAdjInflected = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
-//        }
-//        myratio = noOfTimesThisAdjInflected.toDouble / totalBaseCount;
-//        println("ratio for the trigram:" + trigrams + " is:" + noOfTimesThisAdjInflected + "/" + totalBaseCount + "which is:" + myratio)
-//
-//      }
-//    }
-//
-////this must be a arraybuffer of int values: i.e number of times col occurs, er$ occurs etc
-//    //todo:
-//    return myratio;
-//
-//
-//  }
+  //  def calculateNgramInflectedRatio(adjToGetRatio: String): Double = {
+  //
+  //    var myratio: Double = 0;
+  //    var totalBaseCount: Double = 0
+  //    var noOfTimesThisAdjInflected = 1;
+  //
+  //    //split it into ngrams
+  //    var splitAdj = characterNgramSplitter(adjToGetRatio, 3)
+  //    if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToGetRatio)) {
+  //
+  //      totalBaseCount = hashMapOfAllUniqAdjectivesInAgigaWithFrequency(adjToGetRatio).toDouble;
+  //
+  //      for (trigrams <- splitAdj) {
+  //
+  //        if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
+  //          noOfTimesThisAdjInflected = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
+  //        }
+  //        myratio = noOfTimesThisAdjInflected.toDouble / totalBaseCount;
+  //        println("ratio for the trigram:" + trigrams + " is:" + noOfTimesThisAdjInflected + "/" + totalBaseCount + "which is:" + myratio)
+  //
+  //      }
+  //    }
+  //
+  ////this must be a arraybuffer of int values: i.e number of times col occurs, er$ occurs etc
+  //    //todo:
+  //    return myratio;
+  //
+  //
+  //  }
 
   def checkIfExistsInAgiga(adjToCheckExists: String): Boolean = {
     if (hashMapOfAllUniqAdjectivesInAgigaWithFrequency.contains(adjToCheckExists)) {
       return true;
     }
-      else
-    {
+    else {
       return false;
     }
   }
-    //println("reaching here at 4393897")
+
+  //println("reaching here at 4393897")
 
   def calculateInflectedAdjRatio(adjToGetRatio: String): Double = {
     //println("reaching here at 4393897")
@@ -172,6 +172,7 @@ object ratioCalculator {
     catch {
 
       case ex: Exception => println("An exception occoured.:\n" + ex.getStackTrace.mkString("\n"))
+        System.exit(1);
     }
 
     //the denominator remains same for all ratios. This will be filled by now, hopefully
@@ -214,7 +215,6 @@ object ratioCalculator {
         if (hashMapOfAdvModifiedAdjCount.contains(key)) {
           val inflectedAndModifiedCount = hashMapOfAdvModifiedAdjCount(key);
           println("found that the adjective inflected:" + key + "is both modified by an adverb and self inflected and its frequency is:" + inflectedAndModifiedCount)
-          //System.exit(1)
           totalInflectedAndModifiedCount = totalInflectedAndModifiedCount + inflectedAndModifiedCount;
         }
       }
@@ -232,28 +232,29 @@ object ratioCalculator {
     }
 
 
-  println("ratio is:" + advInflModifiedratio)
+    println("ratio is:" + advInflModifiedratio)
 
-  return advInflModifiedratio;
-}
+    return advInflModifiedratio;
+  }
 
   def characterNgramSplitter(adjectiveToCalculate: String, noOfgrams: Int): List[String] = {
 
     //attach a special character. this is to make sure there is no est in the word itself
-    var modifiedAdjectiveToCalculate="$"+adjectiveToCalculate+"$"
-    var splitChars= modifiedAdjectiveToCalculate.sliding(3).toList
+    var modifiedAdjectiveToCalculate = "$" + adjectiveToCalculate + "$"
+    var splitChars = modifiedAdjectiveToCalculate.sliding(3).toList
 
     return splitChars;
 
 
   }
+
   def readErRemovedFileAndIncreaseCounter(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
 
     //read all lines of adjectives that end in er or est. Note: this is the actual number of times that adjective
     // occurs, not unique.
-     val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectives;
+    val adjWithErEstEnding = resourcesDirectory + AllErEstEndingAdjectives;
 
-    println("path of input file is:"+adjWithErEstEnding)
+    println("path of input file is:" + adjWithErEstEnding)
     var adjToCheck = "NULL";
     try {
 
@@ -273,25 +274,25 @@ object ratioCalculator {
         match1 match {
           case Some(s) => {
             //println(s"Found: $s")
-            erEstRemovedForm=erEstRemovedForm.dropRight(1)
-            erEstRemovedForm=erEstRemovedForm+"y"
+            erEstRemovedForm = erEstRemovedForm.dropRight(1)
+            erEstRemovedForm = erEstRemovedForm + "y"
           }
           case None =>
-            //println("pattern not found")
+          //println("pattern not found")
         }
 
         //convert fattest->fat
         //find repeating letters repeating twice at the end
-        val fatPattern= new Regex("(\\w)\\1+$")
+        val fatPattern = new Regex("(\\w)\\1+$")
         val match2 = fatPattern.findFirstIn(erEstRemovedForm)
         match2 match {
           case Some(s) => {
             //println(s"Found: $s")
             //remove that last repeating letter Eg:Fatt->fat
-            erEstRemovedForm=erEstRemovedForm.dropRight(1)
+            erEstRemovedForm = erEstRemovedForm.dropRight(1)
           }
           case None =>
-            //println("pattern not found")
+          //println("pattern not found")
         }
 
 
@@ -356,22 +357,22 @@ object ratioCalculator {
 
 
         // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
-//        if (hashMapOfAllAdjectivesAndItsCount.contains(adjToCheck)) {
-//          inflectedCounter = hashMapOfAllAdjectivesAndItsCount(adjToCheck).toInt;
-//          inflectedCounter = inflectedCounter + 1;
-//        }
-//        else {
-//          inflectedCounter = 1
-//        }
-//        hashMapOfAllAdjectivesAndItsCount += (adjToCheck -> inflectedCounter);
+        //        if (hashMapOfAllAdjectivesAndItsCount.contains(adjToCheck)) {
+        //          inflectedCounter = hashMapOfAllAdjectivesAndItsCount(adjToCheck).toInt;
+        //          inflectedCounter = inflectedCounter + 1;
+        //        }
+        //        else {
+        //          inflectedCounter = 1
+        //        }
+        //        hashMapOfAllAdjectivesAndItsCount += (adjToCheck -> inflectedCounter);
 
       }
     } catch {
-      case ex: Exception => println("Exception occured:"+ex.toString())
+      case ex: Exception => println("Exception occured:" + ex.toString())
 
     }
 
-     //println("reaching here at 79578")
+    //println("reaching here at 79578")
 
 
     //println("value of hashmap is:" + hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n "));
@@ -382,7 +383,7 @@ object ratioCalculator {
 
     // println("value of hashmap is:" + hashMapOfInflectedAdjectivesAndItsCount.mkString("\n "));
     //write the inflected value count also to file
-    writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"),outputFileNameForInflectedAdjectiveCount,outputDirectoryPath)
+    writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"), outputFileNameForInflectedAdjectiveCount, outputDirectoryPath)
 
   }
 
@@ -408,12 +409,12 @@ object ratioCalculator {
     val advInputFile = resourcesDirectory + FreqOfAdjAdv_withoutAgainAt;
 
     //to get the relative path from resources file
-   // val advInputFile = new File(getClass.getClassLoader.getResource(FreqOfAdjAdv_withoutAgainAt).getPath)
+    // val advInputFile = new File(getClass.getClassLoader.getResource(FreqOfAdjAdv_withoutAgainAt).getPath)
 
 
     //read from all the adjectives and its frequency into a hash table
 
-  println("path of input file is:"+advInputFile)
+    println("path of input file is:" + advInputFile)
     try {
       println("reaching here at 45645")
 
@@ -456,53 +457,53 @@ object ratioCalculator {
       //println(hashMapOfAdvModifiedAdjCount("happy"))
     } catch {
       case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
+        System.exit(1);
     }
   }
 
 
-
-//  def FindNgramCharacterFrequency(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
-//    //read from all the adjectives and its frequency into a hash table
-//    //val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
-//    val adjWithErEstEndingInputFile = resourcesDirectory + AllErEstEndingAdjectives;
-//    try {
-//
-//      //for each adjective-split it to trigrams
-//      for (line <- Source.fromFile(adjWithErEstEndingInputFile).getLines()) {
-//        //println("reaching here at 3462323")
-//        if (!line.isEmpty()) {
-//          var splitAdj = characterNgramSplitter(line,3)
-//
-//          for(trigrams<-splitAdj)
-//          {
-//            var inflectedCounterForSameWord = 0;
-//            if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
-//              inflectedCounterForSameWord = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
-//              inflectedCounterForSameWord = inflectedCounterForSameWord + 1;
-//            }
-//            else {
-//              // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
-//              inflectedCounterForSameWord = 1
-//            }
-//            hashMapCharacterNgramsAndFrequency += (trigrams -> inflectedCounterForSameWord);
-//
-//
-//          }
-//
-//
-//        }
-//      }
-//
-//      //sort it by the most common trigrams
-//      var sortedhashMapCharacterNgramsAndFrequency= ListMap(hashMapCharacterNgramsAndFrequency.toSeq.sortWith(_._2 < _._2):_*)
-//      //println(sortedhashMapCharacterNgramsAndFrequency.mkString("\n"));
-//
-//    } catch {
-//      case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
-//    }
-//  }
-//
-//
+  //  def FindNgramCharacterFrequency(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
+  //    //read from all the adjectives and its frequency into a hash table
+  //    //val advInputFile = resourcesDirectory + completeAgigaFileWithFrequency;
+  //    val adjWithErEstEndingInputFile = resourcesDirectory + AllErEstEndingAdjectives;
+  //    try {
+  //
+  //      //for each adjective-split it to trigrams
+  //      for (line <- Source.fromFile(adjWithErEstEndingInputFile).getLines()) {
+  //        //println("reaching here at 3462323")
+  //        if (!line.isEmpty()) {
+  //          var splitAdj = characterNgramSplitter(line,3)
+  //
+  //          for(trigrams<-splitAdj)
+  //          {
+  //            var inflectedCounterForSameWord = 0;
+  //            if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
+  //              inflectedCounterForSameWord = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
+  //              inflectedCounterForSameWord = inflectedCounterForSameWord + 1;
+  //            }
+  //            else {
+  //              // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
+  //              inflectedCounterForSameWord = 1
+  //            }
+  //            hashMapCharacterNgramsAndFrequency += (trigrams -> inflectedCounterForSameWord);
+  //
+  //
+  //          }
+  //
+  //
+  //        }
+  //      }
+  //
+  //      //sort it by the most common trigrams
+  //      var sortedhashMapCharacterNgramsAndFrequency= ListMap(hashMapCharacterNgramsAndFrequency.toSeq.sortWith(_._2 < _._2):_*)
+  //      //println(sortedhashMapCharacterNgramsAndFrequency.mkString("\n"));
+  //
+  //    } catch {
+  //      case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
+  //    }
+  //  }
+  //
+  //
   def FindNgramCharacterFrequencyGivenAdjective(adjForNgram: String): Map[String, Int] = {
 
     //check for ratio of 3 forms of cold, colder, coldest
@@ -517,7 +518,7 @@ object ratioCalculator {
     all3InflectedForms += adjForNgram
 
     //note this hashMapOfInflAdjToRootForm is in the form colder->cold
-  //println(goodAdjectiveFinder.hashMapOfInflAdjToRootForm.mkString("\n"))
+    //println(goodAdjectiveFinder.hashMapOfInflAdjToRootForm.mkString("\n"))
     for ((key, value) <- goodAdjectiveFinder.hashMapOfInflAdjToRootForm) {
       if (value == adjForNgram) {
         all3InflectedForms += key
@@ -537,10 +538,10 @@ object ratioCalculator {
 
         //for each of the trigram,($co, old, col)-increase count
         for (trigrams <- splitAdj) {
-          var inflectedCounterForSameWord:Int = 0
+          var inflectedCounterForSameWord: Int = 0
           if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
             inflectedCounterForSameWord = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
-            inflectedCounterForSameWord=inflectedCounterForSameWord+1;
+            inflectedCounterForSameWord = inflectedCounterForSameWord + 1;
           }
           else {
             // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
@@ -555,8 +556,7 @@ object ratioCalculator {
   }
 
 
-
-  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory: String, outputDirectoryPath: String):Unit = {
+  def ReadAllAdjectivesAndFrequencyToHashmap(resourcesDirectory: String, outputDirectoryPath: String): Unit = {
     println("reaching here at 36857")
 
     //read from all the adjectives and its frequency into a hash table
@@ -582,8 +582,10 @@ object ratioCalculator {
       }
     } catch {
       case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
+        System.exit(1);
     }
   }
+
   def ReadCommonAdjInBothClassesToHashmap(resourcesDirectory: String, outputDirectoryPath: String, fileToRead: String): Unit = {
     //println("reaching here at 36857")
 
@@ -597,21 +599,21 @@ object ratioCalculator {
           val content = line.split("\\s+")
           val columnCount = content.length
 
-            //add if 2nd column exists add it to hashmap as value, else initialize value to 1
-            if(columnCount>1) {
-              hashMapOfAdjInBothClasses += (content(0) -> content(1));
-            }
-            else
-            {
-              hashMapOfAdjInBothClasses += (content(0) -> "1");
-            }
+          //add if 2nd column exists add it to hashmap as value, else initialize value to 1
+          if (columnCount > 1) {
+            hashMapOfAdjInBothClasses += (content(0) -> content(1));
           }
-          //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));
+          else {
+            hashMapOfAdjInBothClasses += (content(0) -> "1");
+          }
         }
+        //println(hashMapOfAllUniqAdjectivesInAgigaWithFrequency.mkString("\n"));
       }
+    }
 
-     catch {
+    catch {
       case ex: Exception => println("An exception happened.:" + ex.getStackTrace.mkString("\n"))
+        System.exit(1);
     }
 
   }

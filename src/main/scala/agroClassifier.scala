@@ -158,7 +158,7 @@ object classifierForAgro {
       //add only if the adj is not present in both files
       if (!ratioCalculator.isAdjPresentInBothClasses(adjToCheckD)) {
 
-        val trigramCounts = ratioCalculator.FindNgramCharacterFrequencyGivenAdjective(adjToCheckD)
+        val characterNgramCounts = ratioCalculator.FindNgramCharacterFrequencyGivenAdjective(adjToCheckD)
 
         //characterNgramSplitter(adjToCheckD)
 
@@ -168,7 +168,7 @@ object classifierForAgro {
         else if (labelOfGivenAdj == "notgradable") {
           numberOfGoldNonGradable = numberOfGoldNonGradable + 1
         }
-        findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
+        findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels, characterNgramCounts)
       }
     }
 
@@ -283,7 +283,7 @@ object classifierForAgro {
   }
 
 
-  def findRatiosOfGivenAdjectivesAndAddToDataset(myAdjToCheck: String, labelOfGivenAdj: String, datasetToAdd: RVFDataset[String, String]): Unit = {
+  def findRatiosOfGivenAdjectivesAndAddToDataset(myAdjToCheck: String, labelOfGivenAdj: String, datasetToAdd: RVFDataset[String, String], characterNgramCounts: Map[String, Int]): Unit = {
     //for each given adjective find all 3 ratios, attach its corresponding label, and send back a full filled RVFdataset
 
     //println("reaching here at 57633")
@@ -341,6 +341,15 @@ object classifierForAgro {
     counter.setCount("inflectedRatio", inflectedRatio)
     counter.setCount("advrbModifiedRatio", adverbModifiedRatio)
     counter.setCount("inflAndAdvModified", inflectedAndAdvModified)
+
+    //add the character ngram values also as a counter variable.
+    var ngramCounter = 0;
+    for ((key, value) <- characterNgramCounts) {
+      ngramCounter = ngramCounter + 1;
+      val nameOfNgramCounter = ngramCounter + ngramCounter.toString();
+      counter.setCount(key, value.toDouble)
+    }
+
 
     println("printing the value of counter below me in double")
     //println(f"$counter(1)%1.5f")
