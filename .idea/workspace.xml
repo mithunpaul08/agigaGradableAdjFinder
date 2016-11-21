@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadAllAdvAdjectivesAndFrequencyToHashmap$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadAllAdvAdjectivesAndFrequencyToHashmap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadCommonAdjInBothClassesToHashmap$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadCommonAdjInBothClassesToHashmap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$calculateBothInflectedAdvModifiedRatio$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$calculateBothInflectedAdvModifiedRatio$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$calculateBothInflectedAdvModifiedRatio$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$calculateBothInflectedAdvModifiedRatio$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$readErRemovedFileAndIncreaseCounter$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$readErRemovedFileAndIncreaseCounter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" afterPath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/mainFile.scala" afterPath="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" afterPath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
     </list>
     <ignored path="hello.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +43,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -71,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compareErAdjWithUniq.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="compareErAdjWithUniq.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="591">
               <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
               <folding />
             </state>
@@ -84,10 +66,11 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="203" column="28" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="28" />
+            <state relative-caret-position="122">
+              <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
+                <element signature="e#14031#17379#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -150,8 +133,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
       </list>
     </option>
   </component>
@@ -599,7 +582,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39839265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39839265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -625,13 +608,13 @@
       <breakpoints>
         <line-breakpoint type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>244</line>
+          <line>245</line>
           <properties />
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>174</line>
+          <line>175</line>
           <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
@@ -669,6 +652,7 @@
           <caret line="229" column="39" selection-start-line="229" selection-start-column="39" selection-end-line="229" selection-end-column="39" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
+            <element signature="e#14031#17379#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -836,6 +820,7 @@
           <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
+            <element signature="e#14031#17379#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,6 +863,7 @@
           <caret line="343" column="21" selection-start-line="343" selection-start-column="21" selection-end-line="343" selection-end-column="21" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
+            <element signature="e#14031#17379#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -958,14 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/mutable/ResizableArray.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -1000,20 +978,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="203" column="28" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="28" />
-          <folding>
-            <element signature="e#15#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+            <element signature="e#14031#17379#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
           <folding />
         </state>
       </provider>
