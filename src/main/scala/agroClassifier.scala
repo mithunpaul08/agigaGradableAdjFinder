@@ -149,12 +149,18 @@ object classifierForAgro {
 
     val datasetForFillingMixedAdjCounterLabels = new RVFDataset[String, String]
 
+
+
     //for each of the adjectives, find its ratios and labels and add it into the dataset.
     for (individualAdjLabels <- listOfAllAdjectivesShuffled) {
       val adjToCheckD = individualAdjLabels(0);
       val labelOfGivenAdj = individualAdjLabels(1);
       //add only if the adj is not present in both files
       if (!ratioCalculator.isAdjPresentInBothClasses(adjToCheckD)) {
+
+        val trigramCounts = ratioCalculator.FindNgramCharacterFrequencyGivenAdjective(adjToCheckD)
+
+        //characterNgramSplitter(adjToCheckD)
 
         if (labelOfGivenAdj == "gradable") {
           numberOfGoldGradable = numberOfGoldGradable + 1
@@ -214,12 +220,6 @@ object classifierForAgro {
     var countCorrectlyPredicted: Double = 0;
     for ((predictedLabel, actualLabel) <- predictedLabels) {
       totalCount = totalCount + 1;
-
-      //just store into an array of strings for printing purposes
-      //      var predictedValuesToPrint = ArrayBuffer[String]()
-      //      predictedValuesToPrint += listOfAllAdjectives(countForAdjArray)
-      //      predictedValuesToPrint += actualLabel
-      //      predictedValuesToPrint += predictedLabel
 
       if (predictedLabel == actualLabel) {
         countCorrectlyPredicted = countCorrectlyPredicted + 1;
@@ -337,21 +337,21 @@ object classifierForAgro {
 
       }
     }
-      val counter = new Counter[String];
-      counter.setCount("inflectedRatio", inflectedRatio)
-      counter.setCount("advrbModifiedRatio", adverbModifiedRatio)
-      counter.setCount("inflAndAdvModified", inflectedAndAdvModified)
+    val counter = new Counter[String];
+    counter.setCount("inflectedRatio", inflectedRatio)
+    counter.setCount("advrbModifiedRatio", adverbModifiedRatio)
+    counter.setCount("inflAndAdvModified", inflectedAndAdvModified)
 
-      println("printing the value of counter below me in double")
-      //println(f"$counter(1)%1.5f")
-      println(counter.toString())
-      //val datum2 = new RVFDatum[String, String]("notgradable", counter)
-      val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
+    println("printing the value of counter below me in double")
+    //println(f"$counter(1)%1.5f")
+    println(counter.toString())
+    //val datum2 = new RVFDatum[String, String]("notgradable", counter)
+    val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
 
-      // println("number of features is:" + datum2.features())
+    // println("number of features is:" + datum2.features())
 
-      datasetToAdd += datum2
-      println("reaching here at 2462467")
+    datasetToAdd += datum2
+    println("reaching here at 2462467")
 
 
   }

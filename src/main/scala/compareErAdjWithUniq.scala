@@ -40,13 +40,13 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
 
   var outputFileForhashmapForErAdjectiveAndItsBaseForm = "hashmapForErAdjectiveAndItsBaseForm.txt";
 
-  var hashMapOfAllUniqAdjectivesInAgiga = Map("Long" -> "1")
+  //var hashMapOfAllUniqAdjectivesInAgiga = Map("Long" -> "1")
 
   var hashMapOfInflAdjToRootForm: Map[String, String] = Map()
 
 
-  def ReadAllUniqAdjectivesToHashmap(): Unit = {
-
+  def ReadAllUniqAdjectivesToHashmap(): Map[String, String] = {
+    var hashMapOfAllUniqAdjectivesInAgiga: Map[String, String] = Map()
     val advInputFile = resourcesDirectory + completeAgigaFile;
     try {
      println("reaching here at 1263.value of the path of the file is :"+advInputFile)
@@ -58,6 +58,7 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
     } catch {
       case ex: Exception => println("An exception happened. Not able to find the file")
     }
+    return hashMapOfAllUniqAdjectivesInAgiga;
   }
 
 
@@ -108,7 +109,7 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
 
     }
     //read all lines of uniq adjectives to a hashmap
-    ReadAllUniqAdjectivesToHashmap()
+    val localHashMapOfAllUniqAdjectivesInAgiga= ReadAllUniqAdjectivesToHashmap()
     //read all lines of er removed files and check its base form-i.e the er-removed form exists in the hashmap
     val erRemovedInputFile = resourcesDirectory + AllErEstEndingAdjectivesUniq;
     println("reaching here at 956395.value of the path of the file is :"+erRemovedInputFile)
@@ -125,7 +126,7 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
         // println("the root form of the given adjective:" + adjToCheck  + " is:"+erEstRemovedForm)
         //if the er and est removed root form exists in the hashtable store it into another hashtable in the form "deepest->deep
 
-        if (hashMapOfAllUniqAdjectivesInAgiga.contains(erEstRemovedForm)) {
+        if (localHashMapOfAllUniqAdjectivesInAgiga.contains(erEstRemovedForm)) {
           //println("found that the given adjective:" + adjToCheck + " has its root form in the file. adding to hash map")
           //System.exit(1);
           hashMapOfInflAdjToRootForm += (adjToCheck -> erEstRemovedForm);
