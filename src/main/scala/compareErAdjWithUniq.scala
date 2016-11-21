@@ -151,7 +151,7 @@ object goodAdjectiveFinder {
 
 
 
-    writeToFile(hashMapOfInflAdjToRootForm.mkString("\n"))
+    //writeToFile(hashMapOfInflAdjToRootForm.mkString("\n"))
     return hashMapOfInflAdjToRootForm;
 
   }

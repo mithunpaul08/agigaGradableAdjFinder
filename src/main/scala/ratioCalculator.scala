@@ -517,7 +517,7 @@ object ratioCalculator {
     all3InflectedForms += adjForNgram
 
     //note this hashMapOfInflAdjToRootForm is in the form colder->cold
-  println(goodAdjectiveFinder.hashMapOfInflAdjToRootForm.mkString("\n"))
+  //println(goodAdjectiveFinder.hashMapOfInflAdjToRootForm.mkString("\n"))
     for ((key, value) <- goodAdjectiveFinder.hashMapOfInflAdjToRootForm) {
       if (value == adjForNgram) {
         all3InflectedForms += key
