@@ -4,7 +4,7 @@
 		module="hello$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161114124600"
+		publication="20161121113819"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -65,7 +65,7 @@
 			<artifact name="xom" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="xml-apis" name="xml-apis" rev="1.3.03" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="xml-apis" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="xml-apis" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="xerces" name="xercesImpl" rev="2.8.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="xercesImpl" type="src" ext="jar" conf="sources" e:classifier="sources"/>

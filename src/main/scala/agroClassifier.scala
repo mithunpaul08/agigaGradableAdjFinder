@@ -109,6 +109,7 @@ object classifierForAgro {
     //todo: find if we should pick from the top 300 adjectives
 
     var numberOfGoldGradable = 0;
+    var numberOfGoldNonGradable = 0;
     var counterForAdjLabelMatrix = 0;
 
 
@@ -119,17 +120,17 @@ object classifierForAgro {
 
     //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
     for (adjToCheckG <- Source.fromFile(cobuildGradable).getLines()) {
-      numberOfGoldGradable = numberOfGoldGradable + 1
+
       val adjLabelG = ArrayBuffer(adjToCheckG, "gradable")
       listOfAllAdjectives += adjLabelG
     }
 
-    var numberOfGoldNonGradable = 0;
+
     //for each of the adjectives in non gradable COBUILD Auto (list of non gradable adjectives auto generated), go through hash maps, get inflected count/total count ratio, add it to the clasifier
     for (adjToCheckNG <- Source.fromFile(cobuildNonGradable).getLines()) {
 
       //total number of gold non gradable adjectives
-      numberOfGoldNonGradable = numberOfGoldNonGradable + 1;
+
       counterForAdjLabelMatrix = counterForAdjLabelMatrix + 1;
       var inflRatio: Double = 0;
       var advrbModifiedRatio: Double = 0
@@ -150,36 +151,22 @@ object classifierForAgro {
 
     //for each of the adjectives, find its ratios and labels and add it into the dataset.
     for (individualAdjLabels <- listOfAllAdjectivesShuffled) {
-      val adjToCheckD=individualAdjLabels(0);
+      val adjToCheckD = individualAdjLabels(0);
       val labelOfGivenAdj = individualAdjLabels(1);
       //add only if the adj is not present in both files
       if (!ratioCalculator.isAdjPresentInBothClasses(adjToCheckD)) {
-        findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD,labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
+
+        if (labelOfGivenAdj == "gradable") {
+          numberOfGoldGradable = numberOfGoldGradable + 1
+        }
+        else if (labelOfGivenAdj == "notgradable") {
+          numberOfGoldNonGradable = numberOfGoldNonGradable + 1
+        }
+        findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
       }
     }
 
     println(datasetForFillingMixedAdjCounterLabels.labels.length);
-
-
-    //util.Random.shuffle(dataset)
-    //java.util.Collections.shuffle(dataset.asList)
-    //myShuffle(dataset);
-    //    println(dataset.mkString("\n"))
-    //    for(datumIndex <- 0 until dataset.size)
-    //      {
-    //        val datumCounter = dataset.featuresCounter(datumIndex)
-    //        val datumLabel = dataset.labels(datumIndex)
-    //        val datasetLabelLexicon = dataset.labelLexicon
-    //        val datum = new RVFDatum[String, String](datasetLabelLexicon.get(datumLabel), datumCounter)
-    //        println(datum.toString())
-    //      }
-
-    //java.util.Collections.shuffle(java.util.Arrays.asList(dataset))
-    //java.util.Collections.shuffle(listOfAllAdjectives)
-    //println(dataset.mkString("\n"))
-    //val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-    //    println("new max value of ranges is:" + scaleRanges.maxs.toString());
-    //    println("new min value of ranges is:" + scaleRanges.mins.toString());
 
     //train the classifier
     println("\n")
