@@ -540,6 +540,7 @@ object ratioCalculator {
           var inflectedCounterForSameWord:Int = 0
           if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
             inflectedCounterForSameWord = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
+            inflectedCounterForSameWord=inflectedCounterForSameWord+1;
           }
           else {
             // if it exists, retrieve it, increase its counter value and write it back. Else just write 1

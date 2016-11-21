@@ -34,7 +34,12 @@ object goodAdjectiveFinder {
  // var completeAgigaFile = "allAdjectivesFromAgigaButUniq.txt";
   
 
-var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
+//var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
+
+  //on 21nov2016 it was found that this file above sortedUniqAllAdjFromAgiga-
+  //didnt have many words Eg: fat- so did a sort on agiga again. Refer notes in gdrive
+  var completeAgigaFile = "AllUniqueAdjInAgiga.txt";
+
   //var erRemovedFiles="uniqAdjectivesInAgiga_removedErEst.txt";
   var AllErEstEndingAdjectivesUniq = "AllErEstEndingAdjectivesUniq.txt"
 
@@ -52,8 +57,14 @@ var completeAgigaFile = "sortedUniqAllAdjFromAgiga.txt";
      println("reaching here at 1263.value of the path of the file is :"+advInputFile)
       var counterForHashmap = 0;
       for (line <- Source.fromFile(advInputFile).getLines()) {
+        //remove teh initial space
+        //val newName = line.stripMargin
+
+        //val newName = line.replaceAll("^(\\s)", "");
+        val newName = line.trim()
+
          // println("reaching here at 184")
-        hashMapOfAllUniqAdjectivesInAgiga += (line -> "1");
+        hashMapOfAllUniqAdjectivesInAgiga += (newName -> "1");
       }
     } catch {
       case ex: Exception => println("An exception happened. Not able to find the file")
