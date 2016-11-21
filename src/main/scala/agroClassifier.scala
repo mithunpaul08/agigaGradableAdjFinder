@@ -112,6 +112,11 @@ object classifierForAgro {
     var counterForAdjLabelMatrix = 0;
 
 
+    //remove the initial empty element in listOfAllAdjectives
+
+    listOfAllAdjectives.remove(0);
+    println(listOfAllAdjectives.length)
+
     //for each of the adjectives in gradable COBUILD Auto, go through hash maps, get inflected count/total count ratio, add it to the clasifier
     for (adjToCheckG <- Source.fromFile(cobuildGradable).getLines()) {
 //
@@ -120,31 +125,31 @@ object classifierForAgro {
 //
 //      //todo: read input from all agiga files
 //
-//      var inflRatio: Double = 0;
-//      var advrbModifiedRatio: Double = 0
-//      var ngramInflectedRatio: Double = 0;
-//
-//
-//      println("reaching here at 876467")
-//
-//      println("\n")
-//      println("****************************************");
-//      println("Starting a new gradable adjective check, whose value is : " + adjToCheck)
-//
-//
-//
-//      //for each of the adjectives' root forms, get the inflected ratio.
-//      inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheck);
-//
+      var inflRatio: Double = 0;
+      var advrbModifiedRatio: Double = 0
+      var ngramInflectedRatio: Double = 0;
+
+
+      println("reaching here at 876467")
+
+      println("\n")
+      println("****************************************");
+      println("Starting a new gradable adjective check, whose value is : " + adjToCheckG)
+
+
+
+      //for each of the adjectives' root forms, get the inflected ratio.
+//      inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheckG);
+
 //      if (inflRatio > 0) {
-//        println("value of current adjective is :" + adjToCheck + " and its inflected ratio is:" + inflRatio)
+//        println("value of current adjective is :" + adjToCheckG + " and its inflected ratio is:" + inflRatio)
 //
 //      }
 //      else {
 //        //if the given adjective is not found, the return value will be zero. In that case
 //        // ignore it and move onto the next one. We dont want to add zeroes to the datum.
 //
-//        println("current adjective :" + adjToCheck + " doesnt exist in the database. Moving onto the next one")
+//        println("current adjective :" + adjToCheckG + " doesnt exist in the database. Moving onto the next one")
 //
 //
 //      }
@@ -216,7 +221,7 @@ object classifierForAgro {
 //      //println("value of current adjective is :" + adjToCheck);
 //
 //      //for each of the adjectives' root forms, get the inflected ratio.
-//     inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheckNG);
+ //    inflRatio = ratioCalculator.calculateInflectedAdjRatio(adjToCheckNG);
 ////
 //      if (inflRatio > 0) {
 //        println("value of current adjective is :" + adjToCheckNG + " and its inflected ratio is:" + inflRatio)
@@ -281,18 +286,20 @@ object classifierForAgro {
       //      adjGoldPredicted += adjLabelBuilder
     }
 
+    //to test without shuffling
+    //val listOfAllAdjectivesShuffled= listOfAllAdjectives
 
     //not inplace shuffling
     val listOfAllAdjectivesShuffled= util.Random.shuffle(listOfAllAdjectives)
 
-    val datasetForFillingAdjCounterLabels = new RVFDataset[String, String]
+    val datasetForFillingMixedAdjCounterLabels = new RVFDataset[String, String]
 
     //for each of the adjectives, find its ratios and labels and add it into the dataset.
     for(individualAdjLabels <- listOfAllAdjectivesShuffled) {
-      findRatiosOfGivenAdjectivesAndAddToDataset(individualAdjLabels,datasetForFillingAdjCounterLabels)
+      findRatiosOfGivenAdjectivesAndAddToDataset(individualAdjLabels,datasetForFillingMixedAdjCounterLabels)
     }
 
-    println(datasetForFillingAdjCounterLabels.labels.length);
+    println(datasetForFillingMixedAdjCounterLabels.labels.length);
 
 
     //util.Random.shuffle(dataset)
@@ -329,7 +336,7 @@ object classifierForAgro {
     val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
     println("doing LogisticRegressionClassifier...");
     //myClassifier.train(dataset)
-    myClassifier.train(datasetForFillingAdjCounterLabels)
+    myClassifier.train(datasetForFillingMixedAdjCounterLabels)
 
 
 
@@ -350,7 +357,8 @@ object classifierForAgro {
     //val predictedLabels = Datasets.crossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
     //code for scaling only the 9 folds of training data set, and not the 1 fold of test dataset
-    val predictedLabels = mithunsCrossValidate(datasetForFillingAdjCounterLabels, factory, 10) // for 10-fold cross-validation
+    val predictedLabels = mithunsCrossValidate(datasetForFillingMixedAdjCounterLabels, factory, 10) // for 10-fold cross-validation
+    //val predictedLabels = mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
 
     //calculate acccuracy.
@@ -513,7 +521,7 @@ object classifierForAgro {
     * Implements classic cross validation; producing pairs of gold/predicted labels across the training dataset
     */
   def mithunsCrossValidate[L, F](
-                                  dataset: Dataset[L, F],
+                                  dataset: RVFDataset[L, F],
                                   classifierFactory: () => Classifier[L, F],
                                   numFolds: Int): Iterable[(L, L)] = {
 
