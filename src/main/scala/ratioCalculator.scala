@@ -6,7 +6,7 @@ import java.io.{BufferedWriter, File, FileWriter}
 import scala.util;
 import org.clulab.learning.{Datasets, PerceptronClassifier, RVFDataset, RVFDatum}
 import org.clulab.struct.Counter
-
+import org.apache.commons
 import scala.io.Source
 import scala.collection.immutable.ListMap
 import scala.collection.mutable.ArrayBuffer
@@ -390,10 +390,15 @@ object ratioCalculator {
 
 
   def appendToFile(stringToWrite: String, outputFilename: String, outputDirectoryPath: String): Unit = {
-    //FileUtils.deleteQuietly(new File(path))
 
     val outFile = new File(outputDirectoryPath, outputFilename)
-    val bw = new BufferedWriter(new FileWriter(outFile,true))
+
+    //remove if it exists. And keep adding to it.
+
+    if (outFile.exists) {
+      outFile.delete()
+    }
+    val bw = new BufferedWriter(new FileWriter(outFile, true))
     bw.write(stringToWrite)
     bw.close()
   }

@@ -145,6 +145,7 @@ object classifierForAgro {
     //not inplace shuffling
     var listOfAllAdjectivesShuffled = util.Random.shuffle(listOfAllAdjectives)
 
+    var listOfAdjWithoutAmbgiuousOnes = ArrayBuffer[String]()
 
     val datasetForFillingMixedAdjCounterLabels = new RVFDataset[String, String]
 
@@ -158,7 +159,12 @@ object classifierForAgro {
       val adjToCheckD = individualAdjLabels(0);
       val labelOfGivenAdj = individualAdjLabels(1);
       //add only if the adj is not present in both files
-    //  if (!ratioCalculator.isAdjPresentInBothClasses(adjToCheckD)) {
+//      if(adjToCheckD=="immediate")
+//        {
+//          println("found immediate")
+//
+//        }
+      if (!ratioCalculator.isAdjPresentInBothClasses(adjToCheckD)) {
 
         val characterNgramCounts = ratioCalculator.FindNgramCharacterFrequencyGivenAdjective(adjToCheckD)
 
@@ -171,9 +177,10 @@ object classifierForAgro {
         else if (labelOfGivenAdj == "notgradable") {
           numberOfGoldNonGradable = numberOfGoldNonGradable + 1
         }
-       // findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels, characterNgramCounts)
+        listOfAdjWithoutAmbgiuousOnes+=adjToCheckD;
+        // findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels, characterNgramCounts)
         findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
-    //  }
+      }
     }
 
     //printing the counter values of individual adjectives- used for testing the ncharacter ngrams
@@ -228,15 +235,15 @@ object classifierForAgro {
     var countForAdjArray = 0
 
 
-    var totalCount: Double = 0;
+    var totalCount = 0;
     var countCorrectlyPredicted: Double = 0;
     for ((actualLabel,predictedLabel) <- predictedLabels) {
       totalCount = totalCount + 1;
 
       //just store into an array of strings for printing purposes
       //var predictedValuesToPrint = ArrayBuffer[String]()
-      var adjValue=listOfAllAdjectivesShuffled(countForAdjArray)(0)
-      val goldLabel=listOfAllAdjectivesShuffled(countForAdjArray)(1)
+      val adjValue=listOfAdjWithoutAmbgiuousOnes(countForAdjArray)
+      val goldLabel=actualLabel
       val predictedValuesToPrint="adj:"+adjValue+" GoldLabel:"+goldLabel+" PredictedLabel:"+predictedLabel
 
 //      if(goldLabel!=actualLabel)
@@ -261,9 +268,14 @@ object classifierForAgro {
 
 
     }
+    if(!(totalCount==listOfAdjWithoutAmbgiuousOnes.length))
+      {
+        println("error in input and output lists")
 
-    println("value of adjGoldPredicted is: ")
-    println(adjGoldPredicted.mkString("\n"))
+      }
+
+    //println("value of adjGoldPredicted is: ")
+    //println(adjGoldPredicted.mkString("\n"))
     ratioCalculator.writeToFile(adjGoldPredicted.mkString("\n"), outputFileForPredictedLabels, outputDirectoryPath)
 
     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
@@ -371,12 +383,18 @@ object classifierForAgro {
     counter.setCount("inflAndAdvModified", inflectedAndAdvModified)
 
 
-    println("printing the value of counter below me in double")
+    //println("printing the value of counter below me in double")
     //println(f"$counter(1)%1.5f")
     println(counter.toString())
     //val datum2 = new RVFDatum[String, String]("notgradable", counter)
     val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
 
+   // just for testing purposes
+//    if(myAdjToCheck=="immediate")
+//    {
+//      println(datum2.toString())
+//
+//    }
     // println("number of features is:" + datum2.features())
 
     datasetToAdd += datum2
