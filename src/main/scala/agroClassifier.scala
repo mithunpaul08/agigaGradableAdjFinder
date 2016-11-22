@@ -1,5 +1,11 @@
 package agiga
 
+import java.lang.Object
+import java.io.OutputStream
+import java.io.ByteArrayOutputStream
+
+import java.io.ObjectOutputStream
+
 import java.io._
 import scala.collection.mutable.ArrayBuffer
 import org.slf4j.LoggerFactory
@@ -41,7 +47,7 @@ object classifierForAgro {
 
   var GPCombined_Uniq = "GPCombined_Uniq"
 
-  val fadjAndItsDatum="adjAndItsDatum.txt"
+  val fadjAndItsDatum = "adjAndItsDatum.txt"
 
   //path in laptop
   //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
@@ -168,11 +174,11 @@ object classifierForAgro {
       val adjToCheckD = individualAdjLabels(0);
       val labelOfGivenAdj = individualAdjLabels(1);
       //add only if the adj is not present in both files
-//      if(adjToCheckD=="immediate")
-//        {
-//          println("found immediate")
-//
-//        }
+      //      if(adjToCheckD=="immediate")
+      //        {
+      //          println("found immediate")
+      //
+      //        }
       if (!ratioCalculator.isAdjPresentInBothClasses(adjToCheckD)) {
 
         val characterNgramCounts = ratioCalculator.FindNgramCharacterFrequencyGivenAdjective(adjToCheckD)
@@ -186,19 +192,39 @@ object classifierForAgro {
         else if (labelOfGivenAdj == "notgradable") {
           numberOfGoldNonGradable = numberOfGoldNonGradable + 1
         }
-        listOfAdjWithoutAmbgiuousOnes+=adjToCheckD;
-         findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels, characterNgramCounts)
-        //findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
+        listOfAdjWithoutAmbgiuousOnes += adjToCheckD;
+
+
+        //adding ngrams is reducing accuracy. need to ask mihai
+        //findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels, characterNgramCounts)
+        findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
       }
     }
 
-    //printing the counter values of individual adjectives- used for testing the ncharacter ngrams
-//    for (perAdjValues<-datasetForFillingMixedAdjCounterLabels.values) {
-//      println("-----")
-//      println("This adjective has:"+perAdjValues.length+" feature vector values")
-//      println(perAdjValues.mkString("\n"))
-//    }
-//    println(datasetForFillingMixedAdjCounterLabels.labels.length);
+    //start of code to test deep copy
+//    val length=datasetForFillingMixedAdjCounterLabels.size
+//
+//    //val unScaledDataset =datasetForFillingMixedAdjCounterLabels
+//    val unScaledDataset = deepCopy(datasetForFillingMixedAdjCounterLabels).asInstanceOf[RVFDataset[String, String]]
+//
+//    val counter2 = new Counter[String];
+//    counter2.setCount("inflectedRatio", 23)
+//    counter2.setCount("advrbModifiedRatio", 12)
+//    counter2.setCount("inflAndAdvModified", 345)
+//    val datum2 = new RVFDatum [String, String]("thendi", counter2);
+//    datasetForFillingMixedAdjCounterLabels += datum2
+//
+//
+//    //
+//    //
+//    //
+//    //
+//    val length2=datasetForFillingMixedAdjCounterLabels.size
+//    val length3=unScaledDataset.size
+//
+
+    //end of code to test deep copy
+
 
     //train the classifier
     println("\n")
@@ -237,7 +263,6 @@ object classifierForAgro {
 
     //code for scaling only the 9 folds of training data set, and not the 1 fold of test dataset
     val predictedLabels = mithunsCrossValidate(datasetForFillingMixedAdjCounterLabels, factory, 10) // for 10-fold cross-validation
-    //val predictedLabels = mithunsCrossValidate(dataset, factory, 10) // for 10-fold cross-validation
 
 
     //calculate acccuracy.
@@ -247,22 +272,21 @@ object classifierForAgro {
 
     var totalCount = 0;
     var countCorrectlyPredicted: Double = 0;
-    for ((actualLabel,predictedLabel) <- predictedLabels) {
+    for ((actualLabel, predictedLabel) <- predictedLabels) {
       totalCount = totalCount + 1;
 
       //just store into an array of strings for printing purposes
       //var predictedValuesToPrint = ArrayBuffer[String]()
-      val adjValue=listOfAdjWithoutAmbgiuousOnes(countForAdjArray)
-      val goldLabel=actualLabel
-      val predictedValuesToPrint="adj:"+adjValue+" GoldLabel:"+goldLabel+" PredictedLabel:"+predictedLabel
+      val adjValue = listOfAdjWithoutAmbgiuousOnes(countForAdjArray)
+      val goldLabel = actualLabel
+      val predictedValuesToPrint = "adj:" + adjValue + " GoldLabel:" + goldLabel + " PredictedLabel:" + predictedLabel
 
-//      if(goldLabel!=actualLabel)
-//        {
-//          println("goldlabel wrong for adjective:"+adjValue)
-//          System.exit(1)
-//
-//        }
-
+      //      if(goldLabel!=actualLabel)
+      //        {
+      //          println("goldlabel wrong for adjective:"+adjValue)
+      //          System.exit(1)
+      //
+      //        }
 
 
       if (predictedLabel == actualLabel) {
@@ -278,11 +302,10 @@ object classifierForAgro {
 
 
     }
-    if(!(totalCount==listOfAdjWithoutAmbgiuousOnes.length))
-      {
-        println("error in input and output lists")
+    if (!(totalCount == listOfAdjWithoutAmbgiuousOnes.length)) {
+      println("error in input and output lists")
 
-      }
+    }
 
     //println("value of adjGoldPredicted is: ")
     //println(adjGoldPredicted.mkString("\n"))
@@ -321,16 +344,17 @@ object classifierForAgro {
     println(accuracy1)
 
   }
-//
-//  // Fisher-Yates shuffle, see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
-//  def myShuffle[T](array: Array[T]): Array[T] = {
-//    val rnd = new java.util.Random
-//    for (n <- Iterator.range(array.length - 1, 0, -1)) {
-//      val k = rnd.nextInt(n + 1)
-//      val t = array(k); array(k) = array(n); array(n) = t
-//    }
-//    return array
-//  }
+
+  //
+  //  // Fisher-Yates shuffle, see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+  //  def myShuffle[T](array: Array[T]): Array[T] = {
+  //    val rnd = new java.util.Random
+  //    for (n <- Iterator.range(array.length - 1, 0, -1)) {
+  //      val k = rnd.nextInt(n + 1)
+  //      val t = array(k); array(k) = array(n); array(n) = t
+  //    }
+  //    return array
+  //  }
 
 
   def findRatiosOfGivenAdjectivesAndAddToDataset(myAdjToCheck: String, labelOfGivenAdj: String, datasetToAdd: RVFDataset[String, String]): Unit = {
@@ -399,12 +423,12 @@ object classifierForAgro {
     //val datum2 = new RVFDatum[String, String]("notgradable", counter)
     val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
 
-   // just for testing purposes
-//    if(myAdjToCheck=="immediate")
-//    {
-//      println(datum2.toString())
-//
-//    }
+    // just for testing purposes
+    //    if(myAdjToCheck=="immediate")
+    //    {
+    //      println(datum2.toString())
+    //
+    //    }
     // println("number of features is:" + datum2.features())
 
     datasetToAdd += datum2
@@ -486,13 +510,12 @@ object classifierForAgro {
     //val datum2 = new RVFDatum[String, String]("notgradable", counter)
     val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
 
-    var adjAndItsDatum = "\n"+"adj:"+myAdjToCheck+" "+datum2+"\n"
+    var adjAndItsDatum = "\n" + "adj:" + myAdjToCheck + " " + datum2 + "\n"
 
 
 
     //    println("the datum of the adjective:"+myAdjToCheck+"is:")
-//    println(datum2.toString())
-
+    //    println(datum2.toString())
 
 
     ratioCalculator.appendToFile(adjAndItsDatum, fadjAndItsDatum, outputDirectoryPath)
@@ -500,29 +523,76 @@ object classifierForAgro {
     datasetToAdd += datum2
 
 
+  }
+
+  def deepCopy[L, F](datasetToCopy: RVFDataset[L, F]): AnyRef = {
+
+
+    val baos = new ByteArrayOutputStream();
+    val oos = new ObjectOutputStream(baos);
+    oos.writeObject(datasetToCopy);
+    val bais = new ByteArrayInputStream(baos.toByteArray());
+    val ois = new ObjectInputStream(bais);
+
+
+    var copiedRVFDataset = new RVFDataset[String, String]
+    var tempAnyRef: AnyRef = new AnyRef();
+    tempAnyRef = ois.readObject();
+    //copiedRVFDataset=tempAnyRef;
+    //return copiedRVFDataset
+    return tempAnyRef
+
+    //util.Marshal.load[A](util.Marshal.dump(a))
+
 
   }
+
 
   /**
     * Implements classic cross validation; producing pairs of gold/predicted labels across the training dataset
     */
   def mithunsCrossValidate[L, F](
-                                  dataset: RVFDataset[L, F],
+                                  dataSetTotrain: RVFDataset[L, F],
                                   classifierFactory: () => Classifier[L, F],
                                   numFolds: Int): Iterable[(L, L)] = {
 
-    val folds = Datasets.mkFolds(numFolds, dataset.size)
+    val folds = Datasets.mkFolds(numFolds, dataSetTotrain.size)
+    //make a deep copy of unscaled dataset, and give it to testing. Then scale the rest and give it to training
+
+
+   val unScaledDataset = deepCopy(dataSetTotrain).asInstanceOf[RVFDataset[L,F]]
+
+    //scale it before training, but not in testing.
+    val scaleRangesFromTraining = Datasets.svmScaleDataset(dataSetTotrain, lower = -1, upper = 1)
+
+    //val scaleRangesFromTraining = Datasets.svmScaleDataset(dataSetTotrain, -1, 1)
+
+
     val output = new ListBuffer[(L, L)]
     for (fold <- folds) {
 
-      //make a copy of unscaled dataset, and give it to testing. Then scale the rest and give it to training
-      val unScaledDataset = dataset;
       val classifier = classifierFactory()
-      //scale it before training, but not in testing.
-      val scaleRanges = Datasets.svmScaleDataset(dataset, lower = -1, upper = 1)
-      classifier.train(dataset, Some(fold.trainFolds))
+
+
+      classifier.train(dataSetTotrain, Some(fold.trainFolds))
+
+
       for (i <- fold.testFold._1 until fold.testFold._2) {
-        val sys = classifier.classOf(unScaledDataset.mkDatum(i))
+        var testDatum = unScaledDataset.mkDatum(i)
+        //def svmScaleDatum[F](features:Counter[F], ranges:ScaleRange[F], lower:Double = -1, upper:Double = 1):Counter[F] = {
+        //val retScaledTestDatum = Datasets.svmScaleDatum(testDatum.featuresCounter, scaleRangesFromTraining, -1, 1)
+        val retScaledTestDatum = Datasets.svmScaleDatum(testDatum.featuresCounter, scaleRangesFromTraining)
+
+
+//        //by now retScaledTestDatum has the scaled values of features. Either replace it with that of testDatum. or create a new datum itself.
+//        var tempCounter = new Counter[F];
+//        tempCounter=retScaledTestDatum;
+
+        val datumToTest = new RVFDatum[L,F](testDatum.label, retScaledTestDatum);
+
+        //val sys = classifier.classOf(unScaledDataset.mkDatum(i))
+        //val sys = classifier.classOf(testDatum)
+        val sys = classifier.classOf(datumToTest)
         val gold = unScaledDataset.labels(i)
         output += new Tuple2(unScaledDataset.labelLexicon.get(gold), sys)
       }
