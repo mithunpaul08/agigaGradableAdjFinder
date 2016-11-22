@@ -236,8 +236,8 @@ object classifierForAgro {
 
 
     //code for LogisticRegressionClassifier with bias
-    def factory() = new LogisticRegressionClassifier[String, String](bias = false)
-    val myClassifier = new LogisticRegressionClassifier[String, String](bias = false)
+    def factory() = new LogisticRegressionClassifier[String, String](bias = true)
+    val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
     println("doing LogisticRegressionClassifier...");
     //myClassifier.train(dataset)
     myClassifier.train(datasetForFillingMixedAdjCounterLabels)

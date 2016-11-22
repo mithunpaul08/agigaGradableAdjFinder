@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/AllUniqueAdjInAgiga.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/allAdjCombined_withWordCount.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/mainParser$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/mainParser$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" afterPath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
     </list>
     <ignored path="hello.iws" />
@@ -63,13 +56,13 @@
       <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="239" column="84" selection-start-line="239" selection-start-column="84" selection-end-line="239" selection-end-column="84" />
+            <state relative-caret-position="180">
+              <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
               <folding>
                 <element signature="e#15#38#0" expanded="true" />
-                <element signature="e#13545#16683#0" expanded="false" />
-                <element signature="e#16687#20141#0" expanded="false" />
-                <element signature="e#20545#20667#0" expanded="false" />
+                <element signature="e#13543#16681#0" expanded="false" />
+                <element signature="e#16685#20139#0" expanded="false" />
+                <element signature="e#20543#20665#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -849,9 +842,9 @@
           <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="e#15#38#0" expanded="true" />
-            <element signature="e#13545#16683#0" expanded="false" />
-            <element signature="e#16687#20141#0" expanded="false" />
-            <element signature="e#20545#20667#0" expanded="false" />
+            <element signature="e#13543#16681#0" expanded="false" />
+            <element signature="e#16685#20139#0" expanded="false" />
+            <element signature="e#20543#20665#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -894,9 +887,9 @@
           <caret line="343" column="21" selection-start-line="343" selection-start-column="21" selection-end-line="343" selection-end-column="21" />
           <folding>
             <element signature="e#15#38#0" expanded="true" />
-            <element signature="e#13545#16683#0" expanded="false" />
-            <element signature="e#16687#20141#0" expanded="false" />
-            <element signature="e#20545#20667#0" expanded="false" />
+            <element signature="e#13543#16681#0" expanded="false" />
+            <element signature="e#16685#20139#0" expanded="false" />
+            <element signature="e#20543#20665#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1104,13 +1097,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="239" column="84" selection-start-line="239" selection-start-column="84" selection-end-line="239" selection-end-column="84" />
+        <state relative-caret-position="180">
+          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
           <folding>
             <element signature="e#15#38#0" expanded="true" />
-            <element signature="e#13545#16683#0" expanded="false" />
-            <element signature="e#16687#20141#0" expanded="false" />
-            <element signature="e#20545#20667#0" expanded="false" />
+            <element signature="e#13543#16681#0" expanded="false" />
+            <element signature="e#16685#20139#0" expanded="false" />
+            <element signature="e#20543#20665#0" expanded="false" />
           </folding>
         </state>
       </provider>
