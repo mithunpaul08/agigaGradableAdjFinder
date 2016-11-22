@@ -353,18 +353,6 @@ object classifierForAgro {
 
   }
 
-  //
-  //  // Fisher-Yates shuffle, see: http://en.wikipedia.org/wiki/Fisher–Yates_shuffle
-  //  def myShuffle[T](array: Array[T]): Array[T] = {
-  //    val rnd = new java.util.Random
-  //    for (n <- Iterator.range(array.length - 1, 0, -1)) {
-  //      val k = rnd.nextInt(n + 1)
-  //      val t = array(k); array(k) = array(n); array(n) = t
-  //    }
-  //    return array
-  //  }
-
-
   def findRatiosOfGivenAdjectivesAndAddToDataset(myAdjToCheck: String, labelOfGivenAdj: String, datasetToAdd: RVFDataset[String, String]): Unit = {
     //for each given adjective find all 3 ratios, attach its corresponding label, and send back a full filled RVFdataset
 
@@ -431,12 +419,12 @@ object classifierForAgro {
     //val datum2 = new RVFDatum[String, String]("notgradable", counter)
     val datum2 = new RVFDatum[String, String](labelOfGivenAdj, counter);
 
-    // just for testing purposes
-    //    if(myAdjToCheck=="immediate")
-    //    {
-    //      println(datum2.toString())
-    //
-    //    }
+     //just for testing purposes
+        if(myAdjToCheck=="few")
+        {
+          println(datum2.toString())
+
+        }
     // println("number of features is:" + datum2.features())
 
     datasetToAdd += datum2
@@ -565,7 +553,9 @@ object classifierForAgro {
       val classifier = classifierFactory()
       classifier.train(dataSetTotrain, Some(fold.trainFolds))
       for (i <- fold.testFold._1 until fold.testFold._2) {
+
         var testDatum = unScaledDataset.mkDatum(i)
+
         val retScaledTestDatum = Datasets.svmScaleDatum(testDatum.featuresCounter, scaleRangesFromTraining)
         val datumToTest = new RVFDatum[L,F](testDatum.label, retScaledTestDatum);
         val sys = classifier.classOf(datumToTest)
