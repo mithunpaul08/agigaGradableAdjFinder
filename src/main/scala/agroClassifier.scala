@@ -63,6 +63,7 @@ object classifierForAgro {
   var completeAgigaFileWithFrequency = "allAdjCombined_withWordCount.txt";
 
   var outputFileForPredictedLabels = "outputFileForPredictedLabels.txt";
+  val outputFileForWronglyPredictedLabels = "outputFileForWronglyPredictedLabels.txt";
 
 
   def initializeAndClassify(runOnServer: Boolean, hashmapOfColderCold: Map[String, String]): Unit = {
@@ -71,6 +72,7 @@ object classifierForAgro {
     //var adjGoldPredicted = ArrayBuffer.fill(508,3)("")
     //var adjGoldPredicted = ArrayBuffer.fill(509, 3)("")
     var adjGoldPredicted = ArrayBuffer[String]()
+    var wronglyPredictedAdjectives = ArrayBuffer[String]()
     //var listOfAllAdjectives = ArrayBuffer[ArrayBuffer[String,String]]()
     var listOfAllAdjectives = ArrayBuffer.fill(1, 2)("");
 
@@ -291,8 +293,13 @@ object classifierForAgro {
 
       if (predictedLabel == actualLabel) {
         countCorrectlyPredicted = countCorrectlyPredicted + 1;
-
       }
+      else {
+        val wronglyPredAdj = "adj:" + adjValue + " GoldLabel:" + goldLabel + " PredictedLabel:" + predictedLabel
+        wronglyPredictedAdjectives += wronglyPredAdj;
+      }
+
+
 
       //build a tuple of [adjective, predictedLabel, ActualLabel]- used for checking status of each adjective Eg:happy
 
@@ -302,14 +309,15 @@ object classifierForAgro {
 
 
     }
-    if (!(totalCount == listOfAdjWithoutAmbgiuousOnes.length)) {
-      println("error in input and output lists")
-
-    }
+//    if (!(totalCount == listOfAdjWithoutAmbgiuousOnes.length)) {
+//      println("error in input and output lists")
+//
+//    }
 
     //println("value of adjGoldPredicted is: ")
     //println(adjGoldPredicted.mkString("\n"))
     ratioCalculator.writeToFile(adjGoldPredicted.mkString("\n"), outputFileForPredictedLabels, outputDirectoryPath)
+    ratioCalculator.writeToFile(wronglyPredictedAdjectives.mkString("\n"), outputFileForWronglyPredictedLabels, outputDirectoryPath)
 
     val accuracy = (countCorrectlyPredicted / totalCount) * 100;
     // println("value of countCorrectlyPredicted is:"+countCorrectlyPredicted)
