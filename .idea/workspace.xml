@@ -2,29 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$5.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$6.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$7.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$5.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/outputs/adjAndItsDatum.txt" afterPath="$PROJECT_DIR$/src/main/outputs/adjAndItsDatum.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/outputs/outputFileForPredictedLabels.txt" afterPath="$PROJECT_DIR$/src/main/outputs/outputFileForPredictedLabels.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" afterPath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/mainFile.scala" afterPath="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
     </list>
     <ignored path="hello.iws" />
@@ -66,7 +43,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
@@ -176,8 +163,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
       </list>
     </option>
   </component>
@@ -984,14 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/DatasetFold.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1118,6 +1097,14 @@
             <element signature="e#16685#20139#0" expanded="false" />
             <element signature="e#20143#20717#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
