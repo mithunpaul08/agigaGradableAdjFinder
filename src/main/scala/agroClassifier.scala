@@ -41,6 +41,8 @@ object classifierForAgro {
 
   var GPCombined_Uniq = "GPCombined_Uniq"
 
+  val fadjAndItsDatum="adjAndItsDatum.txt"
+
   //path in laptop
   //var resourcesDirectory = "/Users/mithun/agro/agigaGradableAdjFinder/src/main/resources/"
 
@@ -154,6 +156,13 @@ object classifierForAgro {
     //after prediction
     //var listOfAllAdjectivesAfterShuffling:Array[String];
 
+    //remove teh outputfile which stores the datums
+    val outFile = new File(outputDirectoryPath, fadjAndItsDatum)
+    //remove if it exists. And create a new one to append And keep adding to it- in the for loop below.
+    if (outFile.exists) {
+      outFile.delete()
+    }
+    ratioCalculator.writeToFile("", fadjAndItsDatum, outputDirectoryPath)
     //for each of the adjectives, find its ratios and labels and add it into the dataset.
     for (individualAdjLabels <- listOfAllAdjectivesShuffled) {
       val adjToCheckD = individualAdjLabels(0);
@@ -178,8 +187,8 @@ object classifierForAgro {
           numberOfGoldNonGradable = numberOfGoldNonGradable + 1
         }
         listOfAdjWithoutAmbgiuousOnes+=adjToCheckD;
-        // findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels, characterNgramCounts)
-        findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
+         findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels, characterNgramCounts)
+        //findRatiosOfGivenAdjectivesAndAddToDataset(adjToCheckD, labelOfGivenAdj, datasetForFillingMixedAdjCounterLabels)
       }
     }
 
@@ -218,6 +227,7 @@ object classifierForAgro {
 
     //cant get weights for LibSVMClassifier
     val weights = myClassifier.getWeights()
+    
     println("done with getting weights...");
     println(s"""Weights for the positive class: ${weights.get("gradable")}""")
     println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
@@ -485,7 +495,7 @@ object classifierForAgro {
 
 
 
-    ratioCalculator.appendToFile(adjAndItsDatum, "adjAndItsDatum.txt", outputDirectoryPath)
+    ratioCalculator.appendToFile(adjAndItsDatum, fadjAndItsDatum, outputDirectoryPath)
 
     datasetToAdd += datum2
 

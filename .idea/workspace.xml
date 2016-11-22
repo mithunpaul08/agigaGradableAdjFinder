@@ -2,7 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bc35c5-a126-4f47-bf1e-fcef43fc86d2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$5.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$6.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$7.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$5.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$initializeAndClassify$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$$anonfun$mithunsCrossValidate$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/classifierForAgro.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$FindNgramCharacterFrequencyGivenAdjective$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadAllAdjectivesAndFrequencyToHashmap$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadAllAdjectivesAndFrequencyToHashmap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadAllAdvAdjectivesAndFrequencyToHashmap$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadAllAdvAdjectivesAndFrequencyToHashmap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadCommonAdjInBothClassesToHashmap$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$$anonfun$ReadCommonAdjInBothClassesToHashmap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/agiga/ratioCalculator$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/outputs/adjAndItsDatum.txt" afterPath="$PROJECT_DIR$/src/main/outputs/adjAndItsDatum.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/outputs/outputFileForPredictedLabels.txt" afterPath="$PROJECT_DIR$/src/main/outputs/outputFileForPredictedLabels.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" afterPath="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/mainFile.scala" afterPath="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" afterPath="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
     </list>
     <ignored path="hello.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainFile.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="210">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -63,14 +94,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="agroClassifier.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+            <state relative-caret-position="191">
+              <caret line="229" column="4" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="4" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
-                <element signature="e#19145#19267#0" expanded="false" />
+                <element signature="e#19539#19661#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -109,11 +140,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LibLinearClassifier.scala" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/LibLinearClassifier.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ratioCalculator.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="164" column="30" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="30" />
+            <state relative-caret-position="296">
+              <caret line="407" column="27" selection-start-line="407" selection-start-column="27" selection-end-line="407" selection-end-column="27" />
               <folding>
                 <element signature="e#15#47#0" expanded="true" />
               </folding>
@@ -147,9 +188,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ratioCalculator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/agroClassifier.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/mainFile.scala" />
       </list>
     </option>
   </component>
@@ -587,7 +628,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33639494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33639494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -597,7 +638,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39839265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39839265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -623,51 +664,33 @@
       <breakpoints>
         <line-breakpoint type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>284</line>
-          <properties />
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>191</line>
+          <line>200</line>
           <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>189</line>
+          <line>198</line>
           <properties />
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>278</line>
-          <properties />
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>163</line>
+          <line>172</line>
           <properties />
           <option name="timeStamp" value="141" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>394</line>
+          <line>404</line>
           <properties />
           <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala</url>
-          <line>272</line>
-          <properties />
-          <option name="timeStamp" value="143" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="144" />
+      <option name="time" value="145" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -697,7 +720,7 @@
           <caret line="229" column="39" selection-start-line="229" selection-start-column="39" selection-end-line="229" selection-end-column="39" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
-            <element signature="e#19145#19267#0" expanded="false" />
+            <element signature="e#19539#19661#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -865,7 +888,7 @@
           <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
-            <element signature="e#19145#19267#0" expanded="false" />
+            <element signature="e#19539#19661#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -908,7 +931,7 @@
           <caret line="343" column="21" selection-start-line="343" selection-start-column="21" selection-end-line="343" selection-end-column="21" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
-            <element signature="e#19145#19267#0" expanded="false" />
+            <element signature="e#19539#19661#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -948,16 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/LibLinearClassifier.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding>
-            <element signature="e#29#70#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1011,14 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="125" column="29" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/Datum.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -1027,32 +1032,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/compareErAdjWithUniq.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="125" column="29" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ratioCalculator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="164" column="30" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="30" />
+        <state relative-caret-position="296">
+          <caret line="407" column="27" selection-start-line="407" selection-start-column="27" selection-end-line="407" selection-end-column="27" />
           <folding>
             <element signature="e#15#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.clulab/processors-main_2.11/srcs/processors-main_2.11-6.0.0-sources.jar!/org/clulab/learning/LibLinearClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#31#0" expanded="true" />
-            <element signature="e#19145#19267#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="182">
+          <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mainFile.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/agroClassifier.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="191">
+          <caret line="229" column="4" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="4" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+            <element signature="e#19539#19661#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

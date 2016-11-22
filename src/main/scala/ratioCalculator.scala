@@ -392,12 +392,6 @@ object ratioCalculator {
   def appendToFile(stringToWrite: String, outputFilename: String, outputDirectoryPath: String): Unit = {
 
     val outFile = new File(outputDirectoryPath, outputFilename)
-
-    //remove if it exists. And keep adding to it.
-
-    if (outFile.exists) {
-      outFile.delete()
-    }
     val bw = new BufferedWriter(new FileWriter(outFile, true))
     bw.write(stringToWrite)
     bw.close()
