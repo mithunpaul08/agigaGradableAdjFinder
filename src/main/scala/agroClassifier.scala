@@ -236,8 +236,8 @@ object classifierForAgro {
 
 
     //code for LogisticRegressionClassifier with bias
-    def factory() = new LogisticRegressionClassifier[String, String](bias = true)
-    val myClassifier = new LogisticRegressionClassifier[String, String](bias = true)
+    def factory() = new LogisticRegressionClassifier[String, String](bias = false)
+    val myClassifier = new LogisticRegressionClassifier[String, String](bias = false)
     println("doing LogisticRegressionClassifier...");
     //myClassifier.train(dataset)
     myClassifier.train(datasetForFillingMixedAdjCounterLabels)
@@ -526,25 +526,14 @@ object classifierForAgro {
   }
 
   def deepCopy[L, F](datasetToCopy: RVFDataset[L, F]): AnyRef = {
-
-
     val baos = new ByteArrayOutputStream();
     val oos = new ObjectOutputStream(baos);
     oos.writeObject(datasetToCopy);
     val bais = new ByteArrayInputStream(baos.toByteArray());
     val ois = new ObjectInputStream(bais);
-
-
-    var copiedRVFDataset = new RVFDataset[String, String]
     var tempAnyRef: AnyRef = new AnyRef();
     tempAnyRef = ois.readObject();
-    //copiedRVFDataset=tempAnyRef;
-    //return copiedRVFDataset
     return tempAnyRef
-
-    //util.Marshal.load[A](util.Marshal.dump(a))
-
-
   }
 
 
@@ -558,40 +547,19 @@ object classifierForAgro {
 
     val folds = Datasets.mkFolds(numFolds, dataSetTotrain.size)
     //make a deep copy of unscaled dataset, and give it to testing. Then scale the rest and give it to training
-
-
    val unScaledDataset = deepCopy(dataSetTotrain).asInstanceOf[RVFDataset[L,F]]
 
     //scale it before training, but not in testing.
     val scaleRangesFromTraining = Datasets.svmScaleDataset(dataSetTotrain, lower = -1, upper = 1)
 
-    //val scaleRangesFromTraining = Datasets.svmScaleDataset(dataSetTotrain, -1, 1)
-
-
     val output = new ListBuffer[(L, L)]
     for (fold <- folds) {
-
       val classifier = classifierFactory()
-
-
       classifier.train(dataSetTotrain, Some(fold.trainFolds))
-
-
       for (i <- fold.testFold._1 until fold.testFold._2) {
         var testDatum = unScaledDataset.mkDatum(i)
-        //def svmScaleDatum[F](features:Counter[F], ranges:ScaleRange[F], lower:Double = -1, upper:Double = 1):Counter[F] = {
-        //val retScaledTestDatum = Datasets.svmScaleDatum(testDatum.featuresCounter, scaleRangesFromTraining, -1, 1)
         val retScaledTestDatum = Datasets.svmScaleDatum(testDatum.featuresCounter, scaleRangesFromTraining)
-
-
-//        //by now retScaledTestDatum has the scaled values of features. Either replace it with that of testDatum. or create a new datum itself.
-//        var tempCounter = new Counter[F];
-//        tempCounter=retScaledTestDatum;
-
         val datumToTest = new RVFDatum[L,F](testDatum.label, retScaledTestDatum);
-
-        //val sys = classifier.classOf(unScaledDataset.mkDatum(i))
-        //val sys = classifier.classOf(testDatum)
         val sys = classifier.classOf(datumToTest)
         val gold = unScaledDataset.labels(i)
         output += new Tuple2(unScaledDataset.labelLexicon.get(gold), sys)
