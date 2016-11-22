@@ -3,7 +3,7 @@ package agiga
 import scala.util.matching.Regex
 import util.control.Breaks._
 import java.io.{BufferedWriter, File, FileWriter}
-
+import scala.util;
 import org.clulab.learning.{Datasets, PerceptronClassifier, RVFDataset, RVFDatum}
 import org.clulab.struct.Counter
 
@@ -385,6 +385,17 @@ object ratioCalculator {
     //write the inflected value count also to file
     writeToFile(hashMapOfInflectedAdjectivesAndItsCount.mkString("\n"), outputFileNameForInflectedAdjectiveCount, outputDirectoryPath)
 
+  }
+
+
+
+  def appendToFile(stringToWrite: String, outputFilename: String, outputDirectoryPath: String): Unit = {
+    //FileUtils.deleteQuietly(new File(path))
+
+    val outFile = new File(outputDirectoryPath, outputFilename)
+    val bw = new BufferedWriter(new FileWriter(outFile,true))
+    bw.write(stringToWrite)
+    bw.close()
   }
 
   def writeToFile(stringToWrite: String, outputFilename: String, outputDirectoryPath: String): Unit = {

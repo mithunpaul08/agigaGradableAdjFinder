@@ -1,0 +1,766 @@
+
+adj:big LABEL:gradable FEATURES:inflectedRatio:0.0018225185115159537, st$:1.0, inflAndAdvModified:9.089867887860118E-7, ig$:1.0, ges:1.0, $bi:3.0, est:1.0, advrbModifiedRatio:0.05959953678033243, ige:2.0, er$:1.0, big:3.0, ger:1.0
+
+adj:prospective LABEL:notgradable FEATURES:inflectedRatio:0.0, pro:1.0, spe:1.0, ros:1.0, ive:1.0, inflAndAdvModified:0.0, $pr:1.0, osp:1.0, ect:1.0, advrbModifiedRatio:0.0019773344351316255, cti:1.0, tiv:1.0, ve$:1.0, pec:1.0
+
+adj:good LABEL:gradable FEATURES:inflectedRatio:5.232602251588749E-6, ood:3.0, goo:3.0, st$:1.0, inflAndAdvModified:1.5697806754766247E-6, des:1.0, od$:1.0, est:1.0, advrbModifiedRatio:0.15408653154343452, ode:2.0, $go:3.0, er$:1.0, der:1.0
+
+adj:real-estate LABEL:notgradable FEATURES:sta:1.0, eal:1.0, -es:1.0, inflectedRatio:0.0, tat:1.0, $re:1.0, inflAndAdvModified:0.0, al-:1.0, te$:1.0, est:1.0, advrbModifiedRatio:0.013513513513513514, ate:1.0, rea:1.0, l-e:1.0
+
+adj:familiar LABEL:gradable FEATURES:ami:1.0, inflectedRatio:0.0, ar$:1.0, lia:1.0, fam:1.0, mil:1.0, inflAndAdvModified:0.0, ili:1.0, iar:1.0, advrbModifiedRatio:0.06237500342456371, $fa:1.0
+
+adj:wide LABEL:gradable FEATURES:de$:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, wid:1.0, advrbModifiedRatio:0.054000248316372186, ide:1.0, $wi:1.0
+
+adj:popular LABEL:gradable FEATURES:opu:2.0, inflectedRatio:2.436676860098198E-6, ula:2.0, ar$:1.0, st$:1.0, inflAndAdvModified:0.0, lar:2.0, are:1.0, $po:2.0, est:1.0, advrbModifiedRatio:0.06506658219520219, res:1.0, pop:2.0, pul:2.0
+
+adj:blue-chip LABEL:notgradable FEATURES:blu:1.0, e-c:1.0, inflectedRatio:7.659020411289396E-5, chi:1.0, ue-:1.0, ip$:1.0, inflAndAdvModified:0.0, -ch:1.0, $bl:1.0, lue:1.0, advrbModifiedRatio:0.0016849844904836672, hip:1.0
+
+adj:potential LABEL:notgradable FEATURES:ote:1.0, inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, pot:1.0, $po:1.0, ent:1.0, tia:1.0, advrbModifiedRatio:0.002582137569291678, ial:1.0, ten:1.0, nti:1.0
+
+adj:extensive LABEL:gradable FEATURES:ens:1.0, inflectedRatio:0.0, ive:1.0, inflAndAdvModified:0.0, nsi:1.0, $ex:1.0, advrbModifiedRatio:0.02502888375399929, ten:1.0, ve$:1.0, xte:1.0, siv:1.0, ext:1.0
+
+adj:technological LABEL:notgradable FEATURES:inflectedRatio:0.0, log:1.0, hno:1.0, inflAndAdvModified:0.0, $te:1.0, ogi:1.0, al$:1.0, gic:1.0, chn:1.0, ech:1.0, tec:1.0, olo:1.0, cal:1.0, ica:1.0, advrbModifiedRatio:0.0016889268519956514, nol:1.0
+
+adj:sure LABEL:gradable FEATURES:inflectedRatio:0.0, re$:1.0, inflAndAdvModified:0.0, $su:1.0, ure:1.0, advrbModifiedRatio:0.04818154274515519, sur:1.0
+
+adj:australian LABEL:notgradable FEATURES:ian:1.0, $au:1.0, inflectedRatio:0.0, ust:1.0, str:1.0, tra:1.0, ali:1.0, lia:1.0, inflAndAdvModified:0.0, ral:1.0, advrbModifiedRatio:9.563830005774819E-4, an$:1.0, aus:1.0
+
+adj:standard LABEL:notgradable FEATURES:sta:1.0, inflectedRatio:0.0, tan:1.0, and:1.0, dar:1.0, inflAndAdvModified:0.0, nda:1.0, rd$:1.0, advrbModifiedRatio:0.015494022638366882, ard:1.0, $st:1.0
+
+adj:slight LABEL:gradable FEATURES:ht$:1.0, ght:3.0, inflectedRatio:0.01388442783309487, tes:1.0, hte:2.0, st$:1.0, sli:3.0, inflAndAdvModified:7.007913101877537E-4, lig:3.0, $sl:3.0, ter:1.0, est:1.0, advrbModifiedRatio:0.04358045960230093, igh:3.0, er$:1.0
+
+adj:slow LABEL:gradable FEATURES:inflectedRatio:0.011120211693548387, wes:1.0, slo:3.0, st$:1.0, inflAndAdvModified:0.03453881048387097, wer:1.0, $sl:3.0, est:1.0, advrbModifiedRatio:0.10801411290322581, ow$:1.0, er$:1.0, owe:2.0, low:3.0
+
+adj:direct LABEL:gradable FEATURES:$di:1.0, rec:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, dir:1.0, ect:1.0, advrbModifiedRatio:0.007975469623526861, ct$:1.0, ire:1.0
+
+adj:criminal LABEL:notgradable FEATURES:inflectedRatio:0.0, imi:1.0, rim:1.0, $cr:1.0, al$:1.0, inflAndAdvModified:0.0, cri:1.0, ina:1.0, min:1.0, advrbModifiedRatio:0.0032721512831557155, nal:1.0
+
+adj:plastic LABEL:notgradable FEATURES:inflectedRatio:0.0, ast:1.0, sti:1.0, las:1.0, inflAndAdvModified:0.0, $pl:1.0, advrbModifiedRatio:0.00770664224124317, pla:1.0, tic:1.0, ic$:1.0
+
+adj:sexual LABEL:notgradable FEATURES:inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, exu:1.0, ual:1.0, advrbModifiedRatio:0.002978927023324764, sex:1.0, $se:1.0, xua:1.0
+
+adj:sound LABEL:gradable FEATURES:sou:3.0, inflectedRatio:0.00864183852740539, nde:2.0, st$:1.0, inflAndAdvModified:0.001234548361057913, und:3.0, $so:3.0, des:1.0, oun:3.0, est:1.0, advrbModifiedRatio:0.03977461578639148, er$:1.0, der:1.0, nd$:1.0
+
+adj:hourly LABEL:notgradable FEATURES:ly$:1.0, inflectedRatio:0.0, rly:1.0, our:1.0, url:1.0, inflAndAdvModified:0.0, $ho:1.0, advrbModifiedRatio:0.006550626988583193, hou:1.0
+
+adj:cautious LABEL:gradable FEATURES:tio:1.0, us$:1.0, ous:1.0, inflectedRatio:0.0, aut:1.0, inflAndAdvModified:0.0, iou:1.0, cau:1.0, uti:1.0, advrbModifiedRatio:0.11452850529519944, $ca:1.0
+
+adj:nonprofit LABEL:notgradable FEATURES:fit:1.0, pro:1.0, inflectedRatio:0.0, non:1.0, $no:1.0, inflAndAdvModified:0.0, rof:1.0, onp:1.0, npr:1.0, advrbModifiedRatio:9.387214921055062E-4, ofi:1.0, it$:1.0
+
+adj:striking LABEL:gradable FEATURES:iki:1.0, rik:1.0, inflectedRatio:0.0, str:1.0, kin:1.0, inflAndAdvModified:0.0, ing:1.0, tri:1.0, advrbModifiedRatio:0.04741445157347999, $st:1.0, ng$:1.0
+
+adj:due LABEL:notgradable FEATURES:inflectedRatio:1.331134299470608E-6, ue$:1.0, due:2.0, inflAndAdvModified:0.0, uee:1.0, eer:1.0, advrbModifiedRatio:0.02299401388905528, er$:1.0, $du:2.0
+
+adj:actual LABEL:notgradable FEATURES:$ac:1.0, inflectedRatio:0.0, al$:1.0, tua:1.0, inflAndAdvModified:0.0, ual:1.0, advrbModifiedRatio:0.0014612142902522183, ctu:1.0, act:1.0
+
+adj:minor LABEL:gradable FEATURES:inflectedRatio:0.0, inflAndAdvModified:0.0, or$:1.0, min:1.0, $mi:1.0, advrbModifiedRatio:0.08201181592039801, ino:1.0, nor:1.0
+
+adj:difficult LABEL:gradable FEATURES:$di:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, cul:1.0, dif:1.0, advrbModifiedRatio:0.18279885643366872, lt$:1.0, fic:1.0, ult:1.0, iff:1.0, ffi:1.0, icu:1.0
+
+adj:conservative LABEL:gradable FEATURES:inflectedRatio:0.0, $co:1.0, ive:1.0, inflAndAdvModified:0.0, ati:1.0, ons:1.0, erv:1.0, rva:1.0, vat:1.0, advrbModifiedRatio:0.031312517744310264, tiv:1.0, nse:1.0, ve$:1.0, ser:1.0, con:1.0
+
+adj:expensive LABEL:gradable FEATURES:ens:1.0, pen:1.0, inflectedRatio:0.0, exp:1.0, ive:1.0, inflAndAdvModified:0.0, nsi:1.0, xpe:1.0, $ex:1.0, advrbModifiedRatio:0.14187016149410764, ve$:1.0, siv:1.0
+
+adj:vast LABEL:notgradable FEATURES:vas:3.0, $va:3.0, tes:1.0, inflectedRatio:6.541941795059916E-4, ast:3.0, st$:2.0, inflAndAdvModified:3.912937148447053E-4, ter:1.0, est:1.0, advrbModifiedRatio:0.012613108339447298, ste:2.0, er$:1.0
+
+adj:nearby LABEL:notgradable FEATURES:ear:1.0, inflectedRatio:0.0, nea:1.0, by$:1.0, inflAndAdvModified:0.0, arb:1.0, $ne:1.0, advrbModifiedRatio:0.0014341297420687959, rby:1.0
+
+adj:cheap LABEL:gradable FEATURES:inflectedRatio:0.021617059189008594, ape:2.0, hea:3.0, st$:1.0, inflAndAdvModified:0.07480393421098906, pes:1.0, che:3.0, est:1.0, advrbModifiedRatio:0.08839079516546898, $ch:3.0, eap:3.0, per:1.0, er$:1.0, ap$:1.0
+
+adj:net LABEL:notgradable FEATURES:inflectedRatio:0.0, et$:1.0, inflAndAdvModified:0.0, $ne:1.0, advrbModifiedRatio:7.282319939066303E-4, net:1.0
+
+adj:tough LABEL:gradable FEATURES:oug:3.0, inflectedRatio:0.005040126852630898, ghe:2.0, $to:3.0, hes:1.0, st$:1.0, inflAndAdvModified:0.02645459840787004, her:1.0, est:1.0, ugh:3.0, advrbModifiedRatio:0.09642040428882705, er$:1.0, tou:3.0, gh$:1.0
+
+adj:total LABEL:notgradable FEATURES:tal:1.0, tot:1.0, inflectedRatio:0.0, $to:1.0, al$:1.0, ota:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:8.153309943573552E-4
+
+adj:risky LABEL:gradable FEATURES:inflectedRatio:0.02156525066972828, sky:1.0, ky$:1.0, ris:1.0, isk:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.1449100650593188, $ri:1.0
+
+adj:regional LABEL:notgradable FEATURES:inflectedRatio:0.0, $re:1.0, al$:1.0, inflAndAdvModified:0.0, gio:1.0, ona:1.0, advrbModifiedRatio:0.0013645059017109835, egi:1.0, reg:1.0, ion:1.0, nal:1.0
+
+adj:enormous LABEL:notgradable FEATURES:$en:1.0, us$:1.0, ous:1.0, orm:1.0, rmo:1.0, mou:1.0, inflectedRatio:0.0, eno:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.01169596291288391, nor:1.0
+
+adj:fixed-rate LABEL:notgradable FEATURES:inflectedRatio:0.0, $fi:1.0, inflAndAdvModified:0.0, d-r:1.0, -ra:1.0, ixe:1.0, te$:1.0, fix:1.0, advrbModifiedRatio:1.795009872554299E-4, ate:1.0, xed:1.0, rat:1.0, ed-:1.0
+
+adj:so-called LABEL:notgradable FEATURES:inflectedRatio:0.0, so-:1.0, all:1.0, inflAndAdvModified:0.0, $so:1.0, cal:1.0, advrbModifiedRatio:0.0013285700088396981, o-c:1.0, led:1.0, lle:1.0, -ca:1.0, ed$:1.0
+
+adj:fast LABEL:gradable FEATURES:tes:1.0, inflectedRatio:0.01516805061289047, ast:3.0, fas:3.0, st$:2.0, inflAndAdvModified:0.041684460260972715, ter:1.0, est:1.0, advrbModifiedRatio:0.1308264136022143, ste:2.0, er$:1.0, $fa:3.0
+
+adj:poor LABEL:gradable FEATURES:rer:1.0, inflectedRatio:0.004390094628313168, poo:3.0, st$:1.0, inflAndAdvModified:0.003655665929099383, or$:1.0, oor:3.0, $po:3.0, est:1.0, ore:2.0, advrbModifiedRatio:0.04585471493809143, er$:1.0, res:1.0
+
+adj:routine LABEL:gradable FEATURES:inflectedRatio:0.0, ine:1.0, tin:1.0, inflAndAdvModified:0.0, rou:1.0, ne$:1.0, uti:1.0, out:1.0, advrbModifiedRatio:0.03574021663431476, $ro:1.0
+
+adj:financial LABEL:notgradable FEATURES:fin:1.0, inflectedRatio:0.0, $fi:1.0, nci:1.0, nan:1.0, al$:1.0, inflAndAdvModified:0.0, ina:1.0, cia:1.0, anc:1.0, advrbModifiedRatio:8.169271319412649E-4, ial:1.0
+
+adj:congressional LABEL:notgradable FEATURES:ess:1.0, inflectedRatio:0.0, $co:1.0, inflAndAdvModified:0.0, sio:1.0, al$:1.0, gre:1.0, ong:1.0, ona:1.0, advrbModifiedRatio:0.0011052680055614278, ssi:1.0, ngr:1.0, res:1.0, ion:1.0, nal:1.0, con:1.0
+
+adj:temporary LABEL:notgradable FEATURES:ora:1.0, por:1.0, inflectedRatio:0.0, tem:1.0, emp:1.0, $te:1.0, inflAndAdvModified:0.0, rar:1.0, advrbModifiedRatio:0.023178526381428834, ary:1.0, mpo:1.0, ry$:1.0
+
+adj:professional LABEL:gradable FEATURES:ess:1.0, inflectedRatio:0.0, pro:1.0, ofe:1.0, inflAndAdvModified:0.0, al$:1.0, sio:1.0, $pr:1.0, rof:1.0, ona:1.0, advrbModifiedRatio:0.01657890320144338, ssi:1.0, fes:1.0, nal:1.0, ion:1.0
+
+adj:exclusive LABEL:gradable FEATURES:lus:1.0, usi:1.0, inflectedRatio:0.0, ive:1.0, inflAndAdvModified:0.0, exc:1.0, $ex:1.0, clu:1.0, advrbModifiedRatio:0.009950408448217754, ve$:1.0, xcl:1.0, siv:1.0
+
+adj:inevitable LABEL:notgradable FEATURES:abl:1.0, inflectedRatio:0.0, tab:1.0, ine:1.0, le$:1.0, nev:1.0, evi:1.0, inflAndAdvModified:0.0, $in:1.0, ita:1.0, ble:1.0, vit:1.0, advrbModifiedRatio:0.024070616194194535
+
+adj:nervous LABEL:gradable FEATURES:us$:1.0, ous:1.0, vou:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, erv:1.0, ner:1.0, $ne:1.0, advrbModifiedRatio:0.14287543059305466, rvo:1.0
+
+adj:modest LABEL:gradable FEATURES:inflectedRatio:0.0, st$:1.0, inflAndAdvModified:0.0, $mo:1.0, des:1.0, est:1.0, advrbModifiedRatio:0.10022463983365514, ode:1.0, mod:1.0
+
+adj:rich LABEL:gradable FEATURES:inflectedRatio:0.009972168194371312, ch$:1.0, hes:1.0, ich:3.0, st$:1.0, inflAndAdvModified:0.009735759034590959, her:1.0, che:2.0, est:1.0, advrbModifiedRatio:0.05257954630933064, ric:3.0, er$:1.0, $ri:3.0
+
+adj:controversial LABEL:gradable FEATURES:sia:1.0, rov:1.0, inflectedRatio:0.0, ove:1.0, ont:1.0, $co:1.0, inflAndAdvModified:0.0, ers:1.0, al$:1.0, tro:1.0, advrbModifiedRatio:0.027393268250036427, ial:1.0, ver:1.0, con:1.0, ntr:1.0, rsi:1.0
+
+adj:mortgage-backed LABEL:notgradable FEATURES:bac:1.0, gag:1.0, inflectedRatio:0.0, ked:1.0, mor:1.0, -ba:1.0, e-b:1.0, cke:1.0, inflAndAdvModified:0.0, rtg:1.0, tga:1.0, $mo:1.0, age:1.0, advrbModifiedRatio:0.004351487928130264, ort:1.0, ge-:1.0, ack:1.0, ed$:1.0
+
+adj:accurate LABEL:gradable FEATURES:$ac:1.0, ccu:1.0, ura:1.0, inflectedRatio:0.0, cur:1.0, inflAndAdvModified:0.0, acc:1.0, te$:1.0, advrbModifiedRatio:0.07729188349912129, ate:1.0, rat:1.0
+
+adj:competitive LABEL:gradable FEATURES:pet:1.0, inflectedRatio:0.0, eti:1.0, mpe:1.0, $co:1.0, tit:1.0, ive:1.0, com:1.0, inflAndAdvModified:0.0, iti:1.0, advrbModifiedRatio:0.062075491667029824, tiv:1.0, ve$:1.0, omp:1.0
+
+adj:early LABEL:gradable FEATURES:ly$:1.0, ear:2.0, arl:2.0, inflectedRatio:0.0016728950866544607, rly:2.0, lye:1.0, $ea:2.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.04172205362293396, yer:1.0, er$:1.0
+
+adj:optimistic LABEL:gradable FEATURES:inflectedRatio:0.0, mis:1.0, imi:1.0, sti:1.0, inflAndAdvModified:0.0, ist:1.0, pti:1.0, opt:1.0, $op:1.0, advrbModifiedRatio:0.14308315576731384, tim:1.0, ic$:1.0, tic:1.0
+
+adj:special LABEL:notgradable FEATURES:inflectedRatio:2.7569323062841515E-6, $sp:2.0, spe:2.0, st$:1.0, inflAndAdvModified:0.0, al$:1.0, eci:2.0, cia:2.0, ale:1.0, est:1.0, advrbModifiedRatio:0.023749593352484822, les:1.0, ial:2.0, pec:2.0
+
+adj:rapid LABEL:gradable FEATURES:pid:2.0, inflectedRatio:1.1708116651868908E-4, rap:2.0, st$:1.0, inflAndAdvModified:0.0, $ra:2.0, des:1.0, id$:1.0, est:1.0, advrbModifiedRatio:0.02845072346404145, api:2.0, ide:1.0
+
+adj:electric LABEL:notgradable FEATURES:inflectedRatio:0.0, lec:1.0, ele:1.0, inflAndAdvModified:0.0, $el:1.0, ect:1.0, ctr:1.0, tri:1.0, ric:1.0, advrbModifiedRatio:0.003896288675590189, ic$:1.0
+
+adj:unsecured LABEL:notgradable FEATURES:$un:1.0, inflectedRatio:0.0, ecu:1.0, cur:1.0, inflAndAdvModified:0.0, uns:1.0, ure:1.0, advrbModifiedRatio:0.008248730964467006, nse:1.0, red:1.0, sec:1.0, ed$:1.0
+
+adj:radical LABEL:gradable FEATURES:inflectedRatio:0.0, adi:1.0, al$:1.0, rad:1.0, dic:1.0, inflAndAdvModified:0.0, $ra:1.0, cal:1.0, ica:1.0, advrbModifiedRatio:0.018961329375024098
+
+adj:widespread LABEL:gradable FEATURES:inflectedRatio:0.0, esp:1.0, inflAndAdvModified:0.0, ad$:1.0, pre:1.0, des:1.0, wid:1.0, spr:1.0, advrbModifiedRatio:0.026960604951823394, ead:1.0, ide:1.0, rea:1.0, $wi:1.0
+
+adj:own LABEL:notgradable FEATURES:inflectedRatio:2.1613552561998478E-6, wn$:1.0, $ow:2.0, inflAndAdvModified:0.0, wne:1.0, ner:1.0, advrbModifiedRatio:0.0016858570998358811, er$:1.0, own:2.0
+
+adj:brief LABEL:gradable FEATURES:inflectedRatio:0.003396167828910768, ief:3.0, fer:1.0, ef$:1.0, st$:1.0, inflAndAdvModified:6.145446547552819E-4, efe:2.0, $br:3.0, est:1.0, advrbModifiedRatio:0.023178036820928158, fes:1.0, er$:1.0, bri:3.0, rie:3.0
+
+adj:executive LABEL:notgradable FEATURES:exe:1.0, xec:1.0, inflectedRatio:0.0, ecu:1.0, ive:1.0, inflAndAdvModified:0.0, cut:1.0, $ex:1.0, uti:1.0, advrbModifiedRatio:0.0017347103437147006, tiv:1.0, ve$:1.0
+
+adj:over-the-counter LABEL:notgradable FEATURES:r-t:1.0, e-c:1.0, inflectedRatio:0.0, unt:1.0, ove:1.0, -co:1.0, inflAndAdvModified:0.0, -th:1.0, nte:1.0, ter:1.0, cou:1.0, $ov:1.0, oun:1.0, the:1.0, he-:1.0, advrbModifiedRatio:0.005254378648874062, ver:1.0, er-:1.0, er$:1.0
+
+adj:front LABEL:notgradable FEATURES:nt$:1.0, inflectedRatio:0.0, $fr:1.0, ont:1.0, inflAndAdvModified:0.0, fro:1.0, advrbModifiedRatio:0.001336206896551724, ron:1.0
+
+adj:confident LABEL:gradable FEATURES:nt$:1.0, nfi:1.0, inflectedRatio:0.0, den:1.0, $co:1.0, inflAndAdvModified:0.0, fid:1.0, ent:1.0, advrbModifiedRatio:0.11986561590899222, ide:1.0, onf:1.0, con:1.0
+
+adj:right LABEL:notgradable FEATURES:ht$:1.0, ght:3.0, inflectedRatio:8.938310758581192E-5, tes:1.0, hte:2.0, st$:1.0, inflAndAdvModified:8.276213665352956E-6, rig:3.0, ter:1.0, est:1.0, advrbModifiedRatio:0.03139002318995069, igh:3.0, er$:1.0, $ri:3.0
+
+adj:few LABEL:gradable FEATURES:ew$:1.0, inflectedRatio:0.0012284200363210042, wes:1.0, st$:1.0, ewe:2.0, wer:1.0, inflAndAdvModified:0.008058004413691639, $fe:3.0, few:3.0, est:1.0, advrbModifiedRatio:0.034153668881175145, er$:1.0
+
+adj:disappointing LABEL:gradable FEATURES:$di:1.0, oin:1.0, dis:1.0, poi:1.0, inflectedRatio:0.0, int:1.0, inflAndAdvModified:0.0, tin:1.0, ing:1.0, app:1.0, advrbModifiedRatio:0.12270010823020093, isa:1.0, ppo:1.0, ng$:1.0, sap:1.0, nti:1.0
+
+adj:two-year LABEL:notgradable FEATURES:ear:1.0, inflectedRatio:0.0, o-y:1.0, ar$:1.0, $tw:1.0, inflAndAdvModified:0.0, yea:1.0, -ye:1.0, advrbModifiedRatio:1.3435114503816795E-4, two:1.0, wo-:1.0
+
+adj:double LABEL:notgradable FEATURES:inflectedRatio:0.0, le$:1.0, ubl:1.0, dou:1.0, inflAndAdvModified:0.0, ble:1.0, oub:1.0, advrbModifiedRatio:0.0015620918168780555, $do:1.0
+
+adj:square LABEL:notgradable FEATURES:inflectedRatio:0.0, re$:1.0, qua:1.0, inflAndAdvModified:0.0, squ:1.0, uar:1.0, are:1.0, advrbModifiedRatio:0.005398594521502182, $sq:1.0
+
+adj:short LABEL:gradable FEATURES:inflectedRatio:0.004684430439074981, tes:1.0, st$:1.0, inflAndAdvModified:0.0077109863480888325, ter:1.0, est:1.0, rt$:1.0, advrbModifiedRatio:0.0685412698570987, sho:3.0, $sh:3.0, ort:3.0, er$:1.0, hor:3.0, rte:2.0
+
+adj:traditional LABEL:gradable FEATURES:tio:1.0, $tr:1.0, inflectedRatio:0.0, adi:1.0, tra:1.0, inflAndAdvModified:0.0, rad:1.0, al$:1.0, iti:1.0, ona:1.0, advrbModifiedRatio:0.006847004750661215, dit:1.0, ion:1.0, nal:1.0
+
+adj:fine LABEL:gradable FEATURES:fin:1.0, inflectedRatio:0.0, ine:1.0, $fi:1.0, inflAndAdvModified:0.0, ne$:1.0, advrbModifiedRatio:0.08953570921482323
+
+adj:southern LABEL:notgradable FEATURES:uth:1.0, ern:1.0, sou:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, her:1.0, $so:1.0, the:1.0, out:1.0, advrbModifiedRatio:0.0013057668406321827, rn$:1.0
+
+adj:steady LABEL:gradable FEATURES:tea:1.0, inflectedRatio:0.006404180241032953, inflAndAdvModified:0.0, dy$:1.0, ead:1.0, advrbModifiedRatio:0.025473343794556447, ste:1.0, $st:1.0, ady:1.0
+
+adj:historical LABEL:notgradable FEATURES:inflectedRatio:0.0, inflAndAdvModified:0.0, ist:1.0, al$:1.0, ori:1.0, sto:1.0, $hi:1.0, cal:1.0, advrbModifiedRatio:0.0036950643023759885, ric:1.0, ica:1.0, his:1.0, tor:1.0
+
+adj:obvious LABEL:gradable FEATURES:obv:1.0, us$:1.0, ous:1.0, inflectedRatio:0.0, vio:1.0, $ob:1.0, inflAndAdvModified:0.0, bvi:1.0, iou:1.0, advrbModifiedRatio:0.08147264523949245
+
+adj:happy LABEL:gradable FEATURES:inflectedRatio:0.005157812475080142, $ha:1.0, ppy:1.0, inflAndAdvModified:0.0, py$:1.0, app:1.0, hap:1.0, advrbModifiedRatio:0.23969633658155373
+
+adj:antitrust LABEL:notgradable FEATURES:inflectedRatio:0.0, ust:1.0, st$:1.0, tit:1.0, inflAndAdvModified:0.0, $an:1.0, itr:1.0, advrbModifiedRatio:3.861003861003861E-4, tru:1.0, nti:1.0, rus:1.0, ant:1.0
+
+adj:urban LABEL:notgradable FEATURES:rba:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, ban:1.0, advrbModifiedRatio:0.003851634161545997, an$:1.0, $ur:1.0, urb:1.0
+
+adj:joint LABEL:notgradable FEATURES:nt$:1.0, oin:2.0, inflectedRatio:1.0184336490477645E-5, joi:2.0, int:2.0, inflAndAdvModified:0.0, nte:1.0, ter:1.0, $jo:2.0, advrbModifiedRatio:5.855993482024646E-4, er$:1.0
+
+adj:practical LABEL:gradable FEATURES:inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, $pr:1.0, rac:1.0, cal:1.0, ica:1.0, cti:1.0, advrbModifiedRatio:0.030099675826339867, pra:1.0, act:1.0, tic:1.0
+
+adj:important LABEL:gradable FEATURES:nt$:1.0, por:1.0, inflectedRatio:0.0, tan:1.0, rta:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.15349178987380938, $im:1.0, ort:1.0, mpo:1.0, imp:1.0, ant:1.0
+
+adj:tight LABEL:gradable FEATURES:$ti:3.0, ht$:1.0, ght:3.0, inflectedRatio:0.010081861831920867, tes:1.0, hte:2.0, st$:1.0, inflAndAdvModified:0.014391415002754966, ter:1.0, tig:3.0, est:1.0, advrbModifiedRatio:0.0957809671240784, igh:3.0, er$:1.0
+
+adj:residential LABEL:notgradable FEATURES:inflectedRatio:0.0, $re:1.0, den:1.0, inflAndAdvModified:0.0, al$:1.0, esi:1.0, ent:1.0, tia:1.0, advrbModifiedRatio:0.003542138216878803, ial:1.0, ide:1.0, res:1.0, sid:1.0, nti:1.0
+
+adj:easy LABEL:gradable FEATURES:inflectedRatio:0.005839359353656721, st$:1.0, $ea:2.0, inflAndAdvModified:0.0, yes:1.0, asy:2.0, sy$:1.0, eas:2.0, est:1.0, advrbModifiedRatio:0.1483987078313448, sye:1.0
+
+adj:commercial LABEL:notgradable FEATURES:inflectedRatio:0.0, mme:1.0, $co:1.0, com:1.0, inflAndAdvModified:0.0, al$:1.0, cia:1.0, advrbModifiedRatio:0.0035755988260169785, mer:1.0, ial:1.0, omm:1.0, erc:1.0, rci:1.0
+
+adj:soft LABEL:gradable FEATURES:fte:2.0, oft:3.0, inflectedRatio:0.010033557329206652, sof:3.0, tes:1.0, st$:1.0, inflAndAdvModified:0.008898158972590643, ter:1.0, $so:3.0, est:1.0, advrbModifiedRatio:0.0626655789270065, ft$:1.0, er$:1.0
+
+adj:first-quarter LABEL:notgradable FEATURES:irs:1.0, -qu:1.0, inflectedRatio:0.0, t-q:1.0, $fi:1.0, st-:1.0, qua:1.0, inflAndAdvModified:0.0, rst:1.0, ter:1.0, art:1.0, uar:1.0, advrbModifiedRatio:2.1254549802067005E-4, fir:1.0, er$:1.0, rte:1.0
+
+adj:near LABEL:gradable FEATURES:ear:3.0, rer:1.0, inflectedRatio:0.01627924185245087, nea:3.0, ar$:1.0, st$:1.0, inflAndAdvModified:0.003160709944079747, are:2.0, $ne:3.0, est:1.0, advrbModifiedRatio:0.03269590587638347, er$:1.0, res:1.0
+
+adj:social LABEL:notgradable FEATURES:inflectedRatio:2.2720611457095534E-6, soc:2.0, st$:1.0, inflAndAdvModified:0.0, al$:1.0, cia:2.0, $so:2.0, ale:1.0, est:1.0, advrbModifiedRatio:0.002631046806731663, les:1.0, ial:2.0, oci:2.0
+
+adj:consistent LABEL:gradable FEATURES:nt$:1.0, sis:1.0, inflectedRatio:0.0, $co:1.0, inflAndAdvModified:0.0, ist:1.0, ons:1.0, nsi:1.0, ent:1.0, advrbModifiedRatio:0.062244796335026394, ste:1.0, ten:1.0, con:1.0
+
+adj:complex LABEL:gradable FEATURES:inflectedRatio:0.0, lex:1.0, $co:1.0, com:1.0, inflAndAdvModified:0.0, ple:1.0, advrbModifiedRatio:0.08602004069435813, ex$:1.0, mpl:1.0, omp:1.0
+
+adj:lengthy LABEL:gradable FEATURES:inflectedRatio:0.004951043783484205, ngt:1.0, hy$:1.0, inflAndAdvModified:0.0, len:1.0, $le:1.0, advrbModifiedRatio:0.01618326251616479, gth:1.0, eng:1.0, thy:1.0
+
+adj:cost-cutting LABEL:notgradable FEATURES:tti:1.0, inflectedRatio:0.0, -cu:1.0, cos:1.0, $co:1.0, ost:1.0, st-:1.0, inflAndAdvModified:0.0, tin:1.0, cut:1.0, ing:1.0, advrbModifiedRatio:1.277791975466394E-4, ng$:1.0, t-c:1.0, utt:1.0
+
+adj:judicial LABEL:notgradable FEATURES:inflectedRatio:0.0, al$:1.0, dic:1.0, inflAndAdvModified:0.0, udi:1.0, cia:1.0, jud:1.0, advrbModifiedRatio:7.460616553003855E-4, ial:1.0, $ju:1.0, ici:1.0
+
+adj:successful LABEL:gradable FEATURES:suc:1.0, ess:1.0, inflectedRatio:0.0, cce:1.0, ful:1.0, inflAndAdvModified:0.0, $su:1.0, sfu:1.0, ul$:1.0, ssf:1.0, advrbModifiedRatio:0.07578541374474053, ucc:1.0, ces:1.0
+
+adj:elaborate LABEL:gradable FEATURES:ora:1.0, lab:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, te$:1.0, $el:1.0, ela:1.0, advrbModifiedRatio:0.02723992784125075, ate:1.0, bor:1.0, rat:1.0, abo:1.0
+
+adj:military LABEL:notgradable FEATURES:lit:1.0, inflectedRatio:0.0, mil:1.0, inflAndAdvModified:0.0, ita:1.0, $mi:1.0, ili:1.0, advrbModifiedRatio:0.0013897462306330763, ary:1.0, tar:1.0, ry$:1.0
+
+adj:light LABEL:gradable FEATURES:ht$:1.0, ght:3.0, inflectedRatio:0.009642662032923273, tes:1.0, hte:2.0, st$:1.0, inflAndAdvModified:0.010366684438125703, lig:3.0, ter:1.0, est:1.0, advrbModifiedRatio:0.057099039683009827, igh:3.0, er$:1.0, $li:3.0
+
+adj:low LABEL:gradable FEATURES:ere:2.0, rer:1.0, $lo:5.0, inflectedRatio:0.0045186927986851436, wes:1.0, st$:2.0, inflAndAdvModified:0.10062928482174016, wer:3.0, est:2.0, advrbModifiedRatio:0.19565016717137035, ow$:1.0, er$:2.0, res:1.0, owe:4.0, low:5.0
+
+adj:quarterly LABEL:notgradable FEATURES:ly$:1.0, inflectedRatio:0.0, $qu:1.0, rly:1.0, qua:1.0, inflAndAdvModified:0.0, ter:1.0, art:1.0, uar:1.0, advrbModifiedRatio:7.84313725490196E-4, erl:1.0, rte:1.0
+
+adj:upper LABEL:notgradable FEATURES:ppe:1.0, inflectedRatio:0.0, $up:1.0, inflAndAdvModified:0.0, upp:1.0, advrbModifiedRatio:0.0011875536395026245, er$:1.0, per:1.0
+
+adj:overseas LABEL:notgradable FEATURES:inflectedRatio:0.0, ove:1.0, ers:1.0, inflAndAdvModified:0.0, rse:1.0, $ov:1.0, sea:1.0, eas:1.0, advrbModifiedRatio:0.0015733533036984108, ver:1.0, as$:1.0
+
+adj:automatic LABEL:notgradable FEATURES:$au:1.0, inflectedRatio:0.0, aut:1.0, inflAndAdvModified:0.0, ati:1.0, tom:1.0, mat:1.0, uto:1.0, advrbModifiedRatio:0.003745518754347477, oma:1.0, tic:1.0, ic$:1.0
+
+adj:national LABEL:notgradable FEATURES:tio:1.0, inflectedRatio:0.0, nat:1.0, al$:1.0, inflAndAdvModified:0.0, ati:1.0, ona:1.0, advrbModifiedRatio:7.798827997356822E-4, ion:1.0, nal:1.0, $na:1.0
+
+adj:four-year LABEL:notgradable FEATURES:ear:1.0, $fo:1.0, inflectedRatio:0.0, our:1.0, ar$:1.0, r-y:1.0, ur-:1.0, inflAndAdvModified:0.0, yea:1.0, fou:1.0, -ye:1.0, advrbModifiedRatio:2.60360829478972E-4
+
+adj:various LABEL:notgradable FEATURES:us$:1.0, $va:1.0, ous:1.0, inflectedRatio:0.0, var:1.0, ari:1.0, inflAndAdvModified:0.0, iou:1.0, advrbModifiedRatio:0.002010898180041994, rio:1.0
+
+adj:full LABEL:gradable FEATURES:inflectedRatio:0.0, ler:1.0, $fu:3.0, ful:3.0, st$:1.0, inflAndAdvModified:3.296132732056495E-4, ull:3.0, ll$:1.0, est:1.0, advrbModifiedRatio:0.011413953434103598, les:1.0, er$:1.0, lle:2.0
+
+adj:young LABEL:gradable FEATURES:nge:2.0, inflectedRatio:0.0025552746247780945, you:3.0, $yo:3.0, st$:1.0, inflAndAdvModified:0.006799976432554839, ung:3.0, oun:3.0, ges:1.0, est:1.0, advrbModifiedRatio:0.05515422587346844, ger:1.0, ng$:1.0, er$:1.0
+
+adj:institutional LABEL:notgradable FEATURES:tio:1.0, tut:1.0, inflectedRatio:0.0, sti:1.0, tit:1.0, inflAndAdvModified:0.0, $in:1.0, al$:1.0, ins:1.0, ona:1.0, nst:1.0, itu:1.0, advrbModifiedRatio:0.003287156609532754, uti:1.0, ion:1.0, nal:1.0
+
+adj:prominent LABEL:gradable FEATURES:nt$:1.0, rom:1.0, pro:1.0, inflectedRatio:0.0, ine:1.0, omi:1.0, inflAndAdvModified:0.0, $pr:1.0, min:1.0, ent:1.0, advrbModifiedRatio:0.014032847547509072, nen:1.0
+
+adj:civil LABEL:notgradable FEATURES:ivi:2.0, ile:1.0, ler:1.0, inflectedRatio:2.0546115756816175E-6, $ci:2.0, vil:2.0, civ:2.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.0019724271126543525, il$:1.0, er$:1.0
+
+adj:healthy LABEL:gradable FEATURES:eal:1.0, lth:1.0, inflectedRatio:0.00829870237314886, hea:1.0, hy$:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.06924707095263248, alt:1.0, $he:1.0, thy:1.0
+
+adj:hot LABEL:gradable FEATURES:ote:1.0, tes:1.0, inflectedRatio:0.007268928403688893, hot:2.0, st$:1.0, inflAndAdvModified:0.0, $ho:2.0, est:1.0, advrbModifiedRatio:0.07824632712811486, ot$:1.0
+
+adj:influential LABEL:gradable FEATURES:inf:1.0, nfl:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, $in:1.0, al$:1.0, uen:1.0, ent:1.0, tia:1.0, advrbModifiedRatio:0.02883175716314961, flu:1.0, lue:1.0, ial:1.0, nti:1.0
+
+adj:high LABEL:gradable FEATURES:inflectedRatio:0.0016654708361757088, ghe:2.0, hes:1.0, st$:1.0, inflAndAdvModified:0.06371435324636435, her:1.0, $hi:3.0, est:1.0, advrbModifiedRatio:0.12053719004788649, hig:3.0, igh:3.0, er$:1.0, gh$:1.0
+
+adj:outside LABEL:notgradable FEATURES:de$:1.0, inflectedRatio:0.0, uts:1.0, tsi:1.0, inflAndAdvModified:0.0, out:1.0, advrbModifiedRatio:0.003849572855614651, ide:1.0, $ou:1.0, sid:1.0
+
+adj:positive LABEL:gradable FEATURES:osi:1.0, inflectedRatio:0.0, ive:1.0, inflAndAdvModified:0.0, iti:1.0, $po:1.0, sit:1.0, advrbModifiedRatio:0.07488046589348643, pos:1.0, tiv:1.0, ve$:1.0
+
+adj:key LABEL:notgradable FEATURES:inflectedRatio:0.0, ey$:1.0, key:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.0025657833387272835, $ke:1.0
+
+adj:weak LABEL:gradable FEATURES:inflectedRatio:0.009344174546937527, ake:2.0, kes:1.0, wea:3.0, $we:3.0, st$:1.0, inflAndAdvModified:0.032059745622307755, eak:3.0, ker:1.0, est:1.0, advrbModifiedRatio:0.12327377462850152, er$:1.0, ak$:1.0
+
+adj:long-distance LABEL:notgradable FEATURES:g-d:1.0, sta:1.0, $lo:1.0, dis:1.0, inflectedRatio:0.0, tan:1.0, inflAndAdvModified:0.0, ce$:1.0, ist:1.0, nce:1.0, ong:1.0, anc:1.0, advrbModifiedRatio:0.0032104505701317392, ng-:1.0, -di:1.0, lon:1.0
+
+adj:numerous LABEL:gradable FEATURES:us$:1.0, ous:1.0, inflectedRatio:0.0, num:1.0, $nu:1.0, inflAndAdvModified:0.0, rou:1.0, ume:1.0, advrbModifiedRatio:0.01621906349256266, mer:1.0, ero:1.0
+
+adj:sufficient LABEL:notgradable FEATURES:nt$:1.0, inflectedRatio:0.0, cie:1.0, inflAndAdvModified:0.0, $su:1.0, ien:1.0, ent:1.0, advrbModifiedRatio:0.008815472962638524, uff:1.0, fic:1.0, suf:1.0, ffi:1.0, ici:1.0
+
+adj:tremendous LABEL:notgradable FEATURES:eme:1.0, tre:1.0, $tr:1.0, ous:1.0, us$:1.0, inflectedRatio:0.0, men:1.0, dou:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.00791622342262686, rem:1.0, ndo:1.0, end:1.0
+
+adj:left LABEL:notgradable FEATURES:fte:2.0, inflectedRatio:3.2097061514018395E-5, tes:1.0, lef:3.0, st$:1.0, inflAndAdvModified:5.349510252336399E-6, $le:3.0, ter:1.0, eft:3.0, est:1.0, advrbModifiedRatio:0.006002150503121439, ft$:1.0, er$:1.0
+
+adj:additional LABEL:notgradable FEATURES:tio:1.0, inflectedRatio:0.0, ddi:1.0, inflAndAdvModified:0.0, al$:1.0, iti:1.0, ona:1.0, advrbModifiedRatio:9.891105400358668E-4, dit:1.0, $ad:1.0, add:1.0, nal:1.0, ion:1.0
+
+adj:substantial LABEL:gradable FEATURES:sta:1.0, inflectedRatio:0.0, tan:1.0, inflAndAdvModified:0.0, sub:1.0, al$:1.0, $su:1.0, tia:1.0, advrbModifiedRatio:0.0373867682088673, ial:1.0, bst:1.0, ubs:1.0, nti:1.0, ant:1.0
+
+adj:frequent LABEL:gradable FEATURES:que:2.0, nt$:1.0, inflectedRatio:1.1039477170361211E-5, equ:2.0, $fr:2.0, inflAndAdvModified:0.0, nte:1.0, req:2.0, uen:2.0, ter:1.0, ent:2.0, advrbModifiedRatio:0.01813786099090347, er$:1.0, fre:2.0
+
+adj:safe LABEL:gradable FEATURES:inflectedRatio:3.693444136657433E-6, $sa:2.0, saf:2.0, fe$:1.0, inflAndAdvModified:0.0, fee:1.0, eer:1.0, advrbModifiedRatio:0.04935918744228993, er$:1.0, afe:2.0
+
+adj:seasonal LABEL:notgradable FEATURES:inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, son:1.0, sea:1.0, ona:1.0, eas:1.0, advrbModifiedRatio:0.007806215177427524, $se:1.0, nal:1.0, aso:1.0
+
+adj:subsidiary LABEL:notgradable FEATURES:inflectedRatio:0.0, dia:1.0, inflAndAdvModified:0.0, sub:1.0, bsi:1.0, $su:1.0, idi:1.0, advrbModifiedRatio:0.01171875, iar:1.0, ary:1.0, ubs:1.0, sid:1.0, ry$:1.0
+
+adj:crucial LABEL:gradable FEATURES:inflectedRatio:0.0, $cr:1.0, ruc:1.0, cru:1.0, al$:1.0, inflAndAdvModified:0.0, cia:1.0, advrbModifiedRatio:0.025524863558278477, ial:1.0, uci:1.0
+
+adj:gold LABEL:notgradable FEATURES:inflectedRatio:4.803996925441968E-5, gol:3.0, old:3.0, st$:1.0, inflAndAdvModified:0.0, des:1.0, est:1.0, advrbModifiedRatio:7.806495003843197E-4, ld$:1.0, $go:3.0, er$:1.0, der:1.0, lde:2.0
+
+adj:five-year LABEL:notgradable FEATURES:ear:1.0, inflectedRatio:0.0, $fi:1.0, ar$:1.0, ive:1.0, inflAndAdvModified:0.0, fiv:1.0, yea:1.0, -ye:1.0, e-y:1.0, advrbModifiedRatio:2.23502280739183E-4, ve-:1.0
+
+adj:sluggish LABEL:gradable FEATURES:gis:1.0, ugg:1.0, inflectedRatio:0.0, slu:1.0, ggi:1.0, inflAndAdvModified:0.0, $sl:1.0, ish:1.0, advrbModifiedRatio:0.04244890409692038, sh$:1.0, lug:1.0
+
+adj:prime LABEL:notgradable FEATURES:me$:1.0, pri:1.0, inflectedRatio:0.0, rim:1.0, inflAndAdvModified:0.0, $pr:1.0, ime:1.0, advrbModifiedRatio:0.0013985157358540644
+
+adj:present LABEL:notgradable FEATURES:nt$:1.0, inflectedRatio:1.1924565200541374E-5, sen:2.0, inflAndAdvModified:0.0, nte:1.0, pre:2.0, ter:1.0, $pr:2.0, ent:2.0, advrbModifiedRatio:0.059163730242486036, ese:2.0, er$:1.0, res:2.0
+
+adj:after-tax LABEL:notgradable FEATURES:r-t:1.0, ax$:1.0, $af:1.0, fte:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, ter:1.0, -ta:1.0, advrbModifiedRatio:6.45682001614205E-4, er-:1.0, aft:1.0, tax:1.0
+
+adj:top LABEL:notgradable FEATURES:inflectedRatio:9.982852530998677E-6, $to:1.0, op$:1.0, inflAndAdvModified:0.0, top:1.0, advrbModifiedRatio:0.0014667114103236517
+
+adj:aware LABEL:gradable FEATURES:war:1.0, inflectedRatio:0.0, re$:1.0, inflAndAdvModified:0.0, $aw:1.0, are:1.0, advrbModifiedRatio:0.13527851458885942, awa:1.0
+
+adj:willing LABEL:gradable FEATURES:wil:1.0, lin:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, ill:1.0, lli:1.0, ing:1.0, advrbModifiedRatio:0.03591040766578523, ng$:1.0, $wi:1.0
+
+adj:chief LABEL:notgradable FEATURES:inflectedRatio:0.0, chi:1.0, ief:1.0, ef$:1.0, inflAndAdvModified:0.0, hie:1.0, $ch:1.0, advrbModifiedRatio:0.0016084417733594717
+
+adj:hefty LABEL:gradable FEATURES:inflectedRatio:0.01638891764137598, ty$:1.0, fty:1.0, inflAndAdvModified:0.0, eft:1.0, hef:1.0, advrbModifiedRatio:0.020149742952765413, $he:1.0
+
+adj:bad LABEL:gradable FEATURES:inflectedRatio:7.439602177062532E-4, st$:1.0, inflAndAdvModified:0.0, ad$:1.0, $ba:3.0, des:1.0, bad:3.0, ade:2.0, est:1.0, advrbModifiedRatio:0.14128658842625716, er$:1.0, der:1.0
+
+adj:nice LABEL:gradable FEATURES:nic:1.0, inflectedRatio:0.0, ice:1.0, $ni:1.0, ce$:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.1476834806290198
+
+adj:new LABEL:gradable FEATURES:ew$:1.0, inflectedRatio:3.710455681041813E-4, wes:1.0, st$:1.0, ewe:2.0, wer:1.0, inflAndAdvModified:8.863526750429372E-5, $ne:3.0, est:1.0, advrbModifiedRatio:0.004502875348453763, er$:1.0, new:3.0
+
+adj:offshore LABEL:notgradable FEATURES:inflectedRatio:0.0, re$:1.0, inflAndAdvModified:0.0, fsh:1.0, ffs:1.0, ore:1.0, sho:1.0, advrbModifiedRatio:0.0024882610266083395, off:1.0, $of:1.0, hor:1.0
+
+adj:grand LABEL:gradable FEATURES:ran:3.0, inflectedRatio:0.007005428046897265, nde:2.0, st$:1.0, inflAndAdvModified:0.004148910082646819, and:3.0, des:1.0, est:1.0, advrbModifiedRatio:0.008205033038844668, gra:3.0, er$:1.0, $gr:3.0, der:1.0, nd$:1.0
+
+adj:reluctant LABEL:gradable FEATURES:nt$:1.0, elu:1.0, rel:1.0, inflectedRatio:0.0, uct:1.0, $re:1.0, tan:1.0, luc:1.0, inflAndAdvModified:0.0, cta:1.0, advrbModifiedRatio:0.07507824486038663, ant:1.0
+
+adj:severe LABEL:gradable FEATURES:ere:1.0, inflectedRatio:0.0, re$:1.0, sev:1.0, inflAndAdvModified:0.0, eve:1.0, advrbModifiedRatio:0.06590656584723915, ver:1.0, $se:1.0
+
+adj:sensitive LABEL:gradable FEATURES:ens:1.0, inflectedRatio:0.0, sen:1.0, ive:1.0, inflAndAdvModified:0.0, nsi:1.0, iti:1.0, sit:1.0, advrbModifiedRatio:0.11939686351128644, tiv:1.0, ve$:1.0, $se:1.0
+
+adj:state-owned LABEL:notgradable FEATURES:e-o:1.0, sta:1.0, -ow:1.0, inflectedRatio:0.0, tat:1.0, ned:1.0, inflAndAdvModified:0.0, wne:1.0, te-:1.0, advrbModifiedRatio:0.004925655892990413, ate:1.0, $st:1.0, own:1.0, ed$:1.0
+
+adj:promising LABEL:gradable FEATURES:rom:1.0, pro:1.0, mis:1.0, isi:1.0, inflectedRatio:0.0, omi:1.0, inflAndAdvModified:0.0, $pr:1.0, ing:1.0, advrbModifiedRatio:0.07379165904146079, sin:1.0, ng$:1.0
+
+adj:immune LABEL:notgradable FEATURES:inflectedRatio:0.0, une:1.0, mun:1.0, inflAndAdvModified:0.0, ne$:1.0, advrbModifiedRatio:0.018744739416274254, $im:1.0, imm:1.0, mmu:1.0
+
+adj:overall LABEL:notgradable FEATURES:inflectedRatio:0.0, ove:1.0, all:1.0, inflAndAdvModified:0.0, $ov:1.0, ral:1.0, era:1.0, ll$:1.0, advrbModifiedRatio:7.039140340735199E-4, ver:1.0
+
+adj:angry LABEL:gradable FEATURES:inflectedRatio:0.004256628880899524, ang:1.0, inflAndAdvModified:0.0, $an:1.0, advrbModifiedRatio:0.08794195267938416, gry:1.0, ngr:1.0, ry$:1.0
+
+adj:wealthy LABEL:gradable FEATURES:eal:1.0, lth:1.0, inflectedRatio:0.01899946719871221, wea:1.0, $we:1.0, hy$:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.03438268735900604, alt:1.0, thy:1.0
+
+adj:three-year LABEL:notgradable FEATURES:ear:1.0, inflectedRatio:0.0, hre:1.0, ar$:1.0, inflAndAdvModified:0.0, thr:1.0, $th:1.0, yea:1.0, ree:1.0, e-y:1.0, -ye:1.0, ee-:1.0, advrbModifiedRatio:1.212104887476263E-4
+
+adj:single LABEL:notgradable FEATURES:inflectedRatio:2.1285789394142578E-6, ees:1.0, le$:1.0, st$:1.0, inflAndAdvModified:0.0, $si:2.0, lee:1.0, gle:2.0, ing:2.0, est:1.0, advrbModifiedRatio:0.002015764255625302, sin:2.0, ngl:2.0
+
+adj:annual LABEL:notgradable FEATURES:ann:1.0, inflectedRatio:0.0, nua:1.0, nnu:1.0, al$:1.0, inflAndAdvModified:0.0, $an:1.0, ual:1.0, advrbModifiedRatio:2.6722922810272894E-4
+
+adj:bearish LABEL:gradable FEATURES:ear:1.0, inflectedRatio:0.0, ris:1.0, ari:1.0, bea:1.0, inflAndAdvModified:0.0, ish:1.0, advrbModifiedRatio:0.10427135678391959, sh$:1.0, $be:1.0
+
+adj:middle LABEL:notgradable FEATURES:mid:1.0, inflectedRatio:0.0, le$:1.0, idd:1.0, ddl:1.0, inflAndAdvModified:0.0, $mi:1.0, dle:1.0, advrbModifiedRatio:0.004041799973496393
+
+adj:dramatic LABEL:gradable FEATURES:$dr:1.0, inflectedRatio:0.0, ram:1.0, inflAndAdvModified:0.0, ati:1.0, mat:1.0, ama:1.0, advrbModifiedRatio:0.040993116800842784, dra:1.0, tic:1.0, ic$:1.0
+
+adj:far LABEL:gradable FEATURES:rer:1.0, inflectedRatio:2.716800695500978E-5, ar$:1.0, inflAndAdvModified:0.0, are:1.0, far:2.0, advrbModifiedRatio:0.0086122582047381, er$:1.0, $fa:2.0
+
+adj:exchange-rate LABEL:notgradable FEATURES:e-r:1.0, nge:1.0, inflectedRatio:0.0, xch:1.0, ang:1.0, inflAndAdvModified:0.0, han:1.0, -ra:1.0, te$:1.0, exc:1.0, $ex:1.0, advrbModifiedRatio:0.0013698630136986301, ate:1.0, cha:1.0, ge-:1.0, rat:1.0
+
+adj:associate LABEL:notgradable FEATURES:inflectedRatio:0.0, soc:1.0, ass:1.0, inflAndAdvModified:0.0, cia:1.0, te$:1.0, sso:1.0, advrbModifiedRatio:0.0018900675024108003, ate:1.0, $as:1.0, oci:1.0, iat:1.0
+
+adj:surprising LABEL:gradable FEATURES:pri:1.0, rpr:1.0, urp:1.0, inflectedRatio:0.0, isi:1.0, ris:1.0, inflAndAdvModified:0.0, $su:1.0, ing:1.0, advrbModifiedRatio:0.08029350656181784, sin:1.0, ng$:1.0, sur:1.0
+
+adj:retail LABEL:notgradable FEATURES:ile:1.0, ler:1.0, inflectedRatio:4.825759906380258E-5, $re:2.0, inflAndAdvModified:0.0, ail:2.0, ret:2.0, advrbModifiedRatio:0.001200407776712089, il$:1.0, eta:2.0, er$:1.0, tai:2.0
+
+adj:consecutive LABEL:notgradable FEATURES:inflectedRatio:0.0, ecu:1.0, $co:1.0, ive:1.0, inflAndAdvModified:0.0, ons:1.0, cut:1.0, advrbModifiedRatio:4.681087884824433E-5, uti:1.0, tiv:1.0, sec:1.0, nse:1.0, ve$:1.0, con:1.0
+
+adj:equivalent LABEL:notgradable FEATURES:nt$:1.0, inflectedRatio:0.0, equ:1.0, val:1.0, inflAndAdvModified:0.0, uiv:1.0, len:1.0, ale:1.0, iva:1.0, ent:1.0, advrbModifiedRatio:0.007273237854535243, qui:1.0, $eq:1.0
+
+adj:useful LABEL:gradable FEATURES:efu:1.0, inflectedRatio:0.0, ful:1.0, use:1.0, $us:1.0, inflAndAdvModified:0.0, ul$:1.0, advrbModifiedRatio:0.12136653986937486, sef:1.0
+
+adj:false LABEL:notgradable FEATURES:inflectedRatio:0.0, lse:1.0, inflAndAdvModified:0.0, fal:1.0, advrbModifiedRatio:0.019053108408696076, $fa:1.0, se$:1.0, als:1.0
+
+adj:nuclear LABEL:notgradable FEATURES:ear:1.0, cle:1.0, inflectedRatio:0.0, ar$:1.0, $nu:1.0, inflAndAdvModified:0.0, nuc:1.0, advrbModifiedRatio:9.299358131621685E-4, ucl:1.0, lea:1.0
+
+adj:little LABEL:gradable FEATURES:itt:1.0, lit:1.0, inflectedRatio:0.0, le$:1.0, tle:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.07871812111933707, $li:1.0, ttl:1.0
+
+adj:automotive LABEL:notgradable FEATURES:$au:1.0, inflectedRatio:0.0, omo:1.0, ive:1.0, inflAndAdvModified:0.0, aut:1.0, mot:1.0, tom:1.0, uto:1.0, advrbModifiedRatio:0.0011093555652670858, tiv:1.0, oti:1.0, ve$:1.0
+
+adj:afraid LABEL:gradable FEATURES:$af:1.0, aid:1.0, inflectedRatio:0.0, fra:1.0, inflAndAdvModified:0.0, afr:1.0, id$:1.0, rai:1.0, advrbModifiedRatio:0.08241232268732052
+
+adj:comparable LABEL:notgradable FEATURES:abl:1.0, inflectedRatio:0.0, le$:1.0, par:1.0, $co:1.0, com:1.0, inflAndAdvModified:0.0, ble:1.0, mpa:1.0, advrbModifiedRatio:0.015213064696420295, omp:1.0, ara:1.0, rab:1.0
+
+adj:former LABEL:notgradable FEATURES:orm:1.0, $fo:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, rme:1.0, for:1.0, advrbModifiedRatio:0.0015276503442082448, mer:1.0, er$:1.0
+
+adj:convertible LABEL:notgradable FEATURES:inflectedRatio:0.0, ert:1.0, le$:1.0, ibl:1.0, $co:1.0, tib:1.0, inflAndAdvModified:0.0, ble:1.0, onv:1.0, rti:1.0, nve:1.0, advrbModifiedRatio:0.001616118084361364, ver:1.0, con:1.0
+
+adj:unchanged LABEL:notgradable FEATURES:$un:1.0, nge:1.0, inflectedRatio:0.0, ang:1.0, han:1.0, inflAndAdvModified:0.0, ged:1.0, nch:1.0, advrbModifiedRatio:0.018391875167459843, cha:1.0, unc:1.0, ed$:1.0
+
+adj:constitutional LABEL:notgradable FEATURES:tut:1.0, tio:1.0, inflectedRatio:0.0, sti:1.0, $co:1.0, tit:1.0, inflAndAdvModified:0.0, al$:1.0, ons:1.0, ona:1.0, nst:1.0, itu:1.0, advrbModifiedRatio:0.0013363902750021456, uti:1.0, ion:1.0, nal:1.0, con:1.0
+
+adj:serious LABEL:gradable FEATURES:us$:1.0, ous:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, iou:1.0, advrbModifiedRatio:0.08076584033884457, eri:1.0, rio:1.0, $se:1.0, ser:1.0
+
+adj:main LABEL:notgradable FEATURES:inflectedRatio:1.2497750404927114E-6, nes:1.0, ine:1.0, $ma:2.0, st$:1.0, mai:2.0, inflAndAdvModified:0.0, est:1.0, advrbModifiedRatio:1.1872862884680757E-4, ain:2.0, in$:1.0
+
+adj:moderate LABEL:gradable FEATURES:inflectedRatio:0.0, inflAndAdvModified:0.0, era:1.0, te$:1.0, $mo:1.0, advrbModifiedRatio:0.027809972825197263, ate:1.0, ode:1.0, der:1.0, rat:1.0, mod:1.0
+
+adj:giant LABEL:notgradable FEATURES:gia:1.0, nt$:1.0, ian:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.0010105546822366943, $gi:1.0, ant:1.0
+
+adj:costly LABEL:gradable FEATURES:ly$:1.0, inflectedRatio:0.01921519429578695, $co:1.0, cos:1.0, ost:1.0, stl:1.0, inflAndAdvModified:0.0, tly:1.0, advrbModifiedRatio:0.11646630988867891
+
+adj:steep LABEL:gradable FEATURES:inflectedRatio:0.027262202636591105, eep:3.0, st$:1.0, inflAndAdvModified:0.026403256526123166, pes:1.0, ep$:1.0, est:1.0, advrbModifiedRatio:0.06464503118347836, ste:3.0, tee:3.0, per:1.0, $st:3.0, er$:1.0, epe:2.0
+
+adj:operating LABEL:notgradable FEATURES:inflectedRatio:0.0, tin:1.0, inflAndAdvModified:0.0, ati:1.0, ope:1.0, era:1.0, $op:1.0, ing:1.0, advrbModifiedRatio:0.5, ng$:1.0, per:1.0, rat:1.0
+
+adj:taxable LABEL:notgradable FEATURES:abl:1.0, inflectedRatio:0.0, le$:1.0, inflAndAdvModified:0.0, ble:1.0, axa:1.0, $ta:1.0, advrbModifiedRatio:0.006488824801730353, tax:1.0, xab:1.0
+
+adj:one-year LABEL:notgradable FEATURES:ear:1.0, one:1.0, inflectedRatio:0.0, ar$:1.0, $on:1.0, inflAndAdvModified:0.0, yea:1.0, ne-:1.0, -ye:1.0, e-y:1.0, advrbModifiedRatio:6.762087230925279E-4
+
+adj:bitter LABEL:gradable FEATURES:itt:1.0, inflectedRatio:0.0, tte:1.0, inflAndAdvModified:0.0, ter:1.0, bit:1.0, $bi:1.0, advrbModifiedRatio:0.03902976846747519, er$:1.0
+
+adj:subject LABEL:notgradable FEATURES:bje:1.0, inflectedRatio:0.0, sub:1.0, inflAndAdvModified:0.0, $su:1.0, ect:1.0, advrbModifiedRatio:0.03924714905641336, ct$:1.0, ubj:1.0, jec:1.0
+
+adj:unprecedented LABEL:notgradable FEATURES:$un:1.0, rec:1.0, inflectedRatio:0.0, ted:1.0, ede:1.0, den:1.0, inflAndAdvModified:0.0, nte:1.0, unp:1.0, pre:1.0, npr:1.0, ent:1.0, ece:1.0, advrbModifiedRatio:0.00734868391751659, ced:1.0, ed$:1.0
+
+adj:monthly LABEL:notgradable FEATURES:ly$:1.0, inflectedRatio:0.0, ont:1.0, nth:1.0, inflAndAdvModified:0.0, thl:1.0, mon:1.0, $mo:1.0, hly:1.0, advrbModifiedRatio:5.38462121844119E-4
+
+adj:dependent LABEL:gradable FEATURES:nt$:1.0, pen:1.0, inflectedRatio:0.0, nde:1.0, den:1.0, $de:1.0, inflAndAdvModified:0.0, dep:1.0, ent:1.0, advrbModifiedRatio:0.09714585567292555, end:1.0, epe:1.0
+
+adj:principal LABEL:notgradable FEATURES:pri:1.0, inflectedRatio:0.0, nci:1.0, pal:1.0, al$:1.0, inflAndAdvModified:0.0, cip:1.0, $pr:1.0, advrbModifiedRatio:0.001040289165123865, ipa:1.0, inc:1.0, rin:1.0
+
+adj:late LABEL:gradable FEATURES:lat:2.0, inflectedRatio:1.7675948601876655E-6, ees:1.0, st$:1.0, inflAndAdvModified:0.0, te$:1.0, est:1.0, advrbModifiedRatio:0.03646813335796182, $la:2.0, ate:2.0, tee:1.0
+
+adj:many LABEL:gradable FEATURES:inflectedRatio:0.0, ny$:1.0, any:1.0, $ma:1.0, inflAndAdvModified:0.0, man:1.0, advrbModifiedRatio:0.14372088755344248
+
+adj:private LABEL:notgradable FEATURES:pri:2.0, inflectedRatio:1.4523758690654107E-6, riv:2.0, inflAndAdvModified:0.0, $pr:2.0, te$:1.0, eer:1.0, iva:2.0, vat:2.0, advrbModifiedRatio:0.005362171708589496, ate:2.0, tee:1.0, er$:1.0
+
+adj:nationwide LABEL:notgradable FEATURES:de$:1.0, tio:1.0, nwi:1.0, inflectedRatio:0.0, onw:1.0, nat:1.0, inflAndAdvModified:0.0, ati:1.0, wid:1.0, advrbModifiedRatio:6.182688472277623E-4, ide:1.0, ion:1.0, $na:1.0
+
+adj:fundamental LABEL:gradable FEATURES:tal:1.0, dam:1.0, inflectedRatio:0.0, $fu:1.0, men:1.0, ame:1.0, inflAndAdvModified:0.0, al$:1.0, und:1.0, nda:1.0, ent:1.0, advrbModifiedRatio:0.01717515364354697, fun:1.0, nta:1.0
+
+adj:creative LABEL:gradable FEATURES:inflectedRatio:0.0, eat:1.0, ive:1.0, $cr:1.0, inflAndAdvModified:0.0, ati:1.0, advrbModifiedRatio:0.030495033854098057, tiv:1.0, ve$:1.0, cre:1.0, rea:1.0
+
+adj:dominant LABEL:gradable FEATURES:nt$:1.0, inflectedRatio:0.0, omi:1.0, nan:1.0, inflAndAdvModified:0.0, ina:1.0, min:1.0, advrbModifiedRatio:0.04531960936633004, dom:1.0, ant:1.0, $do:1.0
+
+adj:ordinary LABEL:gradable FEATURES:nar:1.0, $or:1.0, ord:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, ina:1.0, rdi:1.0, advrbModifiedRatio:0.028233524096098726, din:1.0, ary:1.0, ry$:1.0
+
+adj:internal LABEL:notgradable FEATURES:ern:1.0, inflectedRatio:0.0, int:1.0, $in:1.0, al$:1.0, inflAndAdvModified:0.0, nte:1.0, rna:1.0, ter:1.0, advrbModifiedRatio:0.0015360441574923701, nal:1.0
+
+adj:formal LABEL:gradable FEATURES:orm:1.0, $fo:1.0, inflectedRatio:0.0, mal:1.0, al$:1.0, inflAndAdvModified:0.0, for:1.0, advrbModifiedRatio:0.005480647977495393, rma:1.0
+
+adj:human LABEL:notgradable FEATURES:inflectedRatio:0.0, hum:1.0, inflAndAdvModified:0.0, $hu:1.0, man:1.0, advrbModifiedRatio:0.0053671654727802665, an$:1.0, uma:1.0
+
+adj:electronic LABEL:notgradable FEATURES:nic:1.0, inflectedRatio:0.0, lec:1.0, ele:1.0, inflAndAdvModified:0.0, $el:1.0, tro:1.0, ect:1.0, advrbModifiedRatio:0.0018721869917674202, ctr:1.0, oni:1.0, ron:1.0, ic$:1.0
+
+adj:responsible LABEL:gradable FEATURES:inflectedRatio:0.0, esp:1.0, $re:1.0, le$:1.0, ibl:1.0, inflAndAdvModified:0.0, pon:1.0, ons:1.0, nsi:1.0, ble:1.0, sib:1.0, advrbModifiedRatio:0.020343299126193863, spo:1.0, res:1.0
+
+adj:northern LABEL:notgradable FEATURES:rth:1.0, ern:1.0, inflectedRatio:0.0, $no:1.0, inflAndAdvModified:0.0, her:1.0, the:1.0, advrbModifiedRatio:0.001559619321549178, ort:1.0, nor:1.0, rn$:1.0
+
+adj:long LABEL:gradable FEATURES:$lo:3.0, nge:2.0, inflectedRatio:0.0023732744591776407, st$:1.0, inflAndAdvModified:0.008729188877389615, ong:3.0, ges:1.0, est:1.0, advrbModifiedRatio:0.06014853652072448, ger:1.0, ng$:1.0, er$:1.0, lon:3.0
+
+adj:permanent LABEL:notgradable FEATURES:nt$:1.0, ane:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, erm:1.0, ent:1.0, man:1.0, advrbModifiedRatio:0.004319739134819563, rma:1.0, $pe:1.0, per:1.0, nen:1.0
+
+adj:sole LABEL:notgradable FEATURES:sol:1.0, inflectedRatio:0.0, le$:1.0, inflAndAdvModified:0.0, $so:1.0, advrbModifiedRatio:2.903104614228628E-4, ole:1.0
+
+adj:second-largest LABEL:notgradable FEATURES:inflectedRatio:0.0, eco:1.0, st$:1.0, d-l:1.0, inflAndAdvModified:0.0, ond:1.0, lar:1.0, -la:1.0, ges:1.0, est:1.0, advrbModifiedRatio:3.4855350296270476E-5, sec:1.0, rge:1.0, arg:1.0, $se:1.0, con:1.0, nd-:1.0
+
+adj:alternative LABEL:notgradable FEATURES:$al:1.0, lte:1.0, ern:1.0, inflectedRatio:0.0, nat:1.0, ive:1.0, inflAndAdvModified:0.0, ati:1.0, ter:1.0, rna:1.0, advrbModifiedRatio:0.0016752188348928463, tiv:1.0, alt:1.0, ve$:1.0
+
+adj:sharp LABEL:gradable FEATURES:har:3.0, inflectedRatio:0.00947669732929439, rp$:1.0, st$:1.0, inflAndAdvModified:0.010099213517494373, sha:3.0, rpe:2.0, pes:1.0, est:1.0, advrbModifiedRatio:0.039752105160770365, $sh:3.0, arp:3.0, per:1.0, er$:1.0
+
+adj:rare LABEL:gradable FEATURES:inflectedRatio:0.0, re$:1.0, inflAndAdvModified:0.0, $ra:1.0, are:1.0, rar:1.0, advrbModifiedRatio:0.08853975479039718
+
+adj:quick LABEL:gradable FEATURES:ck$:1.0, kes:1.0, inflectedRatio:0.009492766369113056, $qu:3.0, ick:3.0, st$:1.0, inflAndAdvModified:0.012636867332131393, cke:2.0, ker:1.0, est:1.0, advrbModifiedRatio:0.06427817598170706, qui:3.0, uic:3.0, er$:1.0
+
+adj:liberal LABEL:gradable FEATURES:lib:1.0, inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, ber:1.0, ral:1.0, era:1.0, ibe:1.0, advrbModifiedRatio:0.04086751127335194, $li:1.0
+
+adj:vital LABEL:gradable FEATURES:tal:1.0, inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, ita:1.0, $vi:1.0, vit:1.0, advrbModifiedRatio:0.028685679131695743
+
+adj:busy LABEL:gradable FEATURES:inflectedRatio:0.013765909745182367, bus:1.0, inflAndAdvModified:0.0, sy$:1.0, $bu:1.0, advrbModifiedRatio:0.18563041411136605, usy:1.0
+
+adj:weekly LABEL:notgradable FEATURES:ly$:1.0, inflectedRatio:0.0, $we:1.0, ekl:1.0, inflAndAdvModified:0.0, kly:1.0, advrbModifiedRatio:4.483172643371346E-4, eek:1.0, wee:1.0
+
+adj:significant LABEL:gradable FEATURES:sig:1.0, nt$:1.0, nif:1.0, can:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, $si:1.0, gni:1.0, advrbModifiedRatio:0.04951141164623615, ica:1.0, ifi:1.0, ign:1.0, fic:1.0, ant:1.0
+
+adj:environmental LABEL:notgradable FEATURES:nme:1.0, tal:1.0, $en:1.0, inflectedRatio:0.0, men:1.0, nvi:1.0, vir:1.0, inflAndAdvModified:0.0, al$:1.0, iro:1.0, onm:1.0, ent:1.0, advrbModifiedRatio:0.001102205255111952, nta:1.0, env:1.0, ron:1.0
+
+adj:small LABEL:gradable FEATURES:$sm:3.0, inflectedRatio:1.0370001659200265E-6, ler:1.0, mal:3.0, st$:1.0, inflAndAdvModified:0.022746598639455783, all:3.0, sma:3.0, ll$:1.0, est:1.0, advrbModifiedRatio:0.0692062800730048, les:1.0, er$:1.0, lle:2.0
+
+adj:unable LABEL:notgradable FEATURES:$un:1.0, abl:1.0, inflectedRatio:0.0, le$:1.0, nab:1.0, inflAndAdvModified:0.0, ble:1.0, una:1.0, advrbModifiedRatio:0.023474973195643588
+
+adj:dangerous LABEL:gradable FEATURES:us$:1.0, ous:1.0, nge:1.0, inflectedRatio:0.0, ang:1.0, inflAndAdvModified:0.0, rou:1.0, $da:1.0, dan:1.0, advrbModifiedRatio:0.14800779235173006, ger:1.0, ero:1.0
+
+adj:broad LABEL:gradable FEATURES:inflectedRatio:0.01163408312801971, roa:3.0, oad:3.0, st$:1.0, inflAndAdvModified:0.035983745560426196, ad$:1.0, des:1.0, $br:3.0, est:1.0, ade:2.0, advrbModifiedRatio:0.04324064889770582, bro:3.0, er$:1.0, der:1.0
+
+adj:voluntary LABEL:notgradable FEATURES:vol:1.0, inflectedRatio:0.0, unt:1.0, $vo:1.0, inflAndAdvModified:0.0, lun:1.0, olu:1.0, advrbModifiedRatio:0.011577747934725104, nta:1.0, ary:1.0, tar:1.0, ry$:1.0
+
+adj:unclear LABEL:gradable FEATURES:ear:1.0, cle:1.0, $un:1.0, inflectedRatio:0.0, ncl:1.0, ar$:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.074616732369689, unc:1.0, lea:1.0
+
+adj:world-wide LABEL:notgradable FEATURES:de$:1.0, $wo:1.0, inflectedRatio:0.0, rld:1.0, inflAndAdvModified:0.0, orl:1.0, wid:1.0, advrbModifiedRatio:4.5662100456621003E-4, ld-:1.0, d-w:1.0, ide:1.0, wor:1.0, -wi:1.0
+
+adj:critical LABEL:gradable FEATURES:rit:1.0, inflectedRatio:0.0, $cr:1.0, al$:1.0, inflAndAdvModified:0.0, cri:1.0, iti:1.0, cal:1.0, ica:1.0, advrbModifiedRatio:0.046569735183776655, tic:1.0
+
+adj:active LABEL:gradable FEATURES:$ac:1.0, inflectedRatio:0.0, ive:1.0, inflAndAdvModified:0.0, cti:1.0, advrbModifiedRatio:0.06593166949357887, tiv:1.0, ve$:1.0, act:1.0
+
+adj:legitimate LABEL:gradable FEATURES:ima:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, $le:1.0, te$:1.0, mat:1.0, iti:1.0, advrbModifiedRatio:0.023906718690092244, tim:1.0, egi:1.0, ate:1.0, git:1.0, leg:1.0
+
+adj:wholesale LABEL:notgradable FEATURES:esa:1.0, inflectedRatio:0.0, le$:1.0, sal:1.0, $wh:1.0, who:1.0, inflAndAdvModified:0.0, ale:1.0, advrbModifiedRatio:0.0013686415196068266, les:1.0, hol:1.0, ole:1.0
+
+adj:fourth-quarter LABEL:notgradable FEATURES:rth:1.0, -qu:1.0, inflectedRatio:0.0, $fo:1.0, our:1.0, qua:1.0, h-q:1.0, inflAndAdvModified:0.0, th-:1.0, ter:1.0, art:1.0, uar:1.0, fou:1.0, advrbModifiedRatio:2.4248302618816683E-4, urt:1.0, er$:1.0, rte:1.0
+
+adj:flat LABEL:gradable FEATURES:lat:3.0, inflectedRatio:0.005312945445121161, tes:1.0, $fl:3.0, fla:3.0, st$:1.0, inflAndAdvModified:0.0, ter:1.0, at$:1.0, est:1.0, advrbModifiedRatio:0.05721567102932919, ate:2.0, er$:1.0
+
+adj:efficient LABEL:gradable FEATURES:nt$:1.0, inflectedRatio:0.0, eff:1.0, cie:1.0, inflAndAdvModified:0.0, ien:1.0, $ef:1.0, ent:1.0, advrbModifiedRatio:0.049965427051077774, fic:1.0, ici:1.0, ffi:1.0
+
+adj:favorite LABEL:notgradable FEATURES:vor:1.0, rit:1.0, ite:1.0, inflectedRatio:0.0, fav:1.0, ori:1.0, inflAndAdvModified:0.0, te$:1.0, advrbModifiedRatio:0.0041377935091480135, avo:1.0, $fa:1.0
+
+adj:rival LABEL:notgradable FEATURES:inflectedRatio:0.0, val:1.0, riv:1.0, al$:1.0, inflAndAdvModified:0.0, iva:1.0, advrbModifiedRatio:0.0010650688557672543, $ri:1.0
+
+adj:final LABEL:notgradable FEATURES:fin:1.0, inflectedRatio:0.0, $fi:1.0, al$:1.0, inflAndAdvModified:0.0, ina:1.0, advrbModifiedRatio:6.227011679679938E-4, nal:1.0
+
+adj:deep LABEL:gradable FEATURES:inflectedRatio:0.007391098614462307, eep:3.0, dee:3.0, $de:3.0, st$:1.0, inflAndAdvModified:0.01963529425566944, pes:1.0, ep$:1.0, est:1.0, advrbModifiedRatio:0.04883208909988933, per:1.0, er$:1.0, epe:2.0
+
+adj:economic LABEL:notgradable FEATURES:inflectedRatio:0.0, omi:1.0, eco:1.0, mic:1.0, inflAndAdvModified:0.0, $ec:1.0, nom:1.0, advrbModifiedRatio:0.0010343513207008335, ono:1.0, ic$:1.0, con:1.0
+
+adj:ready LABEL:notgradable FEATURES:inflectedRatio:2.4651688640671887E-4, $re:1.0, inflAndAdvModified:0.0, dy$:1.0, ead:1.0, advrbModifiedRatio:0.02509159377417353, rea:1.0, ady:1.0
+
+adj:current LABEL:notgradable FEATURES:nt$:1.0, inflectedRatio:0.0, urr:1.0, cur:1.0, $cu:1.0, inflAndAdvModified:0.0, ren:1.0, ent:1.0, advrbModifiedRatio:0.0011002734719890758, rre:1.0
+
+adj:large LABEL:gradable FEATURES:gee:1.0, inflectedRatio:1.2535883967857994E-6, ees:1.0, st$:1.0, inflAndAdvModified:0.0, lar:2.0, est:1.0, advrbModifiedRatio:0.04881473217083903, rge:2.0, $la:2.0, arg:2.0, ge$:1.0
+
+adj:global LABEL:notgradable FEATURES:bal:1.0, inflectedRatio:0.0, glo:1.0, al$:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.0010914511141218027, lob:1.0, $gl:1.0, oba:1.0
+
+adj:attractive LABEL:gradable FEATURES:ttr:1.0, inflectedRatio:0.0, tra:1.0, ive:1.0, inflAndAdvModified:0.0, $at:1.0, rac:1.0, advrbModifiedRatio:0.11234984219179397, cti:1.0, att:1.0, tiv:1.0, ve$:1.0, act:1.0
+
+adj:clear LABEL:gradable FEATURES:ear:3.0, rer:1.0, cle:3.0, inflectedRatio:0.002340114524802532, ar$:1.0, st$:1.0, inflAndAdvModified:0.0023870509192828117, $cl:3.0, are:2.0, est:1.0, advrbModifiedRatio:0.06521610857058563, er$:1.0, res:1.0, lea:3.0
+
+adj:payable LABEL:notgradable FEATURES:pay:1.0, abl:1.0, inflectedRatio:0.0, le$:1.0, $pa:1.0, aya:1.0, inflAndAdvModified:0.0, ble:1.0, yab:1.0, advrbModifiedRatio:0.007928880345987505
+
+adj:minimum LABEL:notgradable FEATURES:inflectedRatio:0.0, imu:1.0, um$:1.0, inflAndAdvModified:0.0, nim:1.0, min:1.0, $mi:1.0, mum:1.0, advrbModifiedRatio:0.0038153615211408555, ini:1.0
+
+adj:lucrative LABEL:gradable FEATURES:$lu:1.0, cra:1.0, inflectedRatio:0.0, luc:1.0, ive:1.0, inflAndAdvModified:0.0, ati:1.0, advrbModifiedRatio:0.03498812583363154, tiv:1.0, ve$:1.0, rat:1.0, ucr:1.0
+
+adj:dead LABEL:notgradable FEATURES:inflectedRatio:2.578068145846863E-4, $de:3.0, st$:1.0, inflAndAdvModified:2.9370396598255398E-5, ad$:1.0, des:1.0, dea:3.0, est:1.0, ade:2.0, advrbModifiedRatio:0.008279188463308216, ead:3.0, er$:1.0, der:1.0
+
+adj:other LABEL:notgradable FEATURES:inflectedRatio:0.0, $ot:1.0, inflAndAdvModified:0.0, her:1.0, the:1.0, advrbModifiedRatio:0.001392110949706943, er$:1.0, oth:1.0
+
+adj:six-month LABEL:notgradable FEATURES:inflectedRatio:0.0, x-m:1.0, ont:1.0, ix-:1.0, nth:1.0, six:1.0, $si:1.0, inflAndAdvModified:0.0, th$:1.0, -mo:1.0, mon:1.0, advrbModifiedRatio:1.3930071043362322E-4
+
+adj:public LABEL:notgradable FEATURES:inflectedRatio:0.0, ubl:1.0, pub:1.0, inflAndAdvModified:0.0, $pu:1.0, advrbModifiedRatio:0.003992037315103576, lic:1.0, bli:1.0, ic$:1.0
+
+adj:careful LABEL:gradable FEATURES:inflectedRatio:2.5653194464040634E-5, efu:2.0, ref:2.0, ful:2.0, st$:1.0, inflAndAdvModified:0.0, are:2.0, ul$:1.0, est:1.0, advrbModifiedRatio:0.14708259045957697, les:1.0, car:2.0, ule:1.0, $ca:2.0
+
+adj:academic LABEL:notgradable FEATURES:$ac:1.0, inflectedRatio:0.0, aca:1.0, mic:1.0, inflAndAdvModified:0.0, cad:1.0, dem:1.0, emi:1.0, ade:1.0, advrbModifiedRatio:0.006175969627231475, ic$:1.0
+
+adj:great LABEL:gradable FEATURES:inflectedRatio:0.002063588402819926, tes:1.0, eat:3.0, st$:1.0, inflAndAdvModified:0.03519097789605283, ter:1.0, gre:3.0, at$:1.0, est:1.0, advrbModifiedRatio:0.036027203261901425, ate:2.0, er$:1.0, $gr:3.0, rea:3.0
+
+adj:raw LABEL:notgradable FEATURES:raw:3.0, inflectedRatio:0.0033175119902586914, wes:1.0, st$:1.0, wer:1.0, aw$:1.0, inflAndAdvModified:2.485027708058945E-4, $ra:3.0, awe:2.0, est:1.0, advrbModifiedRatio:0.02870207002808081, er$:1.0
+
+adj:domestic LABEL:notgradable FEATURES:inflectedRatio:0.0, sti:1.0, inflAndAdvModified:0.0, mes:1.0, ome:1.0, est:1.0, advrbModifiedRatio:0.0016393066046305714, tic:1.0, ic$:1.0, dom:1.0, $do:1.0
+
+adj:tiny LABEL:gradable FEATURES:$ti:2.0, inflectedRatio:0.004606642559786077, ny$:1.0, st$:1.0, tin:2.0, inflAndAdvModified:0.0, yes:1.0, nye:1.0, iny:2.0, est:1.0, advrbModifiedRatio:0.020146464492995838
+
+adj:punitive LABEL:notgradable FEATURES:inflectedRatio:0.0, ive:1.0, nit:1.0, pun:1.0, inflAndAdvModified:0.0, $pu:1.0, iti:1.0, advrbModifiedRatio:0.010010896213565787, uni:1.0, tiv:1.0, ve$:1.0
+
+adj:agricultural LABEL:notgradable FEATURES:ura:1.0, inflectedRatio:0.0, gri:1.0, agr:1.0, inflAndAdvModified:0.0, al$:1.0, cul:1.0, ral:1.0, tur:1.0, $ag:1.0, advrbModifiedRatio:0.0028748322292938477, ric:1.0, ltu:1.0, ult:1.0, icu:1.0
+
+adj:fresh LABEL:gradable FEATURES:she:2.0, inflectedRatio:0.003706854857215481, $fr:3.0, hes:1.0, st$:1.0, inflAndAdvModified:7.943260408318888E-4, her:1.0, est:1.0, advrbModifiedRatio:0.02457115219639976, sh$:1.0, esh:3.0, er$:1.0, res:3.0, fre:3.0
+
+adj:separate LABEL:notgradable FEATURES:inflectedRatio:0.0, epa:1.0, par:1.0, inflAndAdvModified:0.0, sep:1.0, te$:1.0, advrbModifiedRatio:0.0047444426415706635, ate:1.0, ara:1.0, $se:1.0, rat:1.0
+
+adj:cultural LABEL:notgradable FEATURES:ura:1.0, inflectedRatio:0.0, $cu:1.0, al$:1.0, inflAndAdvModified:0.0, cul:1.0, ral:1.0, tur:1.0, advrbModifiedRatio:0.0018704328942571369, ltu:1.0, ult:1.0
+
+adj:medical LABEL:notgradable FEATURES:inflectedRatio:0.0, al$:1.0, dic:1.0, inflAndAdvModified:0.0, med:1.0, cal:1.0, ica:1.0, advrbModifiedRatio:0.001193912557239795, edi:1.0, $me:1.0
+
+adj:protectionist LABEL:gradable FEATURES:tio:1.0, ote:1.0, pro:1.0, inflectedRatio:0.0, st$:1.0, inflAndAdvModified:0.0, ist:1.0, $pr:1.0, tec:1.0, ect:1.0, advrbModifiedRatio:0.012480699948533196, cti:1.0, nis:1.0, rot:1.0, oni:1.0, ion:1.0
+
+adj:cold LABEL:gradable FEATURES:inflectedRatio:0.009536890846142409, $co:3.0, old:3.0, st$:1.0, inflAndAdvModified:0.005444594699839282, col:3.0, des:1.0, est:1.0, advrbModifiedRatio:0.06847869952775752, ld$:1.0, er$:1.0, der:1.0, lde:2.0
+
+adj:primary LABEL:notgradable FEATURES:pri:1.0, ima:1.0, inflectedRatio:0.0, rim:1.0, mar:1.0, inflAndAdvModified:0.0, $pr:1.0, advrbModifiedRatio:0.0014820682517982854, ary:1.0, ry$:1.0
+
+adj:typical LABEL:gradable FEATURES:inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, pic:1.0, cal:1.0, ica:1.0, advrbModifiedRatio:0.025862554490464873, $ty:1.0, ypi:1.0, typ:1.0
+
+adj:solid LABEL:gradable FEATURES:sol:3.0, inflectedRatio:1.4576450009717634E-4, st$:1.0, inflAndAdvModified:6.9411666712941115E-6, lid:3.0, $so:3.0, des:1.0, id$:1.0, oli:3.0, est:1.0, advrbModifiedRatio:0.061290501707527, er$:1.0, ide:2.0, der:1.0
+
+adj:mandatory LABEL:notgradable FEATURES:ory:1.0, inflectedRatio:0.0, $ma:1.0, and:1.0, ato:1.0, inflAndAdvModified:0.0, nda:1.0, dat:1.0, man:1.0, advrbModifiedRatio:0.0040152539295010186, tor:1.0, ry$:1.0
+
+adj:scientific LABEL:notgradable FEATURES:tif:1.0, inflectedRatio:0.0, cie:1.0, inflAndAdvModified:0.0, $sc:1.0, sci:1.0, ien:1.0, ent:1.0, advrbModifiedRatio:0.003646978910596455, ifi:1.0, fic:1.0, ic$:1.0, nti:1.0
+
+adj:future LABEL:notgradable FEATURES:inflectedRatio:0.0, $fu:1.0, re$:1.0, inflAndAdvModified:0.0, tur:1.0, utu:1.0, ure:1.0, fut:1.0, advrbModifiedRatio:0.0012211598420286843
+
+adj:intense LABEL:gradable FEATURES:ens:1.0, inflectedRatio:0.0, int:1.0, $in:1.0, inflAndAdvModified:0.0, nte:1.0, advrbModifiedRatio:0.07590565223237349, nse:1.0, ten:1.0, se$:1.0
+
+adj:free LABEL:gradable FEATURES:inflectedRatio:0.0, $fr:3.0, ees:1.0, st$:1.0, inflAndAdvModified:0.0, eer:1.0, ree:3.0, ee$:1.0, est:1.0, advrbModifiedRatio:0.011576498195568757, er$:1.0, eee:2.0, fre:3.0
+
+adj:pharmaceutical LABEL:notgradable FEATURES:ace:1.0, har:1.0, eut:1.0, inflectedRatio:0.0, ceu:1.0, mac:1.0, pha:1.0, inflAndAdvModified:0.0, al$:1.0, cal:1.0, ica:1.0, uti:1.0, advrbModifiedRatio:0.001078055353996061, arm:1.0, rma:1.0, $ph:1.0, tic:1.0
+
+adj:generous LABEL:gradable FEATURES:us$:1.0, ous:1.0, gen:1.0, inflectedRatio:0.0, $ge:1.0, inflAndAdvModified:0.0, rou:1.0, ner:1.0, ene:1.0, advrbModifiedRatio:0.10866397787021982, ero:1.0
+
+adj:emotional LABEL:gradable FEATURES:tio:1.0, inflectedRatio:0.0, $em:1.0, al$:1.0, inflAndAdvModified:0.0, mot:1.0, ona:1.0, emo:1.0, advrbModifiedRatio:0.06800253498107103, oti:1.0, ion:1.0, nal:1.0
+
+adj:administrative LABEL:notgradable FEATURES:dmi:1.0, inflectedRatio:0.0, str:1.0, tra:1.0, ive:1.0, inflAndAdvModified:0.0, ist:1.0, ati:1.0, min:1.0, advrbModifiedRatio:0.002016057722915856, tiv:1.0, nis:1.0, $ad:1.0, ve$:1.0, ini:1.0, adm:1.0, rat:1.0
+
+adj:sophisticated LABEL:gradable FEATURES:cat:1.0, inflectedRatio:0.0, ted:1.0, sti:1.0, inflAndAdvModified:0.0, ist:1.0, $so:1.0, oph:1.0, ica:1.0, phi:1.0, advrbModifiedRatio:0.06632746802346123, sop:1.0, ate:1.0, his:1.0, tic:1.0, ed$:1.0
+
+adj:close LABEL:gradable FEATURES:inflectedRatio:2.1371174559753806E-6, see:1.0, los:2.0, ose:2.0, $cl:2.0, inflAndAdvModified:0.0, eer:1.0, clo:2.0, advrbModifiedRatio:0.127863737391007, er$:1.0, se$:1.0
+
+adj:famous LABEL:gradable FEATURES:us$:1.0, ous:1.0, mou:1.0, inflectedRatio:0.0, fam:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.02142630349488581, $fa:1.0, amo:1.0
+
+adj:eager LABEL:gradable FEATURES:inflectedRatio:0.0, $ea:1.0, inflAndAdvModified:0.0, age:1.0, advrbModifiedRatio:0.09516294735058305, eag:1.0, er$:1.0, ger:1.0
+
+adj:skeptical LABEL:gradable FEATURES:inflectedRatio:0.0, kep:1.0, pti:1.0, al$:1.0, inflAndAdvModified:0.0, cal:1.0, ica:1.0, advrbModifiedRatio:0.07448206913150537, ept:1.0, $sk:1.0, tic:1.0, ske:1.0
+
+adj:recent LABEL:gradable FEATURES:nt$:1.0, rec:2.0, inflectedRatio:2.286109673825492E-6, $re:2.0, inflAndAdvModified:0.0, nte:1.0, ter:1.0, cen:2.0, ent:2.0, ece:2.0, advrbModifiedRatio:0.0022563902480657607, er$:1.0
+
+adj:comprehensive LABEL:gradable FEATURES:ens:1.0, inflectedRatio:0.0, $co:1.0, ive:1.0, com:1.0, inflAndAdvModified:0.0, nsi:1.0, reh:1.0, pre:1.0, advrbModifiedRatio:0.013400805922593946, ehe:1.0, mpr:1.0, ve$:1.0, omp:1.0, siv:1.0, hen:1.0
+
+adj:subsequent LABEL:notgradable FEATURES:nt$:1.0, que:1.0, seq:1.0, inflectedRatio:0.0, equ:1.0, inflAndAdvModified:0.0, sub:1.0, $su:1.0, uen:1.0, ent:1.0, advrbModifiedRatio:3.9695666556400925E-4, ubs:1.0, bse:1.0
+
+adj:different LABEL:gradable FEATURES:nt$:1.0, $di:1.0, ere:1.0, inflectedRatio:0.0, fer:1.0, ffe:1.0, inflAndAdvModified:0.0, dif:1.0, ren:1.0, ent:1.0, advrbModifiedRatio:0.12387222466600308, iff:1.0
+
+adj:western LABEL:notgradable FEATURES:ern:1.0, inflectedRatio:0.0, wes:1.0, $we:1.0, inflAndAdvModified:0.0, ter:1.0, est:1.0, advrbModifiedRatio:0.003839964110488425, ste:1.0, rn$:1.0
+
+adj:prior LABEL:notgradable FEATURES:pri:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, or$:1.0, $pr:1.0, ior:1.0, advrbModifiedRatio:0.001785408565069582, rio:1.0
+
+adj:possible LABEL:notgradable FEATURES:inflectedRatio:0.0, le$:1.0, ibl:1.0, inflAndAdvModified:0.0, ble:1.0, $po:1.0, sib:1.0, oss:1.0, advrbModifiedRatio:0.02107933003475987, ssi:1.0, pos:1.0
+
+adj:third-quarter LABEL:notgradable FEATURES:hir:1.0, -qu:1.0, ird:1.0, inflectedRatio:0.0, qua:1.0, thi:1.0, inflAndAdvModified:0.0, $th:1.0, ter:1.0, art:1.0, uar:1.0, d-q:1.0, rd-:1.0, advrbModifiedRatio:1.151118887558707E-4, er$:1.0, rte:1.0
+
+adj:industrial LABEL:notgradable FEATURES:inflectedRatio:0.0, ust:1.0, str:1.0, inflAndAdvModified:0.0, $in:1.0, al$:1.0, ria:1.0, ind:1.0, dus:1.0, advrbModifiedRatio:0.0010041000753075056, tri:1.0, ial:1.0, ndu:1.0
+
+adj:definitive LABEL:notgradable FEATURES:fin:1.0, inflectedRatio:0.0, efi:1.0, $de:1.0, ive:1.0, inflAndAdvModified:0.0, nit:1.0, iti:1.0, advrbModifiedRatio:0.012283527990334274, tiv:1.0, ve$:1.0, ini:1.0, def:1.0
+
+adj:preferred LABEL:notgradable FEATURES:inflectedRatio:0.0, fer:1.0, ref:1.0, inflAndAdvModified:0.0, $pr:1.0, pre:1.0, efe:1.0, advrbModifiedRatio:0.0034605497330433064, red:1.0, err:1.0, rre:1.0, ed$:1.0
+
+adj:powerful LABEL:gradable FEATURES:inflectedRatio:0.0, ful:1.0, wer:1.0, inflAndAdvModified:0.0, pow:1.0, $po:1.0, ul$:1.0, advrbModifiedRatio:0.05046519827382739, rfu:1.0, erf:1.0, owe:1.0
+
+adj:further LABEL:notgradable FEATURES:rth:1.0, inflectedRatio:0.0, $fu:1.0, inflAndAdvModified:0.0, her:1.0, fur:1.0, the:1.0, advrbModifiedRatio:0.0027822293908742047, urt:1.0, er$:1.0
+
+adj:quiet LABEL:gradable FEATURES:uie:3.0, inflectedRatio:0.010216473745445898, tes:1.0, et$:1.0, $qu:3.0, st$:1.0, inflAndAdvModified:0.007082742397092169, ete:2.0, iet:3.0, ter:1.0, est:1.0, advrbModifiedRatio:0.12037265076305084, qui:3.0, er$:1.0
+
+adj:past LABEL:notgradable FEATURES:inflectedRatio:0.0, ast:1.0, st$:1.0, $pa:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:5.941284843727857E-4, pas:1.0
+
+adj:real LABEL:notgradable FEATURES:eal:3.0, inflectedRatio:5.470536252822937E-5, ler:1.0, $re:3.0, st$:1.0, inflAndAdvModified:5.61080641315173E-6, al$:1.0, ale:2.0, est:1.0, advrbModifiedRatio:0.018302450519700943, les:1.0, er$:1.0, rea:3.0
+
+adj:hard LABEL:gradable FEATURES:har:3.0, inflectedRatio:0.0034948128538918066, $ha:3.0, st$:1.0, inflAndAdvModified:0.01985434546001034, des:1.0, rd$:1.0, est:1.0, advrbModifiedRatio:0.12374475171333574, ard:3.0, er$:1.0, rde:2.0, der:1.0
+
+adj:back LABEL:notgradable FEATURES:bac:2.0, ck$:1.0, inflectedRatio:1.4601950820629636E-5, cke:1.0, inflAndAdvModified:0.0, $ba:2.0, ker:1.0, advrbModifiedRatio:0.0011754570410606856, er$:1.0, ack:2.0
+
+adj:three-month LABEL:notgradable FEATURES:inflectedRatio:0.0, hre:1.0, ont:1.0, nth:1.0, inflAndAdvModified:0.0, thr:1.0, $th:1.0, th$:1.0, mon:1.0, -mo:1.0, ree:1.0, ee-:1.0, advrbModifiedRatio:4.979666362353722E-5, e-m:1.0
+
+adj:volatile LABEL:gradable FEATURES:lat:1.0, ile:1.0, vol:1.0, inflectedRatio:0.0, le$:1.0, ola:1.0, $vo:1.0, inflAndAdvModified:0.0, ati:1.0, advrbModifiedRatio:0.06722069890200152, til:1.0
+
+adj:cold LABEL:gradable FEATURES:inflectedRatio:0.009536890846142409, $co:3.0, old:3.0, st$:1.0, inflAndAdvModified:0.005444594699839282, col:3.0, des:1.0, est:1.0, advrbModifiedRatio:0.06847869952775752, ld$:1.0, er$:1.0, der:1.0, lde:2.0
+
+adj:excellent LABEL:notgradable FEATURES:nt$:1.0, ell:1.0, xce:1.0, inflectedRatio:0.0, cel:1.0, inflAndAdvModified:0.0, len:1.0, exc:1.0, $ex:1.0, ent:1.0, advrbModifiedRatio:0.01555976389027321, lle:1.0
+
+adj:democratic LABEL:gradable FEATURES:inflectedRatio:0.0, cra:1.0, moc:1.0, $de:1.0, inflAndAdvModified:0.0, ati:1.0, dem:1.0, emo:1.0, advrbModifiedRatio:0.0035809243846044517, ocr:1.0, rat:1.0, ic$:1.0, tic:1.0
+
+adj:whole LABEL:notgradable FEATURES:inflectedRatio:0.0, le$:1.0, $wh:1.0, who:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.0013043117055744787, hol:1.0, ole:1.0
+
+adj:short-term LABEL:gradable FEATURES:inflectedRatio:0.0, rm$:1.0, t-t:1.0, inflAndAdvModified:0.0, -te:1.0, erm:1.0, ter:1.0, rt-:1.0, advrbModifiedRatio:0.013681311238542467, sho:1.0, $sh:1.0, ort:1.0, hor:1.0
+
+adj:assistant LABEL:notgradable FEATURES:nt$:1.0, sis:1.0, sta:1.0, inflectedRatio:0.0, tan:1.0, ass:1.0, ist:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.0010290741724999718, ssi:1.0, $as:1.0, ant:1.0
+
+adj:deputy LABEL:notgradable FEATURES:inflectedRatio:0.0, ty$:1.0, uty:1.0, put:1.0, $de:1.0, inflAndAdvModified:0.0, epu:1.0, dep:1.0, advrbModifiedRatio:0.008529088202937941
+
+adj:legal LABEL:notgradable FEATURES:inflectedRatio:0.0, gal:1.0, al$:1.0, inflAndAdvModified:0.0, $le:1.0, ega:1.0, advrbModifiedRatio:0.004139963315931056, leg:1.0
+
+adj:unsolicited LABEL:notgradable FEATURES:$un:1.0, sol:1.0, cit:1.0, ite:1.0, inflectedRatio:0.0, ted:1.0, inflAndAdvModified:0.0, nso:1.0, uns:1.0, oli:1.0, advrbModifiedRatio:0.0047027208599261005, lic:1.0, ici:1.0, ed$:1.0
+
+adj:full-year LABEL:notgradable FEATURES:ear:1.0, inflectedRatio:0.0, $fu:1.0, ar$:1.0, ful:1.0, l-y:1.0, inflAndAdvModified:0.0, yea:1.0, ull:1.0, ll-:1.0, -ye:1.0, advrbModifiedRatio:1.2899342133551188E-4
+
+adj:civilian LABEL:notgradable FEATURES:ivi:1.0, ian:1.0, inflectedRatio:0.0, lia:1.0, $ci:1.0, vil:1.0, civ:1.0, inflAndAdvModified:0.0, ili:1.0, advrbModifiedRatio:0.002317870262877499, an$:1.0
+
+adj:ambitious LABEL:gradable FEATURES:tio:1.0, us$:1.0, ous:1.0, inflectedRatio:0.0, amb:1.0, inflAndAdvModified:0.0, iou:1.0, bit:1.0, iti:1.0, $am:1.0, advrbModifiedRatio:0.04981264051961029, mbi:1.0
+
+adj:federal LABEL:notgradable FEATURES:inflectedRatio:0.0, ede:1.0, al$:1.0, inflAndAdvModified:0.0, $fe:1.0, ral:1.0, era:1.0, advrbModifiedRatio:6.922194898038189E-4, fed:1.0, der:1.0
+
+adj:regulatory LABEL:notgradable FEATURES:lat:1.0, inflectedRatio:0.0, ory:1.0, ula:1.0, $re:1.0, inflAndAdvModified:0.0, ato:1.0, advrbModifiedRatio:8.359287572975232E-4, reg:1.0, tor:1.0, egu:1.0, gul:1.0, ry$:1.0
+
+adj:monetary LABEL:notgradable FEATURES:one:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, mon:1.0, $mo:1.0, advrbModifiedRatio:0.00110527489910564, eta:1.0, ary:1.0, net:1.0, tar:1.0, ry$:1.0
+
+adj:composite LABEL:notgradable FEATURES:osi:1.0, ite:1.0, inflectedRatio:0.0, $co:1.0, com:1.0, inflAndAdvModified:0.0, te$:1.0, sit:1.0, advrbModifiedRatio:2.1930125138776573E-4, pos:1.0, omp:1.0, mpo:1.0
+
+adj:excess LABEL:notgradable FEATURES:ess:1.0, xce:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, exc:1.0, $ex:1.0, advrbModifiedRatio:0.002619131386575974, ss$:1.0, ces:1.0
+
+adj:corporate LABEL:notgradable FEATURES:ora:1.0, por:1.0, orp:1.0, inflectedRatio:0.0, rpo:1.0, $co:1.0, inflAndAdvModified:0.0, te$:1.0, cor:1.0, advrbModifiedRatio:0.0022224832463710775, ate:1.0, rat:1.0
+
+adj:floating-rate LABEL:notgradable FEATURES:inflectedRatio:0.0, $fl:1.0, loa:1.0, g-r:1.0, inflAndAdvModified:0.0, tin:1.0, ati:1.0, -ra:1.0, te$:1.0, flo:1.0, ing:1.0, advrbModifiedRatio:0.0035046728971962616, ate:1.0, ng-:1.0, oat:1.0, rat:1.0
+
+adj:illegal LABEL:notgradable FEATURES:$il:1.0, inflectedRatio:0.0, gal:1.0, al$:1.0, inflAndAdvModified:0.0, ega:1.0, ill:1.0, advrbModifiedRatio:0.01055503950902578, leg:1.0, lle:1.0
+
+adj:old LABEL:gradable FEATURES:inflectedRatio:0.0026669386845697396, st$:1.0, old:3.0, inflAndAdvModified:0.008498769879564968, des:1.0, ld$:1.0, est:1.0, advrbModifiedRatio:0.02965845199443258, er$:1.0, $ol:3.0, lde:2.0, der:1.0
+
+adj:metric LABEL:notgradable FEATURES:etr:1.0, inflectedRatio:0.0, met:1.0, inflAndAdvModified:0.0, tri:1.0, ric:1.0, advrbModifiedRatio:3.851091142490372E-4, $me:1.0, ic$:1.0
+
+adj:ultimate LABEL:notgradable FEATURES:ima:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, te$:1.0, mat:1.0, lti:1.0, advrbModifiedRatio:3.4339121217097894E-4, ate:1.0, tim:1.0, ult:1.0, $ul:1.0
+
+adj:conventional LABEL:gradable FEATURES:tio:1.0, ven:1.0, inflectedRatio:0.0, $co:1.0, inflAndAdvModified:0.0, al$:1.0, onv:1.0, ent:1.0, nve:1.0, ona:1.0, advrbModifiedRatio:0.012285254873198115, ion:1.0, nal:1.0, nti:1.0, con:1.0
+
+adj:thin LABEL:gradable FEATURES:inflectedRatio:0.017303491901398464, ine:2.0, nes:1.0, hin:3.0, st$:1.0, inflAndAdvModified:0.0, thi:3.0, $th:3.0, ner:1.0, est:1.0, advrbModifiedRatio:0.13556293081439877, er$:1.0, in$:1.0
+
+adj:bullish LABEL:gradable FEATURES:inflectedRatio:0.0, lis:1.0, inflAndAdvModified:0.0, ish:1.0, lli:1.0, ull:1.0, bul:1.0, $bu:1.0, advrbModifiedRatio:0.14454549875978795, sh$:1.0
+
+adj:chemical LABEL:notgradable FEATURES:hem:1.0, inflectedRatio:0.0, mic:1.0, al$:1.0, inflAndAdvModified:0.0, che:1.0, cal:1.0, ica:1.0, emi:1.0, $ch:1.0, advrbModifiedRatio:0.0032048169369719337
+
+adj:negative LABEL:gradable FEATURES:neg:1.0, inflectedRatio:0.0, ive:1.0, inflAndAdvModified:0.0, ati:1.0, ega:1.0, $ne:1.0, gat:1.0, advrbModifiedRatio:0.04328738670694864, tiv:1.0, ve$:1.0
+
+adj:strategic LABEL:notgradable FEATURES:teg:1.0, inflectedRatio:0.0, str:1.0, tra:1.0, inflAndAdvModified:0.0, gic:1.0, advrbModifiedRatio:0.003668726708793371, egi:1.0, ate:1.0, $st:1.0, ic$:1.0, rat:1.0
+
+adj:narrow LABEL:gradable FEATURES:nar:3.0, arr:3.0, inflectedRatio:0.016366612111292964, wes:1.0, st$:1.0, inflAndAdvModified:0.012833681358993172, wer:1.0, rro:3.0, est:1.0, advrbModifiedRatio:0.07983520514701732, ow$:1.0, er$:1.0, row:3.0, owe:2.0, $na:3.0
+
+adj:official LABEL:notgradable FEATURES:inflectedRatio:0.0, al$:1.0, inflAndAdvModified:0.0, cia:1.0, advrbModifiedRatio:7.994475961299687E-4, ial:1.0, fic:1.0, off:1.0, ici:1.0, ffi:1.0, $of:1.0
+
+adj:tax-exempt LABEL:notgradable FEATURES:exe:1.0, x-e:1.0, ax-:1.0, inflectedRatio:0.0, mpt:1.0, emp:1.0, inflAndAdvModified:0.0, -ex:1.0, pt$:1.0, $ta:1.0, advrbModifiedRatio:0.005393071976768305, xem:1.0, tax:1.0
+
+adj:legislative LABEL:notgradable FEATURES:gis:1.0, isl:1.0, lat:1.0, inflectedRatio:0.0, ive:1.0, inflAndAdvModified:0.0, $le:1.0, ati:1.0, advrbModifiedRatio:4.228890263453552E-4, tiv:1.0, egi:1.0, ve$:1.0, leg:1.0, sla:1.0
+
+adj:secondary LABEL:notgradable FEATURES:inflectedRatio:0.0, eco:1.0, dar:1.0, inflAndAdvModified:0.0, nda:1.0, ond:1.0, advrbModifiedRatio:0.006836094579379122, sec:1.0, ary:1.0, $se:1.0, ry$:1.0, con:1.0
+
+adj:rural LABEL:gradable FEATURES:ura:1.0, inflectedRatio:0.0, rur:1.0, al$:1.0, inflAndAdvModified:0.0, ral:1.0, advrbModifiedRatio:0.00780980564486522, $ru:1.0
+
+adj:firm LABEL:gradable FEATURES:inflectedRatio:0.013602251407129456, irm:3.0, $fi:3.0, rm$:1.0, st$:1.0, inflAndAdvModified:0.017343156546011988, rme:2.0, mes:1.0, est:1.0, advrbModifiedRatio:0.048723287420491465, mer:1.0, fir:3.0, er$:1.0
+
+adj:international LABEL:notgradable FEATURES:tio:1.0, ern:1.0, inflectedRatio:0.0, nat:1.0, int:1.0, inflAndAdvModified:0.0, $in:1.0, al$:1.0, ati:1.0, nte:1.0, ter:1.0, rna:1.0, ona:1.0, advrbModifiedRatio:8.716892289582107E-4, ion:1.0, nal:1.0
+
+adj:clinical LABEL:notgradable FEATURES:nic:1.0, lin:1.0, inflectedRatio:0.0, $cl:1.0, al$:1.0, inflAndAdvModified:0.0, cal:1.0, ica:1.0, advrbModifiedRatio:0.006108886779213275, cli:1.0, ini:1.0
+
+adj:one-time LABEL:notgradable FEATURES:me$:1.0, -ti:1.0, one:1.0, inflectedRatio:0.0, $on:1.0, e-t:1.0, inflAndAdvModified:0.0, ne-:1.0, ime:1.0, advrbModifiedRatio:0.0010715737353582382, tim:1.0
+
+adj:maximum LABEL:notgradable FEATURES:axi:1.0, inflectedRatio:0.0, imu:1.0, xim:1.0, $ma:1.0, um$:1.0, max:1.0, inflAndAdvModified:0.0, mum:1.0, advrbModifiedRatio:3.9821407023048146E-4
+
+adj:interesting LABEL:gradable FEATURES:ere:1.0, inflectedRatio:0.0, sti:1.0, int:1.0, inflAndAdvModified:0.0, $in:1.0, tin:1.0, nte:1.0, ter:1.0, ing:1.0, est:1.0, advrbModifiedRatio:0.144159851029648, ng$:1.0, res:1.0
+
+adj:daily LABEL:notgradable FEATURES:ly$:1.0, inflectedRatio:0.0, ily:1.0, dai:1.0, inflAndAdvModified:0.0, ail:1.0, $da:1.0, advrbModifiedRatio:8.899148853683895E-4
+
+adj:interstate LABEL:notgradable FEATURES:sta:1.0, inflectedRatio:0.0, tat:1.0, int:1.0, inflAndAdvModified:0.0, ers:1.0, $in:1.0, rst:1.0, nte:1.0, ter:1.0, te$:1.0, advrbModifiedRatio:7.87246604999016E-4, ate:1.0
+
+adj:appropriate LABEL:gradable FEATURES:pri:1.0, rop:1.0, inflectedRatio:0.0, pro:1.0, opr:1.0, inflAndAdvModified:0.0, ria:1.0, te$:1.0, app:1.0, $ap:1.0, advrbModifiedRatio:0.02434469774922065, ate:1.0, ppr:1.0, iat:1.0
+
+adj:mutual LABEL:notgradable FEATURES:inflectedRatio:0.0, mut:1.0, al$:1.0, tua:1.0, inflAndAdvModified:0.0, utu:1.0, ual:1.0, $mu:1.0, advrbModifiedRatio:0.0015426468234917587
+
+adj:advisory LABEL:notgradable FEATURES:iso:1.0, ory:1.0, inflectedRatio:0.0, sor:1.0, inflAndAdvModified:0.0, dvi:1.0, advrbModifiedRatio:0.002370611653999276, $ad:1.0, adv:1.0, vis:1.0, ry$:1.0
+
+adj:flexible LABEL:gradable FEATURES:xib:1.0, inflectedRatio:0.0, le$:1.0, ibl:1.0, lex:1.0, $fl:1.0, inflAndAdvModified:0.0, ble:1.0, exi:1.0, advrbModifiedRatio:0.04645174320264573, fle:1.0
+
+adj:only LABEL:notgradable FEATURES:ly$:1.0, inflectedRatio:1.008726605948797E-5, lye:1.0, st$:1.0, $on:2.0, inflAndAdvModified:0.0, yes:1.0, nly:2.0, est:1.0, advrbModifiedRatio:7.778402939205169E-4, onl:2.0
+
+adj:fair LABEL:gradable FEATURES:rer:1.0, inflectedRatio:0.00663230652443166, st$:1.0, inflAndAdvModified:7.241599744296616E-4, air:3.0, ir$:1.0, fai:3.0, est:1.0, advrbModifiedRatio:0.03797594790043549, ire:2.0, $fa:3.0, er$:1.0, res:1.0
+
+adj:municipal LABEL:notgradable FEATURES:nic:1.0, inflectedRatio:0.0, pal:1.0, mun:1.0, al$:1.0, inflAndAdvModified:0.0, cip:1.0, $mu:1.0, advrbModifiedRatio:8.165588231655264E-4, uni:1.0, ipa:1.0, ici:1.0
+
+adj:unique LABEL:notgradable FEATURES:que:1.0, $un:1.0, inflectedRatio:0.0, ue$:1.0, niq:1.0, inflAndAdvModified:0.0, advrbModifiedRatio:0.04461926312911946, uni:1.0, iqu:1.0
+
+adj:impressive LABEL:gradable FEATURES:ess:1.0, inflectedRatio:0.0, ive:1.0, inflAndAdvModified:0.0, pre:1.0, advrbModifiedRatio:0.11398847151091777, $im:1.0, ssi:1.0, mpr:1.0, ve$:1.0, res:1.0, imp:1.0, siv:1.0
+
+adj:alleged LABEL:notgradable FEATURES:$al:1.0, inflectedRatio:0.0, ege:1.0, all:1.0, inflAndAdvModified:0.0, ged:1.0, advrbModifiedRatio:5.942573134167094E-4, leg:1.0, lle:1.0, ed$:1.0
+
+adj:unfair LABEL:gradable FEATURES:$un:2.0, inflectedRatio:4.206511680080765E-5, st$:1.0, inflAndAdvModified:0.0, air:2.0, ir$:1.0, fai:2.0, est:1.0, advrbModifiedRatio:0.047519560279312374, ire:1.0, unf:2.0, res:1.0, nfa:2.0
+
+adj:aggressive LABEL:gradable FEATURES:ess:1.0, inflectedRatio:0.0, ggr:1.0, ive:1.0, inflAndAdvModified:0.0, gre:1.0, $ag:1.0, advrbModifiedRatio:0.08080581142814348, ssi:1.0, agg:1.0, ve$:1.0, res:1.0, siv:1.0
+
+adj:strong LABEL:gradable FEATURES:nge:2.0, inflectedRatio:0.002225521778000566, str:3.0, st$:1.0, inflAndAdvModified:0.019143515384520707, ong:3.0, tro:3.0, ges:1.0, est:1.0, advrbModifiedRatio:0.099886653918496, ger:1.0, ng$:1.0, $st:3.0, er$:1.0, ron:3.0
+
+adj:speculative LABEL:gradable FEATURES:lat:1.0, inflectedRatio:0.0, $sp:1.0, ula:1.0, spe:1.0, ecu:1.0, ive:1.0, inflAndAdvModified:0.0, cul:1.0, ati:1.0, advrbModifiedRatio:0.028053284641241648, tiv:1.0, ve$:1.0, pec:1.0
+
+adj:initial LABEL:notgradable FEATURES:inflectedRatio:0.0, nit:1.0, $in:1.0, al$:1.0, inflAndAdvModified:0.0, iti:1.0, tia:1.0, advrbModifiedRatio:8.107012565869477E-4, ial:1.0, ini:1.0
+
+adj:presidential LABEL:notgradable FEATURES:inflectedRatio:0.0, den:1.0, inflAndAdvModified:0.0, al$:1.0, esi:1.0, pre:1.0, $pr:1.0, ent:1.0, tia:1.0, advrbModifiedRatio:6.019084267179741E-4, ial:1.0, ide:1.0, res:1.0, sid:1.0, nti:1.0
+
+adj:previous LABEL:notgradable FEATURES:us$:1.0, ous:1.0, inflectedRatio:0.0, vio:1.0, evi:1.0, inflAndAdvModified:0.0, iou:1.0, $pr:1.0, pre:1.0, advrbModifiedRatio:4.5495905368516835E-4, rev:1.0
+
+adj:pre-tax LABEL:notgradable FEATURES:ax$:1.0, re-:1.0, inflectedRatio:0.0, e-t:1.0, inflAndAdvModified:0.0, $pr:1.0, pre:1.0, -ta:1.0, advrbModifiedRatio:6.298419096806701E-4, tax:1.0
+
+adj:precious LABEL:gradable FEATURES:us$:1.0, ous:1.0, rec:1.0, inflectedRatio:0.0, eci:1.0, inflAndAdvModified:0.0, iou:1.0, $pr:1.0, pre:1.0, advrbModifiedRatio:0.04415228950261369, cio:1.0
+
+adj:friendly LABEL:gradable FEATURES:ly$:1.0, inflectedRatio:0.0063485672102543455, $fr:1.0, fri:1.0, inflAndAdvModified:0.0, ien:1.0, advrbModifiedRatio:0.040775786859942285, end:1.0, rie:1.0, dly:1.0, ndl:1.0
+
+adj:individual LABEL:notgradable FEATURES:div:1.0, vid:1.0, ivi:1.0, inflectedRatio:0.0, inflAndAdvModified:0.0, $in:1.0, al$:1.0, ind:1.0, dua:1.0, ual:1.0, idu:1.0, advrbModifiedRatio:0.003931807353060805, ndi:1.0
+
+adj:cumulative LABEL:notgradable FEATURES:lat:1.0, cum:1.0, mul:1.0, inflectedRatio:0.0, umu:1.0, ula:1.0, ive:1.0, inflAndAdvModified:0.0, $cu:1.0, ati:1.0, advrbModifiedRatio:0.0014726335596825656, tiv:1.0, ve$:1.0
+
+adj:second-quarter LABEL:notgradable FEATURES:-qu:1.0, inflectedRatio:0.0, eco:1.0, qua:1.0, inflAndAdvModified:0.0, ond:1.0, ter:1.0, art:1.0, uar:1.0, d-q:1.0, advrbModifiedRatio:5.515567689804473E-5, sec:1.0, er$:1.0, $se:1.0, con:1.0, nd-:1.0, rte:1.0
+
+adj:electrical LABEL:notgradable FEATURES:inflectedRatio:0.0, lec:1.0, ele:1.0, inflAndAdvModified:0.0, al$:1.0, $el:1.0, cal:1.0, ect:1.0, advrbModifiedRatio:0.0018543000875641709, ric:1.0, tri:1.0, ctr:1.0, ica:1.0
