@@ -227,7 +227,7 @@ object classifierForAgro {
 
     //cant get weights for LibSVMClassifier
     val weights = myClassifier.getWeights()
-    
+
     println("done with getting weights...");
     println(s"""Weights for the positive class: ${weights.get("gradable")}""")
     println(s"""Weights for the negative class: ${weights.get("notgradable")}""")
@@ -413,7 +413,7 @@ object classifierForAgro {
 
   }
 
-  def findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(myAdjToCheck: String, labelOfGivenAdj: String, datasetToAdd: RVFDataset[String, String], characterNgramCounts: Map[String, Int]): Unit = {
+  def findRatiosOfGivenAdjectivesAndAddToDatasetWithCharNgrams(myAdjToCheck: String, labelOfGivenAdj: String, datasetToAdd: RVFDataset[String, String], characterNgramCounts: Map[String, Double]): Unit = {
     //for each given adjective find all 3 ratios, attach its corresponding label, and send back a full filled RVFdataset
 
     //println("reaching here at 57633")

@@ -514,13 +514,13 @@ object ratioCalculator {
   //  }
   //
   //
-  def FindNgramCharacterFrequencyGivenAdjective(adjForNgram: String): Map[String, Int] = {
+  def FindNgramCharacterFrequencyGivenAdjective(adjForNgram: String): Map[String, Double] = {
 
     //check for ratio of 3 forms of cold, colder, coldest
     //go through the Colder->cold hashmap and find the er version of given adjective: i.e cold
     //get both versions of cold: coldest and colder.
 
-    var totalInflectedAndModifiedCount = 0;
+
 
     //store all 3 forms of this base form into an array of strings.
     var all3InflectedForms = ArrayBuffer[String]()
@@ -538,7 +538,15 @@ object ratioCalculator {
     //by now, the arraybfufer all3InflectedForms should have [cold, colder, coldest]
 
     //for each of these value increase count in hashMapCharacterNgramsAndFrequency
-    var hashMapCharacterNgramsAndFrequency: Map[String, Int] = Map()
+    var hashMapCharacterNgramsAndFrequency: Map[String, Double] = Map()
+
+    var totalTrigramCount=0;
+    val denominatorForNgram:Double=3.00000;
+
+    val testNr=2
+    var test = 1/denominatorForNgram;
+    var test2 = 2/denominatorForNgram;
+    var test3 =testNr/denominatorForNgram
 
     for (adjForms <- all3InflectedForms) {
       //now for each of these versions (Eg: colder, coldest),create trigrams
@@ -548,7 +556,8 @@ object ratioCalculator {
 
         //for each of the trigram,($co, old, col)-increase count
         for (trigrams <- splitAdj) {
-          var inflectedCounterForSameWord: Int = 0
+          totalTrigramCount=totalTrigramCount+1
+          var inflectedCounterForSameWord: Double = 0
           if (hashMapCharacterNgramsAndFrequency.contains(trigrams)) {
             inflectedCounterForSameWord = hashMapCharacterNgramsAndFrequency(trigrams).toInt;
             inflectedCounterForSameWord = inflectedCounterForSameWord + 1;
@@ -557,10 +566,11 @@ object ratioCalculator {
             // if it exists, retrieve it, increase its counter value and write it back. Else just write 1
             inflectedCounterForSameWord = 1
           }
-          hashMapCharacterNgramsAndFrequency += (trigrams -> inflectedCounterForSameWord);
+          hashMapCharacterNgramsAndFrequency += (trigrams -> (inflectedCounterForSameWord/denominatorForNgram));
         }
       }
     }
+
 
     return hashMapCharacterNgramsAndFrequency;
   }
